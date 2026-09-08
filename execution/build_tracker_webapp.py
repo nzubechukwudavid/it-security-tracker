@@ -51,6 +51,22 @@ MANIFEST_CONTENT = {
             "type": "image/svg+xml",
             "purpose": "any maskable"
         }
+    ],
+    "shortcuts": [
+        {
+            "name": "+1 Application",
+            "short_name": "+1 Applied",
+            "description": "Quick-log one job application with 1 tap",
+            "url": "./?action=quick_app",
+            "icons": [{"src": "icons/icon-192.svg", "sizes": "192x192"}]
+        },
+        {
+            "name": "Study Schedule",
+            "short_name": "Schedule",
+            "description": "Jump directly to the 16-week study schedule",
+            "url": "./#plan",
+            "icons": [{"src": "icons/icon-192.svg", "sizes": "192x192"}]
+        }
     ]
 }
 
@@ -236,6 +252,10 @@ def build_enhanced_html(source_html: str) -> str:
             <div class="pulse-bar" id="pulseProgressBar" style="width:0%"></div>
           </div>
           <div class="pulse-sub" id="pulseAppFeedback">10 more to hit the weekly target of 10.</div>
+          <div class="pulse-act-row">
+            <button type="button" class="btn pulse-btn-add" id="pulseAddAppBtn" title="Quick log one application for today">+1 Applied</button>
+            <button type="button" class="btn pulse-btn-sub" id="pulseSubAppBtn" title="Undo last quick-logged application">-1</button>
+          </div>
         </div>
 
         <!-- Metric 2: Follow-up Radar -->
@@ -382,6 +402,23 @@ def build_enhanced_html(source_html: str) -> str:
   font-family:var(--mono); font-size:11px; color:var(--flag);
   background:var(--surface); padding:2px 6px; border-radius:2px; border:1px solid var(--flag);
 }
+.pulse-act-row{
+  display:flex; gap:6px; margin-top:6px; align-items:center;
+}
+.pulse-btn-add{
+  background:var(--signal); color:#fff; border-color:var(--signal);
+  font-weight:600; font-size:12px; padding:4px 10px; border-radius:3px;
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:background 0.2s, transform 0.1s;
+}
+.pulse-btn-add:hover{background:#114c63; color:#fff}
+.pulse-btn-add:active{transform:scale(0.96)}
+.pulse-btn-sub{
+  background:transparent; color:var(--muted); border-color:var(--rule);
+  font-size:11.5px; padding:3px 8px; border-radius:3px; cursor:pointer;
+}
+.pulse-btn-sub:hover{color:var(--danger); border-color:var(--danger)}
+.pulse-btn-sub:active{transform:scale(0.96)}
 </style>
 
 <div id="syncModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
@@ -848,6 +885,68 @@ window.drawLog = function() {
 
 // Initial update
 updateCampaignPulse();
+
+// Quick +1 Application button
+function quickLogApplication(customName) {
+  const today = new Date().toISOString().slice(0, 10);
+  const count = (S.apps || []).filter(a => a.d === today).length + 1;
+  const name = customName || `Application #${count}`;
+  if (!Array.isArray(S.apps)) S.apps = [];
+  S.apps.push({
+    c: name,
+    r: "Job Application",
+    s: "Quick Log",
+    d: today,
+    st: "Applied"
+  });
+  save();
+  if (typeof drawApps === "function") drawApps();
+  updateCampaignPulse();
+  flash("+1 Application logged!");
+  updateBadge();
+}
+
+function quickUndoApplication() {
+  if (!Array.isArray(S.apps) || S.apps.length === 0) {
+    flash("No applications to remove");
+    return;
+  }
+  const removed = S.apps.pop();
+  save();
+  if (typeof drawApps === "function") drawApps();
+  updateCampaignPulse();
+  flash(`Removed: ${removed.c || "application"}`);
+  updateBadge();
+}
+
+const addAppBtn = document.getElementById("pulseAddAppBtn");
+if (addAppBtn) {
+  addAppBtn.addEventListener("click", () => quickLogApplication());
+}
+
+const subAppBtn = document.getElementById("pulseSubAppBtn");
+if (subAppBtn) {
+  subAppBtn.addEventListener("click", () => quickUndoApplication());
+}
+
+// App Badge support
+function updateBadge() {
+  if ('setAppBadge' in navigator) {
+    const appsThisWeek = parseInt(document.getElementById("pulseAppCount")?.textContent || "0", 10);
+    const rem = Math.max(0, 10 - appsThisWeek);
+    if (rem > 0) {
+      navigator.setAppBadge(rem).catch(() => {});
+    } else {
+      navigator.clearAppBadge().catch(() => {});
+    }
+  }
+}
+
+// Handle shortcut query param ?action=quick_app
+if (urlParams.get("action") === "quick_app") {
+  quickLogApplication("Quick Log (Shortcut)");
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
 </script>
 """
 

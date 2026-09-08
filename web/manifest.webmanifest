@@ -20,5 +20,31 @@
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "+1 Application",
+      "short_name": "+1 Applied",
+      "description": "Quick-log one job application with 1 tap",
+      "url": "./?action=quick_app",
+      "icons": [
+        {
+          "src": "icons/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Study Schedule",
+      "short_name": "Schedule",
+      "description": "Jump directly to the 16-week study schedule",
+      "url": "./#plan",
+      "icons": [
+        {
+          "src": "icons/icon-192.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
   ]
 }
