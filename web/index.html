@@ -257,6 +257,67 @@ footer.page p{margin-bottom:.7em}
   <nav class="rail" aria-label="Sections"><ol id="rail"></ol></nav>
 
   <main>
+        <!-- Weekly Campaign Pulse & Follow-Up Engine -->
+    <section class="pulse-card" id="campaignPulse" aria-label="Weekly Campaign Pulse">
+      <div class="pulse-header">
+        <div class="pulse-h-left">
+          <span class="pulse-badge">Live Metric</span>
+          <h3>Weekly Campaign Pulse</h3>
+        </div>
+        <span class="pulse-week" id="pulseWeekLabel">Current Week</span>
+      </div>
+      <div class="pulse-grid">
+        <!-- Metric 1: Applications -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Weekly Applications</span>
+            <span class="pulse-tag" id="pulseTargetTag">0/10 Goal</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseAppCount">0</span>
+            <span class="pulse-max">/ 10 target</span>
+          </div>
+          <div class="pulse-track">
+            <div class="pulse-bar" id="pulseProgressBar" style="width:0%"></div>
+          </div>
+          <div class="pulse-sub" id="pulseAppFeedback">10 more to hit the weekly target of 10.</div>
+        </div>
+
+        <!-- Metric 2: Follow-up Radar -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Follow-Up Radar</span>
+            <span class="pulse-tag" id="pulseFollowupTag">Clear</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseOverdueCount">0</span>
+            <span class="pulse-max">pending</span>
+          </div>
+          <div class="pulse-sub" id="pulseFollowupSub">No applications awaiting follow-up</div>
+          <button type="button" class="btn pulse-view-btn hidden" id="pulseToggleAlertsBtn">View list</button>
+        </div>
+
+        <!-- Metric 3: Study Streak -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Daily Study Streak</span>
+            <span class="pulse-tag pulse-tag-streak" id="pulseStreakTag">Active</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseStreakCount">&#x1F525; 1</span>
+            <span class="pulse-max">days</span>
+          </div>
+          <div class="pulse-sub" id="pulseStreakSub">Study or log daily to build streak</div>
+        </div>
+      </div>
+
+      <!-- Expandable Overdue Applications List -->
+      <div class="pulse-alert-box hidden" id="pulseAlertBox">
+        <h4>Applications awaiting response for 7+ days:</h4>
+        <ul id="pulseAlertItems"></ul>
+      </div>
+    </section>
+
     <section class="intro">
       <h2>What this is, and what it assumes</h2>
       <p>This is a study plan and job-hunt log for a computer science graduate moving into IT support, networking and eventually security operations. Everything on it is either free or has a free route; the paid items are marked so they can be skipped without breaking the sequence.</p>
@@ -1009,6 +1070,67 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=
 }
 .notice{font-size:12.5px; color:var(--muted); line-height:1.45; margin-top:6px}
 .notice strong{color:var(--ink)}
+
+/* Weekly Campaign Pulse */
+.pulse-card{
+  background:var(--surface); border:1px solid var(--rule);
+  border-radius:6px; padding:18px 20px; margin-bottom:28px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.pulse-header{
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); flex-wrap:wrap; gap:8px;
+}
+.pulse-h-left{display:flex; align-items:center; gap:8px}
+.pulse-badge{
+  font-family:var(--mono); font-size:10px; text-transform:uppercase;
+  background:var(--signal-soft); color:var(--signal); padding:2px 6px; border-radius:2px; font-weight:600;
+}
+.pulse-header h3{font-size:16px; margin:0; font-family:var(--mono); color:var(--ink)}
+.pulse-week{font-family:var(--mono); font-size:12px; color:var(--muted)}
+.pulse-grid{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+.pulse-metric{
+  background:var(--surface-2); border:1px solid var(--rule-soft);
+  border-radius:4px; padding:12px 14px; display:flex; flex-direction:column; gap:6px;
+}
+.pulse-m-top{display:flex; justify-content:space-between; align-items:center}
+.pulse-label{font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted)}
+.pulse-tag{font-family:var(--mono); font-size:10.5px; padding:1px 6px; border-radius:2px; background:var(--surface); border:1px solid var(--rule)}
+.pulse-tag-alert{color:var(--flag); border-color:var(--flag)}
+.pulse-tag-streak{color:var(--ok); border-color:var(--ok)}
+.pulse-value{display:flex; align-items:baseline; gap:4px; margin-top:2px}
+.pulse-bold{font-size:24px; font-family:var(--mono); font-weight:700; color:var(--ink); line-height:1}
+.pulse-max{font-size:12.5px; color:var(--muted); font-family:var(--mono)}
+.pulse-track{
+  height:7px; background:var(--rule-soft); border-radius:3px;
+  overflow:hidden; margin-top:4px;
+}
+.pulse-bar{
+  height:100%; background:var(--signal); border-radius:3px;
+  transition:width 0.4s ease, background 0.3s;
+}
+.pulse-bar.complete{background:var(--ok)}
+.pulse-sub{font-size:12px; color:var(--ink-2); line-height:1.3}
+.pulse-view-btn{
+  margin-top:4px; align-self:flex-start; font-size:11.5px; padding:2px 8px;
+}
+.pulse-alert-box{
+  margin-top:14px; padding-top:12px; border-top:1px dashed var(--rule-soft); font-size:13px;
+}
+.pulse-alert-box h4{font-size:12.5px; color:var(--flag); margin-bottom:6px}
+.pulse-alert-box ul{list-style:none; margin:0; padding:0}
+.pulse-alert-box li{
+  padding:5px 0; border-bottom:1px solid var(--rule-soft);
+  display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.pulse-alert-box li:last-child{border-bottom:none}
+.pulse-followup-badge{
+  font-family:var(--mono); font-size:11px; color:var(--flag);
+  background:var(--surface); padding:2px 6px; border-radius:2px; border:1px solid var(--flag);
+}
 </style>
 
 <div id="syncModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
@@ -1313,6 +1435,168 @@ if ('serviceWorker' in navigator) {
 
 // Initialize on page load
 initFirebase();
+
+/* =====================================================================
+   WEEKLY CAMPAIGN PULSE & FOLLOW-UP ENGINE
+   ===================================================================== */
+function updateCampaignPulse() {
+  const now = new Date();
+  const d = new Date(now);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  const monday = new Date(d.setDate(diff));
+  monday.setHours(0, 0, 0, 0);
+
+  const sunday = new Date(monday);
+  sunday.setDate(sunday.getDate() + 6);
+
+  const fmt = dt => dt.toLocaleDateString(undefined, {month:'short', day:'numeric'});
+  const weekLabelEl = document.getElementById("pulseWeekLabel");
+  if (weekLabelEl) weekLabelEl.textContent = `${fmt(monday)} – ${fmt(sunday)}`;
+
+  const apps = Array.isArray(S.apps) ? S.apps : [];
+  let appsThisWeek = 0;
+  const overdueApps = [];
+
+  apps.forEach(a => {
+    if (!a.d) return;
+    const appDate = new Date(a.d + "T00:00:00");
+    if (appDate >= monday) {
+      appsThisWeek++;
+    }
+
+    if (a.st === "Applied" || a.st === "Screening") {
+      const daysAgo = Math.floor((now - appDate) / (1000 * 60 * 60 * 24));
+      if (daysAgo >= 7) {
+        overdueApps.push({ app: a, daysAgo });
+      }
+    }
+  });
+
+  // Metric 1: Applications
+  const countEl = document.getElementById("pulseAppCount");
+  const barEl = document.getElementById("pulseProgressBar");
+  const subEl = document.getElementById("pulseAppFeedback");
+  const tagEl = document.getElementById("pulseTargetTag");
+
+  if (countEl) countEl.textContent = appsThisWeek;
+  const pct = Math.min(100, Math.round((appsThisWeek / 10) * 100));
+  if (barEl) {
+    barEl.style.width = pct + "%";
+    barEl.classList.toggle("complete", appsThisWeek >= 10);
+  }
+  if (tagEl) {
+    tagEl.textContent = appsThisWeek >= 10 ? "10/10 Reached! 🎉" : `${appsThisWeek}/10 Goal`;
+    tagEl.className = "pulse-tag " + (appsThisWeek >= 10 ? "pulse-tag-streak" : "");
+  }
+  if (subEl) {
+    if (appsThisWeek >= 10) {
+      subEl.textContent = "Weekly goal achieved! Outstanding work.";
+    } else {
+      const rem = 10 - appsThisWeek;
+      subEl.textContent = `${rem} more to hit the weekly target of 10.`;
+    }
+  }
+
+  // Metric 2: Follow-up Radar
+  const overdueCountEl = document.getElementById("pulseOverdueCount");
+  const overdueSubEl = document.getElementById("pulseFollowupSub");
+  const overdueTagEl = document.getElementById("pulseFollowupTag");
+  const toggleBtn = document.getElementById("pulseToggleAlertsBtn");
+  const alertList = document.getElementById("pulseAlertItems");
+
+  if (overdueCountEl) overdueCountEl.textContent = overdueApps.length;
+  if (overdueTagEl) {
+    overdueTagEl.textContent = overdueApps.length > 0 ? `${overdueApps.length} Action Needed` : "Clear";
+    overdueTagEl.className = "pulse-tag " + (overdueApps.length > 0 ? "pulse-tag-alert" : "pulse-tag-streak");
+  }
+  if (overdueSubEl) {
+    overdueSubEl.textContent = overdueApps.length > 0
+      ? `${overdueApps.length} application(s) awaiting reply for 7+ days`
+      : "No applications overdue for follow-up";
+  }
+  if (toggleBtn) {
+    toggleBtn.classList.toggle("hidden", overdueApps.length === 0);
+  }
+  if (alertList) {
+    alertList.innerHTML = overdueApps.map(item => `
+      <li>
+        <div>
+          <strong>${esc(item.app.c || "Untitled Company")}</strong> — ${esc(item.app.r || "Role")}
+          <span style="color:var(--muted); font-size:11.5px"> (Applied ${item.app.d})</span>
+        </div>
+        <span class="pulse-followup-badge">${item.daysAgo}d ago</span>
+      </li>
+    `).join("");
+  }
+
+  // Metric 3: Study Streak
+  const streakCountEl = document.getElementById("pulseStreakCount");
+  const streakSubEl = document.getElementById("pulseStreakSub");
+
+  const activeDates = new Set();
+  (S.log || []).forEach(l => { if (l.d) activeDates.add(l.d); });
+  if (Object.keys(S.done || {}).length > 0) {
+    activeDates.add(new Date().toISOString().slice(0, 10));
+  }
+
+  let streak = 0;
+  let cur = new Date();
+  while (true) {
+    const s = cur.toISOString().slice(0, 10);
+    if (activeDates.has(s)) {
+      streak++;
+      cur.setDate(cur.getDate() - 1);
+    } else {
+      if (streak === 0 && cur.toDateString() === new Date().toDateString()) {
+        cur.setDate(cur.getDate() - 1);
+        if (activeDates.has(cur.toISOString().slice(0, 10))) {
+          streak = 1;
+          cur.setDate(cur.getDate() - 1);
+          continue;
+        }
+      }
+      break;
+    }
+  }
+
+  const finalStreak = Math.max(1, streak);
+  if (streakCountEl) streakCountEl.innerHTML = `🔥 ${finalStreak}`;
+  if (streakSubEl) {
+    streakSubEl.textContent = finalStreak > 1 ? `${finalStreak} consecutive days of progress!` : "Study or log daily to build streak";
+  }
+}
+
+// Toggle overdue alerts box
+const toggleAlertsBtn = document.getElementById("pulseToggleAlertsBtn");
+if (toggleAlertsBtn) {
+  toggleAlertsBtn.addEventListener("click", () => {
+    const box = document.getElementById("pulseAlertBox");
+    if (box) box.classList.toggle("hidden");
+  });
+}
+
+// Hook render, paint, drawApps, drawLog to automatically update pulse
+const origPaint = window.paint;
+window.paint = function() {
+  if (typeof origPaint === "function") origPaint();
+  updateCampaignPulse();
+};
+
+const origDrawApps = window.drawApps;
+window.drawApps = function() {
+  if (typeof origDrawApps === "function") origDrawApps();
+  updateCampaignPulse();
+};
+
+const origDrawLog = window.drawLog;
+window.drawLog = function() {
+  if (typeof origDrawLog === "function") origDrawLog();
+  updateCampaignPulse();
+};
+
+// Initial update
+updateCampaignPulse();
 </script>
 
 </body>
