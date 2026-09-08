@@ -307,18 +307,35 @@ def build_enhanced_html(source_html: str) -> str:
 /* =====================================================================
    CLOUD SYNC & MOBILE PAIRING MANAGER
    ===================================================================== */
+const DEFAULT_FIREBASE_CONFIG = {
+  apiKey: "AIzaSyCP4dS9tG9Weklw4Yq2s7EJW2NyAoJgwxQ",
+  authDomain: "it-tracker-md.firebaseapp.com",
+  projectId: "it-tracker-md",
+  storageBucket: "it-tracker-md.firebasestorage.app",
+  messagingSenderId: "402091333238",
+  appId: "1:402091333238:web:bd788de1d0c092d23ef157",
+  measurementId: "G-0TD84QG4SG"
+};
+
 const SYNC_CONFIG_KEY = "it-sec-sync.config.v1";
 let syncConfig = {
   syncKey: "",
-  firebaseConfig: null,
+  firebaseConfig: DEFAULT_FIREBASE_CONFIG,
   lastRemoteSync: 0
 };
 
 // Load sync config
 try {
   const savedCfg = localStorage.getItem(SYNC_CONFIG_KEY);
-  if (savedCfg) syncConfig = Object.assign(syncConfig, JSON.parse(savedCfg));
-} catch(e) {}
+  if (savedCfg) {
+    syncConfig = Object.assign(syncConfig, JSON.parse(savedCfg));
+  }
+  if (!syncConfig.firebaseConfig) {
+    syncConfig.firebaseConfig = DEFAULT_FIREBASE_CONFIG;
+  }
+} catch(e) {
+  syncConfig.firebaseConfig = DEFAULT_FIREBASE_CONFIG;
+}
 
 // Check URL query parameters for ?sync=... to enable instant 1-tap phone pairing!
 const urlParams = new URLSearchParams(window.location.search);
