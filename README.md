@@ -26,6 +26,8 @@ Studying for technical certifications while managing job applications usually cr
 
 ### 1. Daily Study Cockpit
 * **Dual-Mode Media Streaming**: Instant local RFC 7233 byte-range streaming for downloaded 1080p CCNA lectures, with seamless automatic fallback to official YouTube streams when away from your primary desktop.
+* **Multi-Part Lesson Selector**: Days with multiple resources (Lecture, Lab Walkthrough, Extra Flashcards) feature clean pill navigation to switch lessons instantly.
+* **Direct YouTube Mobile Hub**: Clean 1-tap launcher to bypass embedded mobile YouTube playback restrictions and open directly in the YouTube app.
 * **Floating Picture-in-Picture (PiP)**: Keep video lectures visible on top while practicing configurations in Cisco Packet Tracer or a Linux shell.
 * **Built-in Spaced Repetition (2,157 Cards)**: Comprehensive Anki decks following the SuperMemo SM-2 algorithm embedded directly into the browser—no third-party software needed.
 * **Interactive Subnetting Gym**: Rapid-fire IPv4 network, broadcast, CIDR, and host calculation generator with real-time feedback and streak tracking.
@@ -47,6 +49,10 @@ Studying for technical certifications while managing job applications usually cr
 * **Firestore Cloud Vault**: Synchronizes automatically to Firebase Firestore with built-in revision timestamps to prevent cross-device clobbering.
 * **Automatic Reconnection Flush**: Progress made while offline is safely queued and automatically uploaded the moment network connectivity resumes.
 * **Instant Mobile Pairing**: Open **More → Cloud Sync & Mobile Pairing** to pair any phone via QR code or 1-tap direct link without entering passwords.
+* **Glassmorphic Passcode Gate (PIN 7821)**: Protects your study cockpit, notes, and metrics across shared or mobile devices with optional 30-day device memory.
+
+### 5. Mobile & Responsive Layout
+* **Adaptive Full-Width Viewport**: Edge-to-edge touch layout, horizontal swipeable navigation for command tabs and lesson pills, and stacked lab cards formatted for thumb-friendly mobile study sessions.
 
 ---
 
