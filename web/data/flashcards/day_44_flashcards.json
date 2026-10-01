@@ -1,0 +1,97 @@
+[
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_001",
+    "front": "Private IPv4 addresses are defined in RFC [...].",
+    "back": "1918"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_002",
+    "front": "What is the class A range of private IPv4 addresses?",
+    "back": "10.0.0.0/8"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_003",
+    "front": "What is the class B range of private IPv4 addresses?",
+    "back": "172.16.0.0/12"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_004",
+    "front": "What is the class C range of private IPv4 addresses?",
+    "back": "192.168.0.0/16"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_005",
+    "front": "Can private IPv4 addresses be used over the Internet?",
+    "back": "No"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_006",
+    "front": "What does NAT stand for?",
+    "back": "Network Address Translation"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_007",
+    "front": "[...] NAT involves statically configuring one-to-one IP address mappings.",
+    "back": "Static"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_008",
+    "front": "Static Source NAT = [...] address is mapped to [...] address.",
+    "back": "Inside Local  /  Inside Global"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_009",
+    "front": "Cisco NAT terminology:\n[...] = The IP address of the inside host from the perspective of the inside network.",
+    "back": "Inside Local"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_010",
+    "front": "Cisco NAT terminology:\n[...] = The IP address of the inside host from the perspective of the outside network.",
+    "back": "Inside Global"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_011",
+    "front": "Cisco NAT terminology:\n[...] = The IP address of the outside host from the perspective of the inside network.",
+    "back": "Outside Local"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_012",
+    "front": "Cisco NAT terminology:\n[...] = The IP address of the outside host from the perspective of the outside network.",
+    "back": "Outside Global"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_013",
+    "front": "Configure the NAT inside interface:\nR1(config-if)# [...]",
+    "back": "ip nat inside"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_014",
+    "front": "Configure the NAT outside interface:\nR1(config-if)# [...]",
+    "back": "ip nat outside"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_015",
+    "front": "Configure a static source NAT mapping:\nR1(config)# [...]",
+    "back": "ip nat inside source static inside-local-ip inside-global-ip"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_016",
+    "front": "When only source NAT is used, in the output of show ip nat translations you can expect the [...] and [...] addresses to be the same.",
+    "back": "outside local  /  outside global"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_017",
+    "front": "Show the NAT translation table:\nR1# [...]",
+    "back": "show ip nat translations"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_018",
+    "front": "Show the NAT statistics:\nR1# [...]",
+    "back": "show ip nat statistics"
+  },
+  {
+    "id": "Day 44 Flashcards - NAT (Part 1)_019",
+    "front": "Clear all dynamic NAT translation entries:\nR1# [...]",
+    "back": "clear ip nat translation *"
+  }
+]

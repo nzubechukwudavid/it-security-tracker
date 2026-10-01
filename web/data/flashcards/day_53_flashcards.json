@@ -1,0 +1,187 @@
+[
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_001",
+    "front": "What leased line standard provides 1.544 Mbps of bandwidth?",
+    "back": "T1"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_002",
+    "front": "What leased line standard provides 6.312 Mbps of bandwidth?",
+    "back": "T2"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_003",
+    "front": "What leased line standard provides 44.736 Mbps of bandwidth?",
+    "back": "T3"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_004",
+    "front": "What leased line standard provides 2.048 Mbps of bandwidth?",
+    "back": "E1"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_005",
+    "front": "What leased line standard provides 8.448 Mbps of bandwidth?",
+    "back": "E2"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_006",
+    "front": "What leased line standard provides 34.368 Mbps of bandwidth?",
+    "back": "E3"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_007",
+    "front": "What does MPLS stand for?",
+    "back": "Multi Protocol Label Switching"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_008",
+    "front": "In MPLS, what does CE router stand for?",
+    "back": "Customer Edge"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_009",
+    "front": "In MPLS, what does PE router stand for?",
+    "back": "Provider Edge"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_010",
+    "front": "In MPLS, what does P router stand for?",
+    "back": "Provider (Core)"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_011",
+    "front": "In [...] MPLS VPNs, CE routers and PE routers can form routing protocol peerings.",
+    "back": "Layer 3"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_012",
+    "front": "In [...] MPLS VPNs, the entire service provider network is transparent to the customer.",
+    "back": "Layer 2"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_013",
+    "front": "In [...] MPLS VPNs, CE routers form routing protocol peerings with each other.",
+    "back": "Layer 2"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_014",
+    "front": "What does DSL stand for?",
+    "back": "Digital Subscriber Line"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_015",
+    "front": "[...] provides Internet connectivity via phone lines.",
+    "back": "DSL"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_016",
+    "front": "[...] provides Internet connectivity via TV lines.",
+    "back": "Cable (CATV) Internet"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_017",
+    "front": "What does modem stand for?",
+    "back": "modulator-demodulator"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_018",
+    "front": "A DSL [...] is required to convert data into a format suitable to be sent over the phone lines.",
+    "back": "modem"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_019",
+    "front": "A cable [...] is required to convert data into a format suitable to be sent over the TV lines.",
+    "back": "modem"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_020",
+    "front": "Internet connectivity:\n1 connection to 1 ISP = [...]",
+    "back": "Single Homed"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_021",
+    "front": "Internet connectivity:\n2 connections to 1 ISP = [...]",
+    "back": "Dual Homed"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_022",
+    "front": "Internet connectivity:\n1 connection to each of 2 ISPs = [...]",
+    "back": "Multihomed"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_023",
+    "front": "Internet connectivity:\n2 connections to each of 2 ISPs = [...]",
+    "back": "Dual Multihomed"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_024",
+    "front": "Site-to-site VPNs typically use [protocol].",
+    "back": "IPsec"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_025",
+    "front": "Remote-access VPNs typically use [protocol].",
+    "back": "TLS"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_026",
+    "front": "[...] VPNs typically use IPsec.",
+    "back": "Site-to-site"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_027",
+    "front": "[...] VPNs typically use TLS.",
+    "back": "Remote-access"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_028",
+    "front": "[...] VPNs are used to permanently connect two sites over the Internet.",
+    "back": "Site-to-site"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_029",
+    "front": "[...] VPNs are used to provide on-demand access to the company network for end devices.",
+    "back": "Remote-access"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_030",
+    "front": "What does GRE stand for?",
+    "back": "Generic Routing Encapsulation"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_031",
+    "front": "What does DMVPN stand for?",
+    "back": "Dynamic Multipoint VPN"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_032",
+    "front": "[...] is a Cisco-developed solution that allows routers to dynamically create a full mesh of IPsec tunnels without having to manually configure every single tunnel.",
+    "back": "DMVPN"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_033",
+    "front": "[...] creates tunnels like IPsec, but does not encrypt the original packet.",
+    "back": "GRE"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_034",
+    "front": "Does IPsec support broadcast and multicast traffic?",
+    "back": "No"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_035",
+    "front": "Does GRE support broadcast and multicast traffic?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_036",
+    "front": "What does TLS stand for?",
+    "back": "Transport Layer Security"
+  },
+  {
+    "id": "Day 53 Flashcards - WAN Architectures_037",
+    "front": "What does SSL stand for?",
+    "back": "Secure Sockets Layer"
+  }
+]

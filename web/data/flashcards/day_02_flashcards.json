@@ -1,0 +1,287 @@
+[
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_001",
+    "front": "What is the name of the connector on the end of an Ethernet UTP cable?",
+    "back": "RJ45"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_002",
+    "front": "How many pins are in an RJ45 connector?",
+    "back": "8"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_003",
+    "front": "How many bits are in 1 byte?",
+    "back": "8"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_004",
+    "front": "Network speeds are measured in [...] per second.",
+    "back": "bits"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_005",
+    "front": "How many bits are in 1 kilobit?",
+    "back": "1,000 (one thousand)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_006",
+    "front": "How many bits are in 1 megabit?",
+    "back": "1,000,000 (1 million)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_007",
+    "front": "How many bits are in 1 gigabit?",
+    "back": "1,000,000,000 (1 billion)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_008",
+    "front": "How many bits are in 1 terabit?",
+    "back": "1,000,000,000,000 (1 trillion)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_009",
+    "front": "Ethernet was originally defined in the IEEE [...] standard in 1983.",
+    "back": "802.3"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_010",
+    "front": "What is the maximum length of an Ethernet UTP cable?",
+    "back": "100 meters"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_011",
+    "front": "What is the speed of an 'Ethernet' connection?",
+    "back": "10 Mbps"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_012",
+    "front": "What is the speed of a 'FastEthernet' connection?",
+    "back": "100 Mbps"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_013",
+    "front": "What is the speed of a 'Gigabit Ethernet' connection?",
+    "back": "1 Gbps"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_014",
+    "front": "What is the speed of a '10 Gig Ethernet' connection?",
+    "back": "10 Gbps"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_015",
+    "front": "IEEE standard [...] = 10 Mbps Ethernet (10BASE-T)",
+    "back": "802.3i"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_016",
+    "front": "IEEE standard [...] = 100 Mbps Ethernet (100BASE-T)",
+    "back": "802.3u"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_017",
+    "front": "IEEE standard [...] = 1 Gbps Ethernet (1000BASE-T)",
+    "back": "802.3ab"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_018",
+    "front": "IEEE standard [...] = 10 Gbps Ethernet (10GBASE-T)",
+    "back": "802.3an"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_019",
+    "front": "What does UTP stand for?",
+    "back": "Unshielded Twisted Pair"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_020",
+    "front": "Why are the wire pairs in a UTP cable twisted together?",
+    "back": "It protects against EMI (Electromagnetic Interference)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_021",
+    "front": "How many pairs of wires are used in a 10BASE-T cable?",
+    "back": "2 (=4 wires)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_022",
+    "front": "How many pairs of wires are used in a 100BASE-T cable?",
+    "back": "2 (=4 wires)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_023",
+    "front": "How many pairs of wires are used in a 1000BASE-T cable?",
+    "back": "4 (=8 wires)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_024",
+    "front": "How many pairs of wires are used in a 10GBASE-T cable?",
+    "back": "4 (=8 wires)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_025",
+    "front": "A [...] connection allows both devices to send and receive data at the same time.",
+    "back": "full-duplex"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_026",
+    "front": "In a FastEthernet connection, a router transmits data on which pins [...]",
+    "back": "1 and 2"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_027",
+    "front": "In a FastEthernet connection, a router receives data on which pins [...]",
+    "back": "3 and 6"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_028",
+    "front": "In a FastEthernet connection, a firewall transmits data on which pins [...]",
+    "back": "1 and 2"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_029",
+    "front": "In a FastEthernet connection, a firewall receives data on which pins [...]",
+    "back": "3 and 6"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_030",
+    "front": "In a FastEthernet connection, a PC transmits data on which pins [...]",
+    "back": "1 and 2"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_031",
+    "front": "In a FastEthernet connection, a PC receives data on which pins [...]",
+    "back": "3 and 6"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_032",
+    "front": "In a FastEthernet connection, a switch transmits data on which pins [...]",
+    "back": "3 and 6"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_033",
+    "front": "In a FastEthernet connection, a switch receives data on which pins [...]",
+    "back": "1 and 2"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_034",
+    "front": "If Auto MDI-X is disabled, what kind of UTP cable should be used to connect a router and a switch?",
+    "back": "straight-through cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_035",
+    "front": "If Auto MDI-X is disabled, what kind of UTP cable should be used to connect a PC and a switch?",
+    "back": "straight-through cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_036",
+    "front": "If Auto MDI-X is disabled, what kind of UTP cable should be used to connect two routers together?",
+    "back": "crossover cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_037",
+    "front": "If Auto MDI-X is disabled, what kind of UTP cable should be used to connect two switches together?",
+    "back": "crossover cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_038",
+    "front": "What kind of cable connects a pin pair on one end of a UTP cable to the same pair on the other end?",
+    "back": "straight-through cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_039",
+    "front": "What kind of cable connects a pin pair on one end of a UTP cable to the opposite pair on the other end?",
+    "back": "crossover cable"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_040",
+    "front": "What is the name of the feature that allows a device to automatically adjust which RJ45 pin pairs it uses to transmit and receive data?",
+    "back": "Auto MDI-X"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_041",
+    "front": "Which two pin pairs are used in a 10BASE-T or 100BASE-T connection?",
+    "back": "Pair 1-2, Pair3-6"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_042",
+    "front": "Which four pin pairs are used in a 1000BASE-T or 10GBASE-T connection?",
+    "back": "Pair 1-2, Pair 3-6, Pair 4-5, pair 7-8"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_043",
+    "front": "Fiber-Optic cables are connected to [...] transceivers in a router or switch.",
+    "back": "SFP (Small Form-Factor Pluggable)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_044",
+    "front": "What are the two main kinds of fiber-optic cable?",
+    "back": "Single-mode and multimode"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_045",
+    "front": "Multimode Fiber cables have a [...] fiberglass core than single-mode fiber cables.",
+    "back": "wider"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_046",
+    "front": "[...] fiber cables allow multiple angles (modes) of light waves to enter the fiberglass core.",
+    "back": "Multimode"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_047",
+    "front": "Which allows longer cables, single-mode or multimode fiber?",
+    "back": "single-mode"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_048",
+    "front": "Which is cheaper, single-mode or multimode fiber?",
+    "back": "multimode"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_049",
+    "front": "In [...] fiber cables, light travels straight through the fiberglass core at a single angle.",
+    "back": "single-mode"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_050",
+    "front": "10GBASE-SR, 10GBASE-LR, and 10GBASE-ER were defined in the IEEE [...] standard.",
+    "back": "802.3ae"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_051",
+    "front": "1000BASE-LX was defined in the IEEE [...] standard.",
+    "back": "802.3z"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_052",
+    "front": "1000BASE-LX maximum cable length:",
+    "back": "550 meters (multimode)\n5 kilometers (single-mode)"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_053",
+    "front": "10GBASE-SR maximum cable length:",
+    "back": "400 meters"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_054",
+    "front": "10GBASE-LR maximum cable length:",
+    "back": "10 kilometers"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_055",
+    "front": "10GBASE-ER maximum cable length:",
+    "back": "30 kilometers"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_056",
+    "front": "[...] cables emit a faint signal outside of the cable, which can be detected and copied.",
+    "back": "UTP"
+  },
+  {
+    "id": "Day 02 Flashcards - Interfaces and Cables_057",
+    "front": "[...] cables are vulnerable to EMI (electromagnetic interference).",
+    "back": "UTP"
+  }
+]

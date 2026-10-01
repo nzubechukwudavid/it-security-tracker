@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT → Security: a 16-week working track</title>
+<meta name="description" content="A self-contained, offline-capable study and job-hunt tracker for moving from a CS degree into IT support, networking and security operations.">
+<style>
+/* ---------------------------------------------------------------
+   Palette derives from packet-capture and terminal colouring:
+   deep slate ink, signal blue for links, ochre for in-flight work,
+   green for completed. No external requests: fonts are system stacks
+   so the page works with the network off.
+----------------------------------------------------------------*/
+:root{
+  --bg:#E9EEEC; --surface:#FBFCFB; --surface-2:#F1F5F3;
+  --ink:#0F2027; --ink-2:#3B545C; --muted:#6C8188;
+  --rule:#C6D3D0; --rule-soft:#DCE5E2;
+  --signal:#155F7C; --signal-soft:#DCEAF0;
+  --flag:#8F5A00; --ok:#256B4A; --danger:#9C362A;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono","Segoe UI Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --shell:1180px;
+}
+html[data-theme="dark"]{
+  --bg:#0B161A; --surface:#112127; --surface-2:#0F1D22;
+  --ink:#DCE8E6; --ink-2:#AFC5C6; --muted:#7C9498;
+  --rule:#21363D; --rule-soft:#1A2C32;
+  --signal:#63B7D6; --signal-soft:#14313D;
+  --flag:#D9A03F; --ok:#5FB98B; --danger:#DB7263;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.6;
+}
+a{color:var(--signal)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible,summary:focus-visible{
+  outline:2px solid var(--signal); outline-offset:2px; border-radius:2px;
+}
+h1,h2,h3,h4{font-family:var(--mono); font-weight:600; letter-spacing:-.015em; margin:0}
+p{margin:0 0 .8em}
+p:last-child{margin-bottom:0}
+
+/* ---------- masthead ---------- */
+.mast{
+  position:sticky; top:0; z-index:40; background:var(--surface);
+  border-bottom:1px solid var(--rule);
+}
+.mast-in{max-width:var(--shell); margin:0 auto; padding:14px 20px 10px}
+.mast-top{display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap}
+.brand h1{font-size:19px; line-height:1.25}
+.brand .sub{font-size:13px; color:var(--muted); margin-top:2px}
+.mast-tools{margin-left:auto; display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+
+button, .btn{
+  font:inherit; font-size:13px; font-family:var(--sans);
+  background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--rule); border-radius:3px;
+  padding:5px 10px; cursor:pointer;
+}
+button:hover{border-color:var(--signal); color:var(--signal)}
+button.danger:hover{border-color:var(--danger); color:var(--danger)}
+
+#find{
+  font:inherit; font-size:13px; width:190px; padding:5px 9px;
+  background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--rule); border-radius:3px;
+}
+#find::placeholder{color:var(--muted)}
+
+/* ---------- progress strip: one segment per block ---------- */
+.meter{margin-top:12px}
+.meter-row{display:flex; gap:3px; height:12px}
+.seg{
+  flex:1 1 0; background:var(--rule-soft); border-radius:1px;
+  position:relative; overflow:hidden; min-width:4px;
+}
+.seg i{position:absolute; inset:0 auto 0 0; background:var(--flag); display:block; width:0}
+.seg.full i{background:var(--ok)}
+.meter-legend{
+  display:flex; justify-content:space-between; gap:12px;
+  font-size:12px; color:var(--muted); margin-top:6px; font-family:var(--mono);
+}
+.meter-legend b{color:var(--ink); font-weight:600}
+
+/* ---------- shell ---------- */
+.shell{max-width:var(--shell); margin:0 auto; padding:26px 20px 90px; display:grid;
+  grid-template-columns:214px minmax(0,1fr); gap:38px; align-items:start}
+nav.rail{position:sticky; top:118px; font-size:13.5px}
+nav.rail ol{list-style:none; margin:0; padding:0}
+nav.rail li{margin:0 0 1px}
+nav.rail a{
+  display:flex; gap:8px; padding:4px 6px; border-radius:3px;
+  text-decoration:none; color:var(--ink-2); border-left:2px solid transparent;
+}
+nav.rail a:hover{background:var(--surface-2); color:var(--signal)}
+nav.rail a .tick{font-family:var(--mono); font-size:11px; color:var(--muted); min-width:34px}
+nav.rail a.done .tick{color:var(--ok)}
+nav.rail .group{
+  font-family:var(--mono); font-size:11px; color:var(--muted);
+  margin:16px 0 5px; padding-left:8px;
+}
+nav.rail .group:first-child{margin-top:0}
+
+/* ---------- intro ---------- */
+.intro{max-width:70ch; margin-bottom:34px}
+.intro h2{font-size:24px; line-height:1.25; margin-bottom:12px}
+.intro p{color:var(--ink-2)}
+.premise{
+  border-left:3px solid var(--signal); padding:2px 0 2px 16px; margin:18px 0;
+  color:var(--ink);
+}
+.premise strong{font-family:var(--mono); font-weight:600}
+
+/* ---------- phase / block ---------- */
+.phase{margin:0 0 42px; scroll-margin-top:130px}
+.phase > header{
+  display:flex; gap:12px; align-items:baseline; flex-wrap:wrap;
+  border-bottom:1px solid var(--rule); padding-bottom:8px; margin-bottom:6px;
+}
+.phase > header h2{font-size:19px}
+.phase .window{font-family:var(--mono); font-size:12.5px; color:var(--flag)}
+.phase .count{margin-left:auto; font-family:var(--mono); font-size:12px; color:var(--muted)}
+.phase .aim{color:var(--ink-2); max-width:70ch; margin:10px 0 18px}
+
+.block{
+  background:var(--surface); border:1px solid var(--rule-soft);
+  border-radius:4px; padding:16px 18px; margin:0 0 12px;
+}
+.block > h3{font-size:15px; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap}
+.block > h3 .bcount{margin-left:auto; font-size:11.5px; color:var(--muted); font-weight:400}
+.block .baim{color:var(--ink-2); font-size:14.5px; margin:6px 0 12px; max-width:68ch}
+
+ul.tasks{list-style:none; margin:0 0 4px; padding:0}
+ul.tasks li{display:flex; gap:9px; align-items:flex-start; padding:3px 0; font-size:15px}
+ul.tasks input[type=checkbox]{
+  margin:6px 0 0; width:15px; height:15px; accent-color:var(--ok); flex:none; cursor:pointer;
+}
+ul.tasks label{cursor:pointer; color:var(--ink)}
+ul.tasks li.done label{color:var(--muted); text-decoration:line-through; text-decoration-thickness:1px}
+ul.tasks code{font-family:var(--mono); font-size:.86em; background:var(--surface-2);
+  border:1px solid var(--rule-soft); border-radius:2px; padding:0 4px}
+
+.res{margin-top:12px; border-top:1px dashed var(--rule-soft); padding-top:10px}
+.res h4{font-size:12px; color:var(--muted); font-weight:500; margin-bottom:6px}
+.res ul{list-style:none; margin:0; padding:0}
+.res li{padding:3px 0; font-size:14.5px; display:flex; gap:8px; flex-wrap:wrap; align-items:baseline}
+.res a{text-decoration:none; border-bottom:1px solid var(--signal-soft)}
+.res a:hover{border-bottom-color:var(--signal)}
+.tag{
+  font-family:var(--mono); font-size:10.5px; color:var(--muted);
+  border:1px solid var(--rule); border-radius:2px; padding:0 4px; white-space:nowrap;
+}
+.tag.free{color:var(--ok); border-color:var(--ok)}
+.tag.paid{color:var(--flag); border-color:var(--flag)}
+.res .note{color:var(--muted); font-size:13px; flex-basis:100%; margin-left:0}
+
+/* ---------- tables & tools ---------- */
+table{border-collapse:collapse; width:100%; font-size:14px}
+th,td{text-align:left; padding:6px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top}
+th{font-family:var(--mono); font-size:11.5px; color:var(--muted); font-weight:500}
+td input,td select,textarea{
+  font:inherit; font-size:14px; width:100%; padding:4px 6px;
+  background:var(--surface-2); color:var(--ink);
+  border:1px solid var(--rule-soft); border-radius:3px;
+}
+textarea{min-height:130px; resize:vertical; line-height:1.55}
+td.act{width:34px}
+td.act button{padding:2px 7px; font-size:12px}
+.rowadd{margin-top:10px}
+
+.logitem{border-bottom:1px solid var(--rule-soft); padding:8px 0; display:flex; gap:12px}
+.logitem time{font-family:var(--mono); font-size:12px; color:var(--muted); flex:none; padding-top:2px}
+.logitem p{margin:0; font-size:14.5px; white-space:pre-wrap}
+.logitem button{margin-left:auto; flex:none}
+
+details.qa{border-bottom:1px solid var(--rule-soft); padding:7px 0}
+details.qa summary{cursor:pointer; font-size:15px}
+details.qa summary::marker{color:var(--muted)}
+details.qa div{color:var(--ink-2); font-size:14.5px; padding:7px 0 3px 18px; max-width:70ch}
+
+.hidden{display:none !important}
+.empty{color:var(--muted); font-size:14px; font-style:italic}
+
+footer.page{
+  max-width:var(--shell); margin:0 auto; padding:0 20px 60px;
+  color:var(--muted); font-size:13px; max-width:78ch;
+}
+footer.page p{margin-bottom:.7em}
+
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr; gap:22px; padding-top:20px}
+  nav.rail{position:static; order:2; border-top:1px solid var(--rule); padding-top:16px}
+  main{order:1}
+  #find{width:140px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important; animation:none !important}}
+@media print{
+  .mast-tools,nav.rail,.meter{display:none}
+  body{background:#fff}
+  .block{break-inside:avoid}
+}
+</style>
+
+  <!-- PWA & Mobile Web App Capabilities -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0F2027">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="IT Tracker">
+  <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
+
+  <!-- External Libraries: Firebase Firestore (v10 compat) + QRCode -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="mast-top">
+      <div class="brand">
+        <h1>IT → Security: a 16-week working track</h1>
+        <div class="sub">Networking and systems first, security operations on top, applications running the whole time.</div>
+      </div>
+      <div class="mast-tools">
+        <button id="cloudSyncBtn" type="button" class="btn-cloud" title="Configure Cloud Sync & Pair Phone">
+          <span class="sync-dot" id="syncDot"></span>
+          <span id="syncStatusText">Cloud Sync</span>
+        </button>
+        <input id="find" type="search" placeholder="Filter tasks and links" aria-label="Filter tasks and links">
+        <button id="expandAll" type="button">Expand all</button>
+        <button id="themeBtn" type="button" aria-live="polite">Dark</button>
+        <button id="backupBtn" type="button">Back up</button>
+        <button id="restoreBtn" type="button">Restore</button>
+        <button id="resetBtn" class="danger" type="button">Clear</button>
+        <input id="restoreFile" type="file" accept="application/json,.json" class="hidden">
+      </div>
+    </div>
+    <div class="meter">
+      <div class="meter-row" id="meter" role="img" aria-label="Progress across the track"></div>
+      <div class="meter-legend">
+        <span id="meterText"><b>0</b> of 0 done</span>
+        <span id="meterSaved">Saved in this browser</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="rail" aria-label="Sections"><ol id="rail"></ol></nav>
+
+  <main>
+        <!-- Weekly Campaign Pulse & Follow-Up Engine -->
+    <section class="pulse-card" id="campaignPulse" aria-label="Weekly Campaign Pulse">
+      <div class="pulse-header">
+        <div class="pulse-h-left">
+          <span class="pulse-badge">Live Metric</span>
+          <h3>Weekly Campaign Pulse</h3>
+        </div>
+        <span class="pulse-week" id="pulseWeekLabel">Current Week</span>
+      </div>
+      <div class="pulse-grid">
+        <!-- Metric 1: Applications -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Weekly Applications</span>
+            <span class="pulse-tag" id="pulseTargetTag">0/10 Goal</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseAppCount">0</span>
+            <span class="pulse-max">/ 10 target</span>
+          </div>
+          <div class="pulse-track">
+            <div class="pulse-bar" id="pulseProgressBar" style="width:0%"></div>
+          </div>
+          <div class="pulse-sub" id="pulseAppFeedback">10 more to hit the weekly target of 10.</div>
+          <div class="pulse-act-row">
+            <button type="button" class="btn pulse-btn-add" id="pulseAddAppBtn" title="Quick log one application for today">+1 Applied</button>
+            <button type="button" class="btn pulse-btn-sub" id="pulseSubAppBtn" title="Undo last quick-logged application">-1</button>
+          </div>
+        </div>
+
+        <!-- Metric 2: Follow-up Radar -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Follow-Up Radar</span>
+            <span class="pulse-tag" id="pulseFollowupTag">Clear</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseOverdueCount">0</span>
+            <span class="pulse-max">pending</span>
+          </div>
+          <div class="pulse-sub" id="pulseFollowupSub">No applications awaiting follow-up</div>
+          <button type="button" class="btn pulse-view-btn hidden" id="pulseToggleAlertsBtn">View list</button>
+        </div>
+
+        <!-- Metric 3: Study Streak -->
+        <div class="pulse-metric">
+          <div class="pulse-m-top">
+            <span class="pulse-label">Daily Study Streak</span>
+            <span class="pulse-tag pulse-tag-streak" id="pulseStreakTag">Active</span>
+          </div>
+          <div class="pulse-value">
+            <span class="pulse-bold" id="pulseStreakCount">&#x1F525; 1</span>
+            <span class="pulse-max">days</span>
+          </div>
+          <div class="pulse-sub" id="pulseStreakSub">Study or log daily to build streak</div>
+        </div>
+      </div>
+
+      <!-- Expandable Overdue Applications List -->
+      <div class="pulse-alert-box hidden" id="pulseAlertBox">
+        <h4>Applications awaiting response for 7+ days:</h4>
+        <ul id="pulseAlertItems"></ul>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>What this is, and what it assumes</h2>
+      <p>This is a study plan and job-hunt log for a computer science graduate moving into IT support, networking and eventually security operations. Everything on it is either free or has a free route; the paid items are marked so they can be skipped without breaking the sequence.</p>
+      <div class="premise">
+        <p><strong>The premise.</strong> Security roles are built on top of networking and systems, so the fastest route into security work is to become genuinely employable in IT infrastructure first, then add the security layer while already earning. Applications start in week one, not week sixteen.</p>
+      </div>
+      <p>Sixteen weeks at two to three focused hours a day, not seven days at eight. A schedule you can keep for four months beats one you abandon in ten days. The two running tracks at the bottom — the job campaign and the final-year project — are worked on every week, not saved for the end.</p>
+      <p>Progress is stored in this browser only. Use <em>Back up</em> after each session and keep the JSON file somewhere safe, or the progress disappears when the browser cache is cleared.</p>
+    </section>
+    <div id="plan"></div>
+  </main>
+</div>
+
+<footer class="page">
+  <p><b>About the links.</b> Every link was checked against live search results on 5 September 2026, or is the canonical root of a well-established resource. Sites move; if one 404s, search the resource name rather than assuming it is gone.</p>
+  <p><b>Cost.</b> Items marked <span class="tag free">free</span> need no payment. <span class="tag paid">paid</span> means money is required for the full thing — in most cases a free equivalent sits directly above or below it in the same list.</p>
+  <p><b>Storage.</b> This page saves to browser localStorage. Nothing is uploaded anywhere. If you host it publicly, remember the page is public even though your saved progress is not.</p>
+</footer>
+
+<script>
+/* =====================================================================
+   PLAN DATA
+   kind: course | video | lab | book | doc | tool | site | practice
+   cost: free | paid | freemium
+   ===================================================================== */
+const PLAN = [
+{
+  id:"p0", label:"Week 0", title:"Set the board before you study anything",
+  window:"3–5 days",
+  aim:"Five days of admin that decide how useful the next four months are. Service-year logistics, a working machine, a place to put evidence, and the first applications out the door before you feel ready.",
+  blocks:[
+    {
+      id:"b01", title:"Service year and paperwork", aim:"In Nigeria the service year sets your next twelve months, and most employers ask for the discharge or exemption certificate. Decide the strategy now rather than discovering it in month three.",
+      tasks:[
+        {id:"t1", text:"Confirm your mobilisation batch and call-up status on the NYSC portal."},
+        {id:"t2", text:"Decide the PPA strategy: an IT-capable place of primary assignment beats a comfortable one, because a service year spent in a server room is a year of experience on the CV."},
+        {id:"t3", text:"Write a one-page PPA pitch — who you are, what you can already do, what you would do for them — and send it to at least ten small firms, schools and clinics with IT needs."},
+        {id:"t4", text:"Scan degree certificate, statement of result and any transcripts into one folder you can attach to applications in seconds."}
+      ],
+      res:[
+        {n:"NYSC portal", u:"https://portal.nysc.gov.ng/", k:"site", c:"free", note:"Call-up letter, mobilisation timetable, relocation."},
+        {n:"MyJobMag — NYSC and graduate trainee listings", u:"https://www.myjobmag.com/jobs-by-title/nysc-graduate-trainee", k:"site", c:"free", note:"PPA openings appear here constantly, including IT units."},
+        {n:"MyJobMag — entry-level jobs in Nigeria", u:"https://www.myjobmag.com/cp/entry-level-jobs-nigeria", k:"site", c:"free"}
+      ]
+    },
+    {
+      id:"b02", title:"Machine setup, deliberately light", aim:"An 8 GB laptop is fine for everything in this track if you don't turn it into a virtualisation experiment on day one. Browser labs first, WSL second, virtual machines only when a lab genuinely needs one.",
+      tasks:[
+        {id:"t1", text:"Install WSL2 with Ubuntu. This is your Linux machine for the next two months — no dual boot, no VM."},
+        {id:"t2", text:"Install Wireshark and Cisco Packet Tracer. Nothing else yet."},
+        {id:"t3", text:"Install Git, create a GitHub account if you don't have one, and make a public repo called <code>it-lab-notes</code> with a README."},
+        {id:"t4", text:"Set the rule: every command you run this month gets a line in the notes repo saying what it showed and why anyone would run it."}
+      ],
+      res:[
+        {n:"Install WSL (Microsoft)", u:"https://learn.microsoft.com/en-us/windows/wsl/install", k:"doc", c:"free"},
+        {n:"Wireshark download", u:"https://www.wireshark.org/download.html", k:"tool", c:"free"},
+        {n:"Cisco Packet Tracer via NetAcad", u:"https://www.netacad.com/", k:"tool", c:"free", note:"Free with a Cisco NetAcad account; search the catalogue for Packet Tracer."},
+        {n:"GitHub", u:"https://github.com/", k:"tool", c:"free"}
+      ]
+    },
+    {
+      id:"b03", title:"CV, LinkedIn and the first five applications", aim:"You apply now, at week zero, while unqualified. Rejections are free and the feedback loop is the point. The CV describes what you can do today plus what you are visibly building.",
+      tasks:[
+        {id:"t1", text:"Rewrite the CV under one headline: computer science graduate moving into IT infrastructure and security. Not 'aspiring cybersecurity professional'."},
+        {id:"t2", text:"Describe the final-year project honestly as a benchmarking study, not a working detector. Wording that survives an interview: built and benchmarked a static malware classification pipeline on PE-header features, including cross-dataset generalisation testing."},
+        {id:"t3", text:"Rewrite the LinkedIn headline and About section to match, and turn on 'open to work' for IT support, technical support, NOC and systems support."},
+        {id:"t4", text:"Create saved job alerts on four boards using the role titles in the job campaign section below."},
+        {id:"t5", text:"Send five applications this week. Yes, this week."}
+      ],
+      res:[
+        {n:"Jobberman", u:"https://www.jobberman.com/", k:"site", c:"free"},
+        {n:"MyJobMag", u:"https://www.myjobmag.com/", k:"site", c:"free"},
+        {n:"Indeed Nigeria", u:"https://ng.indeed.com/", k:"site", c:"free"},
+        {n:"LinkedIn Jobs", u:"https://www.linkedin.com/jobs/", k:"site", c:"free", note:"In Lagos a large share of IT support roles are posted here first and filled through referral before they reach a board."}
+      ]
+    }
+  ]
+},
+{
+  id:"p1", label:"Weeks 1–4", title:"Networking, properly",
+  window:"weeks 1–4",
+  aim:"The single highest-return investment in this whole plan. Networking is the substrate under IT support, under the NOC, under the SOC. Get genuinely good at it and every later subject becomes cheaper to learn.",
+  blocks:[
+    {
+      id:"b11", title:"Week 1 — how machines actually talk", aim:"Build the mental model: frames and packets, MAC and IP, the difference between a switch and a router, what a default gateway is for. By Friday you should be able to draw the path of a packet from your laptop to a web server on paper.",
+      tasks:[
+        {id:"t1", text:"Start the TryHackMe Pre Security path and finish the networking modules in it."},
+        {id:"t2", text:"Watch Professor Messer's N10-009 sections on the OSI model, network devices, IP fundamentals and ports."},
+        {id:"t3", text:"Run and document each of: <code>ipconfig /all</code>, <code>arp -a</code>, <code>route print</code>, <code>nslookup</code>, <code>ping</code>, <code>tracert</code>, <code>netstat -ano</code>. For each: what it shows, why a technician runs it, what fault it helps diagnose."},
+        {id:"t4", text:"Do the same on the Linux side: <code>ip a</code>, <code>ip r</code>, <code>ss -tulpn</code>, <code>dig</code>, <code>traceroute</code>."},
+        {id:"t5", text:"Commit the command journal to the notes repo. This is your first piece of public evidence."}
+      ],
+      res:[
+        {n:"TryHackMe — Pre Security path", u:"https://tryhackme.com/path/outline/presecurity", k:"course", c:"free", note:"Browser-based, no setup, designed for zero prior experience. Around 40 hours end to end."},
+        {n:"Professor Messer — CompTIA Network+ N10-009 course index", u:"https://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-training-course/", k:"video", c:"free", note:"87 videos, roughly 13 hours, organised by exam objective. The whole video course is free."},
+        {n:"Cisco NetAcad — Introduction to Cybersecurity", u:"https://www.netacad.com/courses/introduction-to-cybersecurity", k:"course", c:"free", note:"Short survey course with a free Cisco certificate of completion. Good orientation, light on depth."},
+        {n:"TryHackMe — free content overview", u:"https://tryhackme.com/resources/blog/free_path", k:"doc", c:"free"}
+      ]
+    },
+    {
+      id:"b12", title:"Week 2 — subnetting until it is boring", aim:"Subnetting is the one networking skill that gets tested in interviews because it cannot be faked. Target: solve network address, broadcast, first and last host for any /n in under thirty seconds, on paper.",
+      tasks:[
+        {id:"t1", text:"Learn the mechanics: network address, broadcast address, host range, mask, CIDR, private versus public ranges."},
+        {id:"t2", text:"Do twenty randomly generated subnetting problems a day for five days. This is not optional and it is not interesting; do it anyway."},
+        {id:"t3", text:"Explain in writing what happens between typing a URL and the page rendering — ARP, DNS, gateway, NAT, TCP handshake, TLS, HTTP. Commit it."},
+        {id:"t4", text:"Build a three-router, two-switch topology in Packet Tracer and make every host ping every other host."}
+      ],
+      res:[
+        {n:"Subnetting practice generator (Practical Networking)", u:"https://subnetipv4.com/", k:"practice", c:"free", note:"Random problem generator with auto-check. The daily drill lives here."},
+        {n:"subnettingpractice.com", u:"https://subnettingpractice.com/", k:"practice", c:"free", note:"Text and image-based questions, plus a subnet calculator to verify answers."},
+        {n:"subnetting.net", u:"https://www.subnetting.net/", k:"practice", c:"free"},
+        {n:"Jeremy's IT Lab — free full CCNA course", u:"https://www.youtube.com/@JeremysITLab", k:"video", c:"free", note:"Over 100 videos following the CCNA 200-301 objectives, each with a Packet Tracer lab built on screen."},
+        {n:"Jeremy's IT Lab — recommended resources and free labs", u:"https://www.jeremysitlab.com/ccna-resources/", k:"lab", c:"free"},
+        {n:"Community notes for the Jeremy's IT Lab course", u:"https://github.com/psaumur/CCNA_Course_Notes", k:"doc", c:"free", note:"Day-by-day markdown notes. Useful for revision, not a substitute for watching."},
+        {n:"Jeremy's IT Lab on Teachable (ad-free, slides, quizzes)", u:"https://courses.jeremysitlab.com/p/ccna", k:"course", c:"paid", note:"Same content as the free YouTube course, plus PDFs and quizzes."}
+      ]
+    },
+    {
+      id:"b13", title:"Week 3 — routing, switching and the CLI", aim:"Move from knowing what a router does to configuring one. Even at IT-support level, the person who can read a switch config is the person who gets promoted out of the help desk.",
+      tasks:[
+        {id:"t1", text:"VLANs, trunking, and why a switch stops broadcast storms."},
+        {id:"t2", text:"Static routing, then a single-area OSPF lab."},
+        {id:"t3", text:"DHCP and DNS configured by hand, then deliberately broken and diagnosed."},
+        {id:"t4", text:"NAT, port forwarding, and why your laptop's private address never appears on the internet."},
+        {id:"t5", text:"Record one short screen capture of yourself building and testing a topology. It goes in the portfolio later."}
+      ],
+      res:[
+        {n:"Cisco NetAcad course catalogue", u:"https://www.netacad.com/", k:"course", c:"free", note:"Networking Basics and Networking Devices & Initial Configuration are free and self-paced with Packet Tracer labs."},
+        {n:"Cisco Networking Academy overview", u:"https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html", k:"doc", c:"free"},
+        {n:"Professor Messer — Network+ certification hub", u:"https://www.professormesser.com/get-n10-009-network-plus-certified/", k:"doc", c:"free", note:"Free course, live monthly Q&A, weekly pop quizzes."}
+      ]
+    },
+    {
+      id:"b14", title:"Week 4 — consolidate and prove it", aim:"A week without new material. You write, you drill, you produce the first real portfolio artefact.",
+      tasks:[
+        {id:"t1", text:"Write a networking troubleshooting runbook: eight faults, the diagnostic sequence for each, the commands used, what output confirms the cause."},
+        {id:"t2", text:"Publish it as a proper README in the notes repo, with terminal output pasted in."},
+        {id:"t3", text:"Fifty subnetting problems in one sitting, timed."},
+        {id:"t4", text:"Decide whether you are going for Network+ or CCNA later, and write down why. Do not buy anything yet."},
+        {id:"t5", text:"Ten applications sent this month. Count them."}
+      ],
+      res:[]
+    }
+  ]
+},
+{
+  id:"p2", label:"Weeks 5–8", title:"Operating systems: Linux and Windows",
+  window:"weeks 5–8",
+  aim:"Stop being a person who has heard of Linux. Employers hiring support and NOC staff test two things in practice: can you drive a terminal, and can you find out why a Windows machine is misbehaving.",
+  blocks:[
+    {
+      id:"b21", title:"Weeks 5–6 — Linux you can actually drive", aim:"Files, permissions, processes, packages, services, logs, and enough bash to automate something small. Comfort, not mastery.",
+      tasks:[
+        {id:"t1", text:"Navigation and files: <code>pwd ls cd mkdir touch cp mv rm cat less head tail</code>."},
+        {id:"t2", text:"Searching and text: <code>grep find awk sed sort uniq wc</code> and pipes."},
+        {id:"t3", text:"Permissions and ownership: <code>chmod chown</code>, and what 755 actually means bit by bit."},
+        {id:"t4", text:"Processes and services: <code>ps top kill systemctl journalctl</code>."},
+        {id:"t5", text:"Networking from the shell: <code>ip ss curl wget ssh dig</code>."},
+        {id:"t6", text:"Write one bash script that does something you would otherwise do by hand — a backup, a log filter, a health check."},
+        {id:"t7", text:"Clear OverTheWire Bandit levels 0 through 20."}
+      ],
+      res:[
+        {n:"Linux Journey", u:"https://linuxjourney.com/", k:"course", c:"free", note:"Short structured lessons, no account needed. The gentlest sensible start."},
+        {n:"The Linux Command Line — free PDF (William Shotts)", u:"https://linuxcommand.org/tlcl.php", k:"book", c:"free", note:"555 pages, Creative Commons, free download. The reference you keep open in a second window."},
+        {n:"OverTheWire — Bandit wargame", u:"https://overthewire.org/wargames/bandit/", k:"lab", c:"free", note:"Levels solved over SSH. The single best way to make terminal work stick."},
+        {n:"tldr pages", u:"https://tldr.sh/", k:"tool", c:"free", note:"Example-first command help. Install it in WSL on day one."},
+        {n:"Linux Basics for Hackers, 2nd edition", u:"https://nostarch.com/linux-basics-hackers-2nd-edition", k:"book", c:"paid", note:"Optional. Security-flavoured Linux introduction; skip it if money is tight, the free PDF above covers more ground."}
+      ]
+    },
+    {
+      id:"b22", title:"Weeks 7–8 — Windows administration and PowerShell", aim:"You already run Windows, and most Nigerian IT support work is Windows work. Users, groups, permissions, services, the event log, Defender, the firewall, and PowerShell as a first-class tool rather than a curiosity.",
+      tasks:[
+        {id:"t1", text:"Users, groups, NTFS permissions, and what 'run as administrator' changes."},
+        {id:"t2", text:"Processes, services, startup items, scheduled tasks, environment variables."},
+        {id:"t3", text:"Event Viewer: find a failed logon, a service crash and a driver error, and explain each."},
+        {id:"t4", text:"PowerShell equivalents of everything you learned in week 1: <code>Get-NetIPConfiguration Get-Process Get-Service Get-NetTCPConnection Test-NetConnection Get-WinEvent</code>."},
+        {id:"t5", text:"Run Process Explorer and Autoruns from Sysinternals against your own machine and write down what you find."},
+        {id:"t6", text:"Windows Defender and Windows Firewall: create a rule, test that it blocks, remove it."},
+        {id:"t7", text:"Extend the troubleshooting runbook with a Windows half."}
+      ],
+      res:[
+        {n:"PowerShell 101 (Microsoft Learn)", u:"https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction", k:"doc", c:"free", note:"The official beginner course. Work through it end to end rather than dipping."},
+        {n:"Sysinternals suite and documentation", u:"https://learn.microsoft.com/en-us/sysinternals/", k:"tool", c:"free", note:"Process Explorer, Autoruns, Procmon. Free, tiny downloads, used daily by real analysts."},
+        {n:"Windows documentation (Microsoft Learn)", u:"https://learn.microsoft.com/en-us/windows/", k:"doc", c:"free"},
+        {n:"TryHackMe — Cyber Security 101 path", u:"https://tryhackme.com/paths", k:"course", c:"freemium", note:"Goes deeper into Linux, Windows, Active Directory and PowerShell. Some rooms are subscriber-only."}
+      ]
+    }
+  ]
+},
+{
+  id:"p3", label:"Weeks 9–12", title:"Packets, security fundamentals, frameworks",
+  window:"weeks 9–12",
+  aim:"Where the networking and systems work turns into security work. This is also where your final-year project stops looking like a machine learning exercise and starts looking like relevant background.",
+  blocks:[
+    {
+      id:"b31", title:"Weeks 9–10 — Wireshark and traffic analysis", aim:"Open a capture and say what happened. Not 'I know Wireshark exists' — actually identify a DNS lookup, a handshake, a redirect and a piece of beaconing.",
+      tasks:[
+        {id:"t1", text:"Capture your own traffic while loading a website; find the DNS query, the SYN, SYN-ACK, ACK, and the TLS client hello."},
+        {id:"t2", text:"Learn display filters properly: <code>http.request</code>, <code>dns</code>, <code>tcp.flags.syn==1</code>, <code>ip.addr==</code>, and how to combine them."},
+        {id:"t3", text:"Follow a TCP stream and an HTTP stream, and export an object from a capture."},
+        {id:"t4", text:"Work through five Wireshark sample captures and write one paragraph on each."},
+        {id:"t5", text:"Then, and only in an isolated environment, do two malware traffic exercises and write up the indicators you found."}
+      ],
+      res:[
+        {n:"Wireshark documentation and User's Guide", u:"https://www.wireshark.org/docs/", k:"doc", c:"free"},
+        {n:"Wireshark wiki — sample captures", u:"https://wiki.wireshark.org/samplecaptures", k:"lab", c:"free", note:"Clean protocol examples: ARP, DHCP, DNS, TCP, ICMP, wireless. Start here."},
+        {n:"Wireshark tutorial and filter cheat sheet (HackerTarget)", u:"https://hackertarget.com/wireshark-tutorial-and-cheat-sheet/", k:"doc", c:"free"},
+        {n:"Netresec — index of public PCAP repositories", u:"https://www.netresec.com/?page=PcapFiles", k:"lab", c:"free", note:"Includes CTF and competition captures. Some archives contain real malware; read the warnings."},
+        {n:"Malware-Traffic-Analysis.net — training exercises", u:"https://www.malware-traffic-analysis.net/training-exercises.html", k:"lab", c:"free", note:"Real infection captures with questions and answers. Only open these in a disposable VM with networking off."},
+        {n:"Practical Packet Analysis, 3rd edition — capture files", u:"https://nostarch.com/download/ppa-capture-files.zip", k:"lab", c:"free", note:"The book's example captures are a free download even if you don't buy the book."},
+        {n:"Practical Packet Analysis, 3rd edition (Chris Sanders)", u:"https://nostarch.com/packetanalysis3", k:"book", c:"paid", note:"The best single book on using Wireshark for real troubleshooting. Worth it later, not now."}
+      ]
+    },
+    {
+      id:"b32", title:"Weeks 11–12 — security fundamentals and the shared vocabulary", aim:"The concepts every security interview assumes, plus the two frameworks whose names appear in almost every job description.",
+      tasks:[
+        {id:"t1", text:"CIA triad, authentication versus authorisation, least privilege, defence in depth."},
+        {id:"t2", text:"Hashing versus encryption versus encoding — and why confusing them is an instant interview fail."},
+        {id:"t3", text:"Vulnerability, exploit, payload, threat, risk. Define each in one sentence without hedging."},
+        {id:"t4", text:"Malware families, phishing, credential stuffing, brute force, lateral movement."},
+        {id:"t5", text:"Read the MITRE ATT&CK enterprise matrix and map three techniques you have already seen in a capture or a log."},
+        {id:"t6", text:"Read the NIST Cybersecurity Framework 2.0 functions and be able to name all six."},
+        {id:"t7", text:"Work the first three PortSwigger Academy topics — SQL injection, XSS, authentication — so you understand what web attacks look like from the attacker's side."}
+      ],
+      res:[
+        {n:"MITRE ATT&CK", u:"https://attack.mitre.org/", k:"doc", c:"free", note:"The shared vocabulary. Every technique has an ID like T1566; analysts write those IDs in reports."},
+        {n:"CISA — best practices for ATT&CK mapping", u:"https://www.cisa.gov/news-events/news/best-practices-mitre-attckr-mapping", k:"doc", c:"free"},
+        {n:"NIST Cybersecurity Framework", u:"https://www.nist.gov/cyberframework", k:"doc", c:"free", note:"Version 2.0 added Govern to the original five functions."},
+        {n:"PortSwigger Web Security Academy", u:"https://portswigger.net/web-security", k:"lab", c:"free", note:"Free, interactive, with progress tracking. Widely considered better than most paid web security courses."},
+        {n:"PortSwigger — structured learning paths", u:"https://portswigger.net/web-security/learning-paths", k:"course", c:"free"},
+        {n:"Google Cybersecurity Professional Certificate", u:"https://www.coursera.org/professional-certificates/google-cybersecurity", k:"course", c:"freemium", note:"Audit free, or apply for Coursera financial aid for the full certificate at no cost. Around 170 hours. A credential, not a substitute for the hands-on work above."}
+      ]
+    }
+  ]
+},
+{
+  id:"p4", label:"Weeks 13–16", title:"Security operations: logs, SIEM, detection",
+  window:"weeks 13–16",
+  aim:"The actual day job of a junior analyst: an alert arrives, you decide whether it matters, you write down why. Everything before this was preparation for being able to answer that question.",
+  blocks:[
+    {
+      id:"b41", title:"Weeks 13–14 — logs and a SIEM", aim:"Ingest real data, query it, build a detection, explain a result. On 8 GB of RAM, run one Splunk instance at a time and close everything else.",
+      tasks:[
+        {id:"t1", text:"Install Splunk Enterprise (free tier) and ingest Windows event logs from your own machine."},
+        {id:"t2", text:"Learn enough SPL to filter, count, group and time-chart. Ten queries you wrote yourself, saved."},
+        {id:"t3", text:"Load the Boss of the SOC v3 dataset and work through the guided scenario."},
+        {id:"t4", text:"Build one dashboard and one alert — failed logons by source, for example — and document the logic."},
+        {id:"t5", text:"Take Splunk's free Blue Team Academy introductory courses."}
+      ],
+      res:[
+        {n:"Splunk — free self-paced training courses", u:"https://www.splunk.com/en_us/training/free-courses/overview.html", k:"course", c:"free", note:"Includes the Blue Team Academy introduction to SOC work and the analyst role."},
+        {n:"Splunk Boss of the SOC", u:"https://bots.splunk.com/", k:"lab", c:"free"},
+        {n:"BOTS v3 dataset on GitHub", u:"https://github.com/splunk/botsv3", k:"lab", c:"free", note:"Open-licensed, pre-indexed, runs on the free Splunk Enterprise trial. Large download — plan your data."}
+      ]
+    },
+    {
+      id:"b42", title:"Weeks 15–16 — alert triage and incident write-ups", aim:"Practise the loop: alert, investigate, decide, document. The written investigation is the deliverable — that is literally what the job produces.",
+      tasks:[
+        {id:"t1", text:"Work the LetsDefend free tier: take alerts from the queue, investigate, close or escalate with reasons."},
+        {id:"t2", text:"Complete three CyberDefenders community challenges and publish your methodology for each."},
+        {id:"t3", text:"Write two full incident reports: summary, timeline, evidence, indicators, impact, recommendation. One page each, no padding."},
+        {id:"t4", text:"Map every finding to an ATT&CK technique ID."},
+        {id:"t5", text:"Ask someone technical to read one report and tell you where it is unclear."}
+      ],
+      res:[
+        {n:"LetsDefend", u:"https://letsdefend.io/", k:"lab", c:"freemium", note:"Simulated SOC with a real alert queue and SIEM-like interface. The free tier is enough to learn the workflow."},
+        {n:"CyberDefenders — blue team labs", u:"https://cyberdefenders.org/blue-team-labs/", k:"lab", c:"freemium", note:"DFIR and threat-hunting challenges with real forensic artefacts. Generous free tier."},
+        {n:"TryHackMe — SOC Level 1 path", u:"https://tryhackme.com/paths", k:"course", c:"freemium", note:"Structured guided rooms. Good scaffolding if LetsDefend feels like being thrown in."}
+      ]
+    }
+  ]
+},
+{
+  id:"px", label:"Running", title:"Track A — the job campaign",
+  window:"every week, from week 0",
+  aim:"This runs in parallel from day one. The job hunt is not something that starts after the learning; it is one of the things being learned. Ten applications a week, tracked, with the reasons for rejection recorded where you get them.",
+  blocks:[
+    {
+      id:"bA1", title:"Search these titles, not just 'cybersecurity'", aim:"Breadth matters more than precision at entry level, and the infrastructure roles are where the doors actually open.",
+      tasks:[
+        {id:"t1", text:"Primary: IT Support, IT Support Officer, Technical Support, IT Technician, Help Desk, Desktop Support, Systems Support."},
+        {id:"t2", text:"Networking: Network Support, Network Technician, NOC Technician, Junior Network Administrator."},
+        {id:"t3", text:"Trainee: IT Graduate Trainee, Junior Systems Administrator, IT Intern."},
+        {id:"t4", text:"Security, in parallel: SOC Analyst, SOC Trainee, Junior Security Analyst, Cybersecurity Graduate Trainee."},
+        {id:"t5", text:"Apply to roles asking for two years' experience anyway. 'Entry level, two years required' is a wish list, not a filter."}
+      ],
+      res:[]
+    },
+    {
+      id:"bA2", title:"Referral beats applications", aim:"In Lagos a large share of these roles are filled before they are posted. Cold applications are the slow lane; you run both.",
+      tasks:[
+        {id:"t1", text:"List ten people who already know you — lecturers, seniors, church, family friends — and tell each of them specifically what you are looking for. Not 'any job'."},
+        {id:"t2", text:"Join two Nigerian IT or security communities on WhatsApp, Telegram or Slack and be visibly useful in them."},
+        {id:"t3", text:"Post one thing you built or learned publicly every fortnight. Short, specific, no hashtag padding."},
+        {id:"t4", text:"After every interview, write down the questions you could not answer and turn them into the next week's study list."}
+      ],
+      res:[]
+    },
+    {
+      id:"bA3", title:"Application log", aim:"Tracked properly, an application log tells you which version of your CV works. Untracked, you just feel bad.",
+      tasks:[], res:[], widget:"apps"
+    }
+  ]
+},
+{
+  id:"py", label:"Running", title:"Track B — own your final-year project",
+  window:"2–3 hours a week",
+  aim:"The malware classification project is the single most security-relevant thing on the CV, and the most dangerous if you cannot explain it. If parts of it were AI-generated, do not lie and do not bin it: learn it until it is genuinely yours.",
+  blocks:[
+    {
+      id:"bB1", title:"Rebuild it by hand", aim:"Reading code you did not write does not survive an interviewer asking why the scaler was fitted only on the training split.",
+      tasks:[
+        {id:"t1", text:"Delete one module and rewrite it from scratch without looking, then diff against the original. Repeat for every module."},
+        {id:"t2", text:"Be able to explain: what a PE file is, what a PE header contains, and why that metadata separates malicious from benign binaries at all."},
+        {id:"t3", text:"Explain the preprocessing: why the scaler was fitted on training data only, why the split was stratified, what leakage would look like."},
+        {id:"t4", text:"Explain the models: what LightGBM does differently from random forest, and why you compared against logistic regression at all."},
+        {id:"t5", text:"Explain the metrics: what F1 balances, why accuracy is a poor headline for detection, what a false positive costs a SOC at 3am."},
+        {id:"t6", text:"Explain the interesting result: within-dataset accuracy near 99% collapsing to the mid-60s across datasets, and what that says about benchmark numbers generally."}
+      ],
+      res:[
+        {n:"MITRE ATT&CK — for mapping the malware behaviour you classified", u:"https://attack.mitre.org/", k:"doc", c:"free"},
+        {n:"Practical Malware Analysis (Sikorski & Honig)", u:"https://nostarch.com/catalog/security", k:"book", c:"paid", note:"The standard text if you later want to go deeper into static and dynamic analysis. Not needed for this track."}
+      ]
+    },
+    {
+      id:"bB2", title:"Split the repository in two", aim:"The archive keeps everything. The portfolio version is the one you send to employers, and it should be clean enough to read in five minutes.",
+      tasks:[
+        {id:"t1", text:"Archive repo: keep the full project — datasets, thesis drafts, supervisor materials, experiment artefacts."},
+        {id:"t2", text:"Portfolio repo: source, a small sample dataset, results, and a README that a stranger can follow. No <code>__pycache__</code>, no Word lock files, no reference PDFs."},
+        {id:"t3", text:"README leads with the honest framing: a benchmarking study of static PE-header classification including cross-dataset generalisation and inference-cost measurement."},
+        {id:"t4", text:"State the dataset limitation openly — that only two of the four are ransomware-versus-goodware and the other two are general malware-versus-benign. Catching your own confound is a strength, not something to bury."},
+        {id:"t5", text:"Add a results table and one chart of the cross-dataset degradation. It is the most interesting number you have."}
+      ],
+      res:[]
+    }
+  ]
+},
+{
+  id:"pz", label:"Decisions", title:"Certifications, portfolio and interviews",
+  window:"month 3 onward",
+  aim:"What to buy, what to build, and what you will be asked. None of this happens in week one.",
+  blocks:[
+    {
+      id:"bC1", title:"The certification decision, deferred to month three", aim:"Certificates do real filtering work at the Nigerian CV screen, so 'never bother' is wrong advice — but so is buying a voucher before you can subnet. Study free, pay late, pay once.",
+      tasks:[
+        {id:"t1", text:"Study Network+ material free from week one. Decide in month three whether to sit it."},
+        {id:"t2", text:"If you want the networking path: CCNA carries more weight with Nigerian employers than Network+, and Jeremy's course covers it free."},
+        {id:"t3", text:"If you want the security path: Security+ after Network+, not instead of it."},
+        {id:"t4", text:"Fund the voucher from a first salary, not from savings before employment."},
+        {id:"t5", text:"Free credentials worth collecting meanwhile: Cisco NetAcad course certificates, TryHackMe path completions, Google Cybersecurity via Coursera financial aid."}
+      ],
+      res:[
+        {n:"Professor Messer — Network+ hub (free video course)", u:"https://www.professormesser.com/get-n10-009-network-plus-certified/", k:"video", c:"free"},
+        {n:"Jeremy's IT Lab — free CCNA course", u:"https://www.youtube.com/@JeremysITLab", k:"video", c:"free"},
+        {n:"Coursera financial aid — Google Cybersecurity Certificate", u:"https://www.coursera.org/professional-certificates/google-cybersecurity", k:"course", c:"freemium", note:"The aid application takes about fifteen minutes and roughly two weeks to approve; approval rates are high."}
+      ]
+    },
+    {
+      id:"bC2", title:"Four portfolio artefacts, not twelve", aim:"Employers skim. Four small, finished, well-documented things beat a graveyard of half-built repos.",
+      tasks:[
+        {id:"t1", text:"Networking and Windows troubleshooting runbook with real command output."},
+        {id:"t2", text:"A Packet Tracer topology with a written design rationale and test results."},
+        {id:"t3", text:"Two traffic-analysis or alert-triage write-ups with ATT&CK mappings."},
+        {id:"t4", text:"The cleaned portfolio version of the final-year project."},
+        {id:"t5", text:"A pinned GitHub profile README that ties the four together in six sentences."}
+      ],
+      res:[]
+    },
+    {
+      id:"bC3", title:"Interview question bank", aim:"Answer each of these out loud, timed, before you need to. Open one, say the answer, then check yourself.",
+      tasks:[], res:[], widget:"qa"
+    },
+    {
+      id:"bC4", title:"Working log", aim:"One line a day. What you did, what broke, what you still cannot explain. This is also where interview answers come from six weeks later.",
+      tasks:[], res:[], widget:"log"
+    }
+  ]
+}
+];
+
+const QA = [
+  ["Walk me through what happens when you type a URL and press enter.",
+   "Browser cache and hosts file, DNS resolution (recursive resolver, root, TLD, authoritative), ARP for the gateway if the destination is off-subnet, TCP three-way handshake, TLS handshake, HTTP request, response, render. Interviewers are listening for whether you know where ARP stops and routing starts."],
+  ["What is the difference between a switch and a router?",
+   "A switch forwards frames within a broadcast domain using MAC addresses; a router forwards packets between networks using IP addresses and maintains a routing table. A switch does not shrink a broadcast domain unless you introduce VLANs."],
+  ["A user says the internet is down. What do you check, in order?",
+   "Scope it first — one machine or everyone. Then link, IP configuration, gateway reachability, DNS resolution, then external reachability by IP versus by name. Naming the order matters more than naming the tools."],
+  ["What does 192.168.10.75/26 give you?",
+   "Network 192.168.10.64, broadcast 192.168.10.127, usable hosts .65 to .126, 62 hosts. If you cannot do this in under thirty seconds you are not ready to be asked it."],
+  ["Difference between hashing and encryption?",
+   "Encryption is reversible with a key and protects confidentiality; hashing is one-way and protects integrity or stores password verifiers. Encoding is neither and protects nothing."],
+  ["What is the difference between authentication and authorisation?",
+   "Authentication establishes who you are; authorisation determines what that identity may do. Most privilege-escalation incidents are authorisation failures, not authentication failures."],
+  ["You see 300 failed logons from one IP followed by one success. What do you do?",
+   "Treat it as a probable successful brute force. Confirm the account, check what the session did after the success, check whether the source is expected, contain the account, escalate. Say what evidence would change your mind."],
+  ["What is a false positive and why does it matter operationally?",
+   "An alert that fires on benign activity. It matters because analyst attention is the scarce resource: a noisy rule trains a team to ignore the category, which is how real detections get closed unread."],
+  ["Tell me about your final-year project.",
+   "Lead with the honest framing — a benchmark of static PE-header classifiers including cross-dataset testing and inference-cost measurement. Then lead with the interesting finding, which is the generalisation collapse, not the headline accuracy."],
+  ["Your model got 99% accuracy. Is it production-ready?",
+   "No. Within-dataset accuracy measures fit to one distribution. Cross-dataset evaluation dropped it to roughly 65%, which means the features were partly capturing dataset artefacts. In production the relevant questions are base rate, false-positive cost and drift over time."],
+  ["Which parts of that code did you write?",
+   "Answer plainly. Say what was generated, say that you rewrote it module by module to understand it, then demonstrate that by explaining a design decision in detail. Interviewers forgive tool use; they do not forgive being unable to explain your own repository."],
+  ["Why do you want IT support rather than a security role?",
+   "Because security operations sit on top of networking and systems, and you would rather be the analyst who understands the infrastructure than the one reading alerts about systems they have never administered. Say it as a plan, not an apology."],
+  ["What is MITRE ATT&CK, in one sentence?",
+   "A public catalogue of observed adversary tactics and techniques with stable IDs, which gives defenders a shared vocabulary for describing what an attacker did."],
+  ["Where do you see the gaps in your own knowledge right now?",
+   "Name two real ones and say what you are doing about each this month. Claiming no gaps at entry level reads as either dishonest or unaware."]
+];
+</script>
+
+<script>
+/* =====================================================================
+   STATE + RENDER
+   ===================================================================== */
+const KEY = "it-sec-track.v1";
+const blank = () => ({done:{}, apps:[], log:[], open:{}, theme:null});
+let S = load();
+
+function load(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if(!raw) return blank();
+    return Object.assign(blank(), JSON.parse(raw));
+  }catch(e){ return blank(); }
+}
+function save(){
+  try{
+    localStorage.setItem(KEY, JSON.stringify(S));
+    flash("Saved");
+  }catch(e){
+    flash("Could not save — storage is full or blocked");
+  }
+}
+let flashTimer;
+function flash(msg){
+  const el = document.getElementById("meterSaved");
+  el.textContent = msg;
+  clearTimeout(flashTimer);
+  flashTimer = setTimeout(()=>{ el.textContent = "Saved in this browser"; }, 1800);
+}
+
+/* ---- theme ---- */
+function applyTheme(){
+  const sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const dark = S.theme === null ? sysDark : S.theme === "dark";
+  document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  document.getElementById("themeBtn").textContent = dark ? "Light" : "Dark";
+}
+document.getElementById("themeBtn").addEventListener("click", ()=>{
+  const nowDark = document.documentElement.getAttribute("data-theme") === "dark";
+  S.theme = nowDark ? "light" : "dark";
+  applyTheme(); save();
+});
+
+/* ---- helpers ---- */
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const keyOf = (p,b,t) => p+"."+b+"."+t;
+function blockTasks(p,b){ return b.tasks.map(t=>keyOf(p.id,b.id,t.id)); }
+function blockDone(p,b){ return blockTasks(p,b).filter(k=>S.done[k]).length; }
+function phaseTotals(p){
+  let d=0,n=0;
+  p.blocks.forEach(b=>{ n+=b.tasks.length; d+=blockDone(p,b); });
+  return [d,n];
+}
+function grandTotals(){
+  let d=0,n=0;
+  PLAN.forEach(p=>{ const [a,b]=phaseTotals(p); d+=a; n+=b; });
+  return [d,n];
+}
+
+/* ---- render plan ---- */
+function render(){
+  const root = document.getElementById("plan");
+  root.innerHTML = PLAN.map(p => `
+    <section class="phase" id="${p.id}">
+      <header>
+        <h2>${esc(p.title)}</h2>
+        <span class="window">${esc(p.window)}</span>
+        <span class="count" data-pcount="${p.id}"></span>
+      </header>
+      <p class="aim">${p.aim}</p>
+      ${p.blocks.map(b => renderBlock(p,b)).join("")}
+    </section>`).join("");
+
+  PLAN.forEach(p => p.blocks.forEach(b=>{
+    if(b.widget === "apps") mountApps(document.getElementById("w-"+b.id));
+    if(b.widget === "log")  mountLog(document.getElementById("w-"+b.id));
+    if(b.widget === "qa")   mountQA(document.getElementById("w-"+b.id));
+  }));
+
+  root.addEventListener("change", e=>{
+    if(e.target.matches("input[type=checkbox][data-k]")){
+      const k = e.target.dataset.k;
+      if(e.target.checked) S.done[k] = 1; else delete S.done[k];
+      e.target.closest("li").classList.toggle("done", e.target.checked);
+      save(); paint();
+    }
+  });
+  renderRail();
+  paint();
+}
+
+function renderBlock(p,b){
+  const tasks = b.tasks.length ? `<ul class="tasks">${b.tasks.map(t=>{
+      const k = keyOf(p.id,b.id,t.id), on = !!S.done[k];
+      return `<li class="${on?"done":""}" data-task>
+        <input type="checkbox" id="${k}" data-k="${k}" ${on?"checked":""}>
+        <label for="${k}">${t.text}</label></li>`;
+    }).join("")}</ul>` : "";
+
+  const res = (b.res && b.res.length) ? `<div class="res">
+      <h4>Resources</h4>
+      <ul>${b.res.map(r=>`<li data-res>
+        <a href="${r.u}" target="_blank" rel="noopener noreferrer">${esc(r.n)}</a>
+        <span class="tag">${esc(r.k)}</span>
+        <span class="tag ${r.c==='free'?'free':(r.c==='paid'?'paid':'')}">${esc(r.c)}</span>
+        ${r.note?`<span class="note">${esc(r.note)}</span>`:""}
+      </li>`).join("")}</ul></div>` : "";
+
+  const widget = b.widget ? `<div id="w-${b.id}"></div>` : "";
+
+  return `<article class="block" id="${b.id}">
+      <h3>${esc(b.title)}<span class="bcount" data-bcount="${p.id}|${b.id}"></span></h3>
+      <p class="baim">${b.aim}</p>
+      ${tasks}${widget}${res}
+    </article>`;
+}
+
+function renderRail(){
+  document.getElementById("rail").innerHTML = PLAN.map(p=>`
+    <li class="group">${esc(p.label)}</li>
+    <li><a href="#${p.id}" data-rail="${p.id}"><span class="tick" data-rt="${p.id}"></span><span>${esc(p.title)}</span></a></li>
+  `).join("");
+}
+
+function paint(){
+  const meter = document.getElementById("meter");
+  const segs = [];
+  PLAN.forEach(p => p.blocks.forEach(b=>{
+    const n = b.tasks.length;
+    const d = n ? blockDone(p,b) : 0;
+    segs.push({pct: n ? d/n : 0, title: p.title + " — " + b.title});
+  }));
+  meter.innerHTML = segs.map(s=>
+    `<span class="seg ${s.pct>=1?"full":""}" title="${esc(s.title)}"><i style="width:${Math.round(s.pct*100)}%"></i></span>`
+  ).join("");
+
+  const [d,n] = grandTotals();
+  document.getElementById("meterText").innerHTML = `<b>${d}</b> of ${n} done`;
+
+  PLAN.forEach(p=>{
+    const [pd,pn] = phaseTotals(p);
+    const c = document.querySelector(`[data-pcount="${p.id}"]`);
+    if(c) c.textContent = pn ? `${pd}/${pn}` : "";
+    const rt = document.querySelector(`[data-rt="${p.id}"]`);
+    if(rt){ rt.textContent = pn ? `${pd}/${pn}` : "—"; }
+    const ra = document.querySelector(`[data-rail="${p.id}"]`);
+    if(ra) ra.classList.toggle("done", pn>0 && pd===pn);
+    p.blocks.forEach(b=>{
+      const bc = document.querySelector(`[data-bcount="${p.id}|${b.id}"]`);
+      if(bc) bc.textContent = b.tasks.length ? `${blockDone(p,b)}/${b.tasks.length}` : "";
+    });
+  });
+}
+
+/* ---- application tracker ---- */
+const STATUSES = ["Applied","Screening","Interview","Task/Test","Offer","Rejected","No reply"];
+function mountApps(host){
+  if(!host) return;
+  host.innerHTML = `
+    <table><thead><tr>
+      <th style="width:24%">Company</th><th style="width:24%">Role</th>
+      <th style="width:15%">Source</th><th style="width:14%">Date</th>
+      <th style="width:18%">Status</th><th class="act"></th>
+    </tr></thead><tbody id="appsBody"></tbody></table>
+    <div class="rowadd"><button type="button" id="addApp">Add application</button></div>`;
+  document.getElementById("addApp").addEventListener("click", ()=>{
+    S.apps.push({c:"",r:"",s:"",d:new Date().toISOString().slice(0,10),st:"Applied"});
+    save(); drawApps();
+  });
+  drawApps();
+}
+function drawApps(){
+  const b = document.getElementById("appsBody");
+  if(!b) return;
+  if(!S.apps.length){
+    b.innerHTML = `<tr><td colspan="6" class="empty">No applications logged yet. Ten a week is the target.</td></tr>`;
+    return;
+  }
+  b.innerHTML = S.apps.map((a,i)=>`<tr>
+    <td><input value="${esc(a.c)}" data-i="${i}" data-f="c"></td>
+    <td><input value="${esc(a.r)}" data-i="${i}" data-f="r"></td>
+    <td><input value="${esc(a.s)}" data-i="${i}" data-f="s"></td>
+    <td><input type="date" value="${esc(a.d)}" data-i="${i}" data-f="d"></td>
+    <td><select data-i="${i}" data-f="st">${STATUSES.map(s=>
+        `<option ${s===a.st?"selected":""}>${s}</option>`).join("")}</select></td>
+    <td class="act"><button type="button" data-del="${i}" aria-label="Remove row">×</button></td>
+  </tr>`).join("");
+  b.oninput = e=>{
+    const t=e.target; if(t.dataset.i===undefined) return;
+    S.apps[+t.dataset.i][t.dataset.f] = t.value; save();
+  };
+  b.onchange = b.oninput;
+  b.onclick = e=>{
+    if(e.target.dataset.del!==undefined){
+      S.apps.splice(+e.target.dataset.del,1); save(); drawApps();
+    }
+  };
+}
+
+/* ---- working log ---- */
+function mountLog(host){
+  if(!host) return;
+  host.innerHTML = `
+    <textarea id="logInput" placeholder="What you did, what broke, what you still cannot explain."></textarea>
+    <div class="rowadd"><button type="button" id="addLog">Add entry</button></div>
+    <div id="logList"></div>`;
+  document.getElementById("addLog").addEventListener("click", ()=>{
+    const ta = document.getElementById("logInput");
+    const v = ta.value.trim(); if(!v) return;
+    S.log.unshift({d:new Date().toISOString().slice(0,10), t:v});
+    ta.value=""; save(); drawLog();
+  });
+  drawLog();
+}
+function drawLog(){
+  const l = document.getElementById("logList");
+  if(!l) return;
+  if(!S.log.length){ l.innerHTML = `<p class="empty" style="padding-top:10px">No entries yet.</p>`; return; }
+  l.innerHTML = S.log.map((e,i)=>`<div class="logitem">
+      <time>${esc(e.d)}</time><p>${esc(e.t)}</p>
+      <button type="button" data-dl="${i}" aria-label="Delete entry">×</button></div>`).join("");
+  l.onclick = ev=>{
+    if(ev.target.dataset.dl!==undefined){ S.log.splice(+ev.target.dataset.dl,1); save(); drawLog(); }
+  };
+}
+
+/* ---- interview bank ---- */
+function mountQA(host){
+  if(!host) return;
+  host.innerHTML = QA.map(([q,a])=>
+    `<details class="qa" data-res><summary>${esc(q)}</summary><div>${esc(a)}</div></details>`
+  ).join("");
+}
+
+/* ---- filter ---- */
+document.getElementById("find").addEventListener("input", e=>{
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll("[data-task],[data-res]").forEach(el=>{
+    el.classList.toggle("hidden", q && !el.textContent.toLowerCase().includes(q));
+  });
+  document.querySelectorAll(".block").forEach(bl=>{
+    const items = bl.querySelectorAll("[data-task],[data-res]");
+    const anyVisible = !items.length || [...items].some(i=>!i.classList.contains("hidden"));
+    const inTitle = bl.textContent.toLowerCase().includes(q);
+    bl.classList.toggle("hidden", !!q && !anyVisible && !inTitle);
+  });
+  document.querySelectorAll(".phase").forEach(ph=>{
+    const anyBlock = [...ph.querySelectorAll(".block")].some(b=>!b.classList.contains("hidden"));
+    ph.classList.toggle("hidden", !!q && !anyBlock);
+  });
+});
+
+document.getElementById("expandAll").addEventListener("click", ()=>{
+  const all = document.querySelectorAll("details.qa");
+  const anyClosed = [...all].some(d=>!d.open);
+  all.forEach(d=>d.open = anyClosed);
+});
+
+/* ---- backup / restore / clear ---- */
+document.getElementById("backupBtn").addEventListener("click", ()=>{
+  const blob = new Blob([JSON.stringify(S,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "it-sec-track-backup-" + new Date().toISOString().slice(0,10) + ".json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  flash("Backup downloaded");
+});
+document.getElementById("restoreBtn").addEventListener("click", ()=>
+  document.getElementById("restoreFile").click());
+document.getElementById("restoreFile").addEventListener("change", e=>{
+  const f = e.target.files[0]; if(!f) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try{
+      const data = JSON.parse(rd.result);
+      if(typeof data !== "object" || data === null) throw new Error("bad");
+      S = Object.assign(blank(), data);
+      save(); applyTheme(); render(); drawApps(); drawLog();
+      flash("Restored from file");
+    }catch(err){ flash("That file could not be read as a backup"); }
+    e.target.value = "";
+  };
+  rd.readAsText(f);
+});
+document.getElementById("resetBtn").addEventListener("click", ()=>{
+  if(!confirm("Clear all progress, applications and log entries in this browser? Back up first if you want to keep them.")) return;
+  S = blank(); save(); applyTheme(); render();
+});
+
+/* ---- go ---- */
+applyTheme();
+render();
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>{ if(S.theme===null) applyTheme(); });
+</script>
+
+<!-- Cloud Sync Modal & Styling -->
+<style>
+.btn-cloud{
+  display:inline-flex; align-items:center; gap:6px; font-weight:500;
+  border-color:var(--signal); color:var(--signal);
+}
+.btn-cloud:hover{background:var(--signal-soft)}
+.sync-dot{
+  width:8px; height:8px; border-radius:50%; background:var(--muted);
+  display:inline-block; transition:background 0.3s;
+}
+.sync-dot.synced{background:var(--ok)}
+.sync-dot.syncing{background:var(--flag); animation:pulse 1s infinite alternate}
+.sync-dot.error{background:var(--danger)}
+@keyframes pulse{from{opacity:0.4} to{opacity:1}}
+
+/* Modal dialog */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(3px);
+  z-index:100; display:flex; align-items:center; justify-content:center; padding:16px;
+}
+.modal-card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:8px;
+  max-width:520px; width:100%; max-height:90vh; overflow-y:auto; padding:24px;
+  box-shadow:0 12px 36px rgba(0,0,0,0.3); font-size:14.5px;
+}
+.modal-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:16px}
+.modal-head h3{font-size:18px; margin:0}
+.modal-close{background:none; border:none; font-size:22px; cursor:pointer; padding:0 6px; color:var(--muted)}
+.modal-close:hover{color:var(--ink)}
+.sync-sec{margin-bottom:20px; padding-bottom:18px; border-bottom:1px solid var(--rule-soft)}
+.sync-sec:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0}
+.sync-sec h4{font-size:13.5px; color:var(--signal); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.04em}
+.input-group{display:flex; gap:8px; margin-top:8px}
+.input-group input{flex:1}
+.qr-container{display:flex; flex-direction:column; align-items:center; margin-top:14px; gap:8px}
+#qrcode{background:#fff; padding:12px; border-radius:6px; min-height:152px; min-width:152px}
+.code-badge{
+  font-family:var(--mono); background:var(--surface-2); padding:3px 8px;
+  border-radius:4px; font-size:12px; border:1px solid var(--rule-soft); word-break:break-all;
+}
+.notice{font-size:12.5px; color:var(--muted); line-height:1.45; margin-top:6px}
+.notice strong{color:var(--ink)}
+
+/* Weekly Campaign Pulse */
+.pulse-card{
+  background:var(--surface); border:1px solid var(--rule);
+  border-radius:6px; padding:18px 20px; margin-bottom:28px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.pulse-header{
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--rule-soft); flex-wrap:wrap; gap:8px;
+}
+.pulse-h-left{display:flex; align-items:center; gap:8px}
+.pulse-badge{
+  font-family:var(--mono); font-size:10px; text-transform:uppercase;
+  background:var(--signal-soft); color:var(--signal); padding:2px 6px; border-radius:2px; font-weight:600;
+}
+.pulse-header h3{font-size:16px; margin:0; font-family:var(--mono); color:var(--ink)}
+.pulse-week{font-family:var(--mono); font-size:12px; color:var(--muted)}
+.pulse-grid{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+.pulse-metric{
+  background:var(--surface-2); border:1px solid var(--rule-soft);
+  border-radius:4px; padding:12px 14px; display:flex; flex-direction:column; gap:6px;
+}
+.pulse-m-top{display:flex; justify-content:space-between; align-items:center}
+.pulse-label{font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted)}
+.pulse-tag{font-family:var(--mono); font-size:10.5px; padding:1px 6px; border-radius:2px; background:var(--surface); border:1px solid var(--rule)}
+.pulse-tag-alert{color:var(--flag); border-color:var(--flag)}
+.pulse-tag-streak{color:var(--ok); border-color:var(--ok)}
+.pulse-value{display:flex; align-items:baseline; gap:4px; margin-top:2px}
+.pulse-bold{font-size:24px; font-family:var(--mono); font-weight:700; color:var(--ink); line-height:1}
+.pulse-max{font-size:12.5px; color:var(--muted); font-family:var(--mono)}
+.pulse-track{
+  height:7px; background:var(--rule-soft); border-radius:3px;
+  overflow:hidden; margin-top:4px;
+}
+.pulse-bar{
+  height:100%; background:var(--signal); border-radius:3px;
+  transition:width 0.4s ease, background 0.3s;
+}
+.pulse-bar.complete{background:var(--ok)}
+.pulse-sub{font-size:12px; color:var(--ink-2); line-height:1.3}
+.pulse-view-btn{
+  margin-top:4px; align-self:flex-start; font-size:11.5px; padding:2px 8px;
+}
+.pulse-alert-box{
+  margin-top:14px; padding-top:12px; border-top:1px dashed var(--rule-soft); font-size:13px;
+}
+.pulse-alert-box h4{font-size:12.5px; color:var(--flag); margin-bottom:6px}
+.pulse-alert-box ul{list-style:none; margin:0; padding:0}
+.pulse-alert-box li{
+  padding:5px 0; border-bottom:1px solid var(--rule-soft);
+  display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.pulse-alert-box li:last-child{border-bottom:none}
+.pulse-followup-badge{
+  font-family:var(--mono); font-size:11px; color:var(--flag);
+  background:var(--surface); padding:2px 6px; border-radius:2px; border:1px solid var(--flag);
+}
+.pulse-act-row{
+  display:flex; gap:6px; margin-top:6px; align-items:center;
+}
+.pulse-btn-add{
+  background:var(--signal); color:#fff; border-color:var(--signal);
+  font-weight:600; font-size:12px; padding:4px 10px; border-radius:3px;
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:background 0.2s, transform 0.1s;
+}
+.pulse-btn-add:hover{background:#114c63; color:#fff}
+.pulse-btn-add:active{transform:scale(0.96)}
+.pulse-btn-sub{
+  background:transparent; color:var(--muted); border-color:var(--rule);
+  font-size:11.5px; padding:3px 8px; border-radius:3px; cursor:pointer;
+}
+.pulse-btn-sub:hover{color:var(--danger); border-color:var(--danger)}
+.pulse-btn-sub:active{transform:scale(0.96)}
+</style>
+
+<div id="syncModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3 id="syncModalTitle">Cloud Sync & Mobile Pairing</h3>
+      <button type="button" class="modal-close" id="closeSyncModal" aria-label="Close dialog">&times;</button>
+    </div>
+
+    <!-- Section 1: Pair Code & Direct Link -->
+    <div class="sync-sec">
+      <h4>1. Device Pairing Key</h4>
+      <p class="notice">Enter any unique sync key (or generate one) to connect this browser and your phone to the same progress track.</p>
+      <div class="input-group">
+        <input type="text" id="syncKeyInput" placeholder="e.g. david-track-2026" spellcheck="false" autocomplete="off">
+        <button type="button" id="saveSyncKeyBtn">Save</button>
+        <button type="button" id="genSyncKeyBtn">Random</button>
+      </div>
+      <div class="qr-container" id="qrWrapper">
+        <div id="qrcode"></div>
+        <div class="notice">Scan with your phone camera or use this direct link:</div>
+        <div class="code-badge" id="directSyncLink">...</div>
+        <button type="button" id="copyLinkBtn" style="margin-top:4px">Copy Link</button>
+      </div>
+    </div>
+
+    <!-- Section 2: Firebase Credentials -->
+    <div class="sync-sec">
+      <h4>2. Firebase Configuration (Free Tier)</h4>
+      <p class="notice">
+        Host on Vercel and sync through Firebase Firestore (100% free forever, 50,000 reads/day).
+        Paste your Firebase Web App config JSON below:
+      </p>
+      <textarea id="firebaseConfigInput" style="height:110px; font-family:var(--mono); font-size:12px;" placeholder='{
+  "apiKey": "AIzaSy...",
+  "projectId": "your-tracker-proj",
+  "appId": "1:..."
+}'></textarea>
+      <div style="display:flex; gap:8px; margin-top:8px">
+        <button type="button" id="saveFirebaseConfigBtn">Save Firebase Config</button>
+        <button type="button" id="testSyncBtn">Sync Now</button>
+      </div>
+      <p class="notice">Need setup help? Check <a href="https://console.firebase.google.com" target="_blank" rel="noopener">Firebase Console</a> (free Spark plan) or refer to the project deployment directive.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   CLOUD SYNC & MOBILE PAIRING MANAGER
+   ===================================================================== */
+const DEFAULT_FIREBASE_CONFIG = {
+  apiKey: "AIzaSyCP4dS9tG9Weklw4Yq2s7EJW2NyAoJgwxQ",
+  authDomain: "it-tracker-md.firebaseapp.com",
+  projectId: "it-tracker-md",
+  storageBucket: "it-tracker-md.firebasestorage.app",
+  messagingSenderId: "402091333238",
+  appId: "1:402091333238:web:bd788de1d0c092d23ef157",
+  measurementId: "G-0TD84QG4SG"
+};
+
+const SYNC_CONFIG_KEY = "it-sec-sync.config.v1";
+let syncConfig = {
+  syncKey: "",
+  firebaseConfig: DEFAULT_FIREBASE_CONFIG,
+  lastRemoteSync: 0
+};
+
+// Load sync config
+try {
+  const savedCfg = localStorage.getItem(SYNC_CONFIG_KEY);
+  if (savedCfg) {
+    syncConfig = Object.assign(syncConfig, JSON.parse(savedCfg));
+  }
+  if (!syncConfig.firebaseConfig) {
+    syncConfig.firebaseConfig = DEFAULT_FIREBASE_CONFIG;
+  }
+} catch(e) {
+  syncConfig.firebaseConfig = DEFAULT_FIREBASE_CONFIG;
+}
+
+// Check URL query parameters for ?sync=... to enable instant 1-tap phone pairing!
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has("sync")) {
+  const paramKey = urlParams.get("sync").trim();
+  if (paramKey && paramKey !== syncConfig.syncKey) {
+    syncConfig.syncKey = paramKey;
+    saveSyncConfig();
+    // Clean URL without refresh
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+}
+
+function saveSyncConfig() {
+  localStorage.setItem(SYNC_CONFIG_KEY, JSON.stringify(syncConfig));
+}
+
+let db = null;
+let firestoreUnsubscribe = null;
+let isApplyingRemoteChange = false;
+
+function initFirebase() {
+  if (!syncConfig.firebaseConfig || !window.firebase) return false;
+  try {
+    if (!firebase.apps.length) {
+      firebase.initializeApp(syncConfig.firebaseConfig);
+    }
+    db = firebase.firestore();
+    setupFirestoreListener();
+    return true;
+  } catch(err) {
+    console.error("Firebase init error:", err);
+    updateSyncBadge("error", "Config error");
+    return false;
+  }
+}
+
+function updateSyncBadge(status, text) {
+  const dot = document.getElementById("syncDot");
+  const txt = document.getElementById("syncStatusText");
+  if (!dot || !txt) return;
+  dot.className = "sync-dot " + (status || "");
+  txt.textContent = text || "Cloud Sync";
+}
+
+function setupFirestoreListener() {
+  if (!db || !syncConfig.syncKey) {
+    updateSyncBadge("", "Cloud (Pair Key Needed)");
+    return;
+  }
+
+  if (firestoreUnsubscribe) firestoreUnsubscribe();
+
+  updateSyncBadge("syncing", "Connecting...");
+  const docRef = db.collection("it_trackers").doc(syncConfig.syncKey);
+
+  firestoreUnsubscribe = docRef.onSnapshot((doc) => {
+    if (doc.exists) {
+      const data = doc.data();
+      const remoteUpdatedAt = data.updatedAt || 0;
+      if (remoteUpdatedAt > (syncConfig.lastRemoteSync || 0)) {
+        isApplyingRemoteChange = true;
+        try {
+          if (data.state && typeof data.state === "object") {
+            S = Object.assign(blank(), data.state);
+            syncConfig.lastRemoteSync = remoteUpdatedAt;
+            saveSyncConfig();
+            localStorage.setItem(KEY, JSON.stringify(S));
+            if (typeof applyTheme === "function") applyTheme();
+            if (typeof render === "function") render();
+            if (typeof drawApps === "function") drawApps();
+            if (typeof drawLog === "function") drawLog();
+            flash("Synced from cloud");
+          }
+        } finally {
+          isApplyingRemoteChange = false;
+        }
+      }
+      updateSyncBadge("synced", "Synced");
+    } else {
+      // First-time document creation
+      pushToCloud();
+    }
+  }, (err) => {
+    console.warn("Firestore snapshot error:", err);
+    updateSyncBadge("error", "Sync paused");
+  });
+}
+
+async function pushToCloud() {
+  if (isApplyingRemoteChange || !db || !syncConfig.syncKey) return;
+  updateSyncBadge("syncing", "Syncing...");
+  try {
+    const now = Date.now();
+    await db.collection("it_trackers").doc(syncConfig.syncKey).set({
+      state: S,
+      updatedAt: now,
+      clientTime: new Date().toISOString()
+    }, { merge: true });
+    syncConfig.lastRemoteSync = now;
+    saveSyncConfig();
+    updateSyncBadge("synced", "Synced");
+  } catch(err) {
+    console.error("Cloud push failed:", err);
+    updateSyncBadge("error", "Sync failed");
+  }
+}
+
+// Hook original save() to also push to cloud when connected
+const originalSave = window.save;
+window.save = function() {
+  originalSave();
+  pushToCloud();
+};
+
+// QR Code & Modal UI Wiring
+function updateQrDisplay() {
+  const key = (syncConfig.syncKey || "").trim();
+  const directLinkEl = document.getElementById("directSyncLink");
+  const qrWrapper = document.getElementById("qrWrapper");
+  const qrContainer = document.getElementById("qrcode");
+  if (!key) {
+    if (qrWrapper) qrWrapper.style.display = "none";
+    return;
+  }
+  if (qrWrapper) qrWrapper.style.display = "flex";
+
+  const pairUrl = window.location.origin + window.location.pathname + "?sync=" + encodeURIComponent(key);
+  if (directLinkEl) directLinkEl.textContent = pairUrl;
+
+  if (qrContainer && window.QRCode) {
+    qrContainer.innerHTML = "";
+    new QRCode(qrContainer, {
+      text: pairUrl,
+      width: 144,
+      height: 144,
+      colorDark: "#0F2027",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }
+}
+
+// Modal open/close
+const modal = document.getElementById("syncModal");
+document.getElementById("cloudSyncBtn").addEventListener("click", () => {
+  document.getElementById("syncKeyInput").value = syncConfig.syncKey || "";
+  document.getElementById("firebaseConfigInput").value = syncConfig.firebaseConfig ? JSON.stringify(syncConfig.firebaseConfig, null, 2) : "";
+  updateQrDisplay();
+  modal.classList.remove("hidden");
+});
+document.getElementById("closeSyncModal").addEventListener("click", () => modal.classList.add("hidden"));
+modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.add("hidden"); });
+
+// Save sync key
+document.getElementById("saveSyncKeyBtn").addEventListener("click", () => {
+  const val = document.getElementById("syncKeyInput").value.trim();
+  syncConfig.syncKey = val;
+  saveSyncConfig();
+  updateQrDisplay();
+  setupFirestoreListener();
+  flash("Pairing key saved");
+});
+
+// Random sync key generator
+document.getElementById("genSyncKeyBtn").addEventListener("click", () => {
+  const rand = "track-" + Math.random().toString(36).substring(2, 7) + "-" + Math.floor(Math.random()*900 + 100);
+  document.getElementById("syncKeyInput").value = rand;
+  syncConfig.syncKey = rand;
+  saveSyncConfig();
+  updateQrDisplay();
+  setupFirestoreListener();
+});
+
+// Copy pair link
+document.getElementById("copyLinkBtn").addEventListener("click", () => {
+  const key = (syncConfig.syncKey || "").trim();
+  if (!key) return;
+  const pairUrl = window.location.origin + window.location.pathname + "?sync=" + encodeURIComponent(key);
+  navigator.clipboard.writeText(pairUrl).then(() => flash("Pairing link copied!"));
+});
+
+// Save Firebase Config
+document.getElementById("saveFirebaseConfigBtn").addEventListener("click", () => {
+  const raw = document.getElementById("firebaseConfigInput").value.trim();
+  if (!raw) {
+    syncConfig.firebaseConfig = null;
+    saveSyncConfig();
+    flash("Firebase config cleared");
+    return;
+  }
+  try {
+    syncConfig.firebaseConfig = JSON.parse(raw);
+    saveSyncConfig();
+    initFirebase();
+    flash("Firebase config connected");
+  } catch(err) {
+    alert("Invalid JSON format. Please paste valid JSON from Firebase Console.");
+  }
+});
+
+document.getElementById("testSyncBtn").addEventListener("click", () => {
+  if (!db) {
+    if (!initFirebase()) {
+      alert("Please paste and save your Firebase configuration first.");
+      return;
+    }
+  }
+  pushToCloud();
+});
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').then((reg) => {
+      console.log('PWA ServiceWorker registered with scope:', reg.scope);
+    }).catch((err) => {
+      console.log('PWA ServiceWorker registration failed:', err);
+    });
+  });
+}
+
+// Initialize on page load
+initFirebase();
+
+/* =====================================================================
+   WEEKLY CAMPAIGN PULSE & FOLLOW-UP ENGINE
+   ===================================================================== */
+function updateCampaignPulse() {
+  const now = new Date();
+  const d = new Date(now);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  const monday = new Date(d.setDate(diff));
+  monday.setHours(0, 0, 0, 0);
+
+  const sunday = new Date(monday);
+  sunday.setDate(sunday.getDate() + 6);
+
+  const fmt = dt => dt.toLocaleDateString(undefined, {month:'short', day:'numeric'});
+  const weekLabelEl = document.getElementById("pulseWeekLabel");
+  if (weekLabelEl) weekLabelEl.textContent = `${fmt(monday)} – ${fmt(sunday)}`;
+
+  const apps = Array.isArray(S.apps) ? S.apps : [];
+  let appsThisWeek = 0;
+  const overdueApps = [];
+
+  apps.forEach(a => {
+    if (!a.d) return;
+    const appDate = new Date(a.d + "T00:00:00");
+    if (appDate >= monday) {
+      appsThisWeek++;
+    }
+
+    if (a.st === "Applied" || a.st === "Screening") {
+      const daysAgo = Math.floor((now - appDate) / (1000 * 60 * 60 * 24));
+      if (daysAgo >= 7) {
+        overdueApps.push({ app: a, daysAgo });
+      }
+    }
+  });
+
+  // Metric 1: Applications
+  const countEl = document.getElementById("pulseAppCount");
+  const barEl = document.getElementById("pulseProgressBar");
+  const subEl = document.getElementById("pulseAppFeedback");
+  const tagEl = document.getElementById("pulseTargetTag");
+
+  if (countEl) countEl.textContent = appsThisWeek;
+  const pct = Math.min(100, Math.round((appsThisWeek / 10) * 100));
+  if (barEl) {
+    barEl.style.width = pct + "%";
+    barEl.classList.toggle("complete", appsThisWeek >= 10);
+  }
+  if (tagEl) {
+    tagEl.textContent = appsThisWeek >= 10 ? "10/10 Reached! 🎉" : `${appsThisWeek}/10 Goal`;
+    tagEl.className = "pulse-tag " + (appsThisWeek >= 10 ? "pulse-tag-streak" : "");
+  }
+  if (subEl) {
+    if (appsThisWeek >= 10) {
+      subEl.textContent = "Weekly goal achieved! Outstanding work.";
+    } else {
+      const rem = 10 - appsThisWeek;
+      subEl.textContent = `${rem} more to hit the weekly target of 10.`;
+    }
+  }
+
+  // Metric 2: Follow-up Radar
+  const overdueCountEl = document.getElementById("pulseOverdueCount");
+  const overdueSubEl = document.getElementById("pulseFollowupSub");
+  const overdueTagEl = document.getElementById("pulseFollowupTag");
+  const toggleBtn = document.getElementById("pulseToggleAlertsBtn");
+  const alertList = document.getElementById("pulseAlertItems");
+
+  if (overdueCountEl) overdueCountEl.textContent = overdueApps.length;
+  if (overdueTagEl) {
+    overdueTagEl.textContent = overdueApps.length > 0 ? `${overdueApps.length} Action Needed` : "Clear";
+    overdueTagEl.className = "pulse-tag " + (overdueApps.length > 0 ? "pulse-tag-alert" : "pulse-tag-streak");
+  }
+  if (overdueSubEl) {
+    overdueSubEl.textContent = overdueApps.length > 0
+      ? `${overdueApps.length} application(s) awaiting reply for 7+ days`
+      : "No applications overdue for follow-up";
+  }
+  if (toggleBtn) {
+    toggleBtn.classList.toggle("hidden", overdueApps.length === 0);
+  }
+  if (alertList) {
+    alertList.innerHTML = overdueApps.map(item => `
+      <li>
+        <div>
+          <strong>${esc(item.app.c || "Untitled Company")}</strong> — ${esc(item.app.r || "Role")}
+          <span style="color:var(--muted); font-size:11.5px"> (Applied ${item.app.d})</span>
+        </div>
+        <span class="pulse-followup-badge">${item.daysAgo}d ago</span>
+      </li>
+    `).join("");
+  }
+
+  // Metric 3: Study Streak
+  const streakCountEl = document.getElementById("pulseStreakCount");
+  const streakSubEl = document.getElementById("pulseStreakSub");
+
+  const activeDates = new Set();
+  (S.log || []).forEach(l => { if (l.d) activeDates.add(l.d); });
+  if (Object.keys(S.done || {}).length > 0) {
+    activeDates.add(new Date().toISOString().slice(0, 10));
+  }
+
+  let streak = 0;
+  let cur = new Date();
+  while (true) {
+    const s = cur.toISOString().slice(0, 10);
+    if (activeDates.has(s)) {
+      streak++;
+      cur.setDate(cur.getDate() - 1);
+    } else {
+      if (streak === 0 && cur.toDateString() === new Date().toDateString()) {
+        cur.setDate(cur.getDate() - 1);
+        if (activeDates.has(cur.toISOString().slice(0, 10))) {
+          streak = 1;
+          cur.setDate(cur.getDate() - 1);
+          continue;
+        }
+      }
+      break;
+    }
+  }
+
+  const finalStreak = Math.max(1, streak);
+  if (streakCountEl) streakCountEl.innerHTML = `🔥 ${finalStreak}`;
+  if (streakSubEl) {
+    streakSubEl.textContent = finalStreak > 1 ? `${finalStreak} consecutive days of progress!` : "Study or log daily to build streak";
+  }
+}
+
+// Toggle overdue alerts box
+const toggleAlertsBtn = document.getElementById("pulseToggleAlertsBtn");
+if (toggleAlertsBtn) {
+  toggleAlertsBtn.addEventListener("click", () => {
+    const box = document.getElementById("pulseAlertBox");
+    if (box) box.classList.toggle("hidden");
+  });
+}
+
+// Hook render, paint, drawApps, drawLog to automatically update pulse
+const origPaint = window.paint;
+window.paint = function() {
+  if (typeof origPaint === "function") origPaint();
+  updateCampaignPulse();
+};
+
+const origDrawApps = window.drawApps;
+window.drawApps = function() {
+  if (typeof origDrawApps === "function") origDrawApps();
+  updateCampaignPulse();
+};
+
+const origDrawLog = window.drawLog;
+window.drawLog = function() {
+  if (typeof origDrawLog === "function") origDrawLog();
+  updateCampaignPulse();
+};
+
+// Initial update
+updateCampaignPulse();
+
+// Quick +1 Application button
+function quickLogApplication(customName) {
+  const today = new Date().toISOString().slice(0, 10);
+  const count = (S.apps || []).filter(a => a.d === today).length + 1;
+  const name = customName || `Application #${count}`;
+  if (!Array.isArray(S.apps)) S.apps = [];
+  S.apps.push({
+    c: name,
+    r: "Job Application",
+    s: "Quick Log",
+    d: today,
+    st: "Applied"
+  });
+  save();
+  if (typeof drawApps === "function") drawApps();
+  updateCampaignPulse();
+  flash("+1 Application logged!");
+  updateBadge();
+}
+
+function quickUndoApplication() {
+  if (!Array.isArray(S.apps) || S.apps.length === 0) {
+    flash("No applications to remove");
+    return;
+  }
+  const removed = S.apps.pop();
+  save();
+  if (typeof drawApps === "function") drawApps();
+  updateCampaignPulse();
+  flash(`Removed: ${removed.c || "application"}`);
+  updateBadge();
+}
+
+const addAppBtn = document.getElementById("pulseAddAppBtn");
+if (addAppBtn) {
+  addAppBtn.addEventListener("click", () => quickLogApplication());
+}
+
+const subAppBtn = document.getElementById("pulseSubAppBtn");
+if (subAppBtn) {
+  subAppBtn.addEventListener("click", () => quickUndoApplication());
+}
+
+// App Badge support
+function updateBadge() {
+  if ('setAppBadge' in navigator) {
+    const appsThisWeek = parseInt(document.getElementById("pulseAppCount")?.textContent || "0", 10);
+    const rem = Math.max(0, 10 - appsThisWeek);
+    if (rem > 0) {
+      navigator.setAppBadge(rem).catch(() => {});
+    } else {
+      navigator.clearAppBadge().catch(() => {});
+    }
+  }
+}
+
+// Handle shortcut query param ?action=quick_app
+if (urlParams.get("action") === "quick_app") {
+  quickLogApplication("Quick Log (Shortcut)");
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
+
+</body>
+</html>

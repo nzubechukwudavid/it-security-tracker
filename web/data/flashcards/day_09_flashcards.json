@@ -1,0 +1,117 @@
+[
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_001",
+    "front": "In the output of show ip interface brief, router interfaces will be in the [...]/[...] state by default.",
+    "back": "administratively down/down"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_002",
+    "front": "In the output of show ip interface brief, switch interfaces will be in the [...]/[...] state by default if connected to another device.",
+    "back": "up/up"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_003",
+    "front": "In the output of show ip interface brief, switch interfaces will be in the [...]/[...] state by default if not connected to another device.",
+    "back": "down/down"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_004",
+    "front": "What is the default speed setting of an interface?",
+    "back": "auto"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_005",
+    "front": "What is the default duplex setting of an interface?",
+    "back": "auto"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_006",
+    "front": "Configure a speed of 100 Mbps on an interface:\nSW1(config-if)# [...]",
+    "back": "speed 100"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_007",
+    "front": "Configure full duplex on an interface:\nSW1(config-if)# [...]",
+    "back": "duplex full"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_008",
+    "front": "Which command lets you configure multiple interfaces at the same time?",
+    "back": "interface range"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_009",
+    "front": "In [...] duplex mode, an interface can send and receive data at the same time.",
+    "back": "full"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_010",
+    "front": "In [...] duplex mode, an interface cannot send and receive data at the same time.",
+    "back": "half"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_011",
+    "front": "Ethernet hubs operate at Layer [...] of the OSI model.",
+    "back": "1"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_012",
+    "front": "Ethernet devices use [...] to detect and prevent collisions on half-duplex interfaces.",
+    "back": "CSMA/CD"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_013",
+    "front": "What does CSMA/CD stand for?",
+    "back": "Carrier Sense Multiple Access with Collision Detection"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_014",
+    "front": "All devices connected to an Ethernet hub are in the same [...] domain.",
+    "back": "collision"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_015",
+    "front": "Are all devices connected to an Ethernet switch in the same collision domain?",
+    "back": "No"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_016",
+    "front": "Devices attached to an Ethernet hub must operate in [...] duplex mode.",
+    "back": "half"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_017",
+    "front": "Devices attached to a switch can operate in [...] duplex mode.",
+    "back": "full"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_018",
+    "front": "Which show interfaces error counter?\n-Counts frames that are smaller than the minimum frame size (64 bytes)",
+    "back": "runts"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_019",
+    "front": "Which show interfaces error counter?\n-Counts frames that are larger than the maximum frame size (1518 bytes)",
+    "back": "giants"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_020",
+    "front": "Which show interfaces error counter?\n-Counts frames that failed their error check in the Ethernet FCS trailer.",
+    "back": "CRC"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_021",
+    "front": "Which show interfaces error counter?\n-Counts frames that have an incorrect/illegal format.",
+    "back": "frame"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_022",
+    "front": "Which show interfaces error counter?\n-Total of various counters of errors received by the device",
+    "back": "input errors"
+  },
+  {
+    "id": "Day 09 Flashcards - Switch Interfaces_023",
+    "front": "Which show interfaces error counter?\n-Frames the switch tried to send, but failed due to an error",
+    "back": "output errors"
+  }
+]

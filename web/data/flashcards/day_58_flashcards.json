@@ -1,0 +1,172 @@
+[
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_001",
+    "front": "WLCs only support [...] LAG.",
+    "back": "static\n*PAgP and LACP aren't supported"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_002",
+    "front": "DHCP option [...] can be used to tell APs the IP address of their WLC.",
+    "back": "43"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_003",
+    "front": "In the context of WLCs:\nPort = [phsyical/logical]\nInterface = [phsyical/logical]",
+    "back": "Port = physical\nInterface = logical"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_004",
+    "front": "The WLC [...] port is used for out-of-band management.",
+    "back": "service"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_005",
+    "front": "The WLC service port must connect to a switch [access/trunk] port",
+    "back": "access"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_006",
+    "front": "WLC [...] ports are the standard network ports that connect to the switched network and are used for data traffic.",
+    "back": "distribution system"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_007",
+    "front": "The WLC [...] port is used to connect to another WLC to form an HA pair.",
+    "back": "redundancy"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_008",
+    "front": "CAPWAP tunnels are formed to/from the WLC's [...] interface.",
+    "back": "management"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_009",
+    "front": "The WLC [...] interface can be used to connect to and manage the standby WLC of an HA pair.",
+    "back": "redundancy management"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_010",
+    "front": "The WLC [...] interface is used when communicating with wireless clients to relay DHCP requests, perform web authentication, etc.",
+    "back": "virtual"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_011",
+    "front": "The WLC [...] interface is bound to the service port and used for out-of-band management.",
+    "back": "service port"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_012",
+    "front": "WLC [...] interfaces are used to map WLANs to VLANs.",
+    "back": "dynamic"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_013",
+    "front": "WPA+WPA2 is a Layer [...] security mechanism.",
+    "back": "2"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_014",
+    "front": "802.1X is a Layer [...] security mechanism.",
+    "back": "2"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_015",
+    "front": "Static WEP is a Layer [...] security mechanism.",
+    "back": "2"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_016",
+    "front": "Static WEP + 802.1X is a Layer [...] security mechanism.",
+    "back": "2"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_017",
+    "front": "CKIP is a Layer [...] security mechanism.",
+    "back": "2\n(CKIP = Cisco Key Integrity Protocol)"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_018",
+    "front": "None + EAP Passthrough is a Layer [...] security mechanism.",
+    "back": "2"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_019",
+    "front": "What formats can a WLAN PSK be configured in?",
+    "back": "ASCII  /  HEX"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_020",
+    "front": "WLAN PSKs in ASCII format must be at least [...] characters in length.",
+    "back": "8"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_021",
+    "front": "Web Authentication is a Layer [...] security mechanism.",
+    "back": "3"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_022",
+    "front": "Web Passthrough is a Layer [...] security mechanism.",
+    "back": "3"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_023",
+    "front": "Conditional Web Redirect is a Layer [...] security mechanism.",
+    "back": "3"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_024",
+    "front": "Splash Page Web Redirect is a Layer [...] security mechanism.",
+    "back": "3"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_025",
+    "front": "[...] is the default QoS setting of a WLAN.",
+    "back": "Silver"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_026",
+    "front": "WLAN Platinum QoS = [...]",
+    "back": "voice"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_027",
+    "front": "WLAN Gold QoS = [...]",
+    "back": "video"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_028",
+    "front": "WLAN Silver QoS = [...]",
+    "back": "best effort"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_029",
+    "front": "WLAN Bronze QoS = [...]",
+    "back": "background"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_030",
+    "front": "WLAN [...] QoS = voice",
+    "back": "Platinum"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_031",
+    "front": "WLAN [...] QoS = video",
+    "back": "Gold"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_032",
+    "front": "WLAN [...] QoS = best effort",
+    "back": "Silver"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_033",
+    "front": "WLAN [...] QoS = background",
+    "back": "Bronze"
+  },
+  {
+    "id": "Day 58 Flashcards - Wireless Configuration_034",
+    "front": "[...] ACLs can be used to limit management traffic destined for the WLC itself.",
+    "back": "CPU"
+  }
+]

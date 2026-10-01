@@ -1,0 +1,132 @@
+[
+  {
+    "id": "Day 39 Flashcards - DHCP_001",
+    "front": "What does DHCP stand for?",
+    "back": "Dynamic Host Configuration Protocol"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_002",
+    "front": "Windows command prompt: Release the PC's DHCP-learned IP address\n> [...]",
+    "back": "ipconfig /release"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_003",
+    "front": "Windows command prompt: Get a new IP address via DHCP\n> [...]",
+    "back": "ipconfig /renew"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_004",
+    "front": "Using the command ipconfig /release in the Windows command prompt will send a DHCP [...] message.",
+    "back": "Release"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_005",
+    "front": "The DHCP Release message is [broadcast/unicast].",
+    "back": "unicast"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_006",
+    "front": "What four DHCP messages are exchanged for a DHCP client to get an IP address?",
+    "back": "Discover\nOffer\nRequest\nAck"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_007",
+    "front": "In the DHCP 'DORA' exchange, which messages are sent from client to server?",
+    "back": "Discover, Request"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_008",
+    "front": "In the DHCP 'DORA' exchange, which messages are sent from server to client?",
+    "back": "Offer, Ack"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_009",
+    "front": "The DHCP Discover message is [broadcast/unicast].",
+    "back": "broadcast"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_010",
+    "front": "The DHCP Offer message is [broadcast/unicast].",
+    "back": "either"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_011",
+    "front": "The DHCP Request message is [broadcast/unicast].",
+    "back": "Broadcast"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_012",
+    "front": "The DHCP Ack message is [broadcast/unicast].",
+    "back": "either"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_013",
+    "front": "Which messages in the DHCP 'DORA' exchange are always broadcast?",
+    "back": "Discover, Request"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_014",
+    "front": "Which messages in the DHCP 'DORA' exchange can be broadcast or unicast?",
+    "back": "Offer, Ack"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_015",
+    "front": "The DHCP Release message is sent from [client/server] to [client/server].",
+    "back": "client to server"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_016",
+    "front": "A DHCP relay agent will forward DHCP messages to the DHCP server using [unicast/broadcast].",
+    "back": "unicast"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_017",
+    "front": "Configure a range of addresses to be excluded from the DHCP pool.\nR1(config)# [...]",
+    "back": "ip dhcp excluded-address low-address high-address"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_018",
+    "front": "Create a DHCP pool.\nR1(config)# [...]",
+    "back": "ip dhcp pool pool-name"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_019",
+    "front": "Configure the range of addresses for the DHCP pool.\nR1(dhcp-config)# [...]",
+    "back": "network ip-address {/prefix-length | subnet-mask}"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_020",
+    "front": "Configure a DNS server for the DHCP pool.\nR1(dhcp-config)# [...]",
+    "back": "dns-server ip-address"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_021",
+    "front": "Configure the domain name for the DHCP pool.\nR1(dhcp-config)# [...]",
+    "back": "domain-name domain-name"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_022",
+    "front": "Configure the default gateway for the DHCP pool.\nR1(dhcp-config)# [...]",
+    "back": "default-router ip-address"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_023",
+    "front": "Configure the lease time for the DHCP pool.\nR1(dhcp-config)# [...]",
+    "back": "lease {days hours minutes | infinite}"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_024",
+    "front": "Display the DHCP clients that have received an IP address from this router.\nR1# [...]",
+    "back": "show ip dhcp binding"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_025",
+    "front": "Configure the router as a DHCP relay agent.\nR1(config-if)# [...]",
+    "back": "ip helper-address ip-address"
+  },
+  {
+    "id": "Day 39 Flashcards - DHCP_026",
+    "front": "Configure the router as a DHCP client on this interface.\nR1(config-if)# [...]",
+    "back": "ip address dhcp"
+  }
+]

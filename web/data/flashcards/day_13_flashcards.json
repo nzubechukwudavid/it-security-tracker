@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Day 13 Flashcards - Subnetting_001",
+    "front": "A direct, dedicated connection between two routers is called a [...] network.",
+    "back": "point-to-point"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_002",
+    "front": "What does CIDR stand for?",
+    "back": "Classless Inter-Domain Routing"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_003",
+    "front": "What system replaced the classful IPv4 addressing system?",
+    "back": "CIDR"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_004",
+    "front": "When a classful network is split into several smaller networks, the smaller networks are called...",
+    "back": "subnetworks  /  subnets"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_005",
+    "front": "What is the formula to determine the number of USABLE addresses in a network?",
+    "back": "2n - 2 = usable addresses\n(n = number of host bits)"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_006",
+    "front": "What is the dotted decimal equivalent of a /25 prefix length?",
+    "back": "255.255.255.128"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_007",
+    "front": "What is the dotted decimal equivalent of a /26 prefix length?",
+    "back": "255.255.255.192"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_008",
+    "front": "What is the dotted decimal equivalent of a /27 prefix length?",
+    "back": "255.255.255.224"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_009",
+    "front": "What is the dotted decimal equivalent of a /28 prefix length?",
+    "back": "255.255.255.240"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_010",
+    "front": "What is the dotted decimal equivalent of a /29 prefix length?",
+    "back": "255.255.255.248"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_011",
+    "front": "What is the dotted decimal equivalent of a /30 prefix length?",
+    "back": "255.255.255.252"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_012",
+    "front": "What is the dotted decimal equivalent of a /31 prefix length?",
+    "back": "255.255.255.254"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_013",
+    "front": "What is the dotted decimal equivalent of a /32 prefix length?",
+    "back": "255.255.255.255"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_014",
+    "front": "A subnet mask of 255.255.255.128 is equivalent to /[...]",
+    "back": "25"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_015",
+    "front": "A subnet mask of 255.255.255.192 is equivalent to /[...]",
+    "back": "26"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_016",
+    "front": "A subnet mask of 255.255.255.224 is equivalent to /[...]",
+    "back": "27"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_017",
+    "front": "A subnet mask of 255.255.255.240 is equivalent to /[...]",
+    "back": "28"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_018",
+    "front": "A subnet mask of 255.255.255.248 is equivalent to /[...]",
+    "back": "29"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_019",
+    "front": "A subnet mask of 255.255.255.252 is equivalent to /[...]",
+    "back": "30"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_020",
+    "front": "A subnet mask of 255.255.255.254 is equivalent to /[...]",
+    "back": "31"
+  },
+  {
+    "id": "Day 13 Flashcards - Subnetting_021",
+    "front": "A subnet mask of 255.255.255.255 is equivalent to /[...]",
+    "back": "32"
+  }
+]

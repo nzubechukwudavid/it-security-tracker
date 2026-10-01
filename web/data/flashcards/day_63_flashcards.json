@@ -1,0 +1,272 @@
+[
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_001",
+    "front": "Ansible is written in [language].",
+    "back": "Python"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_002",
+    "front": "Ansible is [agent-based/agentless].",
+    "back": "agentless"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_003",
+    "front": "Puppet is [agent-based/agentless].",
+    "back": "agent-based\n*with an external agent, the managed devices can be agentless"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_004",
+    "front": "Chef is [agent-based/agentless].",
+    "back": "agent-based"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_005",
+    "front": "Puppet is written in [language].",
+    "back": "Ruby"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_006",
+    "front": "Chef is written in [language].",
+    "back": "Ruby"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_007",
+    "front": "Ansible uses [protocol] to connect to devices.",
+    "back": "SSH"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_008",
+    "front": "Chef uses [protocol] to connect to devices.",
+    "back": "HTTPS"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_009",
+    "front": "Puppet uses [protocol] to connect to devices.",
+    "back": "HTTPS"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_010",
+    "front": "Ansible uses a [push/pull] model.",
+    "back": "push"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_011",
+    "front": "Puppet uses a [push/pull] model.",
+    "back": "pull"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_012",
+    "front": "Chef uses a [push/pull] model.",
+    "back": "pull"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_013",
+    "front": "Ansible [...] files define the actions to be taken.",
+    "back": "playbook"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_014",
+    "front": "Puppet [...] files define the actions to be taken.",
+    "back": "manifest"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_015",
+    "front": "Chef [...] files define the actions to be taken.",
+    "back": "recipe  /  run-list"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_016",
+    "front": "[...] clients use TCP port 8140 to communicate with the server.",
+    "back": "Puppet"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_017",
+    "front": "Puppet clients use [...] port 8140 to communicate with the server.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_018",
+    "front": "Puppet clients use TCP port [...] to communicate with the server.",
+    "back": "8140"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_019",
+    "front": "A Puppet server is called a [...].",
+    "back": "Puppet master"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_020",
+    "front": "The Ansible server is called the [...].",
+    "back": "Control node"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_021",
+    "front": "[Ansible/Puppet/Chef] files are written in YAML.",
+    "back": "Ansible\n*templates use Jinja2"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_022",
+    "front": "[Ansible/Puppet/Chef] files are written in a proprietary language.",
+    "back": "Puppet  /  Chef"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_023",
+    "front": "Puppet files are written in [language].",
+    "back": "a proprietary language (known as Puppet DSL)"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_024",
+    "front": "Chef files are written in [language].",
+    "back": "a proprietary langage based on Ruby."
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_025",
+    "front": "[...] uses TCP port 10002 to send configurations to clients.",
+    "back": "Chef"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_026",
+    "front": "Chef uses [...] port 10002 to send configurations to clients.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 63 (part 1) Flashcards - Ansible, Puppet, Chef_027",
+    "front": "Chef uses TCP port [...] to send configurations to clients.",
+    "back": "10002"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_001",
+    "front": "What does IaC stand for?",
+    "back": "Infrastructure as Code"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_002",
+    "front": "Ansible, Puppet, Chef, and Terraform are examples of [...] tools.",
+    "back": "Infrastructure as Code (IaC)"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_003",
+    "front": "Ansible is primarily a [configuration management/provisioning] tool.",
+    "back": "configuration management"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_004",
+    "front": "Puppet is primarily a [configuration management/provisioning] tool.",
+    "back": "configuration management"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_005",
+    "front": "Chef is primarily a [configuration management/provisioning] tool.",
+    "back": "configuration management"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_006",
+    "front": "Terraform is primarily a [configuration management/provisioning] tool.",
+    "back": "provisioning"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_007",
+    "front": "Configuration management tools typically use a(n) [mutable/immutable] infrastructure approach.",
+    "back": "mutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_008",
+    "front": "Provisioning tools typically use a(n) [mutable/immutable] infrastructure approach.",
+    "back": "immutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_009",
+    "front": "Ansible uses a(n) [mutable/immutable] infrastructure approach.",
+    "back": "mutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_010",
+    "front": "Puppet uses a(n) [mutable/immutable] infrastructure approach.",
+    "back": "mutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_011",
+    "front": "Chef uses a(n) [mutable/immutable] infrastructure approach.",
+    "back": "mutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_012",
+    "front": "Terraform uses a(n) [mutable/immutable] infrastructure approach.",
+    "back": "immutable"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_013",
+    "front": "A [...] approach defines explicit steps in a specific order to achieve the desired outcome.",
+    "back": "procedural"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_014",
+    "front": "A [...] approach defines the desired end state, and lets the tool figure out the steps needed to achieve that state.",
+    "back": "declarative"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_015",
+    "front": "Ansible uses a [procedural/declarative] approach.",
+    "back": "procedual"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_016",
+    "front": "Chef uses a [procedural/declarative] approach.",
+    "back": "procedural"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_017",
+    "front": "Terraform uses a [procedural/declarative] approach.",
+    "back": "decalarative"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_018",
+    "front": "Puppet uses a [procedural/declarative] approach.",
+    "back": "declarative"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_019",
+    "front": "Terraform provisions infrastructure resources on platforms called [...].",
+    "back": "providers"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_020",
+    "front": "Terraform uses a [push/pull] model.",
+    "back": "push"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_021",
+    "front": "Terraform uses an [agent-based/agentless] architecture.",
+    "back": "agentless"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_022",
+    "front": "Terraform [...] is the central Terraform software that analyzes configurations and interacts with providers.",
+    "back": "Core"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_023",
+    "front": "Terraform [...] files define the desired end state of the infrastructure.",
+    "back": "configuration"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_024",
+    "front": "The Terraform [...] file tracks the status of the deployed infrastructure.",
+    "back": "state"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_025",
+    "front": "What the the three main steps in the basic Terraform workflow?",
+    "back": "Write, Plan, Apply"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_026",
+    "front": "Terraform Core is written in [language].",
+    "back": "Go"
+  },
+  {
+    "id": "Day 63 (part 2) Flashcards - Terraform_027",
+    "front": "Terraform configuration files are written in [language].",
+    "back": "HashiCorp Configuration Language (HCL)"
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_001",
+    "front": "What are the three logical planes of network functions?",
+    "back": "Management plane\nControl plane\nData plane"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_002",
+    "front": "Tasks involved in forwarding user traffic from one interface to another are part of the [...] plane.",
+    "back": "data"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_003",
+    "front": "Functions that control the actions of the data plane are part of the [...] plane.",
+    "back": "control"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_004",
+    "front": "Functions that are used to manage devices are part of the [...] plane.",
+    "back": "management"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_005",
+    "front": "The Data plane is also known as the [...] plane.",
+    "back": "Forwarding"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_006",
+    "front": "What does ASIC stand for?",
+    "back": "Application-Specific Integrated Circuit"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_007",
+    "front": "What does TCAM stand for?",
+    "back": "Ternary Content-Addressable Memory"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_008",
+    "front": "The MAC address table is also known as the [...] table.",
+    "back": "CAM"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_009",
+    "front": "What does SDN stand for?",
+    "back": "Software-Defined Networking"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_010",
+    "front": "What does SDA stand for?",
+    "back": "Software-Defined Architecture"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_011",
+    "front": "What does API stand for?",
+    "back": "Application Programming Interface"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_012",
+    "front": "SDN is an approach to networking that centralizes the [...] plane into an application called a controller.",
+    "back": "control"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_013",
+    "front": "What does SBI stand for?",
+    "back": "Southbound Interface"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_014",
+    "front": "What does NBI stand for?",
+    "back": "Northbound Interface"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_015",
+    "front": "OpenFlow is a [...]bound interface.",
+    "back": "south"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_016",
+    "front": "OpFlex is a [...]bound interface.",
+    "back": "south"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_017",
+    "front": "onePK is a [...]bound interface.",
+    "back": "south"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_018",
+    "front": "NETCONF is a [...]bound interface.",
+    "back": "south"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_019",
+    "front": "The [...]bound interface is used for communications between the SDN controller and the network devices it controls.",
+    "back": "South"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_020",
+    "front": "The [...]bound interface is used for communications between the SDN controller and applications.",
+    "back": "North"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_021",
+    "front": "What does REST stand for?",
+    "back": "Representational State Transfer"
+  },
+  {
+    "id": "Day 59 (Part 1) Flashcards - Network Automation_022",
+    "front": "REST APIs are used for [...]bound interfaces.",
+    "back": "North"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_001",
+    "front": "What does AI stand for?",
+    "back": "artificial intelligence"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_002",
+    "front": "[...] uses computers to simulate intelligence, allowing them to exhibit behaviors typically associated with humans.",
+    "back": "AI"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_003",
+    "front": "What does ML stand for?",
+    "back": "Machine Learning"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_004",
+    "front": "[...] is a subset of AI that enables computers to learn from data and improve without explicit programming.",
+    "back": "ML"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_005",
+    "front": "ML: [...] learning trains the model on a labeled dataset.",
+    "back": "Supervised"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_006",
+    "front": "ML: [...] learning trains the model on an unlabeled dataset.",
+    "back": "Unsupervised"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_007",
+    "front": "ML: [...] learning trains the model by rewarding or penalizing its actions in a given environment.",
+    "back": "Reinforcement"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_008",
+    "front": "ML: [...] learning uses artificial neural networks to process and learn from large and complex datasets.",
+    "back": "Deep"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_009",
+    "front": "[...] AI analyzes historical data to predict future outcomes or trends.",
+    "back": "Predictive"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_010",
+    "front": "[...] AI learns patterns from existing data to create new content.",
+    "back": "Generative"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_011",
+    "front": "Catalyst Center [...] uses AI to establish the baseline behavior of the network and provide recommendations for optimizing the network.",
+    "back": "AI Network Analytics"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_012",
+    "front": "Catalyst Center [...] uses AI to perform root-cause analysis and take corrective actions when network issues arise.",
+    "back": "Machine Reasoning Engine (MRE)"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_013",
+    "front": "What does Catalyst Center MRE stand for?",
+    "back": "Machine Reasoning Engine"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_014",
+    "front": "Catalyst Center [...] uses AI to automatically identify and classify devices connected to the network.",
+    "back": "AI Endpoint Analytics"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_015",
+    "front": "Catalyst Center [...] uses AI to optimize wireless network performance by dynamically adjusting radio settings.",
+    "back": "AI-enhanced Radio Resource Management (RRM)"
+  },
+  {
+    "id": "Day 59 (Part 2) Flashcards - AI & Machine Learning_016",
+    "front": "What does RRM stand for?",
+    "back": "Radio Resource Management"
+  }
+]

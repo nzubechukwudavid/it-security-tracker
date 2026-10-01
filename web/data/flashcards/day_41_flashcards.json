@@ -1,0 +1,202 @@
+[
+  {
+    "id": "Day 41 Flashcards - Syslog_001",
+    "front": "Syslog message format:\n[...]:timestamp: %facility-severity-mnemonic:description",
+    "back": "seq"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_002",
+    "front": "Syslog message format:\nseq:[...]: %facility-severity-mnemonic:description",
+    "back": "timestamp"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_003",
+    "front": "Syslog message format:\nseq:timestamp: %[...]-severity-mnemonic:description",
+    "back": "facility"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_004",
+    "front": "Syslog message format:\nseq:timestamp: %facility-[...]-mnemonic:description",
+    "back": "severity"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_005",
+    "front": "Syslog message format:\nseq:timestamp: %facility-severity-[...]:description",
+    "back": "mnemonic"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_006",
+    "front": "Syslog message format:\nseq:timestamp: %facility-severity-mnemonic:[...]",
+    "back": "description"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_007",
+    "front": "Which Syslog message field?\n-A number that indicates the order of messages.",
+    "back": "seq"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_008",
+    "front": "Which Syslog message field?\n-Indicates the time the message was generated.",
+    "back": "time stamp"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_009",
+    "front": "Which Syslog message field?\n-Indicates which process on the device generated the message.",
+    "back": "facility"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_010",
+    "front": "Which Syslog message field?\n-Indicates how serious the logged event is.",
+    "back": "severity"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_011",
+    "front": "Which Syslog message field?\n-A short code for the message, indicating what happened.",
+    "back": "mnemonic"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_012",
+    "front": "Which Syslog message field?\n-Detailed information about the event being reported.",
+    "back": "description"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_013",
+    "front": "Syslog severity level:\n[...] = Emergency",
+    "back": "0"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_014",
+    "front": "Syslog severity level:\n0 = [...]",
+    "back": "Emergency"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_015",
+    "front": "Syslog severity level:\n[...] = Alert",
+    "back": "1"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_016",
+    "front": "Syslog severity level:\n1 = [...]",
+    "back": "Alert"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_017",
+    "front": "Syslog severity level:\n[...] = Critical",
+    "back": "2"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_018",
+    "front": "Syslog severity level:\n2 = [...]",
+    "back": "Critical"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_019",
+    "front": "Syslog severity level:\n[...] = Error",
+    "back": "3"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_020",
+    "front": "Syslog severity level:\n3 = [...]",
+    "back": "Error"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_021",
+    "front": "Syslog severity level:\n[...] = Warning",
+    "back": "4"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_022",
+    "front": "Syslog severity level:\n4 = [...]",
+    "back": "Warning"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_023",
+    "front": "Syslog severity level:\n[...] = Notice/Notification",
+    "back": "5"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_024",
+    "front": "Syslog severity level:\n5 = [...]",
+    "back": "Notice/Notification"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_025",
+    "front": "Syslog severity level:\n[...] = Informational",
+    "back": "6"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_026",
+    "front": "Syslog severity level:\n6 = [...]",
+    "back": "Informational"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_027",
+    "front": "Syslog severity level:\n[...] = Debugging",
+    "back": "7"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_028",
+    "front": "Syslog severity level:\n7 = [...]",
+    "back": "Debugging"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_029",
+    "front": "Syslog servers listen for messages on [...] port 514.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_030",
+    "front": "Syslog servers listen for messages on UDP port [...].",
+    "back": "514"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_031",
+    "front": "Which locations are Syslog messages sent to by default?",
+    "back": "Console line\nBuffer"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_032",
+    "front": "Configure Syslog monitoring to the console line, specifying the level.\nR1(config)# [...]",
+    "back": "logging console level"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_033",
+    "front": "Configure Syslog monitoring to the VTY lines, specifying the level.\nR1(config)# [...]",
+    "back": "logging monitor level"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_034",
+    "front": "Configure Syslog monitoring to the buffer, specifying the size/level.\nR1(config)# [...]",
+    "back": "logging buffered [size] level"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_035",
+    "front": "Configure Syslog monitoring to an external server\nR1(config)# [...]",
+    "back": "logging ip-address\nOR\nlogging host ip-address"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_036",
+    "front": "Configure the level of Syslog messages sent to an external server:\nR1(config)# [...]",
+    "back": "logging trap level"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_037",
+    "front": "When connected via Telnet/SSH, display Syslog messages for the current session:\nR1# [...]",
+    "back": "terminal monitor"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_038",
+    "front": "Configure synchronous logging on the device:\nR1(config-line)# [...]",
+    "back": "logging synchronous"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_039",
+    "front": "Enable timestamps for Syslog log messages, displaying the date and time.\nR1(config)# [...]",
+    "back": "service timestamps log datetime"
+  },
+  {
+    "id": "Day 41 Flashcards - Syslog_040",
+    "front": "Enable sequence numbers for Syslog messages:\nR1(config)# [...]",
+    "back": "service sequence-numbers"
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_001",
+    "front": "The Shortest Path First algorithm is also known as [...]'s algorithm.",
+    "back": "Dijkstra"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_002",
+    "front": "Which version of OSPF is usually used for IPv4?",
+    "back": "OSPFv2"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_003",
+    "front": "Which version of OSPF is used for IPv6?",
+    "back": "OSPFv3"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_004",
+    "front": "OSPF: What does LSA stand for?",
+    "back": "Link State Advertisement"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_005",
+    "front": "OSPF: What does LSDB stand for?",
+    "back": "Link State Database"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_006",
+    "front": "OSPF [...] are organized in a structure called the LSDB.",
+    "back": "LSAs"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_007",
+    "front": "OSPF LSAs are organized in a structure called the [...].",
+    "back": "LSDB"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_008",
+    "front": "OSPF LSAs have a default aging timer of [time]",
+    "back": "30 minutes"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_009",
+    "front": "OSPF can divide networks into separate [...]",
+    "back": "areas"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_010",
+    "front": "OSPF: An [...] is a set of routers and links that share the same LSDB.",
+    "back": "area"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_011",
+    "front": "OSPF: The [...] area (area 0) is an area that all other areas must connect to.",
+    "back": "backbone"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_012",
+    "front": "OSPF: The backbone area (area [...]) is an area that all other areas must connect to.",
+    "back": "0"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_013",
+    "front": "OSPF: Routers with all interfaces in the same area are called [...] routers.",
+    "back": "internal"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_014",
+    "front": "OSPF: Routers with interfaces in multiple areas are called [...].",
+    "back": "area border routers (ABRs)"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_015",
+    "front": "OSPF: What does ABR stand for?",
+    "back": "Area Border Router"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_016",
+    "front": "OSPF: It is recommend that you connect an ABR to a maximum of [...] areas.",
+    "back": "2"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_017",
+    "front": "OSPF: Routers connected to the backbone area (area 0) are called [...] routers.",
+    "back": "backbone"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_018",
+    "front": "OSPF: An [...] route is a route to a destination inside the same OSPF area.",
+    "back": "intra-area"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_019",
+    "front": "OSPF: An [...] route is a route to a destination in a different OSPF area.",
+    "back": "interarea"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_020",
+    "front": "Enter OSPF configuration mode:\nR1(config)# [...]",
+    "back": "router ospf process-id"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_021",
+    "front": "Enable OSPF on interfaces in the specified range:\nR1(config-router)# [...]",
+    "back": "network ip-address wildcard-mask area area"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_022",
+    "front": "Prevent an OSPF router from sending OSPF messages out of an OSPF-enabled interface:\nR1(config-router)# [...]",
+    "back": "passive-interface interface-id"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_023",
+    "front": "Configure an OSPF router to advertise its default route into the OSPF domain:\nR1(config-router)# [...]",
+    "back": "default-information originate"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_024",
+    "front": "Modify the OSPF AD on the local router:\nR1(config-router)# [...]",
+    "back": "distance value"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_025",
+    "front": "Configure the maximum number of paths an OSPF router will use to perform ECMP load-balancing:\nR1(config-router)# [...]",
+    "back": "maximum-paths number"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_026",
+    "front": "OSPF Router ID selection priority:\n1. [...]\n2. Highest IP address on a loopback interface\n3. Highest IP address on a physical interface",
+    "back": "Manual configuration"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_027",
+    "front": "OSPF Router ID selection priority:\n1. Manual configuration\n2. [...]\n3. Highest IP address on a physical interface",
+    "back": "Highest IP address on a loopback interface"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_028",
+    "front": "OSPF Router ID selection priority:\n1. Manual configuration\n2. Highest IP address on a loopback interface\n3. [...]",
+    "back": "Highest IP address on a physical interface"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_029",
+    "front": "Reset the OSPF process on the local router:\nR1# [...]",
+    "back": "clear ip ospf process"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_030",
+    "front": "OSPF: What does ASBR stand for?",
+    "back": "Autonomous System Boundary Router"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_031",
+    "front": "An [...] is an OSPF router that connects the OSPF network to an external network.",
+    "back": "autonomous system boundary router (ASBR)"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_032",
+    "front": "Does single-area OSPF have to use area 0?",
+    "back": "No"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_033",
+    "front": "Does the OSPF process ID have to match for two routers to become OSPF neighbors?",
+    "back": "No"
+  },
+  {
+    "id": "Day 26 Flashcards - OSPF (Part 1)_034",
+    "front": "Manually configure the OSPF router ID:\nR1(config-router)# [...]",
+    "back": "router-id a.b.c.d"
+  }
+]

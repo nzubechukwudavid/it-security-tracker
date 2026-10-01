@@ -1,0 +1,287 @@
+[
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_001",
+    "front": "802.11 Frame 'Frame Control' field length:",
+    "back": "2 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_002",
+    "front": "802.11 Frame 'Duration/ID' field length:",
+    "back": "2 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_003",
+    "front": "802.11 Frame 'Address 1/2/3/4' field length:",
+    "back": "6 bytes (per address)"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_004",
+    "front": "802.11 Frame 'Sequence Control' field length:",
+    "back": "2 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_005",
+    "front": "802.11 Frame 'QoS Control' field length:",
+    "back": "2 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_006",
+    "front": "802.11 Frame 'HT Control' field length:",
+    "back": "4 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_007",
+    "front": "802.11 Frame 'FCS' field length:",
+    "back": "4 bytes"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_008",
+    "front": "There are three 802.11 connection states:\n1: [...]\n2: [...]\n3: [...]",
+    "back": "1: Not Authenticated, not Associated.\n2: Authenticated, not Associated.\n3: Authenticated and Associated."
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_009",
+    "front": "Which two messages are used for 802.11 active scanning?",
+    "back": "Probe request\nProbe response"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_010",
+    "front": "Which messages does a wireless station listen for when doing 802.11 passive scanning?",
+    "back": "Beacon"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_011",
+    "front": "What are the three 802.11 message types?",
+    "back": "Management\nControl\nData"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_012",
+    "front": "What 802.11 message type?\nBeacon",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_013",
+    "front": "What 802.11 message type?\nProbe request",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_014",
+    "front": "What 802.11 message type?\nProbe response",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_015",
+    "front": "What 802.11 message type?\nAuthentication",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_016",
+    "front": "What 802.11 message type?\nAssociation request",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_017",
+    "front": "What 802.11 message type?\nAssociation response",
+    "back": "Management"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_018",
+    "front": "What 802.11 message type?\nRTS",
+    "back": "Control"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_019",
+    "front": "What 802.11 message type?\nCTS",
+    "back": "Control"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_020",
+    "front": "What 802.11 message type?\nACK",
+    "back": "Control"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_021",
+    "front": "What are the three main wireless AP deployment methods? (three architectures)",
+    "back": "Autonomous\nLightweight\nCloud-based"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_022",
+    "front": "[...] APs are self-contained systems that don't rely on a WLC.",
+    "back": "Autonomous"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_023",
+    "front": "Autonomous APs connect to a switch via [access/trunk] ports.",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_024",
+    "front": "The use of lightweight APs and WLCs is also known as [...] architecture.",
+    "back": "split-MAC"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_025",
+    "front": "What does WLC stand for?",
+    "back": "Wireless LAN Controller"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_026",
+    "front": "What does CAPWAP stand for?",
+    "back": "Control and Provisioning of Wireless Access Points"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_027",
+    "front": "What does LWAPP stand for?",
+    "back": "Lightweight Access Point Protocol"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_028",
+    "front": "CAPWAP [...] tunnels use UDP port 5246.",
+    "back": "Control"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_029",
+    "front": "CAPWAP Control tunnels use [...] port 5246.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_030",
+    "front": "CAPWAP Control tunnels use UDP port [...].",
+    "back": "5246"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_031",
+    "front": "CAPWAP [...] tunnels use UDP port 5247.",
+    "back": "Data"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_032",
+    "front": "CAPWAP Data tunnels use [...] port 5247.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_033",
+    "front": "CAPWAP Data tunnels use UDP port [...].",
+    "back": "5247"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_034",
+    "front": "How many CAPWAP tunnels does a lightweight AP form with the WLC?",
+    "back": "2 (control and data)"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_035",
+    "front": "The CAPWAP [...] tunnel is encrypted by default.",
+    "back": "control"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_036",
+    "front": "The CAPWAP [...] tunnel isn't encrypted by default.",
+    "back": "data"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_037",
+    "front": "The CAPWAP control tunnel [is/isn't] encrypted by default.",
+    "back": "is"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_038",
+    "front": "The CAPWAP data tunnel [is/isn't] encrypted by default.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_039",
+    "front": "Lightweight APs connect to a switch via [access/trunk] ports.",
+    "back": "access"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_040",
+    "front": "Which feature allows a lightweight AP to locally switch traffic if the tunnels to the WLC go down?",
+    "back": "FlexConnect"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_041",
+    "front": "What is the default operating mode of a lightweight AP, in which it offers a BSS for clients?",
+    "back": "Local"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_042",
+    "front": "Which lightweight AP operating mode is dedicated to capturing 802.11 frames and sending them to a device running software such as Wireshark?",
+    "back": "Sniffer"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_043",
+    "front": "Which lightweight AP operating mode is dedicated to receiving 802.11 frames to detect rogue devices?",
+    "back": "Monitor"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_044",
+    "front": "Which lightweight AP operating mode is dedicated to listening to traffic on the wired network to detect rogue devices? (it does not use its radio)",
+    "back": "Rogue Detector"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_045",
+    "front": "Which lightweight AP operating mode is dedicated to RF spectrum analysis on all channels?",
+    "back": "SE-Connect"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_046",
+    "front": "Which lightweight AP operating mode can form a dedicated bridge between sites?",
+    "back": "Bridge/Mesh\n(a mesh can be formed between the APs)"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_047",
+    "front": "Which lightweight AP operating mode adds FlexConnect functionality to the Bridge/Mesh mode?",
+    "back": "Flex plus Bridge"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_048",
+    "front": "Cisco [...] is a popular cloud-based AP solution.",
+    "back": "Meraki"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_049",
+    "front": "[...] AP architecure is between autonomous AP and split-MAC architecture in terms of functionality.",
+    "back": "Cloud-based"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_050",
+    "front": "A Unified WLC can support about [...] APs.",
+    "back": "6000"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_051",
+    "front": "A Cloud-based WLC can support about [...] APs.",
+    "back": "3000"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_052",
+    "front": "An Embedded WLC can support about [...] APs.",
+    "back": "200"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_053",
+    "front": "A Mobility Express WLC can support about [...] APs.",
+    "back": "100"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_054",
+    "front": "A [...] WLC is a hardware appliance in a central location of the network.",
+    "back": "Unified"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_055",
+    "front": "A [...] WLC is a VM running on a server, usually in a private cloud in a data center.",
+    "back": "Cloud-based"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_056",
+    "front": "An [...] WLC is integrated within a switch.",
+    "back": "Embedded"
+  },
+  {
+    "id": "Day 56 Flashcards - Wireless Architectures_057",
+    "front": "A [...] WLC is integrated within an AP.",
+    "back": "Mobility Express"
+  }
+]

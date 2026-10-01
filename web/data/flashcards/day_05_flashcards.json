@@ -1,0 +1,192 @@
+[
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_001",
+    "front": "What is the only field in an Ethernet trailer?",
+    "back": "FCS (Frame Check Sequence)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_002",
+    "front": "What are the 5 fields of an Ethernet header?",
+    "back": "Preamble, SFD, Destination, Source, Type/Length"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_003",
+    "front": "What does 'SFD' in an Ethernet header stand for?",
+    "back": "Start Frame Delimiter"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_004",
+    "front": "What does 'FCS' in an Ethernet frame stand for?",
+    "back": "Frame Check Sequence"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_005",
+    "front": "Ethernet header 'Preamble' = [...] byte(s)",
+    "back": "7"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_006",
+    "front": "Ethernet header 'SFD' = [...] byte(s)",
+    "back": "1"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_007",
+    "front": "Ethernet header 'Destination' = [...] byte(s)",
+    "back": "6"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_008",
+    "front": "Ethernet header 'Source' = [...] byte(s)",
+    "back": "6"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_009",
+    "front": "Ethernet header 'Type/Length' = [...] byte(s)",
+    "back": "2"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_010",
+    "front": "Ethernet trailer 'FCS' = [...] byte(s)",
+    "back": "4"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_011",
+    "front": "Which field of an Ethernet header is used for synchronization?",
+    "back": "Preamble"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_012",
+    "front": "What is the bit pattern of one byte in the Ethernet preamble?",
+    "back": "10101010"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_013",
+    "front": "What is the bit pattern of the Ethernet SFD?",
+    "back": "10101011"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_014",
+    "front": "Which field of an Ethernet header marks the end of the preamble?",
+    "back": "SFD"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_015",
+    "front": "What does MAC stand for?",
+    "back": "Media Access Control"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_016",
+    "front": "How long is a MAC address? = [...] bytes",
+    "back": "6"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_017",
+    "front": "How long is a MAC address? = [...] bits",
+    "back": "48"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_018",
+    "front": "A value of [...] or less in the Type/Length field indicates Length.",
+    "back": "1500"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_019",
+    "front": "A value of [...] or greater in the Type/Length field indicates Type.",
+    "back": "1536"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_020",
+    "front": "What is the Ethernet Type value for IPv4? (in hexadecimal)",
+    "back": "0x0800"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_021",
+    "front": "What is the Ethernet Type value for IPv6? (in hexadecimal)",
+    "back": "0x86DD"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_022",
+    "front": "What kind of algorithm does the Ethernet FCS use?",
+    "back": "CRC (Cyclic Redundancy Check)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_023",
+    "front": "What is another name for a MAC address?",
+    "back": "BIA (Burned-In Address)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_024",
+    "front": "The first [...] bytes of a MAC address are the OUI.",
+    "back": "3"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_025",
+    "front": "The first 3 bytes of a MAC address are the [...]",
+    "back": "OUI (Organizationally Unique Identifier)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_026",
+    "front": "A MAC address is written as [...] hexadecimal characters.",
+    "back": "12"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_027",
+    "front": "Hexadecimal A = Decimal [...]",
+    "back": "10"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_028",
+    "front": "Hexadecimal B = Decimal [...]",
+    "back": "11"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_029",
+    "front": "Hexadecimal C = Decimal [...]",
+    "back": "12"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_030",
+    "front": "Hexadecimal D = Decimal [...]",
+    "back": "13"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_031",
+    "front": "Hexadecimal E = Decimal [...]",
+    "back": "14"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_032",
+    "front": "Hexadecimal F = Decimal [...]",
+    "back": "15"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_033",
+    "front": "A [...] frame is a frame destined for a single target.",
+    "back": "unicast"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_034",
+    "front": "A MAC address learned by a switch without manual configuration is called a ...",
+    "back": "Dynamic MAC address (Dynamically learned MAC address)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_035",
+    "front": "What does a switch do with an unknown unicast frame?",
+    "back": "Floods it out all ports (except the one it was received on)"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_036",
+    "front": "A switch will flood an [...] unicast frame.",
+    "back": "unknown"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_037",
+    "front": "By default, a dynamic MAC address will be removed from the MAC address table after [time] of inactivity.",
+    "back": "5 minutes"
+  },
+  {
+    "id": "Day 05 Flashcards - Ethernet LAN Switching (Part 1)_038",
+    "front": "Which field of an Ethernet frame does a switch use to learn and populate its MAC address table?",
+    "back": "Source MAC Address"
+  }
+]

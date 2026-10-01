@@ -1,0 +1,202 @@
+[
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_001",
+    "front": "Which Layer 2 discovery protocol is Cisco proprietary?",
+    "back": "CDP"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_002",
+    "front": "Which Layer 2 discovery protocol is an industry standard?",
+    "back": "LLDP"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_003",
+    "front": "What does CDP stand for?",
+    "back": "Cisco Discovery Protocol"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_004",
+    "front": "What does LLDP stand for?",
+    "back": "Link Layer Discovery Protocol"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_005",
+    "front": "CDP messages are sent to MAC address [...]",
+    "back": "0100.0CCC.CCCC"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_006",
+    "front": "Default CDP message timer:",
+    "back": "60 seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_007",
+    "front": "Default CDP holdtime:",
+    "back": "180 seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_008",
+    "front": "Default CDP version:",
+    "back": "Version 2"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_009",
+    "front": "Show global CDP information:\nR1# [...]",
+    "back": "show cdp"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_010",
+    "front": "Show the number of CDP packets sent/received:\nR1# [...]",
+    "back": "show cdp traffic"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_011",
+    "front": "Show the interfaces CDP is enabled on:\nR1# [...]",
+    "back": "show cdp interface"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_012",
+    "front": "Show the CDP neighbor table:\nR1# [...]",
+    "back": "show cdp neighbors"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_013",
+    "front": "Show detailed information for all CDP neighbors:\nR1# [...]",
+    "back": "show cdp neighbors detail"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_014",
+    "front": "CDP [can/can't] share VTP information.",
+    "back": "can"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_015",
+    "front": "LLDP [can/can't] share VTP information.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_016",
+    "front": "Show detailed information for a specific CDP neighbor:\nR1# [...]",
+    "back": "show cdp entry host-name"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_017",
+    "front": "Enable CDP globally:\nR1(config)# [...]",
+    "back": "cdp run"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_018",
+    "front": "Enable CDP on an interface:\nR1(config-if)# [...]",
+    "back": "cdp enable"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_019",
+    "front": "Configure the CDP message timer:\nR1(config)# [...]",
+    "back": "cdp timer seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_020",
+    "front": "Configure the CDP hold time:\nR1(config)# [...]",
+    "back": "cdp holdtime seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_021",
+    "front": "Enable CDPv2:\nR1(config)# [...]",
+    "back": "cdp advertise-v2"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_022",
+    "front": "CDP is [...] on Cisco devices by default.",
+    "back": "enabled"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_023",
+    "front": "LLDP is usually [...] on Cisco devices by default.",
+    "back": "disabled"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_024",
+    "front": "A device [can/can't] run CDP and LLDP at the same time.",
+    "back": "can"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_025",
+    "front": "LLDP messages are sent to MAC address [...]",
+    "back": "0180.C200.000E"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_026",
+    "front": "Default LLDP message timer:",
+    "back": "30 seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_027",
+    "front": "Default LLDP holdtime:",
+    "back": "120 seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_028",
+    "front": "Default LLDP reinitialization timer:",
+    "back": "2 seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_029",
+    "front": "Enable LLDP globally:\nR1(config)# [...]",
+    "back": "lldp run"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_030",
+    "front": "Enable LLDP on an interface (tx):\nR1(config-if)# [...]",
+    "back": "lldp transmit"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_031",
+    "front": "Enable LLDP on an interface (rx):\nR1(config-if)# [...]",
+    "back": "lldp receive"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_032",
+    "front": "Configure the LLDP message timer:\nR1(config)# [...]",
+    "back": "lldp timer seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_033",
+    "front": "Configure the LLDP hold time:\nR1(config)# [...]",
+    "back": "lldp holdtime seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_034",
+    "front": "Configure the LLDP reinitialization timer:\nR1(config)# [...]",
+    "back": "lldp reinit seconds"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_035",
+    "front": "Show global LLDP information:\nR1# [...]",
+    "back": "show lldp"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_036",
+    "front": "Show information about LLDP frames sent/received:\nR1# [...]",
+    "back": "show lldp traffic"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_037",
+    "front": "Show LLDP-enabled interfaces:\nR1# [...]",
+    "back": "show llpd interface"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_038",
+    "front": "Show the LLDP neighbor table:\nR1# [...]",
+    "back": "show lldp neighbors"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_039",
+    "front": "Show detailed information about all LLDP neighbors:\nR1# [...]",
+    "back": "show lldp neighbors detail"
+  },
+  {
+    "id": "Day 36 Flashcards - CDP & LLDP_040",
+    "front": "Show detailed information about a single LLDP neighbor:\nR1# [...]",
+    "back": "show lldp entry host-name"
+  }
+]

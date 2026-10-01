@@ -1,0 +1,217 @@
+[
+  {
+    "id": "Day 57 Flashcards - Wireless Security_001",
+    "front": "A [...] is used by a wireless AP to encrypt traffic that it wants to send to all of its clients.",
+    "back": "group key"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_002",
+    "front": "What does MIC stand for?",
+    "back": "Message Integrity Check"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_003",
+    "front": "What does WEP stand for?",
+    "back": "Wired Equivalent Privacy"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_004",
+    "front": "What does EAP stand for?",
+    "back": "Extensible Authentication Protocol"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_005",
+    "front": "What does LEAP stand for?",
+    "back": "Lightweight EAP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_006",
+    "front": "What does EAP-FAST stand for?",
+    "back": "EAP Flexible Authentication via Secure Tunneling"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_007",
+    "front": "What does PEAP stand for?",
+    "back": "Protected EAP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_008",
+    "front": "What does EAP-TLS stand for?",
+    "back": "EAP Transport Layer Security"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_009",
+    "front": "When using [...] authentication, all authentication requests are accepted.",
+    "back": "open"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_010",
+    "front": "WEP uses the [...] algorithm for encryption.",
+    "back": "RC4"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_011",
+    "front": "WEP keys can be [...] or [...] in length.",
+    "back": "40 bits (+24 = 64) or 104 bits (+24 = 128)"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_012",
+    "front": "EAP is integrated with [...], which provides port-based network access control.",
+    "back": "802.1X"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_013",
+    "front": "Which 802.1X entity?\nThe device that wants to connect to the network.",
+    "back": "Supplicant"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_014",
+    "front": "Which 802.1X entity?\nThe device that provides access to the network.",
+    "back": "Authenticator"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_015",
+    "front": "Which 802.1X entity?\nThe device that receives client credentials and permits/denies access.",
+    "back": "Authentication Server (AS)"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_016",
+    "front": "LEAP provides mutual authentication by exchanging [...]",
+    "back": "challenge phrases"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_017",
+    "front": "LEAP uses [...] WEP keys that change frequently.",
+    "back": "dynamic"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_018",
+    "front": "In EAP-FAST, a [...] is passed from the server to the client.",
+    "back": "PAC (Protected Access Credential)"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_019",
+    "front": "Three phases of EAP-FAST:\n1: [...]\n2: Secure TLS tunnel is established\n3: Client is authenticated via the TLS tunnel",
+    "back": "PAC is passed from server to client"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_020",
+    "front": "Three phases of EAP-FAST:\n1: PAC is passed from server to client\n2: [...]\n3: Client is authenticated via the TLS tunnel",
+    "back": "Secure TLS tunnel is established"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_021",
+    "front": "Three phases of EAP-FAST:\n1: PAC is passed from server to client\n2: Secure TLS tunnel is established\n3: [...]",
+    "back": "Client is authenticated via the TLS tunnel"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_022",
+    "front": "In PEAP, the server is authenticated via a [...].",
+    "back": "certificate"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_023",
+    "front": "What does MS-CHAP stand for?",
+    "back": "Microsoft Challenge-Handshake Authentication Protocol"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_024",
+    "front": "In PEAP, which device/devices require a certificate?",
+    "back": "AS only"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_025",
+    "front": "In EAP-TLS, which device/devices require a certificate?",
+    "back": "AS and supplicant"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_026",
+    "front": "What does TKIP stand for?",
+    "back": "Temporal Key Integrity Protocol"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_027",
+    "front": "What does CCMP stand for?",
+    "back": "Counter/CBC-MAC Protocol"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_028",
+    "front": "What does GCMP stand for?",
+    "back": "Galois/Counter Mode Protocol"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_029",
+    "front": "Which encryption protocol was developed as an improvement upon WEP?",
+    "back": "TKIP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_030",
+    "front": "What does CCMP use for encryption?",
+    "back": "AES counter mode"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_031",
+    "front": "What does CCMP use as a MIC?",
+    "back": "CBC-MAC"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_032",
+    "front": "What does CBC-MAC stand for?",
+    "back": "Cipher Block Chaining Message Authentication Code"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_033",
+    "front": "What does GCMP use for encryption?",
+    "back": "AES counter mode"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_034",
+    "front": "What does GCMP use for MIC?",
+    "back": "GMAC"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_035",
+    "front": "What does GMAC stand for?",
+    "back": "Galois Message Authentication Code"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_036",
+    "front": "What are the two WPA authentication modes?",
+    "back": "Personal, Enterprise"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_037",
+    "front": "Which WPA authentication mode uses a PSK?",
+    "back": "Personal mode"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_038",
+    "front": "Which WPA authentication mode uses 802.1X/EAP?",
+    "back": "Enterprise mode"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_039",
+    "front": "WPA uses [...] for encryption/MIC.",
+    "back": "TKIP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_040",
+    "front": "WPA2 uses [...] for encryption/MIC.",
+    "back": "CCMP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_041",
+    "front": "WPA3 uses [...] for encryption/MIC.",
+    "back": "GCMP"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_042",
+    "front": "WPA3 [...] protects the four-way handshake when using personal mode authentication.",
+    "back": "SAE (Simultaneous Authentication of Equals)"
+  },
+  {
+    "id": "Day 57 Flashcards - Wireless Security_043",
+    "front": "WPA3 [...] prevents data from being decrypted after it has been transmitted over the air.",
+    "back": "forward secrecy"
+  }
+]

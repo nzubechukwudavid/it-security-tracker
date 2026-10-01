@@ -1,0 +1,132 @@
+[
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_001",
+    "front": "What does JSON stand for?",
+    "back": "JavaScript Object Notation"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_002",
+    "front": "What does XML stand for?",
+    "back": "Extensible Markup Language"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_003",
+    "front": "What does YAML stand for?",
+    "back": "YAML Ain't Markup Language"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_004",
+    "front": "Which data serialization languages are often used by REST APIs?",
+    "back": "JSON, XML"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_005",
+    "front": "In JSON, whitespace [is/isn't] significant.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_006",
+    "front": "In XML, whitespace [is/isn't] significant.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_007",
+    "front": "In YAML, whitespace [is/isn't] significant.",
+    "back": "is"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_008",
+    "front": "What are the four JSON 'primitive' data types?",
+    "back": "-string\n-number\n-boolean\n-null"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_009",
+    "front": "What are the two JSON 'structured' data types?",
+    "back": "-object\n-array"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_010",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":\"value\"",
+    "back": "string"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_011",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":5",
+    "back": "number"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_012",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":false",
+    "back": "boolean"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_013",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":null",
+    "back": "null"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_014",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":[\"yes\", \"no\"]",
+    "back": "array"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_015",
+    "front": "What kind of JSON data type is the value of this key-value pair?\n\"key\":{\"interface\":\"gigabitethernet1/1\"}",
+    "back": "object"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_016",
+    "front": "A JSON [...] is a text value.",
+    "back": "string"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_017",
+    "front": "A JSON [...] is a numeric value.",
+    "back": "number"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_018",
+    "front": "A JSON [...] can be true or false.",
+    "back": "boolean"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_019",
+    "front": "A JSON [...] data type represents the intentional absence of any value.",
+    "back": "null"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_020",
+    "front": "A JSON [...] is a list of key-value pairs.",
+    "back": "object"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_021",
+    "front": "A JSON [...] is a series of values.",
+    "back": "array"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_022",
+    "front": "[serialization language] uses the <key>value</key> format.",
+    "back": "XML"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_023",
+    "front": "YAML files start with [...].",
+    "back": "---"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_024",
+    "front": "[serialization language] files start with ---.",
+    "back": "YAML"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_025",
+    "front": "In YAML, [...] indicates a list.",
+    "back": "-"
+  },
+  {
+    "id": "Day 60 Flashcards - JSON, XML, & YAML_026",
+    "front": "YAML key-value pairs are represented as [...].",
+    "back": "key:value"
+  }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_001",
+    "front": "The maximum hop count for a RIP route is [...]",
+    "back": "15"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_002",
+    "front": "Which versions of RIP are used for IPv4?",
+    "back": "RIPv1 and RIPv2"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_003",
+    "front": "Which version of RIP is used for IPv6?",
+    "back": "RIPng (RIP Next Generation)"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_004",
+    "front": "RIP uses two message types:\n-[...]\n-[...]",
+    "back": "Request\nResponse"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_005",
+    "front": "RIPv[...] only advertises classful addresses.",
+    "back": "1"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_006",
+    "front": "RIPv[...] doesn't support VLSM and CIDR.",
+    "back": "1"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_007",
+    "front": "RIPv[...] supports VLSM and CIDR.",
+    "back": "2"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_008",
+    "front": "RIPv1 messages are sent using [...]cast.",
+    "back": "broad"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_009",
+    "front": "RIPv2 messages are sent using [...]cast.",
+    "back": "multi"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_010",
+    "front": "RIPv2 messages are multicast to [IPv4 address].",
+    "back": "224.0.0.9"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_011",
+    "front": "Enter RIP configuration mode:\nR1(config)# [...]",
+    "back": "router rip"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_012",
+    "front": "Enable RIPv2:\nR1(config-router)# [...]",
+    "back": "version 2"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_013",
+    "front": "Disable RIP auto summarization\nR1(config-router)# [...]",
+    "back": "no auto-summary"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_014",
+    "front": "Enable RIP on all interfaces in the specified range:\nR1(config-router)# [...]",
+    "back": "network ip-address"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_015",
+    "front": "Configure the router to stop sending RIP advertisements out of a RIP-enabled interface:\nR1(config-router)# [...]",
+    "back": "passive-interface interface-id"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_016",
+    "front": "Configure a RIP-enabled router to advertise its default route to its RIP neighbors:\nR1(config-router)# [...]",
+    "back": "default-information originate"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_017",
+    "front": "EIGRP messages are multicast to [IPv4 address]",
+    "back": "224.0.0.10"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_018",
+    "front": "RIP [can/can't] perform unequal-cost load-balancing.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_019",
+    "front": "EIGRP [can/can't] perform unequal-cost load-balancing.",
+    "back": "can"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_020",
+    "front": "OSPF [can/can't] perform unequal-cost load-balancing.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_021",
+    "front": "Modify RIP's AD on the local router:\nR1(config-router)# [...]",
+    "back": "distance value"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_022",
+    "front": "Modify the number of paths RIP will perform ECMP load-balancing over:\nR1(config-router)# [...]",
+    "back": "maximum-paths number"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_023",
+    "front": "Enter EIGRP configuration mode:\nR1(config)# [...]",
+    "back": "router eigrp as-number"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_024",
+    "front": "Disable EIGRP auto summarization:\nR1(config-router)# [...]",
+    "back": "no auto-summary"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_025",
+    "front": "Does the EIGRP AS number have to match between EIGRP neighbors?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_026",
+    "front": "Prevent the router from sending EIGRP messages out of an EIGRP-enabled interface:\nR1(config-router)# [...]",
+    "back": "passive-interface interface-id"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_027",
+    "front": "Enable EIGRP on interfaces in the specified range:\nR1(config-router)# [...]",
+    "back": "network ip-address [ wildcard-mask ]"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_028",
+    "front": "EIGRP Router ID selection priority:\n1. [...]\n2. Highest IP address on a loopback interface\n3. Highest IP address on a physical interface",
+    "back": "Manual configuration"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_029",
+    "front": "EIGRP Router ID selection priority:\n1. Manual configuration\n2. [...]\n3. Highest IP address on a physical interface",
+    "back": "Highest IP address on a loopback interface"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_030",
+    "front": "EIGRP Router ID selection priority:\n1. Manual configuration\n2. Highest IP address on a loopback interface\n3. [...]",
+    "back": "Highest IP address on a physical interface"
+  },
+  {
+    "id": "Day 25 Flashcards (1) - RIP & EIGRP_031",
+    "front": "Configure the EIGRP router ID:\nR1(config-router)# [...]",
+    "back": "eigrp router-id a.b.c.d"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_001",
+    "front": "Which EIGRP term?\n[...] = This router's metric value to the route's destination",
+    "back": "Feasible Distance"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_002",
+    "front": "Which EIGRP term?\n[...] = The neighbor's metric value to the route's destination.",
+    "back": "Reported Distance (aka Advertised Distance)"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_003",
+    "front": "Which EIGRP term?\n[...] = The route with the lowest metric to the destination (the best route)",
+    "back": "Successor"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_004",
+    "front": "Which EIGRP term?\n[...] = An alternate route to the destination which meets the feasibility condition",
+    "back": "Feasible Successor"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_005",
+    "front": "EIGRP feasibility condition:\nA route is considered a [...] if its reported distance is lower than the successor route’s feasible distance.",
+    "back": "feasible successor"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_006",
+    "front": "EIGRP feasibility condition:\nA route is considered a feasible successor if its [...] is lower than the successor route’s feasible distance.",
+    "back": "reported distance"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_007",
+    "front": "EIGRP feasibility condition:\nA route is considered a feasible successor if its reported distance is lower than the [...] route’s feasible distance.",
+    "back": "successor"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_008",
+    "front": "EIGRP feasibility condition:\nA route is considered a feasible successor if its reported distance is lower than the successor route’s [...].",
+    "back": "feasible distance"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_009",
+    "front": "EIGRP will only perform unequal-cost load-balancing over [...] routes.",
+    "back": "feasible successor"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_010",
+    "front": "If an EIGRP route doesn't meet the feasibility requirement, can it be used for unequal-cost load-balancing?",
+    "back": "No"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_011",
+    "front": "EIGRP default K-values:\nK1 = [...]\nK2 = [...]\nK3 = [...]\nK4 = [...]\nK5 = [...]",
+    "back": "K1 = 1\nK2 = 0\nK3 = 1\nK4 = 0\nK5 = 0"
+  },
+  {
+    "id": "Day 25 Flashcards (2 - Lab Video) - EIGRP Terms_012",
+    "front": "EIGRP metric calculation uses the bandwidth of [...] plus the delay of [...].",
+    "back": "the slowest link  /  all links"
+  }
+]

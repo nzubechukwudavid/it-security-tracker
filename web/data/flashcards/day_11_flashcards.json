@@ -1,0 +1,147 @@
+[
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_001",
+    "front": "Routers store routes to all of their known destinations in the [...]",
+    "back": "routing table"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_002",
+    "front": "When routers receive packets, they look in the [...] to find the best route to forward that packet.",
+    "back": "routing table"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_003",
+    "front": "A [...] route is manually configured by a network engineer/admin.",
+    "back": "static"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_004",
+    "front": "A [...] route is added to the routing table by a protocol (ie. OSPF) that allows routers to communicate with each other and share routing information.",
+    "back": "dynamic"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_005",
+    "front": "The next router in the path to the destination is called the [...].",
+    "back": "next hop"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_006",
+    "front": "Show the routing table:\nR1# [...]",
+    "back": "show ip route"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_007",
+    "front": "What does code C in the routing table mean?",
+    "back": "Connected"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_008",
+    "front": "What does code L in the routing table mean?",
+    "back": "Local"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_009",
+    "front": "Which two routes are automatically added to the routing table when you configure an IP address on an interface?",
+    "back": "1) a connected route\n2) a local route"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_010",
+    "front": "A [...] route is a route to the actual IP address configured on the interface.",
+    "back": "local"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_011",
+    "front": "A [...] route is a route to the network the interface is connected to.",
+    "back": "connected"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_012",
+    "front": "If a packet's destination IP is matched by multiple routes, which route will the router select?",
+    "back": "The most specific matching route"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_013",
+    "front": "Most specific matching route = the matching route with the [...]",
+    "back": "longest prefix length"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_014",
+    "front": "What will a router do if none of its routes match a packet's destination IP address?",
+    "back": "Drop the packet"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_015",
+    "front": "Local routes use a prefix length of [...]",
+    "back": "/32"
+  },
+  {
+    "id": "Day 11 (part 1) Flashcards - Routing Fundamentals_016",
+    "front": "What prefix length do connected routes use?",
+    "back": "The prefix length configured on the interface."
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_001",
+    "front": "For an end host like a PC to send packets outside of its local network, it will send the packets to its [...].",
+    "back": "default gateway"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_002",
+    "front": "A default route is a route to [network]/[netmask].",
+    "back": "0.0.0.0/0"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_003",
+    "front": "The [...] route is the least specific route possible.",
+    "back": "default"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_004",
+    "front": "To send a packet to a destination, does a router need a route to every network in the path to the destination?",
+    "back": "No\n(It only needs a route to the destination network)"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_005",
+    "front": "Configure a static route, specifying the next-hop IP:\nR1(config)# [...]",
+    "back": "ip route ip-address netmask next-hop"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_006",
+    "front": "Configure a static route, specifying the exit-interface:\nR1(config)# [...]",
+    "back": "ip route ip-address netmask exit-interface"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_007",
+    "front": "Configure a static route, specifying the exit-interface and next-hop IP:\nR1(config)# [...]",
+    "back": "ip route ip-address netmask exit-interface next-hop"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_008",
+    "front": "Code [...] in the routing table indicates a static route.",
+    "back": "S"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_009",
+    "front": "Configure a default route, specifying the next-hop IP:\nR1(config)# [...]",
+    "back": "ip route 0.0.0.0 0.0.0.0 next-hop"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_010",
+    "front": "Static routes in which you specify only the [...] appear as directly-connected in the routing table.",
+    "back": "exit-interface"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_011",
+    "front": "A [...] route is often used to direct traffic to the Internet.",
+    "back": "default"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_012",
+    "front": "In the routing table, the output \"Gateway of last resort is not set\" means [...]",
+    "back": "a default route has not been configured"
+  },
+  {
+    "id": "Day 11 (part 2) Flashcards - Static Routing_013",
+    "front": "Code [...] in the routing table indicates a candidate default route.",
+    "back": "*"
+  }
+]

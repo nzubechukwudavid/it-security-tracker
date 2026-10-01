@@ -1,0 +1,377 @@
+[
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_001",
+    "front": "What does EUI stand for?",
+    "back": "Extended Unique Identifier"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_002",
+    "front": "3 steps to convert a MAC address into an EUI-64 identifier:\n1. [...]\n2. Insert FFFE in the middle\n3. Invert the 7th bit",
+    "back": "Divide the MAC address in half"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_003",
+    "front": "3 steps to convert a MAC address into an EUI-64 identifier:\n1. Divide the MAC address in half\n2. [...]\n3. Invert the 7th bit",
+    "back": "Insert FFFE in the middle"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_004",
+    "front": "3 steps to convert a MAC address into an EUI-64 identifier:\n1. Divide the MAC address in half\n2. Insert FFFE in the middle\n3. [...]",
+    "back": "Invert the 7th bit"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_005",
+    "front": "Configure an IPv6 address using EUI-64\nR1(config-if)# [...]",
+    "back": "ipv6 address prefix/prefix-length eui-64"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_006",
+    "front": "MAC addresses: What does UAA stand for?",
+    "back": "Universally Administered Address"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_007",
+    "front": "MAC addresses: What does LAA stand for?",
+    "back": "Locally Administered Address"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_008",
+    "front": "What is the 7th bit of a MAC address called?",
+    "back": "U/L bit (Universal/Local bit)"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_009",
+    "front": "If the U/L bit of a MAC address is [...], it is a UAA.",
+    "back": "0"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_010",
+    "front": "If the U/L bit of a MAC address is 0, it is a [...]AA.",
+    "back": "U"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_011",
+    "front": "If the U/L bit of a MAC address is [...], it is an LAA.",
+    "back": "1"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_012",
+    "front": "If the U/L bit of a MAC address is 1, it is a [...]AA.",
+    "back": "L"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_013",
+    "front": "IPv6 [...] addresses are like public IPv4 addresses.",
+    "back": "global unicast"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_014",
+    "front": "The IPv6 global unicast range was originally defined as [...]",
+    "back": "2000::/3\n(now it includes all addresses which aren't reserved for other purposes)"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_015",
+    "front": "What are the three sections of an IPv6 global unicast address?\n[...]\nSubnet identifier\nInterface identifier",
+    "back": "Global routing prefix"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_016",
+    "front": "What are the three sections of an IPv6 global unicast address?\nGlobal routing prefix\n[...]\nInterface identifier",
+    "back": "Subnet identifier"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_017",
+    "front": "What are the three sections of an IPv6 global unicast address?\nGlobal routing prefix\nSubnet identifier\n[...]",
+    "back": "Interface identifier"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_018",
+    "front": "What is the typical size of the 'global routing prefix' of an IPv6 global unicast address?",
+    "back": "48 bits"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_019",
+    "front": "What is the typical size of the 'subnet identifier' of an IPv6 global unicast address?",
+    "back": "16 bits"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_020",
+    "front": "What is the typical size of the 'interface identifier' of an IPv6 global unicast address?",
+    "back": "64 bits"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_021",
+    "front": "IPv6 [...] addresses are like private IPv4 addresses.",
+    "back": "unique local"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_022",
+    "front": "What IPv6 address block is reserved for unique local addresses?",
+    "back": "FC00::/7"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_023",
+    "front": "IPv6 unique local addresses begin with [2 hexadecimal digits].",
+    "back": "FD"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_024",
+    "front": "Four sections of an IPv6 'unique local' address:\n[...]\nGlobal ID\nSubnet identifier\nInterface identifier",
+    "back": "Hexadecimal FD (indicates a unique local address)"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_025",
+    "front": "Four sections of an IPv6 'unique local' address:\nHexadecimal FD (indicates a unique local address)\n[...]\nSubnet identifier\nInterface identifier",
+    "back": "Global ID"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_026",
+    "front": "Four sections of an IPv6 'unique local' address:\nHexadecimal FD (indicates a unique local address)\nGlobal ID\n[...]\nInterface identifier",
+    "back": "Subnet identifier"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_027",
+    "front": "Four sections of an IPv6 'unique local' address:\nHexadecimal FD (indicates a unique local address)\nGlobal ID\nSubnet identifier\n[...]",
+    "back": "Interface identifier"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_028",
+    "front": "What is the size of the 'global ID' of an IPv6 unique local address?",
+    "back": "40 bits"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_029",
+    "front": "Enable IPv6 on an interface without manually configuring an IPv6 address:\nR1(config-if)# [...]",
+    "back": "ipv6 enable"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_030",
+    "front": "What IPv6 address block is reserved for link-local addresses?",
+    "back": "FE80::/10"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_031",
+    "front": "How is the interface ID of an IPv6 link-local address generated?",
+    "back": "EUI-64"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_032",
+    "front": "IPv6 link-local addresses begin with [four hexadecimal characters]",
+    "back": "FE80"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_033",
+    "front": "[...]cast addresses provide one-to-one communication.",
+    "back": "Uni"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_034",
+    "front": "[...]cast addresses provide one-to-all communication.",
+    "back": "Broad"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_035",
+    "front": "[...]cast addresses provide one-to-many communication.",
+    "back": "Multi"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_036",
+    "front": "[...]cast addresses provide one-to-one-of-many communication.",
+    "back": "Any"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_037",
+    "front": "What IPv6 address range is reserved for multicast addresses?",
+    "back": "FF00::/8"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_038",
+    "front": "Does IPv6 use broadcast messages?",
+    "back": "No"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_039",
+    "front": "IPv6 multicast address:\n[...] = All nodes",
+    "back": "FF02::1"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_040",
+    "front": "IPv6 multicast address:\nFF02::1 = [...]",
+    "back": "All nodes"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_041",
+    "front": "IPv6 multicast address:\n[...] = All routers",
+    "back": "FF02::2"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_042",
+    "front": "IPv6 multicast address:\nFF02::2 = [...]",
+    "back": "All routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_043",
+    "front": "IPv6 multicast address:\n[...] = All OSPF routers",
+    "back": "FF02::5"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_044",
+    "front": "IPv6 multicast address:\nFF02::5 = [...]",
+    "back": "All OSPF routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_045",
+    "front": "IPv6 multicast address:\n[...] = All OSPF DRs/BDRs",
+    "back": "FF02::6"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_046",
+    "front": "IPv6 multicast address:\nFF02::6 = [...]",
+    "back": "All OSPF DRs/BDRs"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_047",
+    "front": "IPv6 multicast address:\n[...] = All RIP routers",
+    "back": "FF02::9"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_048",
+    "front": "IPv6 multicast address:\nFF02::9 = [...]",
+    "back": "All RIP routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_049",
+    "front": "IPv6 multicast address:\n[...] = All EIGRP routers",
+    "back": "FF02::A"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_050",
+    "front": "IPv6 multicast address:\nFF02::A = [...]",
+    "back": "All EIGRP routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_051",
+    "front": "IPv4 multicast address:\n[...] = All EIGRP routers",
+    "back": "224.0.0.10"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_052",
+    "front": "IPv4 multicast address:\n224.0.0.10 = [...]",
+    "back": "All EIGRP routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_053",
+    "front": "IPv4 multicast address:\n[...] = All RIP routers",
+    "back": "224.0.0.9"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_054",
+    "front": "IPv4 multicast address:\n224.0.0.9 = [...]",
+    "back": "All RIP routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_055",
+    "front": "IPv4 multicast address:\n[...] =  All OSPF DRs/BDRs",
+    "back": "224.0.0.6"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_056",
+    "front": "IPv4 multicast address:\n224.0.0.6 = [...]",
+    "back": "All OSPF DRs/BDRs"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_057",
+    "front": "IPv4 multicast address:\n[...] = All OSPF routers",
+    "back": "224.0.0.5"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_058",
+    "front": "IPv4 multicast address:\n224.0.0.5 = [...]",
+    "back": "All OSPF routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_059",
+    "front": "IPv4 multicast address:\n[...] = All routers",
+    "back": "224.0.0.2"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_060",
+    "front": "IPv4 multicast address:\n224.0.0.2 = [...]",
+    "back": "All routers"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_061",
+    "front": "IPv4 multicast address:\n[...] = All nodes",
+    "back": "224.0.0.1"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_062",
+    "front": "IPv4 multicast address:\n224.0.0.1 = [...]",
+    "back": "All nodes"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_063",
+    "front": "IPv6 multicast scope:\n[...] = Interface-local",
+    "back": "FF01"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_064",
+    "front": "IPv6 multicast scope:\nFF01 = [...]",
+    "back": "Interface-local"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_065",
+    "front": "IPv6 multicast scope:\n[...] = Link-local",
+    "back": "FF02"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_066",
+    "front": "IPv6 multicast scope:\nFF02 = [...]",
+    "back": "Link-local"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_067",
+    "front": "IPv6 multicast scope:\n[...] = Site-local",
+    "back": "FF05"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_068",
+    "front": "IPv6 multicast scope:\nFF05 = [...]",
+    "back": "Site-local"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_069",
+    "front": "IPv6 multicast scope:\n[...] = Organization-local",
+    "back": "FF08"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_070",
+    "front": "IPv6 multicast scope:\nFF08 = [...]",
+    "back": "Organization-local"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_071",
+    "front": "IPv6 multicast scope:\n[...] = Global",
+    "back": "FF0E"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_072",
+    "front": "IPv6 multicast scope:\nFF0E = [...]",
+    "back": "Global"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_073",
+    "front": "Configure an IPv6 anycast address:\nR1(config-if)# [...]",
+    "back": "ipv6 address address/prefix-length anycast"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_074",
+    "front": "What is the IPv6 unspecified address?",
+    "back": "::"
+  },
+  {
+    "id": "Day 32 Flashcards - IPv6 (Part 2)_075",
+    "front": "What is the IPv6 loopback address?",
+    "back": "::1"
+  }
+]

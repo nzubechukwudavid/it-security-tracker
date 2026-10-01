@@ -1,0 +1,237 @@
+[
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_001",
+    "front": "What is the formula to calculate OSPF interface cost?",
+    "back": "Reference bandwidth / interface bandwidth = cost"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_002",
+    "front": "What is the default OSPF reference bandwidth?",
+    "back": "100 mbps"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_003",
+    "front": "What is the OSPF cost of an Ethernet (10 mbps) interface with the default reference bandwidth?",
+    "back": "10"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_004",
+    "front": "What is the OSPF cost of a FastEthernet (100 mbps) interface with the default reference bandwidth?",
+    "back": "1"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_005",
+    "front": "What is the OSPF cost of a Gigabit Ethernet interface with the default reference bandwidth?",
+    "back": "1"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_006",
+    "front": "What is the OSPF cost of a 10Gig Ethernet interface with the default reference bandwidth?",
+    "back": "1"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_007",
+    "front": "Configure the OSPF reference bandwidth:\nR1(config-router)# [...]",
+    "back": "auto-cost reference-bandwidth megabits-per-second"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_008",
+    "front": "What is the OSPF cost of a loopback interface?",
+    "back": "1"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_009",
+    "front": "Configure the OSPF cost of an interface:\nR1(config-if)# [...]",
+    "back": "ip ospf cost cost"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_010",
+    "front": "Configure the bandwidth of an interface:\nR1(config-if)# [...]",
+    "back": "bandwidth kilobits-per-second"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_011",
+    "front": "Does the bandwidth command change the speed at which an interface operates?",
+    "back": "No\n(the speed command does)"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_012",
+    "front": "What is the default OSPF Hello timer on an Ethernet connection?",
+    "back": "10 seconds"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_013",
+    "front": "What is the default OSPF Dead timer on an Ethernet connection?",
+    "back": "40 seconds"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_014",
+    "front": "What is the multicast address for all OSPF routers?",
+    "back": "224.0.0.5"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_015",
+    "front": "OSPF Hello messages are multicast to [...]",
+    "back": "224.0.0.5"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_016",
+    "front": "OSPF neighbor states:\n1. [...]\n2. [...]\n3. [...]\n4. Exstart\n5. Exchange\n6. Loading\n7. Full",
+    "back": "Down\nInit\n2-way"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_017",
+    "front": "OSPF neighbor states:\n1. Down\n2. [...]\n3. [...]\n4. [...]\n5. Exchange\n6. Loading\n7. Full",
+    "back": "Init\n2-way\nExstart"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_018",
+    "front": "OSPF neighbor states:\n1. Down\n2. Init\n3. [...]\n4. [...]\n5. [...]\n6. Loading\n7. Full",
+    "back": "2-way\nExstart\nExchange"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_019",
+    "front": "OSPF neighbor states:\n1. Down\n2. Init\n3. 2-way\n4. [...]\n5. [...]\n6. [...]\n7. Full",
+    "back": "Exstart\nExchange\nLoading"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_020",
+    "front": "OSPF neighbor states:\n1. Down\n2. Init\n3. 2-way\n4. Exstart\n5. [...]\n6. [...]\n7. [...]",
+    "back": "Exchange\nLoading\nFull"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_021",
+    "front": "If no Hello messages have been received, the OSPF neighbor state is [...].",
+    "back": "Down"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_022",
+    "front": "If a router receives an OSPF Hello packet but its own router ID is not in the Hello packet, the neighbor state is [...].",
+    "back": "Init"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_023",
+    "front": "When an OSPF router receives a Hello packet with its own router ID, the OSPF neighbor state is [...].",
+    "back": "2-way"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_024",
+    "front": "OSPF DR/BDRs are elected in the [...] neighbor state.",
+    "back": "2-way"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_025",
+    "front": "In which OSPF neighbor state are a Master and Slave determined?",
+    "back": "Exstart"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_026",
+    "front": "In the OSPF Exstart state, which router becomes the Master?",
+    "back": "The router with the higher router ID."
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_027",
+    "front": "In the OSPF Exstart state, which router becomes the Slave?",
+    "back": "The router with the lower router ID"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_028",
+    "front": "In the OSPF [...] state, routers exchange DBDs which contain a list of LSAs in their LSDB.",
+    "back": "Exchange"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_029",
+    "front": "OSPF: What does DBD stand for?",
+    "back": "Database Description"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_030",
+    "front": "OSPF: What does LSR stand for?",
+    "back": "Link State Request"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_031",
+    "front": "OSPF: What does LSU stand for?",
+    "back": "Link State Update"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_032",
+    "front": "OSPF: What does LSAck stand for?",
+    "back": "Link State Acknowledgement"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_033",
+    "front": "In the OSPF [...] state, routers send LSR messages to request LSAs from their neighbor.",
+    "back": "Loading"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_034",
+    "front": "OSPF LSAs are sent in [...] messages.",
+    "back": "LSU"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_035",
+    "front": "In the OSPF [...] state, the routers have a full OSPF adjacency and identical LSDBs.",
+    "back": "Full"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_036",
+    "front": "OSPF Message type [...] = Hello",
+    "back": "1"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_037",
+    "front": "OSPF Message type 1 = [...]",
+    "back": "Hello"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_038",
+    "front": "OSPF Message type [...] = Database Description (DBD)",
+    "back": "2"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_039",
+    "front": "OSPF Message type 2 = [...]",
+    "back": "Database Description (DBD)"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_040",
+    "front": "OSPF Message type [...] = Link-State Request (LSR)",
+    "back": "3"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_041",
+    "front": "OSPF Message type 3 = [...]",
+    "back": "Link-State Request (LSR)"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_042",
+    "front": "OSPF Message type [...] = Link-State Update (LSU)",
+    "back": "4"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_043",
+    "front": "OSPF Message type 4 = [...]",
+    "back": "Link-State Update (LSU)"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_044",
+    "front": "OSPF Message type [...] = Link-State Acknowledgement (LSAck)",
+    "back": "5"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_045",
+    "front": "OSPF Message type 5 = [...]",
+    "back": "Link-State Acknowledgement (LSAck)"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_046",
+    "front": "Enable OSPF directly on an interface:\nR1(config-if)# [...]",
+    "back": "ip ospf process-id area area-id"
+  },
+  {
+    "id": "Day 27 Flashcards - OSPF (Part 2)_047",
+    "front": "Configure all interfaces to be OSPF passive interfaces by default:\nR1(config-router)# [...]",
+    "back": "passive-interface default"
+  }
+]

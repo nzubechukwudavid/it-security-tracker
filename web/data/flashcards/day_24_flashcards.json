@@ -1,0 +1,257 @@
+[
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_001",
+    "front": "A route to a /32 destination is known as a [...] route.",
+    "back": "host"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_002",
+    "front": "A route to a network/subnet is known as a [...] route.",
+    "back": "network"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_003",
+    "front": "Routers can use [...] to advertise information about the routes they know to other routers.",
+    "back": "dynamic routing protocols"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_004",
+    "front": "If R1 learns multiple routes to the same destination from two different routing protocols, what is used to determine which route will be added to R1's routing table?",
+    "back": "AD (Administrative Distance)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_005",
+    "front": "If R1 learns multiple routes to the same destination from the same routing protocol, what is used to determine which route will be added to R1's routing table?",
+    "back": "Metric"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_006",
+    "front": "Does a router prefer a lower or higher AD when selecting routes?",
+    "back": "lower"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_007",
+    "front": "Does a router prefer a lower or higher metric when selecting routes?",
+    "back": "lower"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_008",
+    "front": "Dynamic routing: What does IGP stand for?",
+    "back": "Interior Gateway Protocol"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_009",
+    "front": "Dynamic routing: What does EGP stand for?",
+    "back": "Exterior Gateway Protocol"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_010",
+    "front": "IGPs are used to share routes within a single [...]",
+    "back": "autonomous system (AS)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_011",
+    "front": "[...] are used to share routes within a single autonomous system (AS).",
+    "back": "IGPs"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_012",
+    "front": "EGPs are used to share routes between different [...]",
+    "back": "autonomous systems (AS)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_013",
+    "front": "[...] are used to share routes between different autonomous systems (AS).",
+    "back": "EGPs"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_014",
+    "front": "What are the two types of IGP?",
+    "back": "Distance Vector\nLink State"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_015",
+    "front": "What is the single type of EGP?",
+    "back": "Path Vector"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_016",
+    "front": "What are the two Distance Vector routing protocols?",
+    "back": "RIP\nEIGRP"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_017",
+    "front": "What are the two Link State routing protocols?",
+    "back": "OSPF\nIS-IS"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_018",
+    "front": "What is the single Path Vector routing protocol?",
+    "back": "BGP"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_019",
+    "front": "What does RIP stand for?",
+    "back": "Routing Information Protocol"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_020",
+    "front": "What does EIGRP stand for?",
+    "back": "Enhanced Interior Gateway Routing Protocol"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_021",
+    "front": "What does OSPF stand for?",
+    "back": "Open Shortest Path First"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_022",
+    "front": "What does IS-IS stand for?",
+    "back": "Intermediate System to Intermediate System"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_023",
+    "front": "What does BGP stand for?",
+    "back": "Border Gateway Protocol"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_024",
+    "front": "What kind of dynamic routing protocol operates using 'routing by rumor'?",
+    "back": "Distance Vector"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_025",
+    "front": "[...] routing protocols send the following information to their connected neighbors:\n-their known destination networks\n-their metric to reach their known destination networks",
+    "back": "Distance Vector"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_026",
+    "front": "When using a [...] routing protocol, every router creates a 'connectivity map' of the network.",
+    "back": "link state"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_027",
+    "front": "Which kind of routing protocol uses more CPU resources on the router, distance vector or link state?",
+    "back": "link state"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_028",
+    "front": "Which kind of dynamic routing protocol tends to react faster to changes in the network, distance vector or link state?",
+    "back": "link state"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_029",
+    "front": "What is the metric value of this route?\nO 192.168.4.0/24 [110/3] via 10.0.12.2",
+    "back": "3"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_030",
+    "front": "What is the AD value of this route?\nO 192.168.4.0/24 [110/3] via 10.0.12.2",
+    "back": "110"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_031",
+    "front": "What does ECMP stand for?",
+    "back": "Equal Cost Multi-Path (load-balancing)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_032",
+    "front": "R1 learns two routes to the same destination, via the same routing protocol, and both routes have the same metric.  Which will be added to the routing table?",
+    "back": "Both (traffic will be load-balanced)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_033",
+    "front": "What metric does RIP use?",
+    "back": "hop count"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_034",
+    "front": "What dynamic routing protocol calculates metric using bandwidth and delay (and others, if configured)?",
+    "back": "EIGRP"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_035",
+    "front": "Which dynamic routing protocol uses a cost calculated based on interface bandwidth as its metric?",
+    "back": "OSPF"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_036",
+    "front": "In which dynamic routing protocol do all links have a metric cost of 10 by default?",
+    "back": "IS-IS"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_037",
+    "front": "[...] is used to compare routes learned via the same routing protocol.",
+    "back": "Metric"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_038",
+    "front": "[...] is used to compare routes learned via different routing protocols.",
+    "back": "AD (Administrative Distance)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_039",
+    "front": "Route protocol/type: Directly connected\nAD: [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_040",
+    "front": "Route protocol/type: Static\nAD: [...]",
+    "back": "1"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_041",
+    "front": "Route protocol/type: eBGP\nAD: [...]",
+    "back": "20"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_042",
+    "front": "Route protocol/type: EIGRP\nAD: [...]",
+    "back": "90"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_043",
+    "front": "Route protocol/type: IGRP\nAD: [...]",
+    "back": "100"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_044",
+    "front": "Route protocol/type: OSPF\nAD: [...]",
+    "back": "110"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_045",
+    "front": "Route protocol/type: IS-IS\nAD: [...]",
+    "back": "115"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_046",
+    "front": "Route protocol/type: RIP\nAD: [...]",
+    "back": "120"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_047",
+    "front": "Route protocol/type: EIGRP (external)\nAD: [...]",
+    "back": "170"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_048",
+    "front": "Route protocol/type: iBGP\nAD: [...]",
+    "back": "200"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_049",
+    "front": "Route protocol/type: Unusable route\nAD: [...]",
+    "back": "255"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_050",
+    "front": "Configure a static route, and specify the AD:\nR1(config)# [...]",
+    "back": "ip route destination mask next-hop AD\n(ie. ip route 10.0.0.0 255.0.0.0 10.0.13.2 115)"
+  },
+  {
+    "id": "Day 24 Flashcards - Dynamic Routing_051",
+    "front": "What is the name for a static route which has a higher AD than a route learned via a dynamic routing protocol?",
+    "back": "Floating static route"
+  }
+]

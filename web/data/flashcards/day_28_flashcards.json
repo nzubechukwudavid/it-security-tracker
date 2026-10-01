@@ -1,0 +1,202 @@
+[
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_001",
+    "front": "OSPF: The [...] network type is enabled on Ethernet and FDDI interfaces by default.",
+    "back": "Broadcast"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_002",
+    "front": "OSPF: The Broadcast network type is enabled on [...] and [...] interfaces by default.",
+    "back": "Ethernet  /  FDDI"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_003",
+    "front": "OSPF: The [...] network type is enabled on PPP and HDLC interfaces by default.",
+    "back": "Point-to-point"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_004",
+    "front": "OSPF: The Point-to-point network type is enabled on [...] and [...] interfaces by default.",
+    "back": "PPP  /  HDLC"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_005",
+    "front": "OSPF: The [...] network type is enabled on Frame Relay and X.25 interfaces by default.",
+    "back": "Non-broadcast"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_006",
+    "front": "OSPF: The Non-broadcast network type is enabled on [...] and [...] interfaces by default.",
+    "back": "Frame Relay  /  X.25"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_007",
+    "front": "In the OSPF Broadcast network type, do routers dynamically discover neighbors?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_008",
+    "front": "In the OSPF Point-to-point network type, do routers dynamically discover neighbors?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_009",
+    "front": "In the OSPF Non-broadcast network type, do routers dynamically discover neighbors?",
+    "back": "No"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_010",
+    "front": "In the OSPF Broadcast network type, are a DR and BDR elected?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_011",
+    "front": "In the OSPF Point-to-point network type, are a DR and BDR elected?",
+    "back": "No"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_012",
+    "front": "OSPF: In the Broadcast network type, routers which aren't the DR/BDR become a [...].",
+    "back": "DROther"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_013",
+    "front": "OSPF DR/BDR election order of priority:\n1: [...]\n2: Highest OSPF router ID",
+    "back": "Highest OSPF interface priority"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_014",
+    "front": "OSPF DR/BDR election order of priority:\n1: Highest OSPF interface priority\n2: [...]",
+    "back": "Highest OSPF router ID"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_015",
+    "front": "The default OSPF interface priority is [...] on all interfaces.",
+    "back": "1"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_016",
+    "front": "OSPF DROthers will only move to the Full state with [...].",
+    "back": "the DR and BDR"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_017",
+    "front": "OSPF DROthers will remain in the [...] neighbor state with other DROthers.",
+    "back": "2-way"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_018",
+    "front": "Messages to the OSPF DR/BDR are multicast using address [...].",
+    "back": "224.0.0.6"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_019",
+    "front": "Serial interfaces use the [...] encapsulation by default.",
+    "back": "HDLC (cHDLC)"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_020",
+    "front": "Configure the operating speed of a serial interface:\nR1(config-if)# [...]",
+    "back": "clock rate bits-per-second"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_021",
+    "front": "Serial connection: What does DCE stand for?",
+    "back": "Data Communications Equipment"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_022",
+    "front": "Serial connection: What does DTE stand for?",
+    "back": "Data Terminal Equipment"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_023",
+    "front": "Serial connection: The [...] side of the connection specifies the clock rate.",
+    "back": "DCE"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_024",
+    "front": "Configure the PPP encapsulation on a serial interface:\nR1(config-if)# [...]",
+    "back": "encapsulation ppp"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_025",
+    "front": "Which command can be used to check if a serial interface is DCE or DTE?",
+    "back": "show controllers interface-id"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_026",
+    "front": "Configure the OSPF network type of an interface:\nR1(config-if)# [...]",
+    "back": "ip ospf network type"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_027",
+    "front": "OSPF Non-broadcast network type default timers:\nHello: [...]\nDead: [...]",
+    "back": "30 seconds\n120 seconds"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_028",
+    "front": "Disable the OSPF process on the router:\nR1(config-router)# [...]",
+    "back": "shutdown"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_029",
+    "front": "Can routers with matching OSPF router IDs become neighbors?",
+    "back": "No"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_030",
+    "front": "Do OSPF Hello and Dead timers have to match for routers to become OSPF neighbors?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_031",
+    "front": "Enable OSPF authentication on an interface:\nR1(config-if)# [...]",
+    "back": "ip ospf authentication"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_032",
+    "front": "Configure an OSPF password on an interface:\nR1(config-if)# [...]",
+    "back": "ip ospf authentication-key password"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_033",
+    "front": "If the IP [...] settings on the interfaces don't match, routers can become OSPF neighbors but won't move to the Full state.",
+    "back": "MTU"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_034",
+    "front": "If two routers have an OSPF network type mismatch, they will form an OSPF adjacency but won't [...].",
+    "back": "learn OSPF routes"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_035",
+    "front": "OSPF Type [...] LSA = Router LSA",
+    "back": "1"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_036",
+    "front": "OSPF Type 1 LSA = [...] LSA",
+    "back": "Router"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_037",
+    "front": "OSPF Type [...] LSA = Network LSA",
+    "back": "2"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_038",
+    "front": "OSPF Type 2 LSA = [...] LSA",
+    "back": "Network"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_039",
+    "front": "OSPF Type [...] LSA = AS-External LSA",
+    "back": "5"
+  },
+  {
+    "id": "Day 28 Flashcards - OSPF (Part 3)_040",
+    "front": "OSPF Type 5 LSA = [...] LSA",
+    "back": "AS-External"
+  }
+]

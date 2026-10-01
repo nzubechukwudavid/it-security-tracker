@@ -1,0 +1,102 @@
+[
+  {
+    "id": "Day 38 Flashcards - DNS_001",
+    "front": "What does DNS stand for?",
+    "back": "Domain Name System"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_002",
+    "front": "Hosts can automatically learn the address of the DNS server via [protocol].",
+    "back": "DHCP"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_003",
+    "front": "(Windows) Show basic IP configuration information.\n> [...]",
+    "back": "ipconfig"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_004",
+    "front": "(Windows) Show detailed IP configuration information.\n> [...]",
+    "back": "ipconfig /all"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_005",
+    "front": "(Windows) Show the DNS cache.\n> [...]",
+    "back": "ipconfig /displaydns"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_006",
+    "front": "(Windows) Clear the DNS cache.\n> [...]",
+    "back": "ipconfig /flushdns"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_007",
+    "front": "(Windows) Ping the specified address, specifying the number of pings to send.\n> [...]",
+    "back": "ping ip-address -n number"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_008",
+    "front": "Configure the router to act as a DNS server.\nR1(config)# [...]",
+    "back": "ip dns server"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_009",
+    "front": "Configure an entry in the router's host table.\nR1(config)# [...]",
+    "back": "ip host hostname ip-address"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_010",
+    "front": "Configure the DNS server the router will send DNS queries to.\nR1(config)# [...]",
+    "back": "ip name-server ip-address"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_011",
+    "front": "Enable the router to perform DNS queries. (enable by default)\nR1(config)# [...]",
+    "back": "ip domain lookup\n(old version: ip domain-lookup)"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_012",
+    "front": "Configure the domain of the router.\nR1(config)# [...]",
+    "back": "ip domain name domain-name\n(old version: ip domain-name domain-name)"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_013",
+    "front": "Display the router's host table:\nR1# [...]",
+    "back": "show hosts"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_014",
+    "front": "DNS '[...]' records map names to IPv4 addresses.",
+    "back": "A"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_015",
+    "front": "DNS 'A' records map names to [...] addresses.",
+    "back": "IPv4"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_016",
+    "front": "DNS '[...]' records map names to IPv6 addresses.",
+    "back": "AAAA"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_017",
+    "front": "DNS 'AAAA' records map names to [...] addresses.",
+    "back": "IPv6"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_018",
+    "front": "Standard DNS queries/responses typically use [TCP/UDP].",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_019",
+    "front": "[...] is used for DNS messages greater than 512 bytes.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 38 Flashcards - DNS_020",
+    "front": "TCP is used for DNS messages greater than [size].",
+    "back": "512 bytes"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "id": "Day 22 Flashcards - Rapid STP_001",
+    "front": "Rapid STP is IEEE [...]",
+    "back": "802.1w"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_002",
+    "front": "Multiple STP is IEEE [...]",
+    "back": "802.1s"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_003",
+    "front": "What is Cisco's upgrade to 802.1D?",
+    "back": "PVST+"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_004",
+    "front": "What is Cisco's upgrade to 802.1w?",
+    "back": "Rapid PVST+"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_005",
+    "front": "What are the three RSTP port states?",
+    "back": "Discarding\nLearning\nForwarding"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_006",
+    "front": "What are the four RSTP port roles?",
+    "back": "Root\nDesignated\nAlternate\nBackup"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_007",
+    "front": "Which STP optional features were built in to RSTP to allow ports to move directly to a forwarding state (in certain circumstances)?\n[...]\nBackboneFast\nPortFast",
+    "back": "UplinkFast"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_008",
+    "front": "Which STP optional features were built in to RSTP to allow ports to move directly to a forwarding state (in certain circumstances)?\nUplinkFast\n[...]\nPortFast",
+    "back": "BackboneFast"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_009",
+    "front": "Which STP optional features were built in to RSTP to allow ports to move directly to a forwarding state (in certain circumstances)?\nUplinkFast\nBackboneFast\n[...]",
+    "back": "PortFast"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_010",
+    "front": "The RSTP [...] port role is a discarding port that receives a superior BPDU from another switch.",
+    "back": "alternate"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_011",
+    "front": "The RSTP [...] port role is a discarding port that receives a superior BPDU from the same switch.",
+    "back": "backup"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_012",
+    "front": "The RSTP [...] port role functions as a backup to the root port.",
+    "back": "alternate"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_013",
+    "front": "The RSTP [...] port role functions as a backup to a designated port.",
+    "back": "backup"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_014",
+    "front": "Enable rapid PVST mode on the switch:\nSW1(config)# [...]",
+    "back": "spanning-tree mode rapid-pvst"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_015",
+    "front": "In RSTP, which switch(es) originate BPDUs?",
+    "back": "All switches"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_016",
+    "front": "Is RSTP compatible with classic STP?",
+    "back": "Yes (the interface connected to the switch running classic STP will run in classic STP mode)"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_017",
+    "front": "What is the protocol version identifier in a rapid STP BPDU?",
+    "back": "2"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_018",
+    "front": "What is the protocol version identifier in a classic STP BPDU?",
+    "back": "0"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_019",
+    "front": "In RSTP, a switch considers a neighbor lost if it misses [...] BPDUs.",
+    "back": "3"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_020",
+    "front": "What are the three RSTP link types?",
+    "back": "Edge\nPoint-to-point\nShared"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_021",
+    "front": "Configure a switchport as an RSTP edge port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree portfast"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_022",
+    "front": "Configure a switchport as an RSTP point-to-point port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree link-type point-to-point"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_023",
+    "front": "Configure a switchport as an RSTP shared port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree link-type shared"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_024",
+    "front": "RSTP [...] link type is used for full-duplex connections.",
+    "back": "point-to-point"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_025",
+    "front": "RSTP [...] link type is used for half-duplex connections.",
+    "back": "shared"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_026",
+    "front": "RSTP Port Cost\n10 Mbps = [...]",
+    "back": "2,000,000"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_027",
+    "front": "RSTP Port Cost\n100 Mbps = [...]",
+    "back": "200,000"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_028",
+    "front": "RSTP Port Cost\n1 Gbps = [...]",
+    "back": "20,000"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_029",
+    "front": "RSTP Port Cost\n10 Gbps = [...]",
+    "back": "2,000"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_030",
+    "front": "RSTP Port Cost\n100 Gbps = [...]",
+    "back": "200"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_031",
+    "front": "RSTP Port Cost\n1 Tbps = [...]",
+    "back": "20"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_032",
+    "front": "RSTP Port Cost\n10 Tbps = [...]",
+    "back": "2"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_033",
+    "front": "RSTP Port Cost\n[...] = 2,000,000",
+    "back": "10 Mbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_034",
+    "front": "RSTP Port Cost\n[...] = 200,000",
+    "back": "100 Mbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_035",
+    "front": "RSTP Port Cost\n[...] = 20,000",
+    "back": "1 Gbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_036",
+    "front": "RSTP Port Cost\n[...] = 2,000",
+    "back": "10 Gbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_037",
+    "front": "RSTP Port Cost\n[...] = 200",
+    "back": "100 Gbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_038",
+    "front": "RSTP Port Cost\n[...] = 20",
+    "back": "1 Tbps"
+  },
+  {
+    "id": "Day 22 Flashcards - Rapid STP_039",
+    "front": "RSTP Port Cost\n[...] = 2",
+    "back": "10 Tbps"
+  }
+]

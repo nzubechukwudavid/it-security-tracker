@@ -1,0 +1,182 @@
+[
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_001",
+    "front": "What does FTP stand for?",
+    "back": "File Transfer Protocol"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_002",
+    "front": "What does TFTP stand for?",
+    "back": "Trivial File Transfer Protocol"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_003",
+    "front": "Does TFTP use authentication?",
+    "back": "No (no username/PW)"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_004",
+    "front": "Does TFTP use encryption?",
+    "back": "No"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_005",
+    "front": "TFTP servers listen on UDP port [...]",
+    "back": "69"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_006",
+    "front": "TFTP uses '[...]' communication, in which the client and server alternately send messages.",
+    "back": "lock-step"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_007",
+    "front": "What are the three phases of a TFTP file transfer?",
+    "back": "Connection\nData Transfer\nConnection Termination"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_008",
+    "front": "What does the TFTP 'TID' stand for?",
+    "back": "Transfer ID"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_009",
+    "front": "The random ports used in TFTP are also called:",
+    "back": "TIDs (Transfer IDs)"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_010",
+    "front": "Which protocol is more lightweight and simple, FTP or TFTP?",
+    "back": "TFTP"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_011",
+    "front": "Which protocol provides more functionality, FTP or TFTP?",
+    "back": "FTP"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_012",
+    "front": "FTP [...] connections use TCP port 21.",
+    "back": "control"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_013",
+    "front": "FTP control connections use [...] port 21.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_014",
+    "front": "FTP control connections use TCP port [...].",
+    "back": "21"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_015",
+    "front": "FTP [...] connections use TCP port 20.",
+    "back": "data"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_016",
+    "front": "FTP data connections use [...] port 20.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_017",
+    "front": "FTP data connections use TCP port [...].",
+    "back": "20"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_018",
+    "front": "TFTP servers listen on [...] port 69.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_019",
+    "front": "In FTP [...] mode, the server initiates the data connection.",
+    "back": "active"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_020",
+    "front": "In FTP active mode, the [...] initiates the data connection.",
+    "back": "server"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_021",
+    "front": "In FTP [...] mode, the client initiates the data connection.",
+    "back": "passive"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_022",
+    "front": "In FTP passive mode, the [...] initiates the data connection.",
+    "back": "client"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_023",
+    "front": "The [...] file system type is used for storage devices such as  flash memory.",
+    "back": "disk"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_024",
+    "front": "The [...] file system type represents logical systems used for internal functions.",
+    "back": "opaque"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_025",
+    "front": "The [...] file system type is used for the device's internal NVRAM.",
+    "back": "nvram"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_026",
+    "front": "The [...] file system type represents external file systems, for example FTP/TFTP servers.",
+    "back": "network"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_027",
+    "front": "Display the contents of flash memory:\nR1# [...]",
+    "back": "show flash"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_028",
+    "front": "Display the file systems of the device:\nR1# [...]",
+    "back": "show file systems"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_029",
+    "front": "Specify the OS file the device should use when next time it boots:\nR1(config)# [...]",
+    "back": "boot system filepath"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_030",
+    "front": "Copy a file from a TFTP server to the router's flash:\nR1# [...]",
+    "back": "copy tftp: flash:"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_031",
+    "front": "Copy a file from an FTP server to the router's flash:\nR1# [...]",
+    "back": "copy ftp: flash:"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_032",
+    "front": "Configure the FTP username of the device:\nR1(config)# [...]",
+    "back": "ip ftp username username"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_033",
+    "front": "Configure the FTP password of the device:\nR1(config)# [...]",
+    "back": "ip ftp password password"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_034",
+    "front": "Does FTP use authentication?",
+    "back": "Yes (username/PW)"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_035",
+    "front": "Does FTP use encryption?",
+    "back": "No\n(FTPS does)"
+  },
+  {
+    "id": "Day 43 Flashcards - FTP & TFTP_036",
+    "front": "What two kinds of connection are used in FTP?",
+    "back": "Control\nData"
+  }
+]

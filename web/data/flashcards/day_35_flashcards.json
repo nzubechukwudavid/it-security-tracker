@@ -1,0 +1,132 @@
+[
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_001",
+    "front": "Delete an ACL entry by specifying the sequence number:\nR1(config-std-nacl)# [...]",
+    "back": "no sequence-number"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_002",
+    "front": "You [can/can't] delete individual ACL entries in global config mode.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_003",
+    "front": "You [can/can't] delete individual ACL entries in named ACL config mode.",
+    "back": "can"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_004",
+    "front": "Resequence an ACL:\nR1(config)# [...]",
+    "back": "ip access-list resequence acl-id starting-seq-num increment"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_005",
+    "front": "Extended numbered ACL ranges:",
+    "back": "100-199, 2000-2699"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_006",
+    "front": "Configure an extended ACL entry, specifying protocol, source IP, and destination IP:\nR1(config)#",
+    "back": "access-list number {permit | deny} protocol src-ip dest-ip\n(use either host before each IP address for /32, or specify a wildcard mask)"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_007",
+    "front": "Configure an extended ACL entry, specifying protocol, source IP, and destination IP:\nR1(config-ext-nacl)#",
+    "back": "{permit | deny} protocol src-ip dest-ip\n(use either host before each IP address for /32, or specify a wildcard mask)"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_008",
+    "front": "Enter extended named ACL config mode:\nR1(config)# [...]",
+    "back": "ip access-list extended {name | number}"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_009",
+    "front": "[...] = IP protocol number 1",
+    "back": "ICMP"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_010",
+    "front": "ICMP = IP protocol number [...]",
+    "back": "1"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_011",
+    "front": "[...] = IP protocol number 6",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_012",
+    "front": "TCP = IP protocol number [...]",
+    "back": "6"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_013",
+    "front": "[...] = IP protocol number 17",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_014",
+    "front": "UDP = IP protocol number [...]",
+    "back": "17"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_015",
+    "front": "[...] = IP protocol number 88",
+    "back": "EIGRP"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_016",
+    "front": "EIGRP = IP protocol number [...]",
+    "back": "88"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_017",
+    "front": "[...] = IP protocol number 89",
+    "back": "OSPF"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_018",
+    "front": "OSPF = IP protocol number [...]",
+    "back": "89"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_019",
+    "front": "Which extended ACL entry command option?\n[...] matches a single port.",
+    "back": "eq port-num"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_020",
+    "front": "Which extended ACL entry command option?\n[...] matches all ports greater than the specified number.",
+    "back": "gt port-num"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_021",
+    "front": "Which extended ACL entry command option?\n[...] matches all ports less than the specified number.",
+    "back": "lt port-num"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_022",
+    "front": "Which extended ACL entry command option?\n[...] matches all ports except the specified number.",
+    "back": "neq port-num"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_023",
+    "front": "Which extended ACL entry command option?\n[...] matches the specified range of ports.",
+    "back": "range lowest-number highest-number"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_024",
+    "front": "Which command can be used to view which ACLs are applied to an interface?\nR1# [...]",
+    "back": "show ip interface interface-id"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_025",
+    "front": "What is the command to create an extended ACL entry, specifying the protocol, source/destination IP, and source/destination port?\nR1(config-ext-nacl)# [...]",
+    "back": "{permit | deny} protocol src-ip src-port dst-ip dst-port\n*src-ip and dst-ip need the host keyword before or a wildcard mask after\n*src-port and dst-port need a keyword such as eq before"
+  },
+  {
+    "id": "Day 35 Flashcards - Extended ACLs_026",
+    "front": "Create an extended ACL entry to permit or deny all traffic:\nR1(config-ext-nacl)# [...]",
+    "back": "{permit | deny} ip any any"
+  }
+]

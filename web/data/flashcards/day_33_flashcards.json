@@ -1,0 +1,227 @@
+[
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_001",
+    "front": "Which IPv6 header field indicates the version of IP?",
+    "back": "Version"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_002",
+    "front": "Which IPv6 header field is used for QoS?",
+    "back": "Traffic Class"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_003",
+    "front": "Which IPv6 header field is used to identify specific traffic flows?",
+    "back": "Flow Label"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_004",
+    "front": "Which IPv6 header field indicates the length of the encapsulated Layer 4 segment?",
+    "back": "Payload Length"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_005",
+    "front": "What is the length of the IPv6 header?",
+    "back": "40 bytes"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_006",
+    "front": "Which IPv6 header field indicates the encapsulated Layer 4 protocol?",
+    "back": "Next Header"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_007",
+    "front": "Which IPv6 header field functions like the IPv4 TTL field?",
+    "back": "Hop Limit"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_008",
+    "front": "How is an IPv6 solicited-node multicast address calculated from a unicast address?\n[...]  +  Last 6 hex digits of unicast address",
+    "back": "ff02::1:ff"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_009",
+    "front": "How is an IPv6 solicited-node multicast address calculated from a unicast address?\nff02::1:ff  +  [...]",
+    "back": "Last 6 hex digits of unicast address"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_010",
+    "front": "What does NDP stand for?",
+    "back": "Neighbor Discovery Protocol"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_011",
+    "front": "Which protocol replaces ARP in IPv6?",
+    "back": "NDP"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_012",
+    "front": "What does the NDP 'NS' message stand for?",
+    "back": "Neighbor Solicitation"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_013",
+    "front": "What does the NDP 'NA' message stand for?",
+    "back": "Neighbor Advertisement"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_014",
+    "front": "What does the NDP 'RS' message stand for?",
+    "back": "Router Solicitation"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_015",
+    "front": "What does the NDP 'RA' message stand for?",
+    "back": "Router Advertisement"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_016",
+    "front": "NDP [...] = ICMPv6 Type 135",
+    "back": "NS"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_017",
+    "front": "NDP NS = ICMPv6 Type [...]",
+    "back": "135"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_018",
+    "front": "NDP [...] = ICMPv6 Type 136",
+    "back": "NA"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_019",
+    "front": "NDP NA = ICMPv6 Type [...]",
+    "back": "136"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_020",
+    "front": "NDP [...] = ICMPv6 Type 133",
+    "back": "RS"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_021",
+    "front": "NDP RS = ICMPv6 Type [...]",
+    "back": "133"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_022",
+    "front": "NDP [...] = ICMPv6 Type 134",
+    "back": "RA"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_023",
+    "front": "NDP RA = ICMPv6 Type [...]",
+    "back": "134"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_024",
+    "front": "When trying to learn a MAC address, what destination IP address are NDP NS messages sent to?",
+    "back": "The neighbor's solicited-node multicast address"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_025",
+    "front": "What command is used to view the IPv6 equivalent of an ARP table?\nR1# [...]",
+    "back": "show ipv6 neighbor"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_026",
+    "front": "NDP RS messages are sent to [destination IP]",
+    "back": "FF02::2"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_027",
+    "front": "NDP RA messages are sent to [destination IP]",
+    "back": "FF02::1"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_028",
+    "front": "What does SLAAC stand for?",
+    "back": "Stateless Address Auto-configuration"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_029",
+    "front": "Which NDP messages allow a device to learn the network prefix for SLAAC?",
+    "back": "RS/RA"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_030",
+    "front": "When using SLAAC, how is the interface ID generated?",
+    "back": "EUI-64, or randomly"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_031",
+    "front": "What does DAD stand for?",
+    "back": "Duplicate Address Detection"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_032",
+    "front": "[...] allows hosts to check if other devices on the local link are using the same IPv6 address.",
+    "back": "Duplicate Address Detection (DAD)"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_033",
+    "front": "Which NDP messages does DAD use?",
+    "back": "NS/NA"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_034",
+    "front": "To perform DAD, which address does a device send an NS to?",
+    "back": "Its own solicited-node multicast address"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_035",
+    "front": "Are routes for IPv6 link-local addresses added to the routing table?",
+    "back": "No"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_036",
+    "front": "In a directly attached static route, the [...] is specified.",
+    "back": "exit interface (only)"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_037",
+    "front": "In a [...] static route, the exit interface (only) is specified.",
+    "back": "directly attached"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_038",
+    "front": "In a [...] static route, the next hop (only) is specified.",
+    "back": "recursive"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_039",
+    "front": "In a recursive static route, the [...] is specified.",
+    "back": "next hop (only)"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_040",
+    "front": "In a [...] static route, the exit interface and next hop are both specified.",
+    "back": "fully specified"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_041",
+    "front": "Configure an IPv6 directly attached static route:\nR1(config)# [...]",
+    "back": "ipv6 route destination/prefix-length exit-interface"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_042",
+    "front": "Configure an IPv6 recursive static route:\nR1(config)# [...]",
+    "back": "ipv6 route destination/prefix-length next-hop"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_043",
+    "front": "Configure an IPv6 fully specified static route:\nR1(config)# [...]",
+    "back": "ipv6 route destination/prefix-length exit-interface next-hop"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_044",
+    "front": "In IPv6, you can't use [...] static routes if the interface is an Ethernet interface.",
+    "back": "directly attached\n(the command will work, but the route will not)"
+  },
+  {
+    "id": "Day 33 Flashcards - IPv6 (Part 3)_045",
+    "front": "To use an IPv6 link-local address as a next hop, you must configure a [...] static route.",
+    "back": "fully specified"
+  }
+]

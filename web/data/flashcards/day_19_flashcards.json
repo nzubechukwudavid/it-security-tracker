@@ -1,0 +1,222 @@
+[
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_001",
+    "front": "[...] is a Cisco proprietary protocol that allows Cisco switches to dynamically determine their interface status (access or trunk) without manual configuration.",
+    "back": "DTP"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_002",
+    "front": "What does DTP stand for?",
+    "back": "Dynamic Trunking Protocol"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_003",
+    "front": "DTP is [...] by default on all Cisco switch interfaces.",
+    "back": "enabled"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_004",
+    "front": "What are the two DTP interface modes?\nswitchport mode dynamic [...]\nswitchport mode dynamic [...]",
+    "back": "auto\ndesirable"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_005",
+    "front": "Interfaces on newer Cisco switches default to switchport mode dynamic [...]",
+    "back": "auto"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_006",
+    "front": "Interfaces on older Cisco switches default to switchport mode dynamic [...]",
+    "back": "desirable"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_007",
+    "front": "A switchport in dynamic [...] mode will actively try to form a trunk with other Cisco switches.",
+    "back": "desirable"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_008",
+    "front": "A switchport in dynamic [...] mode will NOT actively try to form a trunk with other Cisco switches.",
+    "back": "auto"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_009",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic desirable\nSW2 G0/0 Administrative mode: dynamic desirable\nOperational mode: [...]",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_010",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic desirable\nSW2 G0/0 Administrative mode: trunk\nOperational mode: [...]",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_011",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic desirable\nSW2 G0/0 Administrative mode: dynamic auto\nOperational mode: [...]",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_012",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic desirable\nSW2 G0/0 Administrative mode: static access\nOperational mode: [...]",
+    "back": "static access"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_013",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic auto\nSW2 G0/0 Administrative mode: trunk\nOperational mode: [...]",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_014",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic auto\nSW2 G0/0 Administrative mode: dynamic auto\nOperational mode: [...]",
+    "back": "static access"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_015",
+    "front": "SW1 G0/0 is connected to SW2 G0/0\nSW1 G0/0 Administrative mode: dynamic auto\nSW2 G0/0 Administrative mode: static access\nOperational mode: [...]",
+    "back": "static access"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_016",
+    "front": "Configure DTP in desirable mode on a switchport:\nSW1(config-if)# [...]",
+    "back": "switchport mode dynamic desirable"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_017",
+    "front": "Configure DTP in auto mode on a switchport:\nSW1(config-if)# [...]",
+    "back": "switchport mode dynamic auto"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_018",
+    "front": "Two commands that disable DTP negotiation on a switchport:\nSW1(config-if)# switchport mode access\nOR\nSW1(config-if)# [...]",
+    "back": "switchport nonegotiate"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_019",
+    "front": "Two commands that disable DTP negotiation on a switchport:\nSW1(config-if)# switchport nonegotiate\nOR\nSW1(config-if)# [...]",
+    "back": "switchport mode access"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_020",
+    "front": "In DTP trunk encapsulation negotiation, which encapsulation type is favored?",
+    "back": "ISL"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_021",
+    "front": "When using ISL, which VLAN are DTP frames sent in?",
+    "back": "VLAN1"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_022",
+    "front": "When using 802.1Q, which VLAN are DTP frames sent in?",
+    "back": "The native VLAN"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_023",
+    "front": "[...] allows you to configure VLANs on a central server switch, and other switches (clients) will synchronize their VLAN database to the server.",
+    "back": "VTP"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_024",
+    "front": "What does VTP stand for?",
+    "back": "VLAN Trunking Protocol"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_025",
+    "front": "How many versions of VTP are there?",
+    "back": "3"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_026",
+    "front": "What are the three VTP modes?",
+    "back": "Server, client, transparent"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_027",
+    "front": "Cisco switches operate in VTP [...] mode by default.",
+    "back": "server"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_028",
+    "front": "Cisco switches operate in VTP version [...] by default.",
+    "back": "1"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_029",
+    "front": "VTP servers will increase the [...] every time a VLAN is added/modified/deleted.",
+    "back": "revision number"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_030",
+    "front": "VTP servers [can/can't] add/modify/delete VLANs.",
+    "back": "can"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_031",
+    "front": "VTP clients [can/can't] add/modify/delete VLANs.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_032",
+    "front": "VTP transparents [can/can't] add/modify/delete VLANs.",
+    "back": "can"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_033",
+    "front": "VTP servers [will/won't] synchronize their VLAN database with a VTP server with a higher revision number.",
+    "back": "will"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_034",
+    "front": "VTP clients [will/won't] synchronize their VLAN database with a VTP server with a higher revision number.",
+    "back": "will"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_035",
+    "front": "VTP transparents [will/won't] synchronize their VLAN database with a VTP server with a higher revision number.",
+    "back": "won't"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_036",
+    "front": "Does VTPv1 support the extended VLAN range (1006-4094)?",
+    "back": "No"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_037",
+    "front": "Does VTPv2 support the extended VLAN range (1006-4094)?",
+    "back": "No"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_038",
+    "front": "Does VTPv3 support the extended VLAN range (1006-4094)?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_039",
+    "front": "Does a VTP server maintain its VLAN database in NVRAM?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_040",
+    "front": "Does a VTPv1/v2 client maintain its VLAN database in NVRAM?",
+    "back": "No"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_041",
+    "front": "Does a VTP transparent maintain its VLAN database in NVRAM?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_042",
+    "front": "What are two methods to reset the VTP revision number to 0?\n[...]\nOR\nChange the VTP mode to transparent.",
+    "back": "Change the VTP domain to an unused domain."
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_043",
+    "front": "What are two methods to reset the VTP revision number to 0?\nChange the VTP domain to an unused domain.\nOR\n[...]",
+    "back": "Change the VTP mode to transparent."
+  },
+  {
+    "id": "Day 19 Flashcards - DTP & VTP_044",
+    "front": "Does a VTPv3 client maintain its VLAN database in NVRAM?",
+    "back": "Yes"
+  }
+]

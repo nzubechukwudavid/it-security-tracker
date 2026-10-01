@@ -1,0 +1,97 @@
+[
+  {
+    "id": "Day 62 Flashcards - SDN_001",
+    "front": "The [...] layer of SDN architecture contains scripts and applications that interact with the SDN controller.",
+    "back": "Application"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_002",
+    "front": "The [...] layer of SDN architecture contains the SDN controller.",
+    "back": "Control"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_003",
+    "front": "The [...] layer of SDN architecture contains the network devices.",
+    "back": "Infrastructure"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_004",
+    "front": "What does Cisco DNA stand for?",
+    "back": "Digital Network Architecture"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_005",
+    "front": "What does Cisco ACI stand for?",
+    "back": "Application-Centric Infrastructure"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_006",
+    "front": "[...] is Cisco's SDN solution for automating campus LANs.",
+    "back": "SD-Access"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_007",
+    "front": "[...] is Cisco's SDN solution for automating data center networks.",
+    "back": "ACI"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_008",
+    "front": "[...] is Cisco's SDN solution for automating WANs.",
+    "back": "SD-WAN"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_009",
+    "front": "In SDN, the [...] is the physical network of devices and connections.",
+    "back": "underlay"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_010",
+    "front": "In SDN, the [...] is the virtual network built on top of the physical network.",
+    "back": "overlay"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_011",
+    "front": "In SDN, the [...] is the combination of the overlay and underlay.",
+    "back": "fabric"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_012",
+    "front": "What does VXLAN stand for?",
+    "back": "Virtual Extensible LAN"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_013",
+    "front": "What does LISP stand for?",
+    "back": "Locator ID Separation Protocol"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_014",
+    "front": "What are the three switch types in Cisco SD-Access?",
+    "back": "-Edge node\n-Border node\n-Control node"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_015",
+    "front": "What does CTS stand for?",
+    "back": "Cisco TrustSec"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_016",
+    "front": "What does IBN stand for?",
+    "back": "Intent-Based Networking"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_017",
+    "front": "[protocol] provides the control plane of Cisco SD-Access.",
+    "back": "LISP"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_018",
+    "front": "[protocol] provides the data plane of Cisco SD-Access.",
+    "back": "VXLAN"
+  },
+  {
+    "id": "Day 62 Flashcards - SDN_019",
+    "front": "[protocol] provides policy control in Cisco SD-Access.",
+    "back": "Cisco TrustSec"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "Day 23 Flashcards - EtherChannel_001",
+    "front": "What does LAG (EtherChannel) stand for?",
+    "back": "Link Aggregation Group"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_002",
+    "front": "What are the 6 EtherChannel load-balancing methods? (not including TCP/IP port numbers)",
+    "back": "Source MAC\nDestination MAC\nSource/Destination MAC\nSource IP\nDestination IP\nSource/Destination IP"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_003",
+    "front": "View the current EtherChannel load-balancing method on the switch:\nSW1# [...]",
+    "back": "show etherchannel load-balance"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_004",
+    "front": "Configure the EtherChannel load-balancing method on the switch:\nSW1(config)# [...]",
+    "back": "port-channel load-balance method"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_005",
+    "front": "What does PAgP stand for?",
+    "back": "Port Aggregation Protocol"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_006",
+    "front": "What does LACP stand for?",
+    "back": "Link Aggregation Control Protocol"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_007",
+    "front": "Which method of EtherChannel configuration uses a Cisco proprietary protocol?",
+    "back": "PAgP"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_008",
+    "front": "Which method of EtherChannel configuration uses an industry standard protocol?",
+    "back": "LACP"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_009",
+    "front": "LACP is IEEE [...]",
+    "back": "802.3ad"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_010",
+    "front": "How many interfaces can be active in an EtherChannel?",
+    "back": "8"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_011",
+    "front": "Which EtherChannel protocol allows up to 8 active interfaces and up to 8 standby interfaces?",
+    "back": "LACP"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_012",
+    "front": "The EtherChannel channel-group number [does/doesn't] have to match the number on the neighbor switch.",
+    "back": "doesn't"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_013",
+    "front": "Which two EtherChannel modes does PAgP use?",
+    "back": "Desirable, Auto"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_014",
+    "front": "Which two EtherChannel modes does LACP use?",
+    "back": "Active, Passive"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_015",
+    "front": "Configure an interface to join an EtherChannel\nSW1(config-if)# [...]",
+    "back": "channel-group number mode mode"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_016",
+    "front": "Configure static EtherChannel:\nSW1(config-if)# channel-group 1 mode [...]",
+    "back": "on"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_017",
+    "front": "Manually configure the EtherChannel protocol used on an interface:\nSW1(config-if)# [...]",
+    "back": "channel-protocol [lacp | pagp]"
+  },
+  {
+    "id": "Day 23 Flashcards - EtherChannel_018",
+    "front": "Configure a Layer 3 EtherChannel:\nSW1(config-if)# [...]\nSW1(config-if)# channel-group group mode mode",
+    "back": "no switchport"
+  }
+]

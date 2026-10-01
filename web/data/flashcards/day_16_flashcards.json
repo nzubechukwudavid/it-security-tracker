@@ -1,0 +1,62 @@
+[
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_001",
+    "front": "A [...] domain is the group of devices which will receive a frame with the destination MAC address FFFF.FFFF.FFFF.",
+    "back": "broadcast"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_002",
+    "front": "VLANs are used to split up [...] domains.",
+    "back": "broadcast"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_003",
+    "front": "VLANs operate at Layer [...] of the OSI model.",
+    "back": "2"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_004",
+    "front": "Will a Layer 2 switch forward traffic between VLANs? (inter-VLAN routing)",
+    "back": "no"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_005",
+    "front": "What are the 5 VLANs that exist by default on a Cisco switch?",
+    "back": "1, 1002, 1003, 1004, 1005"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_006",
+    "front": "What VLAN are Cisco switch interfaces in by default?",
+    "back": "VLAN1"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_007",
+    "front": "An [...] port is a switchport which belongs to a single VLAN, and usually connects to end hosts like PCs.",
+    "back": "access"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_008",
+    "front": "Switchports which carry multiple VLANs are called ‘[...] ports’.",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_009",
+    "front": "Configure a switch interface to be an access port:\nSW1(config-if)# [...]",
+    "back": "switchport mode access"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_010",
+    "front": "Configure the VLAN of a switch access port:\nSW1(config-if)# [...]",
+    "back": "switchport access vlan vlan-number"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_011",
+    "front": "Create a VLAN:\nSW1(config)# [...]",
+    "back": "vlan vlan-number"
+  },
+  {
+    "id": "Day 16 Flashcards - VLANs (Part 1)_012",
+    "front": "Configure the name of a VLAN:\nSW1(config-vlan)# [...]",
+    "back": "name name"
+  }
+]

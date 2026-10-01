@@ -1,0 +1,207 @@
+[
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_001",
+    "front": "What does PSTN stand for?",
+    "back": "Public Switched Telephone Network"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_002",
+    "front": "What does POTS stand for?",
+    "back": "Plain Old Telephone Service"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_003",
+    "front": "What does VoIP stand for?",
+    "back": "Voice over IP"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_004",
+    "front": "When the switchport voice vlan command is applied to an interface, which traffic will be tagged?  Traffic from the PC or from the IP phone?",
+    "back": "Traffic from the IP phone\n(traffic from the PC will be untagged as usual for an access port)"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_005",
+    "front": "Configure the voice VLAN:\nSW1(config-if)# [...]",
+    "back": "switchport voice vlan vlan-number"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_006",
+    "front": "What does PoE stand for?",
+    "back": "Power over Ethernet"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_007",
+    "front": "PoE: What does PSE stand for?",
+    "back": "Power Sourcing Equipment"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_008",
+    "front": "PoE: What does PD stand for?",
+    "back": "Powered Device"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_009",
+    "front": "Electronic devices use [AC/DC] power.",
+    "back": "DC"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_010",
+    "front": "PoE: [...] can be configured to prevent a PD from taking too much power.",
+    "back": "Power policing"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_011",
+    "front": "Power policing: Configure the switch to disable the interface and generate a Syslog message if the PD draws too much power:\nSW1(config-if)# [...]",
+    "back": "power inline police\nor\npower inline police action errdisable"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_012",
+    "front": "Power policing: Configure the switch to restart the interface and generate a Syslog message if the PD draws too much power:\nSW1(config-if)# [...]",
+    "back": "power inline police action log"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_013",
+    "front": "What does Cisco ILP stand for?",
+    "back": "Cisco Inline Power"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_014",
+    "front": "PoE (Type 1) is IEEE [...]",
+    "back": "802.3af"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_015",
+    "front": "PoE+ (Type 2) is IEEE [...]",
+    "back": "802.3at"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_016",
+    "front": "UPoE (Type 3) is IEEE [...]",
+    "back": "802.3bt"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_017",
+    "front": "UPoE+ (Type 4) is IEEE [...]",
+    "back": "802.3bt"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_018",
+    "front": "PoE (Type 1) offers [...] watts of power.",
+    "back": "15"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_019",
+    "front": "PoE+ (Type 2) offers [...] watts of power.",
+    "back": "30"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_020",
+    "front": "UPoE (Type 3) offers [...] watts of power.",
+    "back": "60"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_021",
+    "front": "UPoE+ (Type 4) offers [...] watts of power.",
+    "back": "100"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_022",
+    "front": "Cisco ILP offers [...] watts of power.",
+    "back": "7"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_023",
+    "front": "Cisco ILP uses [...] powered wire pairs.",
+    "back": "2"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_024",
+    "front": "PoE (Type 1) uses [...] powered wire pairs.",
+    "back": "2"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_025",
+    "front": "PoE+ (Type 2) uses [...] powered wire pairs.",
+    "back": "2"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_026",
+    "front": "UPoE (Type 3) uses [...] powered wire pairs.",
+    "back": "4"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_027",
+    "front": "UPoE+ (Type 4) uses [...] powered wire pairs.",
+    "back": "4"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_028",
+    "front": "QoS: [...] refers to the overall capacity of a link.",
+    "back": "Bandwidth"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_029",
+    "front": "QoS: [...] is the amount of time it takes traffic to go from source to destination.",
+    "back": "Delay (=one-way delay)\n(Two-way delay measures both ways)"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_030",
+    "front": "QoS: [...] is the variation in one-way delay between packets sent by the same application.",
+    "back": "Jitter"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_031",
+    "front": "QoS: [...] is the percentage of packets that do not reach their destination.",
+    "back": "Loss"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_032",
+    "front": "What is considered acceptable one-way delay for interactive audio traffic?",
+    "back": "150 ms or less"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_033",
+    "front": "What is considered acceptable jitter for interactive audio traffic?",
+    "back": "30 ms or less"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_034",
+    "front": "What is considered acceptable loss for interactive audio traffic?",
+    "back": "1% or less"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_035",
+    "front": "QoS: By default, queued messages will be forward in a [...] manner.",
+    "back": "FIFO"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_036",
+    "front": "What does FIFO stand for?",
+    "back": "First In First Out"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_037",
+    "front": "When packets are dropped due to a full queue, it is called [...].",
+    "back": "tail drop"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_038",
+    "front": "Tail drop is harmful because it can lead to [...].",
+    "back": "TCP global synchronization"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_039",
+    "front": "QoS: What does RED stand for?",
+    "back": "Random Early Detection"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_040",
+    "front": "QoS: What does WRED stand for?",
+    "back": "Weighted Random Early Detection"
+  },
+  {
+    "id": "Day 46 Flashcards - QoS (Part 1)_041",
+    "front": "QoS: What features drop random packets when traffic queues pass a certain threshold?",
+    "back": "RED / WRED"
+  }
+]

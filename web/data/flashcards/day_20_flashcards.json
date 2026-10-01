@@ -1,0 +1,182 @@
+[
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_001",
+    "front": "If looped Layer 2 broadcast messages accumulate and congest a network, this is called a [...]",
+    "back": "broadcast storm"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_002",
+    "front": "When a switch rapidly and continuously updates a MAC address in its MAC address table, alternating between different interfaces, this is known as [...]",
+    "back": "MAC address flapping"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_003",
+    "front": "'Classic' Spanning Tree Protocol is IEEE [...]",
+    "back": "802.1D"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_004",
+    "front": "Do all switches run STP by default?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_005",
+    "front": "The messages sent by STP switches are called:",
+    "back": "BPDUs (Bridge Protocol Data Units)"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_006",
+    "front": "What does BPDU stand for?",
+    "back": "Bridge Protocol Data Unit"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_007",
+    "front": "How many root bridges are elected in STP?",
+    "back": "One"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_008",
+    "front": "Which field in the STP BPDU is used to elect the root bridge?",
+    "back": "Bridge ID field"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_009",
+    "front": "STP: The switch with the lowest [...] becomes the root bridge.",
+    "back": "Bridge ID"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_010",
+    "front": "STP: All ports on the root bridge are [...] ports (forwarding state)",
+    "back": "designated"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_011",
+    "front": "STP: The default bridge priority is [...] (not including Extended System ID)",
+    "back": "32768"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_012",
+    "front": "Three fields of the STP Bridge ID:\n[...] (4 bits)\nExtended System ID (12 bits)\nMAC Address (48 bits)",
+    "back": "Bridge Priority"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_013",
+    "front": "Three fields of the STP Bridge ID:\nBridge Priority (4 bits)\n[...] (12 bits)\nMAC Address (48 bits)",
+    "back": "Extended System ID (VLAN ID)"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_014",
+    "front": "Three fields of the STP Bridge ID:\nBridge Priority (4 bits)\nExtended System ID (12 bits)\n[...] (48 bits)",
+    "back": "MAC Address"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_015",
+    "front": "Three fields of the STP Bridge ID:\nBridge Priority ([...] bits)\nExtended System ID (12 bits)\nMAC Address (48 bits)",
+    "back": "4"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_016",
+    "front": "Three fields of the STP Bridge ID:\nBridge Priority (4 bits)\nExtended System ID ([...] bits)\nMAC Address (48 bits)",
+    "back": "12"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_017",
+    "front": "Three fields of the STP Bridge ID:\nBridge Priority (4 bits)\nExtended System ID (12 bits)\nMAC Address ([...] bits)",
+    "back": "48"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_018",
+    "front": "Cisco switches use a version of STP called [...], which runs a separate spanning tree instance in each VLAN.",
+    "back": "PVST (Per-Vlan Spanning Tree)"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_019",
+    "front": "What does PVST stand for?",
+    "back": "Per-VLAN Spanning Tree"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_020",
+    "front": "The STP bridge priority can be changed in units of [...]",
+    "back": "4096\nPossible values (you don't have to memorize these!):\n0, 4096, 8192, 12288, 16384, 20480, 24576, 28672, 32768, 36864, 40960, 45056, 49152, 53248, 57344, or 61440"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_021",
+    "front": "STP Designated ports are in a [...] state.",
+    "back": "forwarding"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_022",
+    "front": "STP: When a switch is powered on, it assumes the role of [...] bridge.",
+    "back": "root"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_023",
+    "front": "In an 802.1D STP network, which switch(es) send BPDUs?",
+    "back": "Root bridge only"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_024",
+    "front": "Interface Speed: 10 Mbps\n802.1D STP cost: [...]",
+    "back": "100"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_025",
+    "front": "Interface Speed: [...]\n802.1D STP cost: 100",
+    "back": "10 Mbps"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_026",
+    "front": "Interface Speed: 100 Mbps\n802.1D STP cost: [...]",
+    "back": "19"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_027",
+    "front": "Interface Speed: [...]\n802.1D STP cost: 19",
+    "back": "100 Mbps"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_028",
+    "front": "Interface Speed: 1 Gbps\n802.1D STP cost: [...]",
+    "back": "4"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_029",
+    "front": "Interface Speed: [...]\n802.1D STP cost: 4",
+    "back": "1 Gbps"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_030",
+    "front": "Interface Speed: 10 Gbps\n802.1D STP cost: [...]",
+    "back": "2"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_031",
+    "front": "Interface Speed: [...]\n802.1D STP cost: 2",
+    "back": "10 Gbps"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_032",
+    "front": "STP root port selection:\n1: Lowest [...]\n2: Lowest [...]\n3: Lowest [...]",
+    "back": "1. root cost\n2. neighbor bridge ID\n3. neighbor port ID"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_033",
+    "front": "STP: There must be one [...] port per collision domain.",
+    "back": "designated"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_034",
+    "front": "STP: There must be one designated port per [...].",
+    "back": "collision domain"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_035",
+    "front": "STP Root ports are in a [...] state.",
+    "back": "forwarding"
+  },
+  {
+    "id": "Day 20 Flashcards - STP (Part 1)_036",
+    "front": "STP Non-Designated ports are in a [...] state",
+    "back": "blocking"
+  }
+]

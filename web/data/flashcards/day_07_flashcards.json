@@ -1,0 +1,137 @@
+[
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_001",
+    "front": "What is the length of an IP address? (bits)",
+    "back": "32 bits"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_002",
+    "front": "What is the length of an IP address? (bytes)",
+    "back": "4"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_003",
+    "front": "What are the groups of 8 bits in an IP address called?",
+    "back": "octets"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_004",
+    "front": "What is the maximum value for a binary octet? (1111 1111)",
+    "back": "255"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_005",
+    "front": "What is the numeric range of the first octet of a class A IPv4 address?",
+    "back": "0-127"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_006",
+    "front": "What is the numeric range of the first octet of a class B IPv4 address?",
+    "back": "128-191"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_007",
+    "front": "What is the numeric range of the first octet of a class C IPv4 address?",
+    "back": "192-223"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_008",
+    "front": "What is the numeric range of the first octet of a class D IPv4 address?",
+    "back": "224-239"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_009",
+    "front": "What is the numeric range of the first octet of a class E IPv4 address?",
+    "back": "240-255"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_010",
+    "front": "What is the binary bit pattern of the first octet of a class A IPv4 address?",
+    "back": "0xxxxxxx"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_011",
+    "front": "What is the binary bit pattern of the first octet of a class B IPv4 address?",
+    "back": "10xxxxxx"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_012",
+    "front": "What is the binary bit pattern of the first octet of a class C IPv4 address?",
+    "back": "110xxxxx"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_013",
+    "front": "What is the binary bit pattern of the first octet of a class D IPv4 address?",
+    "back": "1110xxxx"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_014",
+    "front": "What is the binary bit pattern of the first octet of a class E IPv4 address?",
+    "back": "1111xxxx"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_015",
+    "front": "What is the class D IPv4 address range reserved for?",
+    "back": "Multicast addresses"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_016",
+    "front": "What is the class E IPv4 address range reserved for?",
+    "back": "Experimental purposes"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_017",
+    "front": "IPv4 addresses beginning with 127 are used for [...] addresses.",
+    "back": "loopback"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_018",
+    "front": "IPv4 addresses beginning with [...] are used for loopback addresses.",
+    "back": "127"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_019",
+    "front": "What kind of address is used to test the network software stack on the local device?",
+    "back": "loopback address"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_020",
+    "front": "What is the prefix length of a class A IPv4 address?",
+    "back": "/8"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_021",
+    "front": "What is the prefix length of a class B IPv4 address?",
+    "back": "/16"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_022",
+    "front": "What is the prefix length of a class C IPv4 address?",
+    "back": "/24"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_023",
+    "front": "What is the netmask for a /8 prefix length?",
+    "back": "255.0.0.0"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_024",
+    "front": "What is the netmask for a /16 prefix length?",
+    "back": "255.255.0.0"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_025",
+    "front": "What is the netmask for a /24 prefix length?",
+    "back": "255.255.255.0"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_026",
+    "front": "If the host portion of an IPv4 address is all 0s, what kind of address is it?",
+    "back": "network address"
+  },
+  {
+    "id": "Day 07 Flashcards - IPv4 Addresses (Part 1)_027",
+    "front": "If the host portion of an IPv4 address is all 1s, what kind of address is it?",
+    "back": "broadcast address"
+  }
+]

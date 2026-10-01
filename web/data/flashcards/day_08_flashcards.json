@@ -1,0 +1,87 @@
+[
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_001",
+    "front": "What is the formula to calculate the maximum number of hosts in a network?",
+    "back": "(2^n)-2\n(n = number of host bits)"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_002",
+    "front": "Which IPv4 address class contains a total of 128 networks?",
+    "back": "Class A"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_003",
+    "front": "Which IPv4 address class contains a total of 16,384 networks?",
+    "back": "Class B"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_004",
+    "front": "Which IPv4 address class contains a total of 2,097,152 networks?",
+    "back": "Class C"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_005",
+    "front": "Which IPv4 address class allows a total of 16,777,214 hosts per network?",
+    "back": "Class A"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_006",
+    "front": "Which IPv4 address class allows a total of 65,534 hosts per network?",
+    "back": "Class B"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_007",
+    "front": "Which IPv4 address class allows a total of 254 hosts per network?",
+    "back": "Class C"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_008",
+    "front": "If an interface has the shutdown command applied to it, what will the 'status' column of show ip interface brief display?",
+    "back": "administratively down"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_009",
+    "front": "The 'Status' field of the show ip interface brief command shows the Layer [...] status of the interface.",
+    "back": "1"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_010",
+    "front": "The 'Protocol' field of the show ip interface brief command shows the Layer [...] status of the interface.",
+    "back": "2"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_011",
+    "front": "The '[...]' field of the show ip interface brief command shows the Layer 1 status of the interface.",
+    "back": "Status"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_012",
+    "front": "The '[...]' field of the show ip interface brief command shows the Layer 2 status of the interface.",
+    "back": "Protocol"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_013",
+    "front": "Interfaces on Cisco [device type] are administratively down by default.",
+    "back": "routers"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_014",
+    "front": "Interfaces on Cisco [device type] are NOT administratively down by default.",
+    "back": "switches"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_015",
+    "front": "Command to configure an IP address on an interface:\nR1(config-if)# [...]",
+    "back": "ip address ip-address subnet-mask\nie.\nR1(config-if)# ip address 192.168.0.254 255.255.255.0"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_016",
+    "front": "Command to configure a description on an interface:\nR1(config-if)# [...]",
+    "back": "description description\nie.\nR1(config-if)# description ## to SW1 ##"
+  },
+  {
+    "id": "Day 08 Flashcards - IPv4 Addresses (Part 2)_017",
+    "front": "Display the configured description of each interface on a router:\nR1# [...]",
+    "back": "show interfaces description"
+  }
+]

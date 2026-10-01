@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_001",
+    "front": "When several devices all connect to one central device, it is called a [...] topology.",
+    "back": "star"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_002",
+    "front": "When each device connects to all other devices, it is called a [...] topology.",
+    "back": "full mesh"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_003",
+    "front": "When some devices are connected to each other, but not all, it is called a [...] topology.",
+    "back": "partial mesh"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_004",
+    "front": "Which three layers are found in a traditional 3-tier campus LAN?",
+    "back": "Access\nDistribution\nCore"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_005",
+    "front": "Which two layers are found in a traditional 2-tier campus LAN?",
+    "back": "Access\nDistribution"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_006",
+    "front": "The [...] layer of a campus LAN is also known as the aggregation layer.",
+    "back": "distribution"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_007",
+    "front": "End hosts connect to the [...] layer of a campus LAN.",
+    "back": "access"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_008",
+    "front": "QoS marking is typically done at the [...] layer of a campus LAN.",
+    "back": "access"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_009",
+    "front": "PoE is often used at the [...] layer of a campus LAN.",
+    "back": "access"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_010",
+    "front": "In a campus LAN, the [...] layer aggregates connections from access layer switches.",
+    "back": "distribution"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_011",
+    "front": "In a campus LAN, the [...] layer is typically the border between Layer 2 and Layer 3.",
+    "back": "distribution"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_012",
+    "front": "In a large campus LAN, the [...] layer connects distribution layers together.",
+    "back": "core"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_013",
+    "front": "Spine-Leaf architecture is efficient in data centers with lots of [...] traffic.",
+    "back": "east-west"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_014",
+    "front": "Spine-Leaf Architecture:\nEvery leaf switch is connected to every [...] switch.",
+    "back": "spine"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_015",
+    "front": "Spine-Leaf Architecture:\nEvery spine switch is connected to every [...] switch.",
+    "back": "leaf"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_016",
+    "front": "Spine-Leaf Architecture:\nA leaf switch must not connect to a [...] switch.",
+    "back": "leaf"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_017",
+    "front": "Spine-Leaf Architecture:\nA spine switch must not connect to a [...] switch.",
+    "back": "spine"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_018",
+    "front": "Spine-Leaf Architecture:\nEnd hosts connect to [...] switches.",
+    "back": "leaf"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_019",
+    "front": "What does SOHO stand for?",
+    "back": "Small Office/Home Office"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_020",
+    "front": "In SOHO networks, all networking functions are typically provided by a multipurpose network device called a [...].",
+    "back": "home router  /  wireless router"
+  },
+  {
+    "id": "Day 52  Flashcards - LAN Architectures_021",
+    "front": "A 2-tier campus LAN architecture is also known as a [...] architecture.",
+    "back": "Collapsed-core"
+  }
+]

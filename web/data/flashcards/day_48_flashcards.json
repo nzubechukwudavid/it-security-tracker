@@ -1,0 +1,272 @@
+[
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_001",
+    "front": "What is the C of the CIA triad?",
+    "back": "Confidentiality"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_002",
+    "front": "What is the I of the CIA triad?",
+    "back": "Integrity"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_003",
+    "front": "What is the A of the CIA triad?",
+    "back": "Availability"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_004",
+    "front": "CIA Triad: [...] = only authorized users should be able to access data.",
+    "back": "Confidentiality"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_005",
+    "front": "CIA Triad: [...] = data should not be tampered with by unauthorized users.",
+    "back": "Integrity"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_006",
+    "front": "CIA Triad: [...] = the network/systems should be operational and accessible to authorized users.",
+    "back": "Availability"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_007",
+    "front": "A [...] is any potential weakness that can compromise the security of a system.",
+    "back": "vulnerability"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_008",
+    "front": "An [...] is something that can potentially be used to take advantage of a vulnerability.",
+    "back": "exploit"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_009",
+    "front": "A [...] is the potential of a vulnerability to be exploited.",
+    "back": "threat"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_010",
+    "front": "A [...] technique is something that can protect against threats.",
+    "back": "mitigation"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_011",
+    "front": "What does DoS attack stand for?",
+    "back": "denial-of-service"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_012",
+    "front": "What does DDoS attack stand for?",
+    "back": "distributed denial-of-service"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_013",
+    "front": "A TCP [...] attack exploits the TCP three-way handshake.",
+    "back": "SYN flood"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_014",
+    "front": "A TCP SYN flood results in a [...] on the target.",
+    "back": "denial-of-service"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_015",
+    "front": "To [...] an address is to use a fake source address (IP/MAC)",
+    "back": "spoof"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_016",
+    "front": "In a [...] attack, an attacker floods the target with DHCP Discover messages.",
+    "back": "DHCP exhaustion"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_017",
+    "front": "In a [...] attack, an attacker causes a reflector to send traffic to the target.",
+    "back": "reflection"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_018",
+    "front": "An [...] attack is a more dangerous kind of reflection attack.",
+    "back": "amplification"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_019",
+    "front": "In a [...] attack, the attacker intercepts communications between two devices.",
+    "back": "man-in-the-middle"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_020",
+    "front": "ARP spoofing is also known as [...].",
+    "back": "ARP poisoning"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_021",
+    "front": "In an [...] attack, an attacker sends fraudulent ARP replies.",
+    "back": "ARP spoofing"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_022",
+    "front": "[...] attacks are used to gather information about a target.",
+    "back": "Reconnaissance"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_023",
+    "front": "[...] refers to a variety of harmful programs that can infect a computer.",
+    "back": "Malware"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_024",
+    "front": "[...] are malware that infect other software, called a host program.",
+    "back": "Viruses"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_025",
+    "front": "[...] are standalone malware that spread on their own, without user interaction.",
+    "back": "Worms"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_026",
+    "front": "[...] are malware that is disguised as legitimate software.",
+    "back": "Trojan horses"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_027",
+    "front": "[...] attacks involve pyschological manipulation to make the target reveal confidential information or perform some other action.",
+    "back": "Social engineering"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_028",
+    "front": "[...] is a kind of social engineering which typically involves fraudulent emails that try to appear legitimate.",
+    "back": "Phishing"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_029",
+    "front": "[...] is a more targeted form of phishing, for example aimed at employees of a certain company.",
+    "back": "Spear phishing"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_030",
+    "front": "[...] is a kind of phishing targeted at high-profile individuals.",
+    "back": "Whaling"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_031",
+    "front": "[...] is phishing performed over the phone.",
+    "back": "Vishing"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_032",
+    "front": "[...] is phishing using SMS text messages.",
+    "back": "Smishing"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_033",
+    "front": "[...] attacks compromise sites that the target victim frequently visits.",
+    "back": "Watering hole"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_034",
+    "front": "[...] attacks involve entering restricted, secured areas by walking in behind an authorized person as they enter.",
+    "back": "Tailgating"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_035",
+    "front": "A [...] attack runs through a list of common words or passwords to find the target's password.",
+    "back": "dictionary"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_036",
+    "front": "A [...] attack tries every possible combination of letters, numbers, and special characters to guess the target's password.",
+    "back": "brute force"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_037",
+    "front": "What does MFA stand for?",
+    "back": "Multi-factor authentication"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_038",
+    "front": "What are the three factors of multi-factor authentication?",
+    "back": "Something you know\nSomething you have\nSomething you are"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_039",
+    "front": "[...] are a form of authentication often used to prove the identity of a website.",
+    "back": "Digital certificates"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_040",
+    "front": "What does AAA stand for?",
+    "back": "Authentication, Authorization, and Accounting"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_041",
+    "front": "AAA: [...] is the process of verifying a user's identity.",
+    "back": "Authentication"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_042",
+    "front": "AAA: [...] is the process of granting a user the appropriate access and permissions.",
+    "back": "Authorization"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_043",
+    "front": "AAA: [...] is the process of recording the user's activities on the system.",
+    "back": "Accounting"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_044",
+    "front": "Cisco's AAA server is [...]",
+    "back": "ISE"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_045",
+    "front": "What does Cisco ISE stand for?",
+    "back": "Identity Services Engine"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_046",
+    "front": "Which AAA protocol is an open standard?",
+    "back": "RADIUS"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_047",
+    "front": "Which AAA protocol is Cisco proprietary?",
+    "back": "TACACS+"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_048",
+    "front": "RADIUS uses UDP ports [...] and [...].",
+    "back": "1812  /  1813"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_049",
+    "front": "RADIUS uses [...] ports 1812 and 1813.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_050",
+    "front": "TACACS+ uses TCP port [...]",
+    "back": "49"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_051",
+    "front": "TACACS+ uses [...] port 49",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_052",
+    "front": "[...] programs are designed to make employees aware of potential security threats and risks.",
+    "back": "User awareness"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_053",
+    "front": "[...] programs are formal sessions which educate users on corporate security policies and issues.",
+    "back": "User training"
+  },
+  {
+    "id": "Day 48 Flashcards - Security Fundamentals_054",
+    "front": "[...] protects equipment and data from potential attackers by only allowing authorized users into protected areas such as network closets.",
+    "back": "Physical access control"
+  }
+]

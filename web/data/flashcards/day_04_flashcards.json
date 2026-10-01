@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_001",
+    "front": "What two kinds of console ports are common on Cisco devices?",
+    "back": "USB\nRJ45"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_002",
+    "front": "What kind of cable is used to connect to the RJ45 console port on a Cisco device?",
+    "back": "Rollover cable"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_003",
+    "front": "Default Cisco console port settings:\nSpeed (baud rate) = [...]",
+    "back": "9600 bits per second"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_004",
+    "front": "Default Cisco console port settings:\nData bits = [...]",
+    "back": "8"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_005",
+    "front": "Default Cisco console port settings:\nStop bits = [...]",
+    "back": "1"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_006",
+    "front": "Default Cisco console port settings:\nParity = [...]",
+    "back": "None"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_007",
+    "front": "Default Cisco console port settings:\nFlow control = [...]",
+    "back": "None"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_008",
+    "front": "In Cisco IOS, user EXEC mode is indicated by what?\nRouter[...]",
+    "back": ">"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_009",
+    "front": "In Cisco IOS, privileged EXEC mode is indicated by what?\nRouter[...]",
+    "back": "#"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_010",
+    "front": "In Cisco IOS, global configuration mode is indicated by what?\nRouter[...]",
+    "back": "(config)#"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_011",
+    "front": "What is the lowest-level mode in Cisco IOS?",
+    "back": "user EXEC mode"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_012",
+    "front": "In Cisco IOS, what mode provides complete access to view the device's configuration files?",
+    "back": "privileged EXEC mode"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_013",
+    "front": "View the available commands:\nRouter#[...]",
+    "back": "?"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_014",
+    "front": "Enter privileged EXEC mode:\nRouter>[...]",
+    "back": "enable"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_015",
+    "front": "Enter global configuration mode:\nRouter# [...]",
+    "back": "configure terminal"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_016",
+    "front": "Configure an unencrypted password to protect privileged EXEC mode:\nRouter(config)# [...]",
+    "back": "enable password password"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_017",
+    "front": "Return to privileged EXEC mode:\nRouter(config)# [...]",
+    "back": "exit"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_018",
+    "front": "What two configuration files are kept on the device?",
+    "back": "running-config, startup-config"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_019",
+    "front": "View the running configuration:\nRouter# [...]",
+    "back": "show running-config"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_020",
+    "front": "View the startup configuration:\nRouter# [...]",
+    "back": "show startup-config"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_021",
+    "front": "Which three commands can be use to save the configuration?\nRouter# [...]\nRouter# [...]\nRouter# [...]",
+    "back": "write\nwrite memory\ncopy running-config startup-config"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_022",
+    "front": "Encrypt current and future passwords on the device:\nRouter(config)# [...]",
+    "back": "service password-encryption"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_023",
+    "front": "Configure an MD5-encrypted enable password:\nRouter(config)# [...]",
+    "back": "enable secret password"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_024",
+    "front": "You use the [...] keyword to execute privileged EXEC commands in global configuration mode.",
+    "back": "do"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_025",
+    "front": "Use the [...] keyword to remove a configured command.",
+    "back": "no (for example, no service password-encryption)"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_026",
+    "front": "Cisco's service password-encryption command uses type [...] encryption.",
+    "back": "7"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_027",
+    "front": "enable secret uses type [...] (MD5) encryption.",
+    "back": "5"
+  },
+  {
+    "id": "Day 04 Flashcards - Intro to the CLI_028",
+    "front": "If service password-encryption is removed, will currently encrypted passwords be decrypted?",
+    "back": "No"
+  }
+]

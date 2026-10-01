@@ -1,0 +1,172 @@
+[
+  {
+    "id": "Day 49 Flashcards - Port Security_001",
+    "front": "A combination of statically-configured and dynamically-learned secure MAC addresses [can/can't] exist on a switchport.",
+    "back": "can"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_002",
+    "front": "Enable port security on an interface:\nSW1(config-if)# [...]",
+    "back": "switchport port-security"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_003",
+    "front": "Manually configure a secure MAC address on the interface.\nSW1(config-if)# [...]",
+    "back": "switchport port-security mac-address mac-address"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_004",
+    "front": "Enable sticky secure MAC address learning:\nSW1(config-if)# [...]",
+    "back": "switchport port-security mac-address sticky"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_005",
+    "front": "Configure the port security violation mode:\nSW1(config-if)# [...]",
+    "back": "switchport port-security violation {shutdown | restrict | protect}"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_006",
+    "front": "Configure the port security aging time:\nSW1(config-if)# [...]",
+    "back": "switchport port-security aging time minutes"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_007",
+    "front": "Configure the port security aging type:\nSW1(config-if)# [...]",
+    "back": "switchport port-security aging type {absolute | inactivity}"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_008",
+    "front": "Enable aging of static secure MAC addresses\nSW1(config-if)# [...]",
+    "back": "switchport port-security aging static"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_009",
+    "front": "Enable errdisable recovery for port security violations:\nSW1(config)# [...]",
+    "back": "errdisable recovery cause psecure-violation"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_010",
+    "front": "Configure the errdisable recovery interval:\nSW1(config)# [...]",
+    "back": "errdisable recovery interval seconds"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_011",
+    "front": "Show all secure MAC addresses on the switch:\nSW1# [...]",
+    "back": "show mac address-table secure"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_012",
+    "front": "Show a summary of port security-enabled switchports\nSW1# [...]",
+    "back": "show port-security"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_013",
+    "front": "Show port security information for an individual switchport\nSW1# [...]",
+    "back": "show port-security interface interface"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_014",
+    "front": "Show a summary of errdisable recovery information:\nSW1# [...]",
+    "back": "show errdisable recovery"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_015",
+    "front": "Port security [can/can't] be enabled on an interface configured as switchport mode access",
+    "back": "can"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_016",
+    "front": "Port security [can/can't] be enabled on an interface configured as switchport mode trunk",
+    "back": "can"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_017",
+    "front": "Port security [can/can't] be enabled on an interface configured as switchport mode dynamic auto",
+    "back": "can't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_018",
+    "front": "Port security [can/can't] be enabled on an interface configured as switchport mode dynamic desirable",
+    "back": "can't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_019",
+    "front": "When an interface is shutdown by port security, its status in the output of show interfaces status will be [...]",
+    "back": "err-disabled"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_020",
+    "front": "Manually re-enable an interface disabled by port security:\nSW1(config-if)# [...]\nSW1(config-if)# [...]",
+    "back": "shutdown\nno shutdown"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_021",
+    "front": "The default errdisable recovery timer is [...]",
+    "back": "300 seconds (5 minutes)"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_022",
+    "front": "Errdisable recovery is [enabled/disabled] by default for all causes.",
+    "back": "disabled"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_023",
+    "front": "What is the default port security violation mode?",
+    "back": "Shutdown"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_024",
+    "front": "Port security shutdown violation mode:\nSyslog/SNMP messages [are/aren't] generated.",
+    "back": "are"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_025",
+    "front": "Port security restrict violation mode:\nSyslog/SNMP messages [are/aren't] generated.",
+    "back": "are"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_026",
+    "front": "Port security protect violation mode:\nSyslog/SNMP messages [are/aren't] generated.",
+    "back": "aren't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_027",
+    "front": "Port security shutdown violation mode:\nThe interface [is/isn't] disabled.",
+    "back": "is"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_028",
+    "front": "Port security restrict violation mode:\nThe interface [is/isn't] disabled.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_029",
+    "front": "Port security protect violation mode:\nThe interface [is/isn't] disabled.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_030",
+    "front": "Port security shutdown violation mode:\nThe violation counter [is/isn't] incremented.",
+    "back": "is"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_031",
+    "front": "Port security restrict violation mode:\nThe violation counter [is/isn't] incremented.",
+    "back": "is"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_032",
+    "front": "Port security protect violation mode:\nThe violation counter [is/isn't] incremented.",
+    "back": "isn't"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_033",
+    "front": "The default port security aging type is [...].",
+    "back": "absolute"
+  },
+  {
+    "id": "Day 49 Flashcards - Port Security_034",
+    "front": "Port security secure static address aging is [enabled/disabled] by default.",
+    "back": "disabled"
+  }
+]

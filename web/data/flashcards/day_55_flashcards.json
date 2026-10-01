@@ -1,0 +1,347 @@
+[
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_001",
+    "front": "Wireless LANs are defined in IEEE [...].",
+    "back": "802.11"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_002",
+    "front": "The [...] tests and certifies equipment for 802.11 standards compliance interoperability with other devices.",
+    "back": "Wi-Fi Alliance"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_003",
+    "front": "Wireless networks operate in [...]-duplex.",
+    "back": "half"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_004",
+    "front": "Wireless networks use [...] to avoid collisions.",
+    "back": "CSMA/CA"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_005",
+    "front": "What does CSMA/CA stand for?",
+    "back": "Carrier Sense Multiple Access with Collision Avoidance"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_006",
+    "front": "[...] happens when a wireless signal passes through a material and is converted into heat, weakening the original signal.",
+    "back": "Absorption"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_007",
+    "front": "[...] happens when a signal bounces off of a material, for example metal.",
+    "back": "Reflection"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_008",
+    "front": "[...] happens when a wave is bent when entering a medium where the signal travels at a different speed.",
+    "back": "Refraction"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_009",
+    "front": "[...] happens when a wave encounters an obstacle and travels around it.",
+    "back": "Diffraction"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_010",
+    "front": "[...] happens when a material causes a signal to scatter in all directions.",
+    "back": "Scattering"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_011",
+    "front": "[...] is the maximum strength of the electric and magnetic fields of a wave.",
+    "back": "Amplitude"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_012",
+    "front": "[...] measures the number of up/down cycles per a given unit of time.",
+    "back": "Frequency"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_013",
+    "front": "The most common measurement of frequency is [...].",
+    "back": "hertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_014",
+    "front": "What does Hz stand for?",
+    "back": "Hertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_015",
+    "front": "What does kHz stand for?",
+    "back": "Kilohertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_016",
+    "front": "What does MHz stand for?",
+    "back": "Megahertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_017",
+    "front": "What does GHz stand for?",
+    "back": "Gigahertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_018",
+    "front": "What does THz stand for?",
+    "back": "Terahertz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_019",
+    "front": "The term [...] refers to the amount of time for one cycle of a wave.",
+    "back": "Period"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_020",
+    "front": "Which two main bands are used for wireless LAN communications?",
+    "back": "2.4 GHz\n5 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_021",
+    "front": "The Wi-Fi [...] band typically provides further reach.",
+    "back": "2.4 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_022",
+    "front": "The Wi-Fi [...] band consists of overlapping channels.",
+    "back": "2.4 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_023",
+    "front": "The Wi-Fi [...] band consists of non-overlapping channels.",
+    "back": "5 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_024",
+    "front": "To avoid overlapping frequencies, it is recommended to use channels [...], [...], and [...] of the 2.4 GHz band.",
+    "back": "1, 6, and 11"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_025",
+    "front": "802.11 max data rate:",
+    "back": "2 Mbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_026",
+    "front": "802.11b max data rate:",
+    "back": "11 Mbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_027",
+    "front": "802.11a max data rate:",
+    "back": "54 Mbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_028",
+    "front": "802.11g max data rate:",
+    "back": "54 Mbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_029",
+    "front": "802.11n max data rate:",
+    "back": "600 Mbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_030",
+    "front": "802.11ac max data rate:",
+    "back": "6.93 Gbps"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_031",
+    "front": "802.11ax max data rate:",
+    "back": "4*802.11ac (4*6.93 Gbps)"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_032",
+    "front": "802.11 (original) frequency/frequencies:",
+    "back": "2.4 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_033",
+    "front": "802.11b frequency/frequencies:",
+    "back": "2.4 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_034",
+    "front": "802.11a frequency/frequencies:",
+    "back": "5 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_035",
+    "front": "802.11g frequency/frequencies:",
+    "back": "2.4 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_036",
+    "front": "802.11n frequency/frequencies:",
+    "back": "2.4 / 5 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_037",
+    "front": "802.11ac frequency/frequencies:",
+    "back": "5 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_038",
+    "front": "802.11ax frequency/frequencies:",
+    "back": "2.4 / 5 / 6 GHz"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_039",
+    "front": "802.11n is aka Wi-Fi [...]",
+    "back": "4"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_040",
+    "front": "802.11ac is aka Wi-Fi [...]",
+    "back": "5"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_041",
+    "front": "802.11ax is aka Wi-Fi [...]",
+    "back": "6"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_042",
+    "front": "[...] is aka Wi-Fi 4.",
+    "back": "802.11n"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_043",
+    "front": "[...] is aka Wi-Fi 5.",
+    "back": "802.11ac"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_044",
+    "front": "[...] is aka Wi-Fi 6.",
+    "back": "802.11ax"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_045",
+    "front": "What does SSID stand for?",
+    "back": "Service Set Identifier"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_046",
+    "front": "802.11 defines three types of service sets:",
+    "back": "Independent\nInfrastructure\nMesh"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_047",
+    "front": "The [...] is a human-readable name which identifies the service set.",
+    "back": "SSID"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_048",
+    "front": "Does an SSID have to be unique?",
+    "back": "No"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_049",
+    "front": "What does IBSS stand for?",
+    "back": "Independent Basic Service Set"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_050",
+    "front": "What does AP stand for?",
+    "back": "Access Point"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_051",
+    "front": "An IBSS is also called an [...] wireless network.",
+    "back": "ad hoc"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_052",
+    "front": "What does BSS stand for?",
+    "back": "Basic Service Set"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_053",
+    "front": "What does BSSID stand for?",
+    "back": "Basic Service Set Identifier"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_054",
+    "front": "What does BSA stand for?",
+    "back": "Basic Service Area"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_055",
+    "front": "The area around an AP where its signal is usable is called a [...].",
+    "back": "BSA (Basic Service Area)"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_056",
+    "front": "The [...] is the MAC address of the AP's radio.",
+    "back": "BSSID"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_057",
+    "front": "In a BSS, can clients communicate directly with each other?",
+    "back": "No, they must communicate via the AP"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_058",
+    "front": "Wireless devices that have associated with a BSS are called clients or [...].",
+    "back": "stations"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_059",
+    "front": "What does ESS stand for?",
+    "back": "Extended Service Set"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_060",
+    "front": "When a client passes between APs in an ESS, it is called [...].",
+    "back": "roaming"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_061",
+    "front": "What does MBSS stand for?",
+    "back": "Mesh Basic Service Set"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_062",
+    "front": "In an MBSS, what does RAP stand for?",
+    "back": "Root Access Point"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_063",
+    "front": "In an MBSS, what does MAP stand for?",
+    "back": "Mesh Access Point"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_064",
+    "front": "In an MBSS, which AP is connected to the wired network?",
+    "back": "RAP (Root Access Point)"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_065",
+    "front": "In 802.11, the upstream wired network is called the [...].",
+    "back": "DS (Distribution System)"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_066",
+    "front": "An AP in [...] mode can be used to extend the range of a BSS.",
+    "back": "repeater"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_067",
+    "front": "A [...] operates as a wireless client of another AP, and can be used to connect wired devices to the wireless network.",
+    "back": "workgroup bridge (WGB)"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_068",
+    "front": "What does WGB stand for?",
+    "back": "Workgroup bridge"
+  },
+  {
+    "id": "Day 55 Flashcards - Wireless Fundamentals_069",
+    "front": "An AP operating as an [...] can be used to connect networks over long distances without a physical cable connecting them.",
+    "back": "outdoor bridge"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_001",
+    "front": "What does ACL stand for?",
+    "back": "Access Control List"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_002",
+    "front": "ACLs are an ordered sequence of [...]",
+    "back": "ACEs (Access Control Entries)"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_003",
+    "front": "ACLs must be [...] to take effect.",
+    "back": "applied to an interface"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_004",
+    "front": "ACLs can be applied to an interface [...] or [...]",
+    "back": "inbound  /  outbound"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_005",
+    "front": "In what order do routers check the ACEs of an ACL?",
+    "back": "Top to bottom"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_006",
+    "front": "When a packet matches an ACE in an ACL, what happens to the remaining entries below the matching entry?",
+    "back": "They are ignored (not checked/processed)"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_007",
+    "front": "How many ACLs can be applied to a single interface?",
+    "back": "Two:\none inbound\none outbound"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_008",
+    "front": "What will happen if a packet doesn’t match any of the entries in an ACL?",
+    "back": "It will be dropped\n('implicit deny')"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_009",
+    "front": "The [...] tells the router to deny all traffic that doesn’t match any of the configured entries in the ACL.",
+    "back": "implicit deny"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_010",
+    "front": "[...] IP ACLs can match based on source IP address only.",
+    "back": "Standard"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_011",
+    "front": "[...] IP ACLs can match based on source/destination IP address and source/destination Layer 4 port.",
+    "back": "Extended"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_012",
+    "front": "What ranges of numbers can be used to identify standard numbered ACLs?",
+    "back": "1-99, 1300-1999"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_013",
+    "front": "Configure a standard numbered ACL entry, specifying the IP/mask.\nR1(config)# [...]",
+    "back": "access-list number {deny | permit} ip wildcard-mask"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_014",
+    "front": "Configure a standard numbered ACL entry, permitting or denying all source IPs.\nR1(config)# [...]",
+    "back": "access-list number {deny | permit} any"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_015",
+    "front": "Configure a remark for standard numbered ACL:\nR1(config)# [...]",
+    "back": "access-list number remark remark"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_016",
+    "front": "View all ACLs on the router:\nR1# [...]",
+    "back": "show access-lists"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_017",
+    "front": "View all IP ACLs on the router:\nR1# [...]",
+    "back": "show ip access-lists"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_018",
+    "front": "Standard ACLs should be applied as close to the [...] as possible.",
+    "back": "destination"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_019",
+    "front": "[...] ACLs should be applied as close to the destination as possible.",
+    "back": "Standard"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_020",
+    "front": "Apply an ACL to an interface:\nR1(config-if)# [...]",
+    "back": "ip access-group acl {in | out}"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_021",
+    "front": "Enter standard named ACL config mode:\nR1(config)# [...]",
+    "back": "ip access-list standard acl-name"
+  },
+  {
+    "id": "Day 34 Flashcards - Standard ACLs_022",
+    "front": "Configure a permit or deny entry for a standard named ACL:\nR1(config-std-nacl)# [...]",
+    "back": "[entry-number] {deny | permit} ip wildcard-mask"
+  }
+]

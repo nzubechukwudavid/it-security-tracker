@@ -1,0 +1,167 @@
+[
+  {
+    "id": "Day 40 Flashcards - SNMP_001",
+    "front": "What does SNMP stand for?",
+    "back": "Simple Network Management Protocol"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_002",
+    "front": "What are the two types of devices in SNMP?",
+    "back": "Managed Devices\nNetwork Management Station (NMS)"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_003",
+    "front": "What does NMS stand for?",
+    "back": "Network Management Station"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_004",
+    "front": "The SNMP Manager is software on the [NMS/managed devices].",
+    "back": "NMS"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_005",
+    "front": "The SNMP Agent is software on the [NMS/managed devices].",
+    "back": "managed devices"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_006",
+    "front": "The [...] is the structure that contains the variables that are managed by SNMP.",
+    "back": "Management Information Base (MIB)"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_007",
+    "front": "What does MIB stand for?",
+    "back": "Management Information Base"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_008",
+    "front": "What does OID stand for?",
+    "back": "Object ID"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_009",
+    "front": "Each variable in the SNMP MIB is identified with an [...].",
+    "back": "OID"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_010",
+    "front": "Which version of SNMP is most secure?",
+    "back": "SNMPv3"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_011",
+    "front": "What is the most commonly used version of SNMPv2?",
+    "back": "SNMPv2c"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_012",
+    "front": "Which SNMP message(s) is/are in the 'read' message class?",
+    "back": "Get\nGetNext\nGetBulk"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_013",
+    "front": "Which SNMP message(s) is/are in the 'write' message class?",
+    "back": "Set"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_014",
+    "front": "Which SNMP message(s) is/are in the 'notification' message class?",
+    "back": "Trap\nInform"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_015",
+    "front": "Which SNMP message(s) is/are in the 'response' message class?",
+    "back": "Response"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_016",
+    "front": "Which SNMP message is a request sent from the manager to the agent to retrieve the value of a variable (OID), or multiple variables?",
+    "back": "Get"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_017",
+    "front": "Which SNMP message is a request sent from the manager to the agent to discover the available variables in the MIB?",
+    "back": "GetNext\n(also GetBulk, which is a more efficient version)"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_018",
+    "front": "Which SNMP message is a more efficient version of the GetNext message?",
+    "back": "GetBulk"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_019",
+    "front": "Which SNMP message is a request sent from the manager to the agent to change the value of one or more variables?",
+    "back": "Set"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_020",
+    "front": "Which SNMP message is an unacknowleged notification sent from the agent to the manager?",
+    "back": "Trap"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_021",
+    "front": "Which SNMP message is an acknowleged notification sent from the agent to the manager?",
+    "back": "Inform"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_022",
+    "front": "SNMP [...] use UDP port 161.",
+    "back": "Agents"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_023",
+    "front": "SNMP Agents use [...] port 161.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_024",
+    "front": "SNMP Agents use UDP port [...].",
+    "back": "161"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_025",
+    "front": "SNMP [...] use UDP port 162.",
+    "back": "Managers"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_026",
+    "front": "SNMP Managers use [...] port 162.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_027",
+    "front": "SNMP Managers use UDP port [...].",
+    "back": "162"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_028",
+    "front": "SNMP: Configure contact information for the device:\nR1(config)# [...]",
+    "back": "snmp-server contact contact-info"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_029",
+    "front": "SNMP: Configure location information for the device:\nR1(config)# [...]",
+    "back": "snmp-server location location"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_030",
+    "front": "SNMP: Configure a read-only community string:\nR1(config)# [...]",
+    "back": "snmp-server community password ro"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_031",
+    "front": "SNMP: Configure a read-write community string:\nR1(config)# [...]",
+    "back": "snmp-server community password rw"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_032",
+    "front": "SNMP: Configure the NMS address, specifying version 2c and a community string.\nR1(config)# [...]",
+    "back": "snmp-server host ip-address version 2c community-string"
+  },
+  {
+    "id": "Day 40 Flashcards - SNMP_033",
+    "front": "SNMP: Configure the Trap types to send to the NMS:\nR1(config)# [...]",
+    "back": "snmp-server enable traps trap-types"
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_001",
+    "front": "The IPv4 header 'Version' field is [...] bits in length.",
+    "back": "4"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_002",
+    "front": "A value of [...] in the IP header 'Version' field indicates IP version 4.",
+    "back": "4 (binary 0100)"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_003",
+    "front": "A value of [...] in the IP header 'Version' field indicates IP version 6.",
+    "back": "6 (binary 0110)"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_004",
+    "front": "IPv4 header: What does 'IHL' stand for?",
+    "back": "Internet Header Length"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_005",
+    "front": "IPv4 header: The 'IHL' field is [...] bits in length.",
+    "back": "4"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_006",
+    "front": "IPv4 Header: The IHL field specifies the length of the header in [...] increments.",
+    "back": "4-byte (32 bit)"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_007",
+    "front": "IPv4 header: What is the minimum value of the IHL field?",
+    "back": "5"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_008",
+    "front": "IPv4 header: What is the maximum value of the IHL field?",
+    "back": "15"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_009",
+    "front": "What is the maximum length of the IPv4 header?",
+    "back": "60 bytes"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_010",
+    "front": "What is the minimum length of the IPv4 header?",
+    "back": "20 bytes"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_011",
+    "front": "IPv4 header: What does 'DSCP' stand for?",
+    "back": "Differentiated Services Code Point"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_012",
+    "front": "IPv4 header: The 'DSCP' field is [...] bits in length.",
+    "back": "6"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_013",
+    "front": "IPv4 header: Which field is used to prioritize delay-sensitive network traffic?",
+    "back": "DSCP"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_014",
+    "front": "IPv4 header: What does 'ECN' stand for?",
+    "back": "Explicit Congestion Notification"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_015",
+    "front": "IPv4 header: The 'ECN' field is [...] bits in length.",
+    "back": "2"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_016",
+    "front": "IPv4 header: Which field provides end-to-end notification of network congestion?",
+    "back": "ECN"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_017",
+    "front": "IPv4 header: The 'Total Length' field is [...] bits in length.",
+    "back": "16"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_018",
+    "front": "IPv4 header: Which field indicates the total length of the packet?",
+    "back": "Total Length"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_019",
+    "front": "IPv4 header: What is the minimum value of the 'Total Length' field?",
+    "back": "20 (=IPv4 header with no encapsulated data)"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_020",
+    "front": "IPv4 header: What is the maximum value of the 'Total Length' field?",
+    "back": "65,535"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_021",
+    "front": "IPv4 header: The 'Identification' field is [...] bits in length.",
+    "back": "16"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_022",
+    "front": "IPv4 header: Which field is used to identify which packet a fragment belongs to?",
+    "back": "Identification"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_023",
+    "front": "IPv4 header: All fragments of the same packet will have the same value in the [...] field.",
+    "back": "Identification"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_024",
+    "front": "IPv4 packets are fragmented if they are larger than the [...]",
+    "back": "MTU (Maximum Transmission Unit)"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_025",
+    "front": "What does 'MTU' stand for?",
+    "back": "Maximum Transmission Unit"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_026",
+    "front": "The MTU is usually [...] bytes.",
+    "back": "1500"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_027",
+    "front": "IPv4 header: The 'Flags' field is [...] bits in length.",
+    "back": "3"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_028",
+    "front": "Unfragmented IPv4 packets will always have the MF bit set to [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_029",
+    "front": "IPv4 header 'Flags' field:\nBit [...] = Reserved, always set to 0",
+    "back": "0"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_030",
+    "front": "IPv4 header 'Flags' field:\nBit [...] = DF bit",
+    "back": "1"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_031",
+    "front": "IPv4 header 'Flags' field:\nBit [...] = MF bit",
+    "back": "2"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_032",
+    "front": "IPv4 header 'Flags' field:\nWhat does 'DF bit' stand for?",
+    "back": "Don't Fragment bit"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_033",
+    "front": "IPv4 header 'Flags' field:\nWhat does 'MF bit' stand for?",
+    "back": "More Fragments bit"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_034",
+    "front": "IPv4 header: The 'Fragment Offset' field is [...] bits in length.",
+    "back": "13"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_035",
+    "front": "IPv4 header: Which field is used to indicate the position of a fragment within an original, unfragmented IP packet?",
+    "back": "Fragment Offset"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_036",
+    "front": "IPv4 header: the 'TTL' field is [...] bits in length.",
+    "back": "8"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_037",
+    "front": "The recommended default TTL of an IPv4 packet is [...]",
+    "back": "64"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_038",
+    "front": "A router will drop a packet with a TTL of [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_039",
+    "front": "IPv4 header: Which field is used to prevent infinite routing loops?",
+    "back": "TTL"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_040",
+    "front": "IPv4 header: What does 'TTL' stand for?",
+    "back": "Time to Live"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_041",
+    "front": "IPv4 header: The 'Protocol' field is [...] bits in length.",
+    "back": "8"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_042",
+    "front": "IPv4 header: Which field indicates the protocol of the encapsulated L4PDU?",
+    "back": "Protocol"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_043",
+    "front": "IPv4 header 'Protocol' field:\nValue of [...] = TCP",
+    "back": "6"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_044",
+    "front": "IPv4 header 'Protocol' field:\nValue of 6 = [...]",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_045",
+    "front": "IPv4 header 'Protocol' field:\nValue of [...] = UDP",
+    "back": "17"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_046",
+    "front": "IPv4 header 'Protocol' field:\nValue of 17 = [...]",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_047",
+    "front": "IPv4 header 'Protocol' field:\nValue of 1 = [...]",
+    "back": "ICMP"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_048",
+    "front": "IPv4 header 'Protocol' field:\nValue of [...] = ICMP",
+    "back": "1"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_049",
+    "front": "IPv4 header 'Protocol' field:\nValue of 89 = [...]",
+    "back": "OSPF"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_050",
+    "front": "IPv4 header 'Protocol' field:\nValue of [...] = OSPF",
+    "back": "89"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_051",
+    "front": "IPv4 header: the 'Checksum' field is [...] bits in length.",
+    "back": "16"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_052",
+    "front": "IPv4 header: Which field is used to check for errors in the header?",
+    "back": "Header Checksum"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_053",
+    "front": "IPv4 header: the 'Source IP Address' field is [...] bits in length.",
+    "back": "32"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_054",
+    "front": "IPv4 header: the 'Destination IP Address' field is [...] bits in length.",
+    "back": "32"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_055",
+    "front": "IPv4 header: What is the minimum length of the 'Options' field?",
+    "back": "0 bits"
+  },
+  {
+    "id": "Day 10 Flashcards - IPv4 Header_056",
+    "front": "IPv4 header: What is the maximum length of the 'Options' field?",
+    "back": "320 bits  /  40 bytes"
+  }
+]

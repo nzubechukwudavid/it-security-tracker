@@ -1,0 +1,252 @@
+[
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_001",
+    "front": "What does CRUD stand for?",
+    "back": "Cread, Read, Update, Delete"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_002",
+    "front": "CRUD [...] = HTTP POST",
+    "back": "Create"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_003",
+    "front": "CRUD Create = HTTP [...]",
+    "back": "POST"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_004",
+    "front": "CRUD [...] = HTTP GET",
+    "back": "Read"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_005",
+    "front": "CRUD Read = HTTP [...]",
+    "back": "GET"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_006",
+    "front": "CRUD [...] = HTTP PUT, PATCH",
+    "back": "Update"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_007",
+    "front": "CRUD Update = HTTP [...]",
+    "back": "PUT, PATCH"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_008",
+    "front": "CRUD [...] = HTTP DELETE",
+    "back": "Delete"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_009",
+    "front": "CRUD Delete = HTTP [...]",
+    "back": "DELETE"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_010",
+    "front": "What does URI stand for?",
+    "back": "Uniform Resource Identifier"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_011",
+    "front": "Which part of the following URI is the scheme?\nhttps://sandboxdnac.cisco.com/dna/intent/api/v1/network-device",
+    "back": "https"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_012",
+    "front": "Which part of the following URI is the authority?\nhttps://sandboxdnac.cisco.com/dna/intent/api/v1/network-device",
+    "back": "sandboxdnac.cisco.com"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_013",
+    "front": "Which part of the following URI is the path?\nhttps://sandboxdnac.cisco.com/dna/intent/api/v1/network-device",
+    "back": "/dna/intent/api/v1/network-device"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_014",
+    "front": "HTTP Response class [...] = informational",
+    "back": "1xx"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_015",
+    "front": "HTTP Response class 1xx = [...]",
+    "back": "informational"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_016",
+    "front": "HTTP Response class [...] = successful",
+    "back": "2xx"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_017",
+    "front": "HTTP Response class 2xx = [...]",
+    "back": "successful"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_018",
+    "front": "HTTP Response class [...] = redirection",
+    "back": "3xx"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_019",
+    "front": "HTTP Response class 3xx = [...]",
+    "back": "redirection"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_020",
+    "front": "HTTP Response class [...] = client error",
+    "back": "4xx"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_021",
+    "front": "HTTP Response class 4xx = [...]",
+    "back": "client error"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_022",
+    "front": "HTTP Response class [...] = server error",
+    "back": "5xx"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_023",
+    "front": "HTTP Response class 5xx = [...]",
+    "back": "server error"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_024",
+    "front": "HTTP Response code [...] = OK",
+    "back": "200"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_025",
+    "front": "HTTP Response code 200 = [...]",
+    "back": "OK"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_026",
+    "front": "HTTP Response code [...] = Processing",
+    "back": "102"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_027",
+    "front": "HTTP Response code 102 = [...]",
+    "back": "Processing"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_028",
+    "front": "HTTP Response code [...] = Created",
+    "back": "201"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_029",
+    "front": "HTTP Response code 201 = [...]",
+    "back": "Created"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_030",
+    "front": "HTTP Response code [...] = Moved Permanently",
+    "back": "301"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_031",
+    "front": "HTTP Response code 301 = [...]",
+    "back": "Moved Permanently"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_032",
+    "front": "HTTP Response code [...] = Unauthorized",
+    "back": "401"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_033",
+    "front": "HTTP Response code 401 = [...]",
+    "back": "Unauthorized"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_034",
+    "front": "HTTP Response code [...] = Not Found",
+    "back": "404"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_035",
+    "front": "HTTP Response code 404 = [...]",
+    "back": "Not Found"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_036",
+    "front": "HTTP Response code [...] = Internal Server Error",
+    "back": "500"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_037",
+    "front": "HTTP Response code 500 = [...]",
+    "back": "Internal Server Error"
+  },
+  {
+    "id": "Day 61 (Part 1) Flashcards - REST APIs_038",
+    "front": "REST APIs must be [stateful/stateless].",
+    "back": "stateless"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_001",
+    "front": "Which form of REST API authentication uses a username/password combination?",
+    "back": "Basic authentication"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_002",
+    "front": "In REST API Basic authentication, credentials are encoded in [format].",
+    "back": "Base64"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_003",
+    "front": "Is Base64 encoding secure?",
+    "back": "No. Encoding is easily reversible; it is not encryption."
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_004",
+    "front": "REST API Bearer authentication uses a [...] for authentication.",
+    "back": "token (also called a bearer token)"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_005",
+    "front": "In REST API Basic authentication, in which part of the message are the credentials included?",
+    "back": "In the HTTP Authorization header"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_006",
+    "front": "In REST API Bearer authentication, in which part of the message are the credentials included?",
+    "back": "In the HTTP Authorization header"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_007",
+    "front": "In REST API Bearer authentication, are the bearer tokens valid indefinitely?",
+    "back": "No; they expire after a set period of time"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_008",
+    "front": "API key authentication uses a [...] key issued by the API provider.",
+    "back": "static (non-expiring)"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_009",
+    "front": "In API key authentication, in which part of the message should the client specify the key?",
+    "back": "The HTTP Authorization header (recommended).\n*Other options: URL, cookie"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_010",
+    "front": "REST API [...] authentication provides access delegation.",
+    "back": "OAuth 2.0"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_011",
+    "front": "What are the four entities in OAuth 2.0?",
+    "back": "Resource owner\nClient app\nAuth server\nResource server"
+  },
+  {
+    "id": "Day 61 (Part 2) Flashcards - REST Authentication_012",
+    "front": "OAuth 2.0: A [...] can be used to renew access tokens without user reauthentication.",
+    "back": "refresh token"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Day 42 Flashcards - SSH_001",
+    "front": "Enter console line configuration mode:\nR1(config)# [...]",
+    "back": "line console 0"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_002",
+    "front": "Configure a line password:\nR1(config-line)# [...]",
+    "back": "password password"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_003",
+    "front": "Configure the router to authenticate using the configured line password:\nR1(config-line)# [...]",
+    "back": "login"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_004",
+    "front": "Configure local line authentication:\nR1(config-line)# [...]",
+    "back": "login local"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_005",
+    "front": "By default, is a password required to access the CLI via the console port?",
+    "back": "No"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_006",
+    "front": "Configure the switch's default gateway:\nSW1(config)# [...]",
+    "back": "ip default-gateway ip-address"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_007",
+    "front": "What does Telnet stand for?",
+    "back": "Teletype Network"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_008",
+    "front": "Does Telnet encrypt data?",
+    "back": "No"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_009",
+    "front": "Telnet servers listen for traffic on [...] port 23.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_010",
+    "front": "Telnet servers listen for traffic on TCP port [...].",
+    "back": "23"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_011",
+    "front": "Access all VTY lines:\nR1(config)# [...]",
+    "back": "line vty 0 15"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_012",
+    "front": "Configure the exec timeout:\nR1(config-line)# [...]",
+    "back": "exec-timeout minutes seconds"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_013",
+    "front": "Configure the protocols that can be used to connect via the VTY lines:\nR1(config-line)# [...]",
+    "back": "transport input [protocols | all | none]"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_014",
+    "front": "Apply an ACL for connections to the VTY lines:\nR1(config-line)# [...]",
+    "back": "access-class acl in"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_015",
+    "front": "Generate an RSA key pair:\nR1(config)# [...]",
+    "back": "crypto key generate rsa"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_016",
+    "front": "A device that supports both SSHv1 and SSHv2 is said to run version [...]",
+    "back": "1.99"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_017",
+    "front": "SSH servers listen for traffic on [...] port 22.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_018",
+    "front": "SSH servers listen for traffic on TCP port [...].",
+    "back": "22"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_019",
+    "front": "Does SSH encrypt traffic?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_020",
+    "front": "Show information about the IOS version of the device:\nR1# [...]",
+    "back": "show version"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_021",
+    "front": "Show information about the current SSH configuration:\nR1# [...]",
+    "back": "show ip ssh"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_022",
+    "front": "[...] IOS images support SSH.",
+    "back": "K9"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_023",
+    "front": "[...] IOS images do not support cryptographic features like SSH.",
+    "back": "NPE (No Payload Encryption)"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_024",
+    "front": "What does FQDN stand for?",
+    "back": "Fully Qualified Domain Name"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_025",
+    "front": "What makes up the FQDN of a device?",
+    "back": "hostname.domainname"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_026",
+    "front": "When crypto key generate rsa is used, how are the keys named?",
+    "back": "The FQDN is used as the name"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_027",
+    "front": "Limit SSH connections to SSHv2 only:\nR1(config)# [...]",
+    "back": "ip ssh version 2"
+  },
+  {
+    "id": "Day 42 Flashcards - SSH_028",
+    "front": "What does SSH stand for?",
+    "back": "Secure Shell"
+  }
+]

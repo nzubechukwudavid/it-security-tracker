@@ -1,0 +1,67 @@
+[
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_001",
+    "front": "Which RIR controls IP address assignments in Africa?",
+    "back": "AFRINIC"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_002",
+    "front": "Which RIR controls IP address assignments in Asia-Pacific?",
+    "back": "APNIC"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_003",
+    "front": "Which RIR controls IP address assignments in Canada, many Caribbean and North Atlantic islands, and the US?",
+    "back": "ARIN"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_004",
+    "front": "Which RIR controls IP address assignments in Latin America and the Caribbean?",
+    "back": "LACNIC"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_005",
+    "front": "Which RIR controls IP address assignments in Europe, the Middle East, and parts of Central Asia?",
+    "back": "RIPE NCC"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_006",
+    "front": "An IPv6 address is [...] bits in length.",
+    "back": "128"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_007",
+    "front": "An IPv6 address contains [...] hexadecimal quartets.",
+    "back": "8"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_008",
+    "front": "To shorten an IPv6 address, you can remove [...] from each quartet.",
+    "back": "leading 0s"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_009",
+    "front": "To shorten an IPv6 address, you can replace consecutive quartets of all 0s with a [...].",
+    "back": "double colon (::)\n*can only do this once per address"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_010",
+    "front": "Typically, an enterprise requesting IPv6 addresses will receive a [prefix length] block of addresses.",
+    "back": "/48"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_011",
+    "front": "Typically, IPv6 subnets use a [...] prefix length.",
+    "back": "/64"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_012",
+    "front": "Enable IPv6 routing on the router.\nR1(config)# [...]",
+    "back": "ipv6 unicast-routing"
+  },
+  {
+    "id": "Day 31 Flashcards - IPv6 (Part 1)_013",
+    "front": "Configure an IPv6 address on an interface\nR1(config-if)# [...]",
+    "back": "ipv6 address address/prefix-length"
+  }
+]

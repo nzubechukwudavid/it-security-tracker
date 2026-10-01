@@ -1,0 +1,277 @@
+[
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_001",
+    "front": "What does NBAR stand for?",
+    "back": "Network Based Application Recognition"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_002",
+    "front": "What Layer 2 header field can be used for QoS markings?",
+    "back": "PCP / CoS"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_003",
+    "front": "What Layer 3 header field can be used for QoS markings?",
+    "back": "DSCP\n(formerly IPP)"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_004",
+    "front": "What does IPP stand for?",
+    "back": "IP Precedence"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_005",
+    "front": "[...] delivery means there is no guarantee that data is delivered or that it meets any QoS standard.",
+    "back": "Best effort"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_006",
+    "front": "CoS/PCP [...] = best effort",
+    "back": "0"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_007",
+    "front": "CoS/PCP 0 = [...]",
+    "back": "best effort"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_008",
+    "front": "CoS/PCP [...] = critical applications",
+    "back": "3"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_009",
+    "front": "CoS/PCP 3 = [...]",
+    "back": "critical applications"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_010",
+    "front": "CoS/PCP [...] = video traffic",
+    "back": "4"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_011",
+    "front": "CoS/PCP 4 = [...]",
+    "back": "video traffic"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_012",
+    "front": "CoS/PCP [...] = voice traffic",
+    "back": "5"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_013",
+    "front": "CoS/PCP 5 = [...]",
+    "back": "voice traffic"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_014",
+    "front": "The IPP precedence field was [...] in length.",
+    "back": "3 bits"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_015",
+    "front": "DSCP: What does DF stand for?",
+    "back": "default forwarding"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_016",
+    "front": "DSCP: What does EF stand for?",
+    "back": "expedited forwarding"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_017",
+    "front": "DSCP: What does AF stand for?",
+    "back": "assured forwarding"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_018",
+    "front": "DSCP: What does CS stand for?",
+    "back": "class selector"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_019",
+    "front": "[...] = DSCP 0",
+    "back": "DF"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_020",
+    "front": "DF = DSCP [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_021",
+    "front": "[...] = DSCP 46",
+    "back": "EF"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_022",
+    "front": "EF = DSCP [...]",
+    "back": "46"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_023",
+    "front": "AF41 = DSCP [...]",
+    "back": "34"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_024",
+    "front": "AF42 = DSCP [...]",
+    "back": "36"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_025",
+    "front": "AF43 = DSCP [...]",
+    "back": "38"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_026",
+    "front": "AF31 = DSCP [...]",
+    "back": "26"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_027",
+    "front": "AF32 = DSCP [...]",
+    "back": "28"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_028",
+    "front": "AF33 = DSCP [...]",
+    "back": "30"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_029",
+    "front": "AF21 = DSCP [...]",
+    "back": "18"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_030",
+    "front": "AF22 = DSCP [...]",
+    "back": "20"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_031",
+    "front": "AF23 = DSCP [...]",
+    "back": "22"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_032",
+    "front": "AF11 = DSCP [...]",
+    "back": "10"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_033",
+    "front": "AF12 = DSCP [...]",
+    "back": "12"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_034",
+    "front": "AF13 = DSCP [...]",
+    "back": "14"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_035",
+    "front": "CS0 = DSCP [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_036",
+    "front": "CS1 = DSCP [...]",
+    "back": "8"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_037",
+    "front": "CS2 = DSCP [...]",
+    "back": "16"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_038",
+    "front": "CS3 = DSCP [...]",
+    "back": "24"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_039",
+    "front": "CS4 = DSCP [...]",
+    "back": "32"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_040",
+    "front": "CS5 = DSCP [...]",
+    "back": "40"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_041",
+    "front": "CS6 = DSCP [...]",
+    "back": "48"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_042",
+    "front": "CS7 = DSCP [...]",
+    "back": "56"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_043",
+    "front": "RFC 4594 recommends the [...] marking for voice traffic.",
+    "back": "EF"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_044",
+    "front": "RFC 4594 recommends the [...] marking for interactive video traffic.",
+    "back": "AF4x (AF41, AF42, AF43)"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_045",
+    "front": "RFC 4594 recommends the [...] marking for streaming video traffic.",
+    "back": "AF3x (AF31, AF32, AF33)"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_046",
+    "front": "RFC 4594 recommends the [...] marking for high priority data traffic.",
+    "back": "AF2x (AF21, AF22, AF23)"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_047",
+    "front": "RFC 4594 recommends the [...] marking for best effort traffic.",
+    "back": "DF"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_048",
+    "front": "If an IP phone is connected to a switchport, the QoS trust boundary should be at the [...].",
+    "back": "IP phone"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_049",
+    "front": "What does CBWFQ stand for?",
+    "back": "Class-Based Weighted Fair Queuing"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_050",
+    "front": "What QoS scheduling algorithm uses a weighted round-robin scheduler while guaranteeing a minimum bandwidth to each queue?",
+    "back": "CBWFQ"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_051",
+    "front": "What does LLQ stand for?",
+    "back": "Low Latency Queuing"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_052",
+    "front": "LLQ designates one or more queues as [...] queues.",
+    "back": "strict priority"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_053",
+    "front": "[...] buffers traffic in a queue if the traffic rate goes over the configured rate.",
+    "back": "Shaping"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_054",
+    "front": "[...] drops traffic in a queue if the traffic rate goes over the configured rate.",
+    "back": "Policing"
+  },
+  {
+    "id": "Day 47 Flashcards - QoS (Part 2)_055",
+    "front": "IP phones mark their call signaling traffic as PCP/CoS [...].",
+    "back": "3"
+  }
+]

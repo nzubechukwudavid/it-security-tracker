@@ -1,0 +1,72 @@
+[
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_001",
+    "front": "Configure a pool for dynamic NAT:\nR1(config)# [...]",
+    "back": "ip nat pool pool-name start-ip end-ip [prefix-length prefix-length | netmask subnet-mask]"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_002",
+    "front": "Configure dynamic NAT:\nR1(config)# [...]",
+    "back": "ip nat inside source list access-list pool pool-name"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_003",
+    "front": "Configure dynamic PAT using an address pool:\nR1(config)# [...]",
+    "back": "ip nat inside source list access-list pool pool-name overload"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_004",
+    "front": "Configure dynamic PAT using the router's interface IP:\nR1(config)# [...]",
+    "back": "ip nat inside source list access-list interface interface overload"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_005",
+    "front": "In dynamic NAT/PAT, what is used to identify traffic that should be translated?",
+    "back": "an ACL"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_006",
+    "front": "In dynamic NAT, what is used to identify the range of public IP address that can be used for translations?",
+    "back": "A NAT pool"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_007",
+    "front": "What does PAT stand for?",
+    "back": "Port Address Translation"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_008",
+    "front": "What is another name for PAT?",
+    "back": "NAT Overload"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_009",
+    "front": "Which form of NAT is most useful for preserving public IP addresses?",
+    "back": "PAT / NAT Overload"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_010",
+    "front": "What does a router do if a packet requires NAT but no inside global addresses are available?",
+    "back": "It drops the packet"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_011",
+    "front": "When an ACL is used to identify traffic in dynamic NAT/PAT, what happens to traffic permitted by the ACL?",
+    "back": "It is translated by the router"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_012",
+    "front": "When an ACL is used to identify traffic in dynamic NAT/PAT, what happens to traffic denied by the ACL?",
+    "back": "It is not translated by the router\n(but the traffic is not dropped!)"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_013",
+    "front": "In which form of NAT does the router automatically create one-to-one IP address mappings?",
+    "back": "Dynamic NAT"
+  },
+  {
+    "id": "Day 45 Flashcards - NAT (Part 2)_014",
+    "front": "In which form of NAT are multiple inside local addresses translated to a single inside global address at the same time?",
+    "back": "PAT  /  NAT Overload"
+  }
+]

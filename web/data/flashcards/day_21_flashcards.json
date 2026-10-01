@@ -1,0 +1,442 @@
+[
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_001",
+    "front": "What are the two 'stable' STP port states?",
+    "back": "Blocking, Forwarding"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_002",
+    "front": "What are the two 'transitional' STP port states?",
+    "back": "Listening, Learning"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_003",
+    "front": "STP: Non-designated ports are in a [...] state.",
+    "back": "Blocking"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_004",
+    "front": "STP: Do interfaces in a blocking state send/receive regular network traffic?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_005",
+    "front": "STP: Do interfaces in a blocking state send BPDUs?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_006",
+    "front": "STP: Do interfaces in a blocking state receive BPDUs?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_007",
+    "front": "STP: Do interfaces in a blocking state learn MAC addresses?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_008",
+    "front": "STP default Forward delay timer:",
+    "back": "15 seconds"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_009",
+    "front": "STP: Do interfaces in a Listening state send/receive regular network traffic?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_010",
+    "front": "STP: Do interfaces in a Listening state send/receive BPDUs?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_011",
+    "front": "STP: Do interfaces in a Listening state learn MAC addresses?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_012",
+    "front": "STP: Do interfaces in a Learning state send/receive regular network traffic?",
+    "back": "No"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_013",
+    "front": "STP: Do interfaces in a Learning state send/receive BPDUs?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_014",
+    "front": "STP: Do interfaces in a Learning state learn MAC addresses?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_015",
+    "front": "STP: Do interfaces in a Forwarding state send/receive regular network traffic?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_016",
+    "front": "STP: Do interfaces in a Forwarding state send/receive BPDUs?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_017",
+    "front": "STP: Do interfaces in a Forwarding state learn MAC addresses?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_018",
+    "front": "STP default hello timer:",
+    "back": "2 seconds"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_019",
+    "front": "STP default max age timer:",
+    "back": "20 seconds (10*hello timer)"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_020",
+    "front": "STP BPDUs are only forwarded on [...] ports.",
+    "back": "designated"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_021",
+    "front": "STP: A forwarding interface [can/can't] move directly to a blocking state.",
+    "back": "can"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_022",
+    "front": "STP: A blocking interface [can/can't] move directly to a forwarding state.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_023",
+    "front": "PVST+ BPDUs are sent to destination MAC address:",
+    "back": "0100.0ccc.cccd"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_024",
+    "front": "Standard STP (NOT PVST) BPDUs are sent to destination MAC address:",
+    "back": "0180.c200.0000"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_025",
+    "front": "The STP timers on the [...] determine the timers used for all switches in the network.",
+    "back": "root bridge"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_026",
+    "front": "[...] allows an STP port to move immediately to the forwarding state.",
+    "back": "Portfast"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_027",
+    "front": "If an interface with [...] enabled receives a BPDU from another switch, the interface will be shut down.",
+    "back": "BPDU Guard"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_028",
+    "front": "Enable portfast on a switch port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree portfast"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_029",
+    "front": "Enable portfast on all access ports on the switch:\nSW1(config)# [...]",
+    "back": "spanning-tree portfast default"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_030",
+    "front": "SW1(config)# spanning-tree portfast default\nThis command enables portfast on which ports?",
+    "back": "All access ports"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_031",
+    "front": "Enable BPDU Guard on a switch port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree bpduguard enable"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_032",
+    "front": "Enable BPDU Guard on all Portfast-enabled interfaces:\nSW1(config)# [...]",
+    "back": "spanning-tree portfast bpduguard default"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_033",
+    "front": "Which STP optional feature prevents a newly connected switch from becoming the root bridge?",
+    "back": "Root Guard"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_034",
+    "front": "Which STP optional feature shuts down an interface if it stops receiving BPDUs?",
+    "back": "Loop Guard"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_035",
+    "front": "Configure spanning tree in PVST mode:\nSW1(config)# [...]",
+    "back": "spanning-tree mode pvst"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_036",
+    "front": "Configure the spanning-tree root for a VLAN:\nSW1(config)# [...]",
+    "back": "spanning-tree vlan vlan-id root primary"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_037",
+    "front": "spanning-treee vlan vlan-id root primary sets the STP priority to [...], or 4096 less than the current root's priority.",
+    "back": "24576"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_038",
+    "front": "Configure the spanning-tree secondary root for a VLAN:\nSW1(config)# [...]",
+    "back": "spanning-tree vlan vlan-id root secondary"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_039",
+    "front": "spanning-tree vlan vlan-id root secondary sets the STP priority to [...]",
+    "back": "28672"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_040",
+    "front": "Configure the STP cost of an interface:\nSW1(config-if)# [...]",
+    "back": "spanning-tree vlan vlan-id cost cost"
+  },
+  {
+    "id": "Day 21 Flashcards - STP (Part 2)_041",
+    "front": "Configure the STP priority of an interface:\nSW1(config-if)# [...]",
+    "back": "spanning-tree vlan vlan-id port-priority priority"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_001",
+    "front": "PortFast allows a port to skip the STP [...] and [...] states.",
+    "back": "Listening  /  Learning"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_002",
+    "front": "A PortFast-enabled port immediately enters the STP [...] state when it comes online.",
+    "back": "Forwarding"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_003",
+    "front": "PortFast should not be enabled on a port connected to a [...].",
+    "back": "switch"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_004",
+    "front": "Configure PortFast on an individual interface:\nSW1(config-if)# [...]",
+    "back": "spanning-tree portfast [edge]"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_005",
+    "front": "Enable PortFast by default:\nSW1(config)# [...]",
+    "back": "spanning-tree portfast [edge] default"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_006",
+    "front": "Configuring PortFast in global config mode enables it on all [...] ports.",
+    "back": "access"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_007",
+    "front": "View detailed STP information about an interface:\nSW1# [...]",
+    "back": "show spanning-tree interface interface-name detail"
+  },
+  {
+    "id": "Day 21-1 Flashcards - PortFast_008",
+    "front": "Configure PortFast on a trunk port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree portfast [edge] trunk"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_001",
+    "front": "Does a PortFast-enabled port send BPDUs?",
+    "back": "Yes"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_002",
+    "front": "What happens when a PortFast-enabled port receives a BPDU?",
+    "back": "It will revert to acting like a regular STP port (without PortFast)"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_003",
+    "front": "[Feature] err-disables a switch port if it receives an STP BPDU.",
+    "back": "BPDU Guard"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_004",
+    "front": "If a BPDU Guard-enabled port receives a BPDU, what happens to the port?",
+    "back": "It is error-disabled (err-disabled)"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_005",
+    "front": "Enable BPDU Guard on a port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree bpduguard enable"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_006",
+    "front": "Enable BPDU Guard by default:\nSW1(config)# [...]",
+    "back": "spanning-tree portfast [edge] bpduguard default"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_007",
+    "front": "When BPDU Guard is enabled by default, which ports is it active on?",
+    "back": "All PortFast-enabled ports"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_008",
+    "front": "Disable BPDU Guard on a specific port (after it has been enabled by default):\nSW1(config-if)# [...]",
+    "back": "spanning-tree bpduguard disable"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_009",
+    "front": "Manually re-enable an err-disabled port:\nSW1(config-if)# [...]\nSW1(config-if)# [...]",
+    "back": "shutdown\nno shutdown"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_010",
+    "front": "Which feature can automatically re-enable err-disabled ports?",
+    "back": "ErrDisable Recovery"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_011",
+    "front": "View the status of ErrDisable Recovery on the switch:\nSW1# [...]",
+    "back": "show errdisable recovery"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_012",
+    "front": "The default ErrDisable Recovery interval is [time].",
+    "back": "300 seconds/5 minutes"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_013",
+    "front": "Modify the ErrDisable Recovery interval:\nSW1(config)# [...]",
+    "back": "errdisable recovery interval seconds"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_014",
+    "front": "Enable ErrDisable Recovery for a particular cause:\nSW1(config)# [...]",
+    "back": "errdisable recovery cause cause\n(e.g. errdisable recovery cause bpduguard)"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_015",
+    "front": "[Feature] prevents a switch port from sending BPDUs.",
+    "back": "BPDU Filter"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_016",
+    "front": "Enable BPDU Filter on a port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree bpdufilter enable"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_017",
+    "front": "Enable BPDU Filter by default:\nSW1(config)# [...]",
+    "back": "spanning-tree portfast [edge] bpdufilter default"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_018",
+    "front": "Disable BPDU Filter on a port (after it has been enabled by default):\nSW1(config-if)# [...]",
+    "back": "spanning-tree bpdufilter disable"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_019",
+    "front": "BPDU Filter has been enabled in interface config mode. What happens if the port receives a BPDU?",
+    "back": "The port ignores the BPDU"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_020",
+    "front": "BPDU Filter has been enabled in global config mode. What happens if the port receives a BPDU?",
+    "back": "PortFast and BPDU Filter are disabled, and the port operates as a normal STP port"
+  },
+  {
+    "id": "Day 21-2 Flashcards - BPDU Guard & BPDU Filter_021",
+    "front": "When BPDU Filter is enabled by default, which ports is it active on?",
+    "back": "All PortFast-enabled ports"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_001",
+    "front": "Root Guard disables a port if [...].",
+    "back": "it receives a superior BPDU"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_002",
+    "front": "Enable Root Guard on a port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree guard root"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_003",
+    "front": "If a Root Guard-enabled port receives a superior BPDU, it will enter the [...] state.",
+    "back": "Broken (Root Inconsistent)"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_004",
+    "front": "In the output of show spanning-tree, what does BKN mean?",
+    "back": "Broken (e.g. disabled by Root Guard)"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_005",
+    "front": "In the output of show spanning-tree, what does ROOT_Inc mean?",
+    "back": "Root Inconsistent"
+  },
+  {
+    "id": "Day 21-3 Flashcards - Root Guard_006",
+    "front": "A port disabled by Root Guard will be re-enabled when [...].",
+    "back": "it stops receiving superior BDPUs"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_001",
+    "front": "A [...] is a network link where data transmission occurs in only one direction.",
+    "back": "unidirectional link"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_002",
+    "front": "Unidirectional links are typically caused by Layer [...] issues.",
+    "back": "1"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_003",
+    "front": "[STP optional feature] protects against loops caused by unidirectional links.",
+    "back": "Loop Guard"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_004",
+    "front": "When a Loop Guard-enabled port's Max Age counts down to 0, it enters the [...] state.",
+    "back": "Broken (Loop Inconsistent)"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_005",
+    "front": "Enable Loop Guard on a port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree guard loop"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_006",
+    "front": "Enable Loop Guard by default:\nSW1(config)# [...]",
+    "back": "spanning-tree loopguard default"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_007",
+    "front": "Disable Loop Guard on a port:\nSW1(config-if)# [...]",
+    "back": "spanning-tree guard none"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_008",
+    "front": "On which ports does the command spanning-tree loopguard default enabled Loop Guard?",
+    "back": "All ports"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_009",
+    "front": "Loop Guard and Root Guard [can/can't] be enabled on the same port at the same time.",
+    "back": "can't"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_010",
+    "front": "If you configure spanning-tree guard loop on a port and then spanning-tree guard root, which feature is active on the port?",
+    "back": "Root Guard\n*the second command replaces the first"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_011",
+    "front": "If you configure spanning-tree loopguard default in global config mode and then spanning-tree guard root on a port, which feature is active on the port?",
+    "back": "Root Guard"
+  },
+  {
+    "id": "Day 21-4 Flashcards - Loop Guard_012",
+    "front": "When will a Loop Guard-enabled port automatically recover?",
+    "back": "When it starts receiving BPDUs again"
+  }
+]

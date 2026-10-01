@@ -1,0 +1,87 @@
+[
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_001",
+    "front": "What is the size of the Ethernet header + trailer? (no Preamble + SFD)",
+    "back": "18 bytes"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_002",
+    "front": "What is the minimum size of an Ethernet frame? (Header + Payload + Trailer)",
+    "back": "64 bytes"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_003",
+    "front": "What is the minimum size of an Ethernet payload?",
+    "back": "46 bytes"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_004",
+    "front": "What protocol is used to discover the Layer 2 address of another device?",
+    "back": "ARP (Address Resolution Protocol)"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_005",
+    "front": "What two messages are used in ARP?",
+    "back": "ARP Request\nARP Reply"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_006",
+    "front": "The ARP Request message is [...]cast.",
+    "back": "broad"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_007",
+    "front": "The ARP Reply message is [...]cast.",
+    "back": "uni"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_008",
+    "front": "What is the broadcast MAC address?",
+    "back": "FFFF.FFFF.FFFF"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_009",
+    "front": "What is the command to view the ARP table on a Windows, macOS, or Linux computer?",
+    "back": "arp -a"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_010",
+    "front": "What two messages are used in ping?",
+    "back": "ICMP Echo Request\nICMP Echo Reply"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_011",
+    "front": "The process of addresses being cleared from the MAC address table after 5 minutes of inactivity is known as [...]",
+    "back": "aging"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_012",
+    "front": "Clear all dynamic MAC addresses from the MAC Address Table:\nSW1# [...]",
+    "back": "clear mac address-table dynamic"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_013",
+    "front": "View the MAC Address Table:\nSW1# [...]",
+    "back": "show mac address-table"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_014",
+    "front": "Clear all entries for a specific dynamic MAC address from the MAC Address Table:\nSW1# [...]",
+    "back": "clear mac address-table dynamic address mac-address"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_015",
+    "front": "Clear all dynamic MAC addresses on a specific interface from the MAC Address Table:\nSW1# [...]",
+    "back": "clear mac address-table dynamic interface interface-id"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_016",
+    "front": "What is the Ethernet Type code for an ARP packet?",
+    "back": "0x0806"
+  },
+  {
+    "id": "Day 06 Flashcards - Ethernet LAN Switching (Part 2)_017",
+    "front": "Command to show the ARP table on a Cisco device:",
+    "back": "show arp"
+  }
+]

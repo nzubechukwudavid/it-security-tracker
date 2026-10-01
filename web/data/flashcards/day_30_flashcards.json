@@ -1,0 +1,337 @@
+[
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_001",
+    "front": "FTP data = TCP port [...]",
+    "back": "20"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_002",
+    "front": "[...] = TCP port 20",
+    "back": "FTP data"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_003",
+    "front": "FTP data = [...] port 20",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_004",
+    "front": "[...] = TCP port 21",
+    "back": "FTP control"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_005",
+    "front": "FTP control = [...] port 21",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_006",
+    "front": "FTP control = TCP port [...]",
+    "back": "21"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_007",
+    "front": "[...] = TCP port 22",
+    "back": "SSH"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_008",
+    "front": "SSH = [...] port 22",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_009",
+    "front": "SSH = TCP port [...]",
+    "back": "22"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_010",
+    "front": "[...] = TCP port 23",
+    "back": "Telnet"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_011",
+    "front": "Telnet = TCP port [...]",
+    "back": "23"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_012",
+    "front": "[...] = TCP port 25",
+    "back": "SMTP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_013",
+    "front": "SMTP = [...] port 25",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_014",
+    "front": "SMTP = TCP port [...]",
+    "back": "25"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_015",
+    "front": "[...] = TCP port 80",
+    "back": "HTTP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_016",
+    "front": "HTTP = [...] port 80",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_017",
+    "front": "HTTP = TCP port [...]",
+    "back": "80"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_018",
+    "front": "[...] = TCP port 110",
+    "back": "POP3"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_019",
+    "front": "POP3 = [...] port 110",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_020",
+    "front": "POP3 = TCP port [...]",
+    "back": "110"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_021",
+    "front": "[...] = TCP port 443",
+    "back": "HTTPS"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_022",
+    "front": "HTTPS = [...] port 443",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_023",
+    "front": "HTTPS = TCP port [...]",
+    "back": "443"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_024",
+    "front": "[...] = UDP port 67",
+    "back": "DHCP server"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_025",
+    "front": "DHCP server = [...] port 67",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_026",
+    "front": "DHCP server = UDP port [...]",
+    "back": "67"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_027",
+    "front": "[...] = UDP port 68",
+    "back": "DHCP client"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_028",
+    "front": "DHCP client = UDP port [...]",
+    "back": "68"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_029",
+    "front": "DHCP client = [...] port 68",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_030",
+    "front": "[...] = UDP port 69",
+    "back": "TFTP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_031",
+    "front": "TFTP = [...] port 69",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_032",
+    "front": "TFTP = UDP port [...]",
+    "back": "69"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_033",
+    "front": "[...] = UDP port 161",
+    "back": "SNMP agent"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_034",
+    "front": "SNMP agent = [...] port 161",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_035",
+    "front": "SNMP agent = UDP port [...]",
+    "back": "161"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_036",
+    "front": "[...] = UDP port 162",
+    "back": "SNMP manager"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_037",
+    "front": "SNMP manager = [...] port 162",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_038",
+    "front": "SNMP manager = UDP port [...]",
+    "back": "162"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_039",
+    "front": "[...] = UDP port 514",
+    "back": "Syslog"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_040",
+    "front": "Syslog = [...] port 514",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_041",
+    "front": "Syslog = UDP port [...]",
+    "back": "514"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_042",
+    "front": "[...] = TCP/UDP port 53",
+    "back": "DNS"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_043",
+    "front": "DNS = [...] port 53",
+    "back": "TCP/UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_044",
+    "front": "DNS = TCP/UDP port [...]",
+    "back": "53"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_045",
+    "front": "Telnet = [...] port 23",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_046",
+    "front": "What does TCP stand for?",
+    "back": "Transmission Control Protocol"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_047",
+    "front": "What does UDP stand for?",
+    "back": "User Datagram Protocol"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_048",
+    "front": "What are Layer 4 addresses?",
+    "back": "Port numbers"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_049",
+    "front": "[TCP/UDP] provides reliable data transfer.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_050",
+    "front": "[TCP/UDP] provides error recovery.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_051",
+    "front": "[TCP/UDP] provides data sequencing.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_052",
+    "front": "[TCP/UDP] provides flow control.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_053",
+    "front": "[TCP/UDP] has less overhead.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_054",
+    "front": "The Layer 4 destination port number indicates the [...] Layer protocol.",
+    "back": "Application"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_055",
+    "front": "The Layer 4 [source/destination] port number is randomly selected by the host that initiates the data exchange.",
+    "back": "source"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_056",
+    "front": "Layer 4 well-known port range (according to IANA):",
+    "back": "0 - 1023"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_057",
+    "front": "Layer 4 registered port range (according to IANA):",
+    "back": "1024 - 49151"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_058",
+    "front": "Layer 4 ephemeral port range (according to IANA):",
+    "back": "49152 - 65535"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_059",
+    "front": "The TCP header [...] field is used for flow control.",
+    "back": "window size"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_060",
+    "front": "TCP three-way handshake order of messages (establishing a connection):",
+    "back": "SYN ->\n<- SYN-ACK\nACK ->"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_061",
+    "front": "TCP four-way handshake order of messages (terminating a connection):",
+    "back": "FIN ->\n<- ACK\n<- FIN\nACK ->"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_062",
+    "front": "[TCP/UDP] is connection-oriented.",
+    "back": "TCP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_063",
+    "front": "[TCP/UDP] is connectionless.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_064",
+    "front": "TCP: [...] is used to indicate the sequence number of the next segment the host expects to receive.",
+    "back": "Forward acknowledgement"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_065",
+    "front": "TCP: A ‘[...]’ is used to dynamically adjust how large the window size is.",
+    "back": "sliding window"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_066",
+    "front": "For applications like real-time voice and video, [TCP/UDP] is preferred.",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 30 Flashcards - TCP & UDP_067",
+    "front": "For applications that require reliable communications, [TCP/UDP] is preferred.",
+    "back": "TCP"
+  }
+]

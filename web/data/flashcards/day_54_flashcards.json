@@ -1,0 +1,272 @@
+[
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_001",
+    "front": "What does Cisco UCS stand for?",
+    "back": "Unified Computing System"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_002",
+    "front": "What does VM stand for?",
+    "back": "Virtual Machine"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_003",
+    "front": "A [...] is used to manage and allocate the hardware resources to each VM.",
+    "back": "hypervisor"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_004",
+    "front": "Another name for a hypervisor is [...].",
+    "back": "VMM (Virtual Machine Monitor)"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_005",
+    "front": "What does VMM stand for?",
+    "back": "Virtual Machine Monitor"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_006",
+    "front": "A Type [...] hypervisor runs directly on top of the hardware.",
+    "back": "1"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_007",
+    "front": "A Type [...] hypervisor is also called a bare-metal hypervisor.",
+    "back": "1"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_008",
+    "front": "A Type [...] hypervisor is also called a native hypervisor.",
+    "back": "1"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_009",
+    "front": "A Type [...] hypervisor is also called a hosted hypervisor.",
+    "back": "2"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_010",
+    "front": "A Type [...] hypervisor runs as a program on an operating system.",
+    "back": "2"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_011",
+    "front": "When using a Type 2 hypervisor, the OS running directly on the hardware is called the [...] OS.",
+    "back": "Host"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_012",
+    "front": "When using a Type 2 hypervisor, the OS running in a VM is called a [...] OS.",
+    "back": "Guest"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_013",
+    "front": "Five essential characteristics of cloud computing:\n- [...]\n- Broad network access\n- Resource pooling\n- Rapid elasticity\n- Measured service",
+    "back": "On-demand self-service"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_014",
+    "front": "Five essential characteristics of cloud computing:\n- On-demand self-service\n- [...]\n- Resource pooling\n- Rapid elasticity\n- Measured service",
+    "back": "Broad network access"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_015",
+    "front": "Five essential characteristics of cloud computing:\n- On-demand self-service\n- Broad network access\n- [...]\n- Rapid elasticity\n- Measured service",
+    "back": "Resource pooling"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_016",
+    "front": "Five essential characteristics of cloud computing:\n- On-demand self-service\n- Broad network access\n- Resource pooling\n- [...]\n- Measured service",
+    "back": "Rapid elasticity"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_017",
+    "front": "Five essential characteristics of cloud computing:\n- On-demand self-service\n- Broad network access\n- Resource pooling\n- Rapid elasticity\n- [...]",
+    "back": "Measured service"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_018",
+    "front": "Three service models of cloud computing (according to NIST):\n- [...]\n- Platform as a Service (PaaS)\n- Infrastructure as a Service (IaaS)",
+    "back": "Software as a Service (SaaS)"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_019",
+    "front": "Three service models of cloud computing (according to NIST):\n- Software as a Service (SaaS)\n- [...]\n- Infrastructure as a Service (IaaS)",
+    "back": "Platform as a Service (PaaS)"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_020",
+    "front": "Three service models of cloud computing (according to NIST):\n- Software as a Service (SaaS)\n- Platform as a Service (PaaS)\n- [...]",
+    "back": "Infrastructure as a Service (IaaS)"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_021",
+    "front": "What does SaaS stand for?",
+    "back": "Software as a Service"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_022",
+    "front": "What does PaaS stand for?",
+    "back": "Platform as a Service"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_023",
+    "front": "What does IaaS stand for?",
+    "back": "Infrastructure as a Service"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_024",
+    "front": "Microsoft Office 365 is an example of [cloud service model].",
+    "back": "SaaS"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_025",
+    "front": "AWS Lambda is an example of [cloud service model].",
+    "back": "PaaS"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_026",
+    "front": "Google App Engine is an example of [cloud service model].",
+    "back": "PaaS"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_027",
+    "front": "Amazon EC2 is an example of [cloud service model].",
+    "back": "IaaS"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_028",
+    "front": "Google Compute Engine is an example of [cloud service model].",
+    "back": "IaaS"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_029",
+    "front": "Four deployment models of cloud (according to NIST):\n- [...]\n- Community cloud\n- Public cloud\n- Hybrid cloud",
+    "back": "Private cloud"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_030",
+    "front": "Four deployment models of cloud (according to NIST):\n- Private cloud\n- [...]\n- Public cloud\n- Hybrid cloud",
+    "back": "Community cloud"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_031",
+    "front": "Four deployment models of cloud (according to NIST):\n- Private cloud\n- Community cloud\n- [...]\n- Hybrid cloud",
+    "back": "Public cloud"
+  },
+  {
+    "id": "Day 54 (Part 1) Flashcards - Virtualization & Cloud_032",
+    "front": "Four deployment models of cloud (according to NIST):\n- Private cloud\n- Community cloud\n- Public cloud\n- [...]",
+    "back": "Hybrid cloud"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_001",
+    "front": "Kubernetes is an example of a [software type].",
+    "back": "container orchestrator"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_002",
+    "front": "Docker Swarm is an example of a [software type].",
+    "back": "container orchestrator"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_003",
+    "front": "Docker Engine is an example of a [software type].",
+    "back": "container engine"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_004",
+    "front": "[...] are software packages that contain an app and all dependencies for the app to run.",
+    "back": "Containers"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_005",
+    "front": "Containers [do/do not] run an OS in the container.",
+    "back": "do not"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_006",
+    "front": "Containers run on top of a [software type].",
+    "back": "container engine"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_007",
+    "front": "A container engine is run on a [...].",
+    "back": "host OS (ie. Linux)"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_008",
+    "front": "A [...] is a software platform for automating the deployment, management, scaling etc. of containers.",
+    "back": "container orchestrator"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_009",
+    "front": "Which boots up faster, a VM or a container?",
+    "back": "a container"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_010",
+    "front": "Which takes up more disk space, a VM or a container?",
+    "back": "a VM"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_011",
+    "front": "Which uses more CPU/RAM, a VM or a container?",
+    "back": "a VM"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_012",
+    "front": "Which is more isolated, a VM or a container?",
+    "back": "a VM\n*because each VM runs its own OS, whereas containers all share the same OS"
+  },
+  {
+    "id": "Day 54 (Part 2) Flashcards - Containers_013",
+    "front": "A [VM/container] runs its own OS instance.",
+    "back": "VM"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_001",
+    "front": "What does VRF stand for?",
+    "back": "Virtual Routing and Forwarding"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_002",
+    "front": "Only Layer [...] interfaces can be configured in a VRF.",
+    "back": "3"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_003",
+    "front": "[...] can be configured to allow traffic to pass between VRFs.",
+    "back": "VRF Leaking"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_004",
+    "front": "VRF allows a router to build multiple [...]",
+    "back": "routing tables"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_005",
+    "front": "Without VRF, two interfaces on the same router [can/cannot] be in the same subnet.",
+    "back": "cannot"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_006",
+    "front": "Create a VRF:\nR1(config)# [...]",
+    "back": "ip vrf vrf-name"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_007",
+    "front": "Assign an interface to a VRF:\nR1(config-if)# [...]",
+    "back": "ip vrf forwarding vrf-name"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_008",
+    "front": "Show the routing table for a VRF:\nR1# [...]",
+    "back": "show ip route vrf vrf-name"
+  },
+  {
+    "id": "Day 54 (Part 3) Flashcards - VRF_009",
+    "front": "Ping in a VRF:\nR1# [...]",
+    "back": "ping vrf vrf-name ip-address"
+  }
+]

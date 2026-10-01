@@ -1,0 +1,47 @@
+[
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_001",
+    "front": "Configure the native VLAN on a router subinterface:\nR1(config-subif)# [...]",
+    "back": "encapsulation dot1q vlan-id native"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_002",
+    "front": "What is another name for a 'Layer 3 switch'?",
+    "back": "multilayer switch"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_003",
+    "front": "What is another name for a 'multilayer switch'?",
+    "back": "Layer 3"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_004",
+    "front": "An [...] is a virtual interface you can assign an IP address to on a multilayer switch.",
+    "back": "SVI"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_005",
+    "front": "What does SVI stand for?",
+    "back": "Switch Virtual Interface"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_006",
+    "front": "Reset an interface to its default configuration:\nR1(config)# [...]",
+    "back": "default interface interface"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_007",
+    "front": "Enable Layer 3 routing on a multilayer switch:\nSW1(config)# [...]",
+    "back": "ip routing"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_008",
+    "front": "Configure a switch interface as a routed port:\nSW1(config-if)# [...]",
+    "back": "no switchport"
+  },
+  {
+    "id": "Day 18 Flashcards - VLANs (Part 3)_009",
+    "front": "SVIs are [shutdown/no shutdown] by default.",
+    "back": "shutdown"
+  }
+]

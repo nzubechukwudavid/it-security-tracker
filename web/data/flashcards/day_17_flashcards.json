@@ -1,0 +1,167 @@
+[
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_001",
+    "front": "VLANs: [...] ports are known as 'tagged' ports.",
+    "back": "Trunk"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_002",
+    "front": "VLANs: [...] ports are known as 'untagged' ports.",
+    "back": "Access"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_003",
+    "front": "VLANs: Switches will tag frames sent out of [...] ports with a VLAN number.",
+    "back": "trunk"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_004",
+    "front": "What is a Cisco proprietary VLAN trunking protocol?",
+    "back": "ISL (Inter-Switch Link)"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_005",
+    "front": "What is an industry standard VLAN trunking protocol?",
+    "back": "IEEE 802.1Q (dot1q)"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_006",
+    "front": "The 802.1Q tag is inserted after the [...] field of the Ethernet header.",
+    "back": "Source MAC Address"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_007",
+    "front": "The 802.1Q tag is [...] bytes in length.",
+    "back": "4"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_008",
+    "front": "802.1Q tag: What does TPID stand for?",
+    "back": "Tag Protocol Identifier"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_009",
+    "front": "802.1Q tag: What does PCP stand for?",
+    "back": "Priority Code Point"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_010",
+    "front": "802.1Q tag: What does DEI stand for?",
+    "back": "Drop Eligible Indicator"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_011",
+    "front": "802.1Q tag: What does VID stand for?",
+    "back": "VLAN ID"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_012",
+    "front": "802.1Q tag: The TPID field is [...] bits in length.",
+    "back": "16"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_013",
+    "front": "802.1Q tag: The TPID field is alway set to a value of [...]",
+    "back": "0x8100"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_014",
+    "front": "802.1Q tag: The PCP field is [...] bits in length.",
+    "back": "3"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_015",
+    "front": "802.1Q tag: The [...] field is use for Class of Service.",
+    "back": "PCP"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_016",
+    "front": "802.1Q tag: The DEI field is [...] in length.",
+    "back": "1 bit"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_017",
+    "front": "802.1Q tag: The [...] field indicates that a frame can be dropped if the network is congested.",
+    "back": "DEI"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_018",
+    "front": "802.1Q tag: The [...] field identifies the VLAN the frame belongs to.",
+    "back": "VID"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_019",
+    "front": "VLANs [...] and [...] are reserved and cannot be used.",
+    "back": "0  /  4095"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_020",
+    "front": "The range of usable VLANs is [...] to [...]",
+    "back": "1 to 4094"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_021",
+    "front": "The Normal VLAN range is [...] to [...]",
+    "back": "1 to 1005"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_022",
+    "front": "The Extended VLAN range is [...] to [...]",
+    "back": "1006 to 4094"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_023",
+    "front": "The default native VLAN is VLAN [...] on all trunk ports.",
+    "back": "1"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_024",
+    "front": "The switch does not add an 802.1Q tag to frames in the [...] VLAN over a trunk link.",
+    "back": "native"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_025",
+    "front": "When a switch receives an untagged frame on a trunk port, it assumes the frame belongs to the [...] VLAN.",
+    "back": "native"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_026",
+    "front": "Configure the interface as a trunk port:\nSW1(config-if)# [...]",
+    "back": "switchport mode trunk"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_027",
+    "front": "Configure the encapsulation type on a trunk port:\nSW1(config-if)# [...]",
+    "back": "switchport trunk encapsulation encapsulation-type"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_028",
+    "front": "Display all trunk ports on the switch:\nSW1# [...]",
+    "back": "show interfaces trunk"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_029",
+    "front": "Configure the allowed VLANs on a trunk port:\nSW1(config-if)# [...]",
+    "back": "switchport trunk allowed vlan allowed-vlans"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_030",
+    "front": "For security purposes, it is best to change the native VLAN to an [...] VLAN.",
+    "back": "unused"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_031",
+    "front": "Configure the native VLAN on a trunk port:\nSW1(config-if)# [...]",
+    "back": "switchport trunk native vlan vlan-number"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_032",
+    "front": "Configure the VLAN number on a router subinterface:\nR1(config-subif)# [...]",
+    "back": "encapsulation dot1q vlan-number"
+  },
+  {
+    "id": "Day 17 Flashcards - VLANs (Part 2)_033",
+    "front": "ROAS involves configuring VLAN tags and IP addresses on router [...].",
+    "back": "subinterfaces"
+  }
+]

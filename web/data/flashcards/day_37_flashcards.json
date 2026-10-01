@@ -1,0 +1,197 @@
+[
+  {
+    "id": "Day 37 Flashcards - NTP_001",
+    "front": "Display the software clock:\nR1# [...]",
+    "back": "show clock"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_002",
+    "front": "Display the software clock, including the time source:\nR1# [...]",
+    "back": "show clock detail"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_003",
+    "front": "Display the hardware clock:\nR1# [...]",
+    "back": "show calendar"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_004",
+    "front": "What is the meaning of an asterisk (*) next to the time in the output of show clock?",
+    "back": "The time is not authoritative"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_005",
+    "front": "What is the default time zone on Cisco devices?",
+    "back": "UTC (Coordinated Universal Time)"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_006",
+    "front": "What does NTP stand for?",
+    "back": "Network Time Protocol"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_007",
+    "front": "What is the default time source for the software clock of a Cisco device?",
+    "back": "hardware calendar"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_008",
+    "front": "Displays the logs of the device:\nR1# [...]",
+    "back": "show logging"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_009",
+    "front": "Configure the software clock:\nR1# [...]",
+    "back": "clock set hh:mm:ss day month year\n(day and month can be reversed in order)"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_010",
+    "front": "Configure the hardware clock:\nR1# [...]",
+    "back": "calendar set hh:mm:ss day month year\n(day and month can be reversed in order)"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_011",
+    "front": "Make the software clock update to match the hardware clock's time:\nR1# [...]",
+    "back": "clock read-calendar"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_012",
+    "front": "Make the hardware clock update to match the software clock's time:\nR1# [...]",
+    "back": "clock update-calendar"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_013",
+    "front": "Configure the timezone:\nR1(config)# [...]",
+    "back": "clock timezone name hours-offset [minutes-offset]"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_014",
+    "front": "Configure recurring daylight saving time:\nR1(config)# [...]",
+    "back": "clock summer-time name recurring start end [offset]\n(start and end require the week (first, last, or number), weekday, month, and time)"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_015",
+    "front": "A device [can/can't] be an NTP server and client at the same time.",
+    "back": "can"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_016",
+    "front": "The distance of an NTP server from the original reference clock is called [...].",
+    "back": "stratum"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_017",
+    "front": "[...] = UDP port 123",
+    "back": "NTP"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_018",
+    "front": "NTP = [...] port 123",
+    "back": "UDP"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_019",
+    "front": "NTP = UDP port [...]",
+    "back": "123"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_020",
+    "front": "Reference clocks are NTP stratum [...]",
+    "back": "0"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_021",
+    "front": "NTP servers directly connected to reference clocks are stratum [...]",
+    "back": "1"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_022",
+    "front": "NTP servers which get their time directly from reference clocks are also called [...].",
+    "back": "primary servers"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_023",
+    "front": "NTP servers which get their time from other NTP servers are called [...].",
+    "back": "secondary servers"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_024",
+    "front": "Anything above NTP stratum [...] is considered unreliable and the device will not sync its time.",
+    "back": "15"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_025",
+    "front": "When an NTP server peers with another server at the same stratum level, this is called [...] mode.",
+    "back": "symmetric active"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_026",
+    "front": "Configure the NTP server to sync to:\nR1(config)# [...]",
+    "back": "ntp server ip-address [prefer]"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_027",
+    "front": "Show a list of configured NTP servers:\nR1# [...]",
+    "back": "show ntp associations"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_028",
+    "front": "Configure the router to update the hardware clock using NTP:\nR1(config)# [...]",
+    "back": "ntp update-calendar"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_029",
+    "front": "NTP uses only the [...] time zone.",
+    "back": "UTC"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_030",
+    "front": "Configure the source interface of NTP messages:\nR1(config)# [...]",
+    "back": "ntp source interface"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_031",
+    "front": "Configure the device to be an NTP server:\nR1(config)# [...]",
+    "back": "ntp master [stratum]"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_032",
+    "front": "The default stratum of the ntp master command is [...].",
+    "back": "8"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_033",
+    "front": "Configure NTP symmetric active mode:\nR1(config)# [...]",
+    "back": "ntp peer ip-address"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_034",
+    "front": "Enable NTP authentication:\nR1(config)# [...]",
+    "back": "ntp authenticate"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_035",
+    "front": "Create an NTP authentication key:\nR1(config)# [...]",
+    "back": "ntp authentication-key key-number md5 key"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_036",
+    "front": "Specify an NTP trusted key:\nR1(config)# [...]",
+    "back": "ntp trusted-key key-number"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_037",
+    "front": "Specify the NTP authentication key to use with the NTP server:\nR1(config)# [...]",
+    "back": "ntp server ip-address key key-number"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_038",
+    "front": "Display the status of NTP on the device:\nR1# [...]",
+    "back": "show ntp status"
+  },
+  {
+    "id": "Day 37 Flashcards - NTP_039",
+    "front": "NTP servers with a [lower/higher] stratum are preferred.",
+    "back": "lower"
+  }
+]
