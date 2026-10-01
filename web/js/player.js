@@ -3,9 +3,8 @@
  * <!-- DOE-VERSION: 2026.10.01 -->
  * Features:
  * - Multi-Video Pill Switcher (Lecture, Lab, Extra) for days with multiple lessons
- * - Local RFC 7233 Byte-Range Desktop Daemon streaming
- * - Native Phone Storage Player (plays it-security-track MP4s directly from Android/iOS)
- * - 1-Tap YouTube App launch fallback (bypasses broken mobile iframe embeds)
+ * - Local RFC 7233 Byte-Range Desktop Daemon streaming when on PC
+ * - Direct 1-Tap YouTube App Launch when away from PC (zero broken iframe embeds, zero clunky file pickers)
  * - Picture-in-Picture & W3C Media Session API integration
  */
 
@@ -13,13 +12,9 @@ import { setupPiPAndHotkeys } from './pip.js';
 
 const CCNA_PLAYLIST_ID = 'PLxbwE86jKRgMpuZuLBivmt48dPUfSm444';
 
-// In-memory phone storage cache for files picked from mobile internal storage
-window._phoneLocalVideos = window._phoneLocalVideos || new Map();
-
 export async function probeLocalMediaServer() {
-  const customHost = localStorage.getItem('custom-media-server') || 'http://127.0.0.1:8080';
   try {
-    const res = await fetch(`${customHost}/health`, {
+    const res = await fetch('http://127.0.0.1:8080/health', {
       signal: AbortSignal.timeout(1200)
     });
     return res.ok;
@@ -45,7 +40,7 @@ export async function mountVideoPlayer(container, dayData, selectedIndex = 0) {
   const safeIndex = Math.min(Math.max(0, selectedIndex), Math.max(0, vids.length - 1));
   const activeVideo = vids[safeIndex] || null;
 
-  // 1. Render Multi-Video Selector Pills
+  // 1. Render Multi-Video Selector Pills (Lecture, Lab, Extra)
   renderVideoSelectorBar(dayData, safeIndex, container);
 
   // Stop any currently playing video before re-mounting
@@ -59,24 +54,15 @@ export async function mountVideoPlayer(container, dayData, selectedIndex = 0) {
   }
   container.innerHTML = '';
 
-  // Check if this video is cached from phone's local storage
-  const phoneLocalFile = activeVideo && window._phoneLocalVideos.get(activeVideo);
-
   if (isLocalAvailable && activeVideo) {
-    // Mode A: Desktop RFC 7233 Local Media Daemon Streaming
-    const customHost = localStorage.getItem('custom-media-server') || 'http://127.0.0.1:8080';
-    const videoUrl = `${customHost}/media/01_Jeremy_CCNA_200-301/${encodeURIComponent(activeVideo)}`;
-    mountHtml5Player(container, videoUrl, dayData, activeVideo, 'local_desktop');
+    // Mode A: Local High-Speed Desktop Daemon Streaming (1080p RFC 7233)
+    const videoUrl = `http://127.0.0.1:8080/media/01_Jeremy_CCNA_200-301/${encodeURIComponent(activeVideo)}`;
+    mountHtml5Player(container, videoUrl, dayData, activeVideo);
     updateToolbar(true, activeVideo, 'Local Vault (1080p)');
-  } else if (phoneLocalFile) {
-    // Mode B: Native Phone Storage Playback (it-security-track on mobile internal storage)
-    const blobUrl = URL.createObjectURL(phoneLocalFile);
-    mountHtml5Player(container, blobUrl, dayData, activeVideo, 'phone_storage');
-    updateToolbar(true, activeVideo, 'Phone Storage (1080p)');
   } else {
-    // Mode C: Mobile Offline Hub with Direct YouTube App & Phone File Picker
-    mountMobileVideoHub(container, dayData, activeVideo, safeIndex);
-    updateToolbar(false, 'Mobile Hub (Choose Source)');
+    // Mode B: Clean, Frictionless 1-Tap YouTube Hub (Bypasses broken mobile iframe embeds)
+    mountCleanYouTubeHub(container, dayData, activeVideo, safeIndex);
+    updateToolbar(false, 'YouTube (Direct)');
   }
 }
 
@@ -110,7 +96,7 @@ function renderVideoSelectorBar(dayData, activeIndex, container) {
   });
 }
 
-function mountHtml5Player(container, sourceUrl, dayData, videoFilename, sourceMode) {
+function mountHtml5Player(container, sourceUrl, dayData, videoFilename) {
   const savedTimeKey = `ccna_playback_day_${dayData.day}_${encodeURIComponent(videoFilename)}`;
   const savedTime = parseFloat(localStorage.getItem(savedTimeKey) || '0');
 
@@ -159,58 +145,41 @@ function mountHtml5Player(container, sourceUrl, dayData, videoFilename, sourceMo
   setupPiPAndHotkeys(videoEl);
 }
 
-function mountMobileVideoHub(container, dayData, activeVideo, activeIndex) {
+function mountCleanYouTubeHub(container, dayData, activeVideo, activeIndex) {
   const cleanTitle = activeVideo ? formatVideoTitle(activeVideo, activeIndex) : dayData.topic;
-  const directYtSearch = `https://www.youtube.com/results?search_query=Jeremy%27s+IT+Lab+CCNA+Day+${dayData.day}+${encodeURIComponent(dayData.topic)}`;
+  
+  // Clean search query to land straight on Jeremy's exact video
+  const searchPart = activeVideo 
+    ? activeVideo.replace(/\.mp4$/i, '').replace(/^\d+_Day_\d+_/i, '').replace(/_/g, ' ')
+    : dayData.topic;
+  const directYtSearch = `https://www.youtube.com/results?search_query=Jeremy%27s+IT+Lab+CCNA+Day+${dayData.day}+${encodeURIComponent(searchPart)}`;
   const playlistUrl = `https://www.youtube.com/playlist?list=${CCNA_PLAYLIST_ID}`;
 
   container.innerHTML = `
     <div class="video-offline-hub">
-      <div class="hub-icon">📱</div>
-      <h3 class="hub-title">Day ${dayData.day}: ${cleanTitle}</h3>
+      <div class="hub-icon">📺</div>
+      <h3 class="hub-title">Day ${String(dayData.day).padStart(2, '0')}: ${cleanTitle}</h3>
       <p class="hub-desc">
-        Watching on mobile without a desktop media server. Choose how you want to watch this lesson:
+        Click below to open and watch this lesson directly on YouTube without iframe playback restrictions.
       </p>
 
       <div class="video-hub-actions">
-        <!-- Option 1: Pick local MP4 from Phone's it-security-track folder -->
-        <label class="action-btn primary" style="cursor:pointer;">
-          📁 Play from Phone ("it-security-track")
-          <input type="file" id="phoneVideoPicker" accept="video/*" multiple style="display:none;" />
-        </label>
-
-        <!-- Option 2: 1-Tap Launch in YouTube App -->
-        <a href="${directYtSearch}" target="_blank" rel="noopener" class="action-btn" style="text-decoration:none;">
-          ▶️ Open in YouTube App
+        <!-- 1-Tap Launch in YouTube App -->
+        <a href="${directYtSearch}" target="_blank" rel="noopener" class="action-btn primary" style="font-size:14px; padding:10px 18px; text-decoration:none;">
+          ▶️ Watch on YouTube
         </a>
 
-        <!-- Option 3: Full YouTube Playlist -->
+        <!-- Full Playlist Shortcut -->
         <a href="${playlistUrl}" target="_blank" rel="noopener" class="action-btn" style="text-decoration:none;">
           📑 CCNA Playlist
         </a>
       </div>
 
       <div class="video-hub-hint">
-        ⚡ <strong>Offline Pro-Tip:</strong> Select the video from your phone's <code>it-security-track</code> folder. It plays natively in full 1080p offline with zero buffering and zero data!
+        💻 <strong>Desktop Mode:</strong> When studying on your PC, launching the Study Cockpit streams downloaded 1080p video locally with zero buffering.
       </div>
     </div>
   `;
-
-  // Bind Phone Video Picker
-  const picker = container.querySelector('#phoneVideoPicker');
-  if (picker) {
-    picker.onchange = e => {
-      const files = Array.from(e.target.files || []);
-      if (!files.length) return;
-
-      files.forEach(f => {
-        window._phoneLocalVideos.set(f.name, f);
-      });
-
-      alert(`Loaded ${files.length} video(s) from phone storage! Starting playback...`);
-      mountVideoPlayer(container, dayData, activeIndex);
-    };
-  }
 }
 
 function updateToolbar(isLocal, label, badgeDesc) {
@@ -221,7 +190,7 @@ function updateToolbar(isLocal, label, badgeDesc) {
       badge.innerHTML = `🟢 <strong>${badgeDesc || 'Local Vault'}</strong> (${label.slice(0, 30)}...)`;
     } else {
       badge.style.color = 'var(--accent-amber)';
-      badge.innerHTML = `📱 <strong>${label}</strong>`;
+      badge.innerHTML = `📺 <strong>${label}</strong>`;
     }
   }
 }
