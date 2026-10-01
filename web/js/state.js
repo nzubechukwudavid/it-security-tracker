@@ -129,9 +129,11 @@ class UnifiedStore {
     const prevState = JSON.parse(JSON.stringify(this.state));
     const nextState = typeof updater === 'function' ? updater(prevState) : Object.assign({}, prevState, updater);
 
-    nextState.updatedAt = Date.now();
+    if (syncCloud) {
+      nextState.updatedAt = Date.now();
+      this._hasLocalPending = true;
+    }
     this.state = nextState;
-    this._hasLocalPending = true;
 
     if (recordHistory) {
       if (this.historyIndex < this.history.length - 1) {
@@ -298,7 +300,15 @@ class UnifiedStore {
         if (doc.exists) {
           const remote = doc.data();
           if (remote && remote.state) {
-            const remoteUpdatedAt = remote.updatedAtMs || (remote.state && remote.state.updatedAt) || 0;
+            let remoteUpdatedAt = 0;
+            if (typeof remote.updatedAtMs === 'number') {
+              remoteUpdatedAt = remote.updatedAtMs;
+            } else if (remote.updatedAt && typeof remote.updatedAt.toMillis === 'function') {
+              remoteUpdatedAt = remote.updatedAt.toMillis();
+            } else if (remote.state && typeof remote.state.updatedAt === 'number') {
+              remoteUpdatedAt = remote.state.updatedAt;
+            }
+
             const localUpdatedAt = this.state.updatedAt || 0;
 
             // RACE CONDITION GUARD: If we have unsaved local edits that are newer than remote snapshot, DO NOT OVERWRITE!
@@ -318,6 +328,11 @@ class UnifiedStore {
             const merged = Object.assign({}, DEFAULT_ROOT_STATE, remote.state);
             merged.cockpit = Object.assign({}, DEFAULT_COCKPIT, remote.state.cockpit || {});
             merged.updatedAt = Math.max(remoteUpdatedAt, localUpdatedAt);
+
+            // Always preserve local high-frequency stopwatch study time if higher than remote
+            if ((this.state.todayActiveSeconds || 0) > (merged.todayActiveSeconds || 0)) {
+              merged.todayActiveSeconds = this.state.todayActiveSeconds;
+            }
 
             const currentStr = JSON.stringify(this.state);
             const remoteStr = JSON.stringify(merged);
