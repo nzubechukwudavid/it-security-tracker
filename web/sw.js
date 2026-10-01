@@ -3,7 +3,7 @@
  * <!-- DOE-VERSION: 2026.10.01 -->
  */
 
-const CACHE_NAME = 'study-cockpit-cache-v1';
+const CACHE_NAME = 'study-cockpit-cache-v2';
 
 const STATIC_ASSETS = [
   './',

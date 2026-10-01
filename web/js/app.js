@@ -160,6 +160,15 @@ function setupCockpitActions() {
       applyTheme(next);
     });
   }
+
+  const lockBtn = document.getElementById('lockCockpitBtn');
+  if (lockBtn) {
+    lockBtn.addEventListener('click', () => {
+      if (typeof window.lockCockpit === 'function') {
+        window.lockCockpit();
+      }
+    });
+  }
 }
 
 function updateCompleteButtonState() {

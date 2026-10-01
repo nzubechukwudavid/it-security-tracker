@@ -18,55 +18,82 @@
 </head>
 <body>
 
-  <!-- Unified Masthead Header -->
-  <header class="cockpit-masthead">
-    <div class="masthead-inner">
+  <!-- Glassmorphic Passcode Gate (PIN 7821 Auth) -->
+  <div class="lock-overlay" id="lockScreen" style="display: flex;">
+    <div class="lock-card" id="lockCard">
+      <div class="lock-icon">🔒</div>
+      <h2 class="lock-title">IT → Security Career Track</h2>
+      <p class="lock-subtitle">Passcode-protected study cockpit & job hunt pipeline</p>
       
-      <!-- Brand & Track Label -->
-      <div class="brand-section">
-        <span class="brand-badge">Track</span>
-        <div>
-          <h1 class="brand-title">IT → Security Tracker</h1>
-          <div class="brand-sub">16-Week Working Track & CCNA Master Cockpit</div>
-        </div>
-      </div>
-
-      <!-- View Switcher -->
-      <nav class="view-nav-group" aria-label="View Mode Switcher">
-        <button class="view-nav-btn active" data-view="viewCockpit">
-          <span>🚀</span> Study Cockpit
-        </button>
-        <button class="view-nav-btn" data-view="viewRoadmap">
-          <span>🗺️</span> 16-Week Roadmap
-        </button>
-      </nav>
-
-      <!-- Masthead Right Tools -->
-      <div class="masthead-tools">
-        <!-- Cloud Sync & Mobile Pairing Button -->
-        <button id="cloudSyncBtn" class="cloud-sync-chip" title="Click to open Cloud Sync & Mobile Pairing">
-          <span class="sync-dot synced" id="syncStatusDot"></span>
-          <span id="cloudSyncStatusText">Cloud Synced</span>
-        </button>
-
-        <!-- Active Timer -->
-        <div class="live-timer-chip" title="Active Study Time Today">
-          <div id="timerIndicatorDot" class="timer-indicator"></div>
-          <span id="mastheadLiveTimer">0m 0s</span>
-        </div>
-
-        <!-- More Drawer Trigger -->
-        <button id="moreDrawerBtn" class="action-btn" title="Open Interview Bank, Program About, Sync, and Backups">
-          ⋯ More
-        </button>
-
-        <!-- Theme Toggle -->
-        <button id="themeToggleBtn" class="action-btn" title="Toggle Theme" style="padding:7px 10px;">
-          ☀️
-        </button>
-      </div>
+      <input type="password" id="pinInput" class="pin-input" placeholder="••••" maxlength="12" autocomplete="off" onkeydown="if(event.key==='Enter') window.handleUnlock()">
+      <div class="lock-error" id="pinError"></div>
+      
+      <label class="lock-options">
+        <input type="checkbox" id="rememberMe" checked>
+        <span>Remember this device (30 days)</span>
+      </label>
+      
+      <button class="btn-unlock" onclick="window.handleUnlock()">Unlock Cockpit &rarr;</button>
     </div>
-  </header>
+  </div>
+
+  <!-- Main Authenticated Application Wrapper -->
+  <div id="cockpitApp" style="display: none;">
+
+    <!-- Unified Masthead Header -->
+    <header class="cockpit-masthead">
+      <div class="masthead-inner">
+        
+        <!-- Brand & Track Label -->
+        <div class="brand-section">
+          <span class="brand-badge">Track</span>
+          <div>
+            <h1 class="brand-title">IT → Security Tracker</h1>
+            <div class="brand-sub">16-Week Working Track & CCNA Master Cockpit</div>
+          </div>
+        </div>
+
+        <!-- View Switcher -->
+        <nav class="view-nav-group" aria-label="View Mode Switcher">
+          <button class="view-nav-btn active" data-view="viewCockpit">
+            <span>🚀</span> Study Cockpit
+          </button>
+          <button class="view-nav-btn" data-view="viewRoadmap">
+            <span>🗺️</span> 16-Week Roadmap
+          </button>
+        </nav>
+
+        <!-- Masthead Right Tools -->
+        <div class="masthead-tools">
+          <!-- Cloud Sync & Mobile Pairing Button -->
+          <button id="cloudSyncBtn" class="cloud-sync-chip" title="Click to open Cloud Sync & Mobile Pairing">
+            <span class="sync-dot synced" id="syncStatusDot"></span>
+            <span id="cloudSyncStatusText">Cloud Synced</span>
+          </button>
+
+          <!-- Active Timer -->
+          <div class="live-timer-chip" title="Active Study Time Today">
+            <div id="timerIndicatorDot" class="timer-indicator"></div>
+            <span id="mastheadLiveTimer">0m 0s</span>
+          </div>
+
+          <!-- Lock Cockpit Button -->
+          <button id="lockCockpitBtn" class="action-btn" title="Lock Cockpit" style="padding:7px 10px; font-size:12px; display:inline-flex; align-items:center; gap:4px;">
+            🔒 Lock
+          </button>
+
+          <!-- More Drawer Trigger -->
+          <button id="moreDrawerBtn" class="action-btn" title="Open Interview Bank, Program About, Sync, and Backups">
+            ⋯ More
+          </button>
+
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" class="action-btn" title="Toggle Theme" style="padding:7px 10px;">
+            ☀️
+          </button>
+        </div>
+      </div>
+    </header>
 
   <!-- Main Viewport Container -->
   <main class="cockpit-viewport">
@@ -213,6 +240,104 @@
       </div>
     </div>
   </div>
+
+  </div> <!-- /#cockpitApp -->
+
+  <!-- Security Passcode Auth (PIN 7821) -->
+  <script>
+    const PIN_HASH = "0566b75aac4aa34f39ff9e05e6897aeaf93a02d10a8592ba76c27d613393cb28"; // SHA-256 for "7821"
+    const AUTH_ENABLED = true;
+    const REMEMBER_KEY = "david_cockpit_remember_until";
+    const UNLOCKED_KEY = "david_cockpit_unlocked";
+
+    async function sha256(str) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    window.handleUnlock = async function() {
+      const input = document.getElementById("pinInput");
+      const err = document.getElementById("pinError");
+      const rememberEl = document.getElementById("rememberMe");
+      const remember = rememberEl ? rememberEl.checked : true;
+      const pin = (input ? input.value : "").trim();
+      if (!pin) {
+        if (err) err.innerText = "Please enter your passcode";
+        return;
+      }
+      const hash = await sha256(pin);
+      if (hash === PIN_HASH) {
+        sessionStorage.setItem(UNLOCKED_KEY, "true");
+        if (remember) {
+          const expiresAt = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30 days
+          localStorage.setItem(REMEMBER_KEY, expiresAt.toString());
+        }
+        const lockScreen = document.getElementById("lockScreen");
+        const appEl = document.getElementById("cockpitApp");
+        if (lockScreen) lockScreen.style.display = "none";
+        if (appEl) appEl.style.display = "block";
+      } else {
+        const card = document.getElementById("lockCard");
+        if (card) {
+          card.classList.remove("shake");
+          void card.offsetWidth;
+          card.classList.add("shake");
+        }
+        if (err) err.innerText = "Incorrect passcode. Access denied.";
+        if (input) {
+          input.value = "";
+          input.focus();
+        }
+      }
+    };
+
+    window.lockCockpit = function() {
+      sessionStorage.removeItem(UNLOCKED_KEY);
+      localStorage.removeItem(REMEMBER_KEY);
+      const appEl = document.getElementById("cockpitApp");
+      const lockScreen = document.getElementById("lockScreen");
+      if (appEl) appEl.style.display = "none";
+      if (lockScreen) lockScreen.style.display = "flex";
+      const pinInput = document.getElementById("pinInput");
+      if (pinInput) {
+        pinInput.value = "";
+        pinInput.focus();
+      }
+      const err = document.getElementById("pinError");
+      if (err) err.innerText = "";
+    };
+
+    function checkAuth() {
+      if (!AUTH_ENABLED) {
+        const lockScreen = document.getElementById("lockScreen");
+        const appEl = document.getElementById("cockpitApp");
+        if (lockScreen) lockScreen.style.display = "none";
+        if (appEl) appEl.style.display = "block";
+        return;
+      }
+      const sessionUnlocked = sessionStorage.getItem(UNLOCKED_KEY) === "true";
+      const rememberUntil = parseInt(localStorage.getItem(REMEMBER_KEY) || "0", 10);
+      const isRemembered = rememberUntil > Date.now();
+
+      const lockScreen = document.getElementById("lockScreen");
+      const appEl = document.getElementById("cockpitApp");
+
+      if (sessionUnlocked || isRemembered) {
+        if (lockScreen) lockScreen.style.display = "none";
+        if (appEl) appEl.style.display = "block";
+      } else {
+        if (lockScreen) lockScreen.style.display = "flex";
+        if (appEl) appEl.style.display = "none";
+        setTimeout(() => {
+          const pinInput = document.getElementById("pinInput");
+          if (pinInput) pinInput.focus();
+        }, 100);
+      }
+    }
+
+    // Run auth check immediately
+    checkAuth();
+  </script>
 
   <!-- Main JavaScript Module Entry Point -->
   <script type="module" src="js/app.js"></script>

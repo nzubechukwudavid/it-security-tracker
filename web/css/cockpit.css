@@ -1501,3 +1501,129 @@ body {
   }
 }
 
+/* ==========================================================================
+   GLASSMORPHIC PASSCODE GATE (PIN 7821 AUTH)
+   ========================================================================== */
+.lock-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: radial-gradient(circle at top, #151d30 0%, #060911 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.lock-card {
+  background: rgba(21, 28, 44, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 2.25rem 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px hsla(190, 90%, 45%, 0.15);
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lock-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  filter: drop-shadow(0 0 12px hsla(190, 90%, 45%, 0.4));
+}
+
+.lock-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.lock-subtitle {
+  font-size: 0.85rem;
+  color: var(--ink-muted, #94a3b8);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.pin-input {
+  width: 100%;
+  font-family: var(--font-mono, monospace);
+  font-size: 1.6rem;
+  letter-spacing: 0.35em;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 14, 23, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  margin-bottom: 0.85rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.pin-input:focus {
+  border-color: var(--signal-cyan, #00dfa2);
+  box-shadow: 0 0 16px hsla(190, 90%, 45%, 0.4);
+}
+
+.lock-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted, #94a3b8);
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lock-options input {
+  cursor: pointer;
+  accent-color: var(--signal-cyan, #00dfa2);
+}
+
+.lock-error {
+  color: var(--accent-crimson, #f87171);
+  font-size: 0.82rem;
+  min-height: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-unlock {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, hsl(190, 85%, 42%), hsl(215, 90%, 50%));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px hsla(190, 90%, 45%, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-unlock:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px hsla(190, 90%, 45%, 0.5);
+}
+
+@keyframes lockShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.lock-card.shake {
+  animation: lockShake 0.4s ease-in-out;
+}
+
