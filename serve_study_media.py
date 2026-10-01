@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
-Serve Study Media Daemon
+Serve Study Media & Web Daemon
 <!-- DOE-VERSION: 2026.10.01 -->
 
 Directive: directives/serve_study_media.md
 
-High-performance, threaded HTTP server supporting RFC 7233 byte-range
-requests for instant video scrubbing, CORS headers, and path traversal security.
+High-performance, threaded HTTP server supporting:
+1. Static Web App serving (cockpit / web UI) for 100% offline local usability.
+2. RFC 7233 byte-range streaming for instant video seeking.
+3. Live Job-Finder pipeline integration with 30s caching.
+4. OWASP A01 path traversal boundary security.
+5. Idempotent port binding (gracefully handles already running instance).
 
 Usage:
     python execution/serve_study_media.py
@@ -35,13 +39,28 @@ DEFAULT_VAULT_ROOT = Path(r"C:\Users\David\Desktop\SnapTube Video")
 CHUNK_SIZE = 64 * 1024  # 64 KB streaming buffer
 
 # Extra MIME registrations
+mimetypes.add_type("text/html; charset=utf-8", ".html")
+mimetypes.add_type("text/css; charset=utf-8", ".css")
+mimetypes.add_type("application/javascript; charset=utf-8", ".js")
+mimetypes.add_type("image/x-icon", ".ico")
+mimetypes.add_type("image/png", ".png")
+mimetypes.add_type("image/jpeg", ".jpg")
+mimetypes.add_type("application/manifest+json", ".webmanifest")
+mimetypes.add_type("application/json; charset=utf-8", ".json")
 mimetypes.add_type("video/mp4", ".mp4")
 mimetypes.add_type("video/webm", ".webm")
 mimetypes.add_type("video/x-matroska", ".mkv")
-mimetypes.add_type("application/json", ".json")
 mimetypes.add_type("application/octet-stream", ".pkt")
 mimetypes.add_type("application/octet-stream", ".pka")
 mimetypes.add_type("application/pdf", ".pdf")
+
+_builtin_print = print
+def print(*args, **kwargs):
+    try:
+        if sys.stdout is not None:
+            _builtin_print(*args, **kwargs)
+    except Exception:
+        pass
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """Handles requests in separate threads for non-blocking concurrent playback."""
@@ -66,8 +85,24 @@ def get_live_applied_data():
             _APPLIED_CACHE["timestamp"] = now
             _APPLIED_CACHE["data"] = applied_map
             return applied_map
-    except Exception as e:
+    except Exception:
         return _APPLIED_CACHE.get("data", {})
+
+def resolve_web_root() -> Path:
+    """Finds the local web application root (cockpit or web folder)."""
+    script_dir = Path(__file__).resolve().parent
+    candidates = [
+        script_dir / "web",
+        script_dir / "cockpit",
+        script_dir.parent / "web",
+        script_dir.parent / "cockpit",
+        Path(r"C:\Users\David\Projects\it-security-tracker\web"),
+        Path(r"C:\Users\David\Projects\agentic-workflows-template\cockpit"),
+    ]
+    for c in candidates:
+        if c.exists() and (c / "index.html").exists():
+            return c.resolve()
+    return script_dir.resolve()
 
 class MediaRangeRequestHandler(BaseHTTPRequestHandler):
     """RFC 7233 compliant byte-range HTTP request handler with security sandboxing."""
@@ -93,25 +128,65 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_HEAD(self):
-        self._handle_media_request(send_body=False)
+        self._dispatch_request(send_body=False)
 
     def do_GET(self):
-        if self.path in ["/health", "/healthz", "/ping"]:
-            self._handle_health()
+        self._dispatch_request(send_body=True)
+
+    def _dispatch_request(self, send_body: bool = True):
+        parsed_url = urllib.parse.urlparse(self.path)
+        path = parsed_url.path
+
+        if path in ["/health", "/healthz", "/ping"]:
+            if send_body:
+                self._handle_health()
+            else:
+                self.send_response(200)
+                self.end_headers()
             return
 
-        if self.path.startswith("/api/job-finder"):
-            self._handle_job_finder()
+        if path.startswith("/api/job-finder"):
+            if send_body:
+                self._handle_job_finder()
+            else:
+                self.send_response(200)
+                self.end_headers()
             return
 
-        self._handle_media_request(send_body=True)
+        rel_path = urllib.parse.unquote(path).lstrip("/")
+
+        # 1. Explicit /media/... requests route to vault_root
+        if rel_path.lower().startswith("media/"):
+            media_rel = rel_path[6:]
+            self._serve_file(self.server.vault_root, media_rel, send_body=send_body)
+            return
+
+        # 2. Root or /index.html -> serve index.html from web_root
+        if rel_path == "" or rel_path == "index.html":
+            self._serve_file(self.server.web_root, "index.html", send_body=send_body)
+            return
+
+        # 3. Check if file exists in web_root (css, js, data, icons, manifest, etc.)
+        candidate_web = (self.server.web_root / rel_path).resolve()
+        if candidate_web.exists() and candidate_web.is_file():
+            self._serve_file(self.server.web_root, rel_path, send_body=send_body)
+            return
+
+        # 4. Fallback: check vault_root in case file was requested without /media/
+        candidate_vault = (self.server.vault_root / rel_path).resolve()
+        if candidate_vault.exists() and candidate_vault.is_file():
+            self._serve_file(self.server.vault_root, rel_path, send_body=send_body)
+            return
+
+        self.send_error(404, f"File Not Found: {rel_path}")
 
     def _handle_health(self):
         payload = {
             "status": "ok",
             "version": DOE_VERSION,
-            "mode": "local_media_vault",
-            "root": str(self.server.vault_root)
+            "mode": "study_cockpit_daemon",
+            "vault_root": str(self.server.vault_root),
+            "web_root": str(self.server.web_root)
         }
         data = json.dumps(payload).encode("utf-8")
         self.send_response(200)
@@ -119,7 +194,10 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(data)))
         self.send_cors_headers()
         self.end_headers()
-        self.wfile.write(data)
+        try:
+            self.wfile.write(data)
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError, OSError):
+            pass
 
     def _handle_job_finder(self):
         dashboard_file = JOB_FINDER_ROOT / "dashboard_data.json"
@@ -180,8 +258,7 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                         "company": j.get("company"),
                         "track": j.get("track"),
                         "status": "Applied",
-                        "stage": stage_str or "Application Submitted",
-                        "fit_score": j.get("fit_score", 0),
+                        "stage": stage_str,
                         "location": j.get("location"),
                         "url": j.get("effective_url") or j.get("job_url"),
                         "date": action_date
@@ -195,8 +272,7 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                         "company": j.get("company"),
                         "track": j.get("track"),
                         "status": "Interview",
-                        "stage": stage_str or "Interview / Screen",
-                        "fit_score": j.get("fit_score", 0),
+                        "stage": stage_str,
                         "location": j.get("location"),
                         "url": j.get("effective_url") or j.get("job_url"),
                         "date": action_date
@@ -252,26 +328,19 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
         except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError, OSError):
             pass
 
-    def _handle_media_request(self, send_body: bool = True):
+    def _serve_file(self, root_dir: Path, rel_path: str, send_body: bool = True):
         # 1. Parse and sanitize requested URL path
-        parsed_url = urllib.parse.urlparse(self.path)
-        rel_path = urllib.parse.unquote(parsed_url.path).lstrip("/")
-        
-        # Strip optional leading 'media/' prefix
-        if rel_path.lower().startswith("media/"):
-            rel_path = rel_path[6:]
-
-        raw_target = (self.server.vault_root / rel_path).resolve()
+        raw_target = (root_dir / rel_path).resolve()
 
         # 2. Strict Security Boundary Check (OWASP A01 Path Traversal Prevention)
-        vault_root = self.server.vault_root.resolve()
+        root_resolved = root_dir.resolve()
         try:
-            is_safe = os.path.commonpath([str(vault_root), str(raw_target)]) == str(vault_root)
+            is_safe = os.path.commonpath([str(root_resolved), str(raw_target)]) == str(root_resolved)
         except ValueError:
             is_safe = False
 
         if not is_safe:
-            self.send_error(403, "Access Denied: Path outside media vault boundary.")
+            self.send_error(403, "Access Denied: Path outside boundary.")
             return
 
         if not raw_target.exists() or not raw_target.is_file():
@@ -289,7 +358,6 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
         if range_header:
             range_match = re.match(r"^bytes=(\d*)-(\d*)$", range_header.strip())
             if not range_match:
-                # Malformed range header
                 self.send_error(400, "Invalid Range Header")
                 return
 
@@ -302,7 +370,6 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                 start = int(start_str)
                 end = file_size - 1
             elif end_str:
-                # Suffix byte range
                 suffix_len = int(end_str)
                 start = max(0, file_size - suffix_len)
                 end = file_size - 1
@@ -310,7 +377,6 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                 self.send_error(400, "Invalid Range Specification")
                 return
 
-            # Validate range bounds
             if start >= file_size or end >= file_size or start > end:
                 self.send_response(416)  # Range Not Satisfiable
                 self.send_header("Content-Range", f"bytes */{file_size}")
@@ -340,7 +406,6 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                             self.wfile.write(chunk)
                             bytes_remaining -= len(chunk)
                 except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError, OSError):
-                    # Browser canceled seeking/request mid-stream (normal playback behavior)
                     pass
         else:
             # Full 200 OK Response
@@ -363,36 +428,43 @@ class MediaRangeRequestHandler(BaseHTTPRequestHandler):
                     pass
 
     def log_message(self, format, *args):
-        """Clean minimal access log."""
-        sys.stdout.write(f"[{self.log_date_time_string()}] {self.address_string()} - {format % args}\n")
+        """Clean minimal access log resilient to windowless pythonw execution."""
+        try:
+            if sys.stdout is not None:
+                sys.stdout.write(f"[{self.log_date_time_string()}] {self.address_string()} - {format % args}\n")
+                sys.stdout.flush()
+        except Exception:
+            pass
 
 def main():
-    parser = argparse.ArgumentParser(description="Serve study media with RFC 7233 range support.")
+    parser = argparse.ArgumentParser(description="Serve study media & web app with RFC 7233 range support.")
     parser.add_argument("--host", default="127.0.0.1", help="Host interface to bind (default 127.0.0.1)")
     parser.add_argument("--port", type=int, default=8080, help="Port to listen on (default 8080)")
     parser.add_argument("--vault", type=Path, default=DEFAULT_VAULT_ROOT, help="Media vault root directory")
+    parser.add_argument("--web", type=Path, default=None, help="Web app root directory")
     args = parser.parse_args()
 
     if not args.vault.exists():
-        print(f"Error: Vault directory does not exist: {args.vault}")
-        return 1
+        print(f"Warning: Vault directory does not exist: {args.vault}")
+
+    web_root = (args.web if args.web else resolve_web_root()).resolve()
 
     server_address = (args.host, args.port)
     try:
         httpd = ThreadedHTTPServer(server_address, MediaRangeRequestHandler)
     except OSError as e:
-        # Check for port already in use (WinError 10048 or errno 98)
         if getattr(e, 'winerror', None) == 10048 or getattr(e, 'errno', None) == 98:
             print(f"Media daemon already active on http://{args.host}:{args.port}")
             return 0
         raise
 
-    httpd.vault_root = args.vault
+    httpd.vault_root = args.vault.resolve() if args.vault.exists() else args.vault
+    httpd.web_root = web_root
 
     print(f"============================================================")
-    print(f"  Study Media Streaming Daemon v{DOE_VERSION}")
-    print(f"  Root:  {args.vault}")
-    print(f"  Bind:  http://{args.host}:{args.port}")
+    print(f"  Study Cockpit & Media Streaming Daemon v{DOE_VERSION}")
+    print(f"  Web:   http://{args.host}:{args.port}/ (Root: {httpd.web_root})")
+    print(f"  Vault: {httpd.vault_root}")
     print(f"  CORS:  Enabled (*)")
     print(f"  Range: RFC 7233 (HTTP 206 Partial Content)")
     print(f"============================================================")
