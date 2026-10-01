@@ -102,11 +102,15 @@ body {
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
   padding: 12px 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .masthead-inner {
   max-width: var(--shell-width);
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -257,12 +261,27 @@ body {
 /* ==========================================================================
    Main Single-Screen Cockpit Layout
    ========================================================================== */
+#cockpitApp {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .cockpit-viewport {
   flex: 1;
   max-width: var(--shell-width);
   margin: 0 auto;
   width: 100%;
   padding: 20px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.view-panel {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -274,6 +293,8 @@ body {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1560,50 +1581,178 @@ body {
    Responsive Mobile Optimization
    ========================================================================== */
 @media (max-width: 860px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #cockpitApp {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .cockpit-masthead {
-    padding: 10px 14px;
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
   }
-  .cockpit-viewport {
-    padding: 12px 14px 90px;
+
+  .masthead-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
-  .cockpit-grid {
-    grid-template-columns: 1fr;
+
+  .brand-section {
+    width: 100%;
+    justify-content: flex-start;
   }
+
+  .masthead-tools {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .view-nav-group {
     width: 100%;
     order: 3;
-    margin-top: 8px;
-    justify-content: space-around;
+    margin-top: 4px;
+    display: flex;
+    justify-content: stretch;
   }
+
   .view-nav-btn {
-    padding: 6px 8px;
-    font-size: 12px;
+    padding: 8px 10px;
+    font-size: 13px;
     flex: 1;
     justify-content: center;
   }
+
+  .cockpit-viewport {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 14px 90px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .view-panel {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mission-banner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .mission-banner > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cockpit-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .left-pane, .right-pane {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .video-selector-bar {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+  .video-selector-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .video-hotkeys-hint {
     display: none;
   }
+
   .search-input-wrap {
     width: 100%;
   }
+
+  .tab-bar {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+  .tab-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
   .lab-card {
+    width: 100%;
+    box-sizing: border-box;
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
     padding: 14px;
   }
+
   .lab-meta code {
     word-break: break-all;
     font-size: 11px;
     display: inline-block;
   }
+
   .lab-launch-btn {
     justify-content: center;
     width: 100%;
     text-align: center;
     padding: 10px 14px;
   }
+
   .video-offline-hub {
     padding: 16px 12px;
   }
@@ -1620,6 +1769,29 @@ body {
   }
   .video-hub-hint {
     display: none;
+  }
+
+  .velocity-hud {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 14px;
+  }
+
+  .velocity-inner {
+    width: 100%;
+    gap: 8px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .velocity-metrics {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .velocity-bar-wrap {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
