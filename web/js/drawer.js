@@ -236,9 +236,9 @@ function renderDrawerContent(container, activeTabId = 'tabAbout') {
     saveKeyBtn.onclick = () => {
       const val = inner.querySelector('#syncKeyInput').value.trim();
       if (val) {
-        localStorage.setItem('it-sec-sync-channel', val);
+        store.setSyncChannel(val);
         alert(`Pairing Key saved to "${val}"! Connecting...`);
-        window.location.reload();
+        renderDrawerContent(container, 'tabSync');
       }
     };
   }
@@ -247,9 +247,9 @@ function renderDrawerContent(container, activeTabId = 'tabAbout') {
     genKeyBtn.onclick = () => {
       const randKey = 'track-' + Math.random().toString(36).slice(2, 8);
       inner.querySelector('#syncKeyInput').value = randKey;
-      localStorage.setItem('it-sec-sync-channel', randKey);
+      store.setSyncChannel(randKey);
       alert(`New Pairing Key generated: "${randKey}". Refreshing connection...`);
-      window.location.reload();
+      renderDrawerContent(container, 'tabSync');
     };
   }
 

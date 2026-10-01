@@ -10,6 +10,21 @@
 
 import { DEFAULT_FIREBASE_CONFIG } from './roadmapData.js';
 
+export const DEFAULT_SYNC_CHANNEL = 'david-track-2026';
+
+// Capture ?sync=... URL parameter immediately before any store initialization
+try {
+  if (typeof window !== 'undefined' && window.location && window.location.search) {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('sync')) {
+      const syncVal = urlParams.get('sync').trim();
+      if (syncVal) {
+        localStorage.setItem('it-sec-sync-channel', syncVal);
+      }
+    }
+  }
+} catch (e) {}
+
 const STORAGE_KEY = 'it-sec-track.v1';
 const SYNC_CONFIG_KEY = 'it-sec-sync.config.v1';
 const MAX_HISTORY = 40;
@@ -63,6 +78,9 @@ class UnifiedStore {
     this.isPushingToFirestore = false;
     this._syncTimer = null;
     this._lastSyncStatus = null;
+    this._hasLocalPending = false;
+    this._persistenceEnabled = false;
+    this._networkListenersAttached = false;
     this._initFirestoreSync();
   }
 
@@ -111,7 +129,9 @@ class UnifiedStore {
     const prevState = JSON.parse(JSON.stringify(this.state));
     const nextState = typeof updater === 'function' ? updater(prevState) : Object.assign({}, prevState, updater);
 
+    nextState.updatedAt = Date.now();
     this.state = nextState;
+    this._hasLocalPending = true;
 
     if (recordHistory) {
       if (this.historyIndex < this.history.length - 1) {
@@ -127,7 +147,7 @@ class UnifiedStore {
 
     this._persist();
     if (syncCloud) {
-      this.scheduleFirestoreSync(2500);
+      this.scheduleFirestoreSync(600);
     }
     this._notify();
   }
@@ -231,7 +251,7 @@ class UnifiedStore {
         try { cfg = Object.assign({}, DEFAULT_FIREBASE_CONFIG, JSON.parse(customRaw)); } catch (e) {}
       }
 
-      const channelId = cfg.channelId || localStorage.getItem('it-sec-sync-channel') || 'default-tracker-vault';
+      const channelId = localStorage.getItem('it-sec-sync-channel') || cfg.channelId || DEFAULT_SYNC_CHANNEL;
 
       if (!window.firebase.apps.length) {
         window.firebase.initializeApp({
@@ -245,6 +265,31 @@ class UnifiedStore {
       }
 
       const db = window.firebase.firestore();
+
+      // Enable local offline persistence if available
+      try {
+        if (!this._persistenceEnabled && db.enablePersistence) {
+          db.enablePersistence({ synchronizeTabs: true }).catch(err => {
+            console.log('Firestore offline persistence note:', err.code);
+          });
+          this._persistenceEnabled = true;
+        }
+      } catch (e) {}
+
+      // Wire automatic flush on network reconnection and tab hide
+      if (!this._networkListenersAttached && typeof window !== 'undefined') {
+        window.addEventListener('online', () => {
+          console.log('[Sync] Network reconnected; syncing pending progress...');
+          this.syncNow();
+        });
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden' && this._hasLocalPending) {
+            this.syncNow();
+          }
+        });
+        this._networkListenersAttached = true;
+      }
+
       this.firestoreUnsub = db.collection('it_trackers').doc(channelId).onSnapshot(doc => {
         // Prevent local pending writes from triggering snapshot loop
         if (doc.metadata && doc.metadata.hasPendingWrites) return;
@@ -253,6 +298,16 @@ class UnifiedStore {
         if (doc.exists) {
           const remote = doc.data();
           if (remote && remote.state) {
+            const remoteUpdatedAt = remote.updatedAtMs || (remote.state && remote.state.updatedAt) || 0;
+            const localUpdatedAt = this.state.updatedAt || 0;
+
+            // RACE CONDITION GUARD: If we have unsaved local edits that are newer than remote snapshot, DO NOT OVERWRITE!
+            if (this._hasLocalPending && localUpdatedAt > remoteUpdatedAt) {
+              console.log('[Sync] Preserving newer local edits; syncing local state to cloud...');
+              this.syncNow();
+              return;
+            }
+
             // Clean any legacy bare keys from remote state
             if (remote.state.done) {
               ['t1', 't2', 't3', 't4', 't5', 't6', 't7'].forEach(bare => {
@@ -262,10 +317,12 @@ class UnifiedStore {
 
             const merged = Object.assign({}, DEFAULT_ROOT_STATE, remote.state);
             merged.cockpit = Object.assign({}, DEFAULT_COCKPIT, remote.state.cockpit || {});
+            merged.updatedAt = Math.max(remoteUpdatedAt, localUpdatedAt);
 
             const currentStr = JSON.stringify(this.state);
             const remoteStr = JSON.stringify(merged);
             if (currentStr !== remoteStr) {
+              this._hasLocalPending = false;
               this.state = merged;
               this._persist();
               this._notify();
@@ -284,7 +341,7 @@ class UnifiedStore {
     }
   }
 
-  scheduleFirestoreSync(delayMs = 2500) {
+  scheduleFirestoreSync(delayMs = 600) {
     if (this._syncTimer) {
       clearTimeout(this._syncTimer);
     }
@@ -307,28 +364,44 @@ class UnifiedStore {
       if (customRaw) {
         try { cfg = Object.assign({}, DEFAULT_FIREBASE_CONFIG, JSON.parse(customRaw)); } catch (e) {}
       }
-      const channelId = cfg.channelId || localStorage.getItem('it-sec-sync-channel') || 'default-tracker-vault';
+      const channelId = localStorage.getItem('it-sec-sync-channel') || cfg.channelId || DEFAULT_SYNC_CHANNEL;
 
       const db = window.firebase.firestore();
       this.isPushingToFirestore = true;
       this._setSyncStatus('syncing');
 
+      const pushTimestamp = this.state.updatedAt || Date.now();
+
       db.collection('it_trackers').doc(channelId).set({
         state: this.state,
+        updatedAtMs: pushTimestamp,
         clientTime: new Date().toISOString(),
         updatedAt: window.firebase.firestore.FieldValue.serverTimestamp()
       }).then(() => {
+        this._hasLocalPending = false;
         this._setSyncStatus('synced');
       }).catch(err => {
         console.warn('Firestore sync push failed:', err.message);
         this._setSyncStatus('offline');
       }).finally(() => {
-        setTimeout(() => { this.isPushingToFirestore = false; }, 800);
+        setTimeout(() => { this.isPushingToFirestore = false; }, 600);
       });
     } catch (e) {
       console.warn('Firestore sync exception:', e);
       this._setSyncStatus('offline');
     }
+  }
+
+  setSyncChannel(newChannelId) {
+    if (!newChannelId) return;
+    const clean = newChannelId.trim();
+    localStorage.setItem('it-sec-sync-channel', clean);
+    if (this.firestoreUnsub) {
+      try { this.firestoreUnsub(); } catch (e) {}
+      this.firestoreUnsub = null;
+    }
+    this._initFirestoreSync();
+    this.syncNow();
   }
 
   _setSyncStatus(status) {
