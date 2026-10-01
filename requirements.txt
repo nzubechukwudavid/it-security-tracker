@@ -1,5 +1,4 @@
-# Python dependencies for Agentic Workflows Template
-# Install: pip install -r requirements.txt
-
-python-dotenv>=1.0.0
+﻿# IT -> Security Tracker & Media Server Dependencies
+# Python 3.10+ Standard Library is used for the RFC 7233 media daemon (http.server, socketserver, urllib).
+# Optional helper packages:
 requests>=2.31.0
