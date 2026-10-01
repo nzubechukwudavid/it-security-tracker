@@ -1587,6 +1587,40 @@ body {
   .search-input-wrap {
     width: 100%;
   }
+  .lab-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+  }
+  .lab-meta code {
+    word-break: break-all;
+    font-size: 11px;
+    display: inline-block;
+  }
+  .lab-launch-btn {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+  .video-offline-hub {
+    padding: 16px 12px;
+  }
+  .video-offline-hub .hub-icon {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+  .video-offline-hub .hub-title {
+    font-size: 14px;
+  }
+  .video-offline-hub .hub-desc {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .video-hub-hint {
+    display: none;
+  }
 }
 
 /* ==========================================================================
