@@ -79,6 +79,8 @@ class UnifiedStore {
     this._syncTimer = null;
     this._lastSyncStatus = null;
     this._hasLocalPending = false;
+    this._hasExplicitUserEdit = false;
+    this._initialCloudHydrated = false;
     this._persistenceEnabled = false;
     this._networkListenersAttached = false;
     this._initFirestoreSync();
@@ -132,6 +134,7 @@ class UnifiedStore {
     if (syncCloud) {
       nextState.updatedAt = Date.now();
       this._hasLocalPending = true;
+      this._hasExplicitUserEdit = true;
     }
     this.state = nextState;
 
@@ -311,8 +314,25 @@ class UnifiedStore {
 
             const localUpdatedAt = this.state.updatedAt || 0;
 
-            // RACE CONDITION GUARD: If we have unsaved local edits that are newer than remote snapshot, DO NOT OVERWRITE!
-            if (this._hasLocalPending && localUpdatedAt > remoteUpdatedAt) {
+            // FIRST BOOT HYDRATION:
+            // If this client hasn't hydrated yet and hasn't had explicit user clicks,
+            // it MUST unconditionally adopt the existing remote cloud document!
+            if (!this._initialCloudHydrated && !this._hasExplicitUserEdit) {
+              console.log('[Sync] Initial cloud hydration: adopting established remote state.');
+              const merged = Object.assign({}, DEFAULT_ROOT_STATE, remote.state);
+              merged.cockpit = Object.assign({}, DEFAULT_COCKPIT, remote.state.cockpit || {});
+              merged.todayActiveSeconds = Math.max(this.state.todayActiveSeconds || 0, remote.state.todayActiveSeconds || 0);
+              this.state = merged;
+              this._hasLocalPending = false;
+              this._initialCloudHydrated = true;
+              this._persist();
+              this._notify();
+              this._setSyncStatus('synced');
+              return;
+            }
+
+            // RACE CONDITION GUARD: If we have explicit unsaved local edits that are genuinely newer than remote snapshot:
+            if (this._hasLocalPending && this._hasExplicitUserEdit && localUpdatedAt > remoteUpdatedAt) {
               console.log('[Sync] Preserving newer local edits; syncing local state to cloud...');
               this.syncNow();
               return;
@@ -329,10 +349,15 @@ class UnifiedStore {
             merged.cockpit = Object.assign({}, DEFAULT_COCKPIT, remote.state.cockpit || {});
             merged.updatedAt = Math.max(remoteUpdatedAt, localUpdatedAt);
 
-            // Always preserve local high-frequency stopwatch study time if higher than remote
-            if ((this.state.todayActiveSeconds || 0) > (merged.todayActiveSeconds || 0)) {
-              merged.todayActiveSeconds = this.state.todayActiveSeconds;
+            // ACCUMULATIVE STUDY TIME: Study seconds must NEVER roll backwards on any client!
+            merged.todayActiveSeconds = Math.max(this.state.todayActiveSeconds || 0, remote.state.todayActiveSeconds || 0);
+
+            // ACCUMULATIVE DAILY STUDY TIME: Merge daily histories with Math.max
+            const mergedHistory = Object.assign({}, remote.state.dailyHistory || {});
+            for (const [day, secs] of Object.entries(this.state.dailyHistory || {})) {
+              mergedHistory[day] = Math.max(mergedHistory[day] || 0, secs || 0);
             }
+            merged.dailyHistory = mergedHistory;
 
             const currentStr = JSON.stringify(this.state);
             const remoteStr = JSON.stringify(merged);
@@ -342,8 +367,12 @@ class UnifiedStore {
               this._persist();
               this._notify();
             }
+            this._initialCloudHydrated = true;
             this._setSyncStatus('synced');
           }
+        } else {
+          // Document does not exist in cloud yet
+          this._initialCloudHydrated = true;
         }
       }, err => {
         console.warn('Firestore snapshot error:', err);
@@ -370,6 +399,12 @@ class UnifiedStore {
     if (this._syncTimer) {
       clearTimeout(this._syncTimer);
       this._syncTimer = null;
+    }
+
+    // HYDRATION GATE: Prevent an unhydrated booting client from pushing initial empty state
+    if (!this._initialCloudHydrated && !this._hasExplicitUserEdit) {
+      console.log('[Sync] Hydration gate active: holding outbound push until initial cloud snapshot is received.');
+      return;
     }
 
     try {

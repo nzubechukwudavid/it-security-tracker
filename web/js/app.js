@@ -90,7 +90,7 @@ function switchView(viewId) {
     viewId = 'viewCockpit';
   }
   currentView = viewId;
-  store.commit(s => { s.activeView = viewId; return s; }, false);
+  store.commit(s => { s.activeView = viewId; return s; }, false, false);
 
   // Update nav buttons
   document.querySelectorAll('.view-nav-btn').forEach(btn => {
@@ -156,7 +156,7 @@ function setupCockpitActions() {
     themeBtn.addEventListener('click', () => {
       const curr = store.get().theme || 'dark';
       const next = curr === 'dark' ? 'light' : 'dark';
-      store.commit(s => { s.theme = next; return s; }, false);
+      store.commit(s => { s.theme = next; return s; }, false, false);
       applyTheme(next);
     });
   }
@@ -199,7 +199,7 @@ function switchDay(newDay) {
     s.cockpit = s.cockpit || {};
     s.cockpit.currentDay = newDay;
     return s;
-  });
+  }, false, false);
   renderDay(newDay);
 }
 
